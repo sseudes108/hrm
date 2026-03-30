@@ -1,0 +1,1001 @@
+id,cpf,nome,data,inicio,fim,analista,cliente,fila,resultado,motivo,hora
+ID-1000,779.345.409-25,Usuario Exemplo 0,2026-02-20,2026-03-29 15:39:00,16:18:00,Analista 28,Cliente 4,Fila 11,Aprovado,Fluxo Normal,15:00
+ID-1001,553.742.514-92,Usuario Exemplo 1,2026-01-29,2026-03-29 16:36:00,17:21:00,Analista 8,Cliente 5,Fila 10,Reprovado Fraude,Divergência Cadastral,16:00
+ID-1002,245.932.531-72,Usuario Exemplo 2,2026-03-13,2026-03-29 15:53:00,16:36:00,Analista 5,Cliente 6,Fila 18,Reprovado Fraude,Documentação Irregular,15:00
+ID-1003,928.358.586-77,Usuario Exemplo 3,2026-02-21,2026-03-29 17:43:00,18:22:00,Analista 7,Cliente 2,Fila 4,Reprovado Fraude,Perfil de Risco,17:00
+ID-1004,740.583.422-58,Usuario Exemplo 4,2026-03-21,2026-03-29 11:49:00,12:23:00,Analista 19,Cliente 4,Fila 3,Aprovado,Fluxo Normal,11:00
+ID-1005,587.972.976-88,Usuario Exemplo 5,2026-03-23,2026-03-29 13:07:00,13:12:00,Analista 12,Cliente 4,Fila 15,Reprovado Fraude,Perfil de Risco,13:00
+ID-1006,772.111.629-93,Usuario Exemplo 6,2026-03-20,2026-03-29 16:37:00,16:53:00,Analista 24,Cliente 3,Fila 8,Aprovado,Fluxo Normal,16:00
+ID-1007,881.334.530-80,Usuario Exemplo 7,2026-03-20,2026-03-29 08:01:00,08:29:00,Analista 17,Cliente 3,Fila 6,Pendente,Aguardando Documento,08:00
+ID-1008,276.509.822-59,Usuario Exemplo 8,2026-03-29,2026-03-29 13:15:00,13:32:00,Analista 8,Cliente 4,Fila 14,Pendente,Aguardando Documento,13:00
+ID-1009,889.411.286-12,Usuario Exemplo 9,2026-03-03,2026-03-29 14:29:00,14:34:00,Analista 22,Cliente 2,Fila 9,Pendente,Aguardando Documento,14:00
+ID-1010,792.506.512-89,Usuario Exemplo 10,2026-02-23,2026-03-29 11:34:00,12:03:00,Analista 9,Cliente 3,Fila 5,Aprovado,Fluxo Normal,11:00
+ID-1011,561.719.988-57,Usuario Exemplo 11,2026-03-01,2026-03-29 14:11:00,14:16:00,Analista 27,Cliente 1,Fila 14,Aprovado,Fluxo Normal,14:00
+ID-1012,759.193.837-90,Usuario Exemplo 12,2026-02-07,2026-03-29 15:13:00,15:43:00,Analista 23,Cliente 4,Fila 2,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1013,105.834.722-97,Usuario Exemplo 13,2026-02-13,2026-03-29 14:03:00,14:38:00,Analista 27,Cliente 5,Fila 13,Reprovado Politica,Divergência Cadastral,14:00
+ID-1014,948.752.676-90,Usuario Exemplo 14,2026-02-26,2026-03-29 11:38:00,11:44:00,Analista 27,Cliente 2,Fila 1,Aprovado,Fluxo Normal,11:00
+ID-1015,187.349.223-19,Usuario Exemplo 15,2026-01-27,2026-03-29 11:24:00,12:02:00,Analista 2,Cliente 1,Fila 16,Reprovado Politica,Renda Não Comprovada,11:00
+ID-1016,278.288.342-98,Usuario Exemplo 16,2026-02-28,2026-03-29 10:59:00,11:22:00,Analista 9,Cliente 5,Fila 7,Pendente,Aguardando Documento,10:00
+ID-1017,813.820.247-20,Usuario Exemplo 17,2026-02-02,2026-03-29 09:53:00,10:37:00,Analista 26,Cliente 5,Fila 16,Reprovado Fraude,Documentação Irregular,09:00
+ID-1018,471.127.623-48,Usuario Exemplo 18,2026-03-16,2026-03-29 11:17:00,11:53:00,Analista 1,Cliente 2,Fila 4,Pendente,Aguardando Documento,11:00
+ID-1019,960.366.648-64,Usuario Exemplo 19,2026-02-14,2026-03-29 11:34:00,11:44:00,Analista 18,Cliente 2,Fila 7,Pendente,Aguardando Documento,11:00
+ID-1020,514.837.752-27,Usuario Exemplo 20,2026-03-01,2026-03-29 10:57:00,11:04:00,Analista 28,Cliente 3,Fila 12,Reprovado Politica,Perfil de Risco,10:00
+ID-1021,524.710.446-57,Usuario Exemplo 21,2026-02-17,2026-03-29 09:53:00,10:09:00,Analista 20,Cliente 4,Fila 2,Reprovado Politica,Score Baixo,09:00
+ID-1022,593.854.212-50,Usuario Exemplo 22,2026-02-12,2026-03-29 17:27:00,18:09:00,Analista 18,Cliente 2,Fila 6,Pendente,Aguardando Documento,17:00
+ID-1023,165.163.359-91,Usuario Exemplo 23,2026-03-19,2026-03-29 14:13:00,14:46:00,Analista 20,Cliente 3,Fila 16,Pendente,Aguardando Documento,14:00
+ID-1024,423.434.891-51,Usuario Exemplo 24,2026-02-24,2026-03-29 09:50:00,09:57:00,Analista 3,Cliente 3,Fila 13,Reprovado Politica,Perfil de Risco,09:00
+ID-1025,105.461.173-25,Usuario Exemplo 25,2026-03-21,2026-03-29 11:12:00,11:23:00,Analista 23,Cliente 4,Fila 3,Aprovado,Fluxo Normal,11:00
+ID-1026,459.701.404-69,Usuario Exemplo 26,2026-03-27,2026-03-29 11:00:00,11:20:00,Analista 11,Cliente 5,Fila 7,Reprovado Fraude,Documentação Irregular,11:00
+ID-1027,470.341.206-33,Usuario Exemplo 27,2026-03-19,2026-03-29 15:19:00,15:37:00,Analista 12,Cliente 6,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1028,769.498.246-63,Usuario Exemplo 28,2026-03-23,2026-03-29 17:17:00,17:40:00,Analista 14,Cliente 2,Fila 1,Reprovado Politica,Documentação Irregular,17:00
+ID-1029,953.108.551-34,Usuario Exemplo 29,2026-02-28,2026-03-29 15:47:00,16:09:00,Analista 4,Cliente 6,Fila 15,Reprovado Politica,Suspeita de Fraude,15:00
+ID-1030,226.705.924-72,Usuario Exemplo 30,2026-02-12,2026-03-29 17:16:00,17:44:00,Analista 17,Cliente 2,Fila 15,Reprovado Politica,Divergência Cadastral,17:00
+ID-1031,692.348.179-36,Usuario Exemplo 31,2026-03-01,2026-03-29 14:10:00,14:16:00,Analista 16,Cliente 4,Fila 12,Reprovado Fraude,Renda Não Comprovada,14:00
+ID-1032,133.380.438-30,Usuario Exemplo 32,2026-02-17,2026-03-29 10:47:00,11:28:00,Analista 21,Cliente 4,Fila 15,Aprovado,Fluxo Normal,10:00
+ID-1033,725.809.969-24,Usuario Exemplo 33,2026-01-28,2026-03-29 13:37:00,14:05:00,Analista 22,Cliente 6,Fila 3,Aprovado,Fluxo Normal,13:00
+ID-1034,948.192.560-20,Usuario Exemplo 34,2026-01-31,2026-03-29 15:36:00,16:08:00,Analista 7,Cliente 1,Fila 16,Aprovado,Fluxo Normal,15:00
+ID-1035,898.819.368-17,Usuario Exemplo 35,2026-03-02,2026-03-29 17:41:00,17:58:00,Analista 5,Cliente 4,Fila 2,Pendente,Aguardando Documento,17:00
+ID-1036,360.138.802-40,Usuario Exemplo 36,2026-02-09,2026-03-29 15:52:00,16:12:00,Analista 26,Cliente 5,Fila 16,Reprovado Fraude,Perfil de Risco,15:00
+ID-1037,618.764.522-11,Usuario Exemplo 37,2026-02-07,2026-03-29 16:55:00,17:39:00,Analista 20,Cliente 4,Fila 3,Aprovado,Fluxo Normal,16:00
+ID-1038,603.454.419-22,Usuario Exemplo 38,2026-03-07,2026-03-29 17:12:00,17:18:00,Analista 28,Cliente 1,Fila 17,Reprovado Fraude,Perfil de Risco,17:00
+ID-1039,241.127.252-50,Usuario Exemplo 39,2026-03-04,2026-03-29 15:16:00,15:22:00,Analista 28,Cliente 4,Fila 15,Reprovado Politica,Documentação Irregular,15:00
+ID-1040,406.602.223-73,Usuario Exemplo 40,2026-03-03,2026-03-29 13:00:00,13:15:00,Analista 3,Cliente 6,Fila 7,Reprovado Fraude,Suspeita de Fraude,13:00
+ID-1041,575.898.858-10,Usuario Exemplo 41,2026-03-26,2026-03-29 12:04:00,12:16:00,Analista 18,Cliente 1,Fila 2,Pendente,Aguardando Documento,12:00
+ID-1042,607.405.790-34,Usuario Exemplo 42,2026-02-02,2026-03-29 12:41:00,12:55:00,Analista 23,Cliente 2,Fila 14,Pendente,Aguardando Documento,12:00
+ID-1043,806.482.787-32,Usuario Exemplo 43,2026-02-19,2026-03-29 13:51:00,14:06:00,Analista 25,Cliente 6,Fila 6,Pendente,Aguardando Documento,13:00
+ID-1044,724.201.356-72,Usuario Exemplo 44,2026-03-14,2026-03-29 15:59:00,16:41:00,Analista 11,Cliente 2,Fila 14,Pendente,Aguardando Documento,15:00
+ID-1045,747.447.432-36,Usuario Exemplo 45,2026-02-05,2026-03-29 13:51:00,14:11:00,Analista 7,Cliente 3,Fila 10,Reprovado Fraude,Score Baixo,13:00
+ID-1046,602.575.859-50,Usuario Exemplo 46,2026-03-23,2026-03-29 14:30:00,15:00:00,Analista 10,Cliente 4,Fila 7,Reprovado Fraude,Perfil de Risco,14:00
+ID-1047,235.205.668-41,Usuario Exemplo 47,2026-03-07,2026-03-29 14:53:00,15:06:00,Analista 3,Cliente 3,Fila 16,Reprovado Fraude,Divergência Cadastral,14:00
+ID-1048,460.831.709-53,Usuario Exemplo 48,2026-01-30,2026-03-29 15:55:00,16:16:00,Analista 27,Cliente 4,Fila 4,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1049,342.294.361-16,Usuario Exemplo 49,2026-03-16,2026-03-29 14:06:00,14:21:00,Analista 7,Cliente 1,Fila 4,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1050,443.503.694-44,Usuario Exemplo 50,2026-03-02,2026-03-29 08:45:00,09:07:00,Analista 27,Cliente 6,Fila 6,Pendente,Aguardando Documento,08:00
+ID-1051,800.987.499-23,Usuario Exemplo 51,2026-02-02,2026-03-29 15:46:00,16:06:00,Analista 25,Cliente 2,Fila 18,Reprovado Fraude,Score Baixo,15:00
+ID-1052,170.751.666-88,Usuario Exemplo 52,2026-03-04,2026-03-29 15:09:00,15:21:00,Analista 7,Cliente 1,Fila 13,Pendente,Aguardando Documento,15:00
+ID-1053,657.849.938-82,Usuario Exemplo 53,2026-03-09,2026-03-29 16:19:00,16:46:00,Analista 17,Cliente 3,Fila 11,Reprovado Fraude,Score Baixo,16:00
+ID-1054,466.218.577-79,Usuario Exemplo 54,2026-03-15,2026-03-29 12:12:00,12:24:00,Analista 19,Cliente 5,Fila 2,Reprovado Fraude,Score Baixo,12:00
+ID-1055,713.591.212-40,Usuario Exemplo 55,2026-03-10,2026-03-29 15:54:00,16:09:00,Analista 12,Cliente 2,Fila 16,Aprovado,Fluxo Normal,15:00
+ID-1056,665.774.986-92,Usuario Exemplo 56,2026-03-04,2026-03-29 13:42:00,13:49:00,Analista 14,Cliente 6,Fila 13,Pendente,Aguardando Documento,13:00
+ID-1057,793.357.729-93,Usuario Exemplo 57,2026-03-23,2026-03-29 10:33:00,11:13:00,Analista 22,Cliente 4,Fila 16,Reprovado Politica,Renda Não Comprovada,10:00
+ID-1058,518.504.284-39,Usuario Exemplo 58,2026-03-01,2026-03-29 15:20:00,15:25:00,Analista 25,Cliente 5,Fila 4,Reprovado Politica,Documentação Irregular,15:00
+ID-1059,123.996.351-39,Usuario Exemplo 59,2026-02-17,2026-03-29 11:55:00,12:28:00,Analista 12,Cliente 2,Fila 1,Aprovado,Fluxo Normal,11:00
+ID-1060,290.936.536-77,Usuario Exemplo 60,2026-03-09,2026-03-29 11:14:00,11:28:00,Analista 27,Cliente 6,Fila 18,Aprovado,Fluxo Normal,11:00
+ID-1061,226.528.394-45,Usuario Exemplo 61,2026-03-27,2026-03-29 11:51:00,12:33:00,Analista 17,Cliente 5,Fila 14,Aprovado,Fluxo Normal,11:00
+ID-1062,443.849.438-22,Usuario Exemplo 62,2026-03-16,2026-03-29 17:45:00,18:24:00,Analista 11,Cliente 6,Fila 18,Aprovado,Fluxo Normal,17:00
+ID-1063,251.548.995-43,Usuario Exemplo 63,2026-02-24,2026-03-29 08:29:00,09:00:00,Analista 26,Cliente 4,Fila 6,Aprovado,Fluxo Normal,08:00
+ID-1064,880.655.217-60,Usuario Exemplo 64,2026-02-11,2026-03-29 17:37:00,18:15:00,Analista 3,Cliente 2,Fila 16,Aprovado,Fluxo Normal,17:00
+ID-1065,920.385.834-57,Usuario Exemplo 65,2026-02-15,2026-03-29 08:36:00,08:45:00,Analista 12,Cliente 2,Fila 17,Reprovado Fraude,Score Baixo,08:00
+ID-1066,984.657.883-93,Usuario Exemplo 66,2026-02-25,2026-03-29 10:18:00,10:49:00,Analista 9,Cliente 6,Fila 14,Aprovado,Fluxo Normal,10:00
+ID-1067,436.256.232-98,Usuario Exemplo 67,2026-02-13,2026-03-29 12:05:00,12:12:00,Analista 19,Cliente 2,Fila 17,Aprovado,Fluxo Normal,12:00
+ID-1068,527.436.452-59,Usuario Exemplo 68,2026-03-27,2026-03-29 09:38:00,10:01:00,Analista 14,Cliente 2,Fila 11,Reprovado Fraude,Perfil de Risco,09:00
+ID-1069,916.872.297-77,Usuario Exemplo 69,2026-02-28,2026-03-29 10:29:00,10:57:00,Analista 27,Cliente 2,Fila 1,Pendente,Aguardando Documento,10:00
+ID-1070,881.619.436-87,Usuario Exemplo 70,2026-02-03,2026-03-29 17:24:00,17:58:00,Analista 27,Cliente 3,Fila 12,Reprovado Politica,Renda Não Comprovada,17:00
+ID-1071,339.945.134-46,Usuario Exemplo 71,2026-03-06,2026-03-29 11:39:00,12:20:00,Analista 11,Cliente 2,Fila 8,Aprovado,Fluxo Normal,11:00
+ID-1072,710.930.795-54,Usuario Exemplo 72,2026-03-07,2026-03-29 09:05:00,09:50:00,Analista 25,Cliente 4,Fila 6,Reprovado Politica,Score Baixo,09:00
+ID-1073,792.534.311-86,Usuario Exemplo 73,2026-02-13,2026-03-29 17:17:00,17:33:00,Analista 6,Cliente 1,Fila 11,Pendente,Aguardando Documento,17:00
+ID-1074,941.213.348-45,Usuario Exemplo 74,2026-03-10,2026-03-29 08:13:00,08:35:00,Analista 21,Cliente 6,Fila 3,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1075,667.805.512-31,Usuario Exemplo 75,2026-02-11,2026-03-29 09:43:00,10:00:00,Analista 21,Cliente 4,Fila 15,Reprovado Fraude,Renda Não Comprovada,09:00
+ID-1076,891.554.223-20,Usuario Exemplo 76,2026-02-15,2026-03-29 14:56:00,15:20:00,Analista 20,Cliente 5,Fila 17,Pendente,Aguardando Documento,14:00
+ID-1077,890.614.245-97,Usuario Exemplo 77,2026-02-07,2026-03-29 10:14:00,10:24:00,Analista 1,Cliente 3,Fila 6,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1078,506.496.175-97,Usuario Exemplo 78,2026-03-13,2026-03-29 12:16:00,12:33:00,Analista 18,Cliente 5,Fila 2,Reprovado Fraude,Renda Não Comprovada,12:00
+ID-1079,859.563.915-23,Usuario Exemplo 79,2026-02-24,2026-03-29 10:58:00,11:43:00,Analista 8,Cliente 4,Fila 17,Reprovado Politica,Suspeita de Fraude,10:00
+ID-1080,535.491.566-14,Usuario Exemplo 80,2026-01-28,2026-03-29 12:23:00,12:34:00,Analista 18,Cliente 5,Fila 9,Reprovado Fraude,Renda Não Comprovada,12:00
+ID-1081,903.711.444-62,Usuario Exemplo 81,2026-03-16,2026-03-29 12:51:00,13:15:00,Analista 16,Cliente 3,Fila 1,Pendente,Aguardando Documento,12:00
+ID-1082,890.844.883-79,Usuario Exemplo 82,2026-02-27,2026-03-29 08:24:00,09:00:00,Analista 10,Cliente 3,Fila 2,Reprovado Fraude,Divergência Cadastral,08:00
+ID-1083,869.339.385-34,Usuario Exemplo 83,2026-03-20,2026-03-29 13:59:00,14:28:00,Analista 23,Cliente 6,Fila 16,Aprovado,Fluxo Normal,13:00
+ID-1084,439.503.909-77,Usuario Exemplo 84,2026-01-31,2026-03-29 12:29:00,13:04:00,Analista 14,Cliente 2,Fila 17,Pendente,Aguardando Documento,12:00
+ID-1085,353.317.185-93,Usuario Exemplo 85,2026-02-20,2026-03-29 15:51:00,16:35:00,Analista 12,Cliente 4,Fila 13,Reprovado Politica,Divergência Cadastral,15:00
+ID-1086,638.646.160-70,Usuario Exemplo 86,2026-02-24,2026-03-29 10:45:00,10:54:00,Analista 2,Cliente 1,Fila 13,Pendente,Aguardando Documento,10:00
+ID-1087,931.709.788-14,Usuario Exemplo 87,2026-01-29,2026-03-29 11:19:00,11:51:00,Analista 21,Cliente 6,Fila 1,Aprovado,Fluxo Normal,11:00
+ID-1088,247.282.316-54,Usuario Exemplo 88,2026-02-17,2026-03-29 08:21:00,08:55:00,Analista 4,Cliente 4,Fila 2,Reprovado Fraude,Suspeita de Fraude,08:00
+ID-1089,400.617.497-33,Usuario Exemplo 89,2026-02-13,2026-03-29 10:56:00,11:04:00,Analista 25,Cliente 4,Fila 11,Pendente,Aguardando Documento,10:00
+ID-1090,962.987.788-86,Usuario Exemplo 90,2026-02-17,2026-03-29 15:21:00,15:26:00,Analista 9,Cliente 5,Fila 17,Reprovado Fraude,Documentação Irregular,15:00
+ID-1091,776.757.203-83,Usuario Exemplo 91,2026-02-23,2026-03-29 08:53:00,09:29:00,Analista 26,Cliente 6,Fila 14,Reprovado Fraude,Renda Não Comprovada,08:00
+ID-1092,571.306.549-49,Usuario Exemplo 92,2026-01-27,2026-03-29 08:10:00,08:21:00,Analista 28,Cliente 2,Fila 5,Reprovado Fraude,Divergência Cadastral,08:00
+ID-1093,525.303.287-31,Usuario Exemplo 93,2026-02-22,2026-03-29 10:37:00,10:51:00,Analista 20,Cliente 4,Fila 11,Aprovado,Fluxo Normal,10:00
+ID-1094,604.685.257-65,Usuario Exemplo 94,2026-02-01,2026-03-29 13:02:00,13:33:00,Analista 8,Cliente 1,Fila 6,Pendente,Aguardando Documento,13:00
+ID-1095,798.132.200-98,Usuario Exemplo 95,2026-02-11,2026-03-29 17:30:00,18:00:00,Analista 12,Cliente 5,Fila 4,Aprovado,Fluxo Normal,17:00
+ID-1096,888.695.329-39,Usuario Exemplo 96,2026-02-05,2026-03-29 17:41:00,18:12:00,Analista 18,Cliente 5,Fila 17,Reprovado Politica,Documentação Irregular,17:00
+ID-1097,257.200.680-55,Usuario Exemplo 97,2026-02-01,2026-03-29 10:05:00,10:43:00,Analista 20,Cliente 5,Fila 15,Reprovado Politica,Renda Não Comprovada,10:00
+ID-1098,475.216.250-53,Usuario Exemplo 98,2026-03-21,2026-03-29 12:02:00,12:34:00,Analista 13,Cliente 2,Fila 3,Aprovado,Fluxo Normal,12:00
+ID-1099,133.822.298-94,Usuario Exemplo 99,2026-02-27,2026-03-29 09:44:00,09:54:00,Analista 19,Cliente 5,Fila 2,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1100,263.264.376-22,Usuario Exemplo 100,2026-03-21,2026-03-29 17:20:00,18:05:00,Analista 21,Cliente 5,Fila 3,Pendente,Aguardando Documento,17:00
+ID-1101,948.445.528-13,Usuario Exemplo 101,2026-02-11,2026-03-29 10:27:00,10:33:00,Analista 25,Cliente 6,Fila 16,Aprovado,Fluxo Normal,10:00
+ID-1102,145.275.236-66,Usuario Exemplo 102,2026-02-09,2026-03-29 13:24:00,13:29:00,Analista 29,Cliente 5,Fila 10,Aprovado,Fluxo Normal,13:00
+ID-1103,927.316.287-23,Usuario Exemplo 103,2026-03-27,2026-03-29 11:32:00,11:56:00,Analista 21,Cliente 5,Fila 5,Pendente,Aguardando Documento,11:00
+ID-1104,803.962.387-24,Usuario Exemplo 104,2026-03-22,2026-03-29 12:52:00,13:06:00,Analista 26,Cliente 2,Fila 10,Reprovado Politica,Renda Não Comprovada,12:00
+ID-1105,559.556.169-76,Usuario Exemplo 105,2026-02-12,2026-03-29 14:41:00,14:50:00,Analista 26,Cliente 2,Fila 17,Pendente,Aguardando Documento,14:00
+ID-1106,162.192.724-45,Usuario Exemplo 106,2026-03-02,2026-03-29 08:56:00,09:18:00,Analista 19,Cliente 6,Fila 16,Pendente,Aguardando Documento,08:00
+ID-1107,791.386.181-22,Usuario Exemplo 107,2026-01-28,2026-03-29 13:27:00,13:35:00,Analista 16,Cliente 4,Fila 5,Aprovado,Fluxo Normal,13:00
+ID-1108,795.185.986-56,Usuario Exemplo 108,2026-02-17,2026-03-29 16:17:00,17:02:00,Analista 11,Cliente 1,Fila 11,Reprovado Politica,Divergência Cadastral,16:00
+ID-1109,481.524.187-43,Usuario Exemplo 109,2026-02-11,2026-03-29 08:46:00,09:07:00,Analista 6,Cliente 2,Fila 3,Reprovado Fraude,Divergência Cadastral,08:00
+ID-1110,360.495.567-65,Usuario Exemplo 110,2026-02-14,2026-03-29 09:39:00,10:01:00,Analista 30,Cliente 6,Fila 8,Aprovado,Fluxo Normal,09:00
+ID-1111,587.248.366-35,Usuario Exemplo 111,2026-03-05,2026-03-29 16:13:00,16:41:00,Analista 29,Cliente 6,Fila 15,Reprovado Politica,Divergência Cadastral,16:00
+ID-1112,368.759.764-74,Usuario Exemplo 112,2026-02-21,2026-03-29 10:02:00,10:20:00,Analista 27,Cliente 6,Fila 4,Reprovado Politica,Perfil de Risco,10:00
+ID-1113,580.997.454-49,Usuario Exemplo 113,2026-02-14,2026-03-29 12:43:00,13:20:00,Analista 8,Cliente 1,Fila 10,Pendente,Aguardando Documento,12:00
+ID-1114,916.500.474-57,Usuario Exemplo 114,2026-02-25,2026-03-29 09:33:00,09:49:00,Analista 1,Cliente 6,Fila 1,Reprovado Fraude,Renda Não Comprovada,09:00
+ID-1115,390.270.555-42,Usuario Exemplo 115,2026-02-14,2026-03-29 16:43:00,16:53:00,Analista 2,Cliente 6,Fila 13,Aprovado,Fluxo Normal,16:00
+ID-1116,631.353.320-11,Usuario Exemplo 116,2026-03-24,2026-03-29 10:19:00,10:34:00,Analista 25,Cliente 3,Fila 8,Aprovado,Fluxo Normal,10:00
+ID-1117,559.810.355-10,Usuario Exemplo 117,2026-03-17,2026-03-29 09:39:00,10:14:00,Analista 10,Cliente 4,Fila 11,Aprovado,Fluxo Normal,09:00
+ID-1118,616.660.544-48,Usuario Exemplo 118,2026-03-25,2026-03-29 16:26:00,16:53:00,Analista 18,Cliente 3,Fila 6,Reprovado Fraude,Perfil de Risco,16:00
+ID-1119,238.155.667-44,Usuario Exemplo 119,2026-01-30,2026-03-29 11:15:00,11:43:00,Analista 12,Cliente 3,Fila 9,Reprovado Fraude,Divergência Cadastral,11:00
+ID-1120,973.357.589-80,Usuario Exemplo 120,2026-02-05,2026-03-29 13:51:00,14:19:00,Analista 17,Cliente 3,Fila 3,Aprovado,Fluxo Normal,13:00
+ID-1121,331.387.360-69,Usuario Exemplo 121,2026-03-16,2026-03-29 12:29:00,12:47:00,Analista 1,Cliente 4,Fila 15,Reprovado Fraude,Score Baixo,12:00
+ID-1122,760.229.397-13,Usuario Exemplo 122,2026-02-22,2026-03-29 12:47:00,13:05:00,Analista 1,Cliente 2,Fila 8,Aprovado,Fluxo Normal,12:00
+ID-1123,950.957.668-10,Usuario Exemplo 123,2026-03-07,2026-03-29 09:56:00,10:21:00,Analista 4,Cliente 5,Fila 10,Aprovado,Fluxo Normal,09:00
+ID-1124,637.207.351-46,Usuario Exemplo 124,2026-03-03,2026-03-29 08:47:00,08:54:00,Analista 22,Cliente 2,Fila 11,Aprovado,Fluxo Normal,08:00
+ID-1125,112.880.514-70,Usuario Exemplo 125,2026-03-21,2026-03-29 14:35:00,15:06:00,Analista 16,Cliente 5,Fila 18,Pendente,Aguardando Documento,14:00
+ID-1126,654.564.531-84,Usuario Exemplo 126,2026-03-04,2026-03-29 12:54:00,13:35:00,Analista 11,Cliente 2,Fila 7,Reprovado Politica,Perfil de Risco,12:00
+ID-1127,487.710.351-45,Usuario Exemplo 127,2026-03-18,2026-03-29 11:24:00,11:48:00,Analista 16,Cliente 6,Fila 8,Aprovado,Fluxo Normal,11:00
+ID-1128,219.124.629-76,Usuario Exemplo 128,2026-02-11,2026-03-29 14:04:00,14:39:00,Analista 18,Cliente 6,Fila 13,Aprovado,Fluxo Normal,14:00
+ID-1129,806.915.602-99,Usuario Exemplo 129,2026-03-02,2026-03-29 16:07:00,16:30:00,Analista 8,Cliente 2,Fila 14,Aprovado,Fluxo Normal,16:00
+ID-1130,512.897.956-42,Usuario Exemplo 130,2026-03-22,2026-03-29 11:07:00,11:22:00,Analista 14,Cliente 6,Fila 4,Pendente,Aguardando Documento,11:00
+ID-1131,307.852.773-10,Usuario Exemplo 131,2026-02-27,2026-03-29 17:25:00,17:44:00,Analista 14,Cliente 4,Fila 4,Reprovado Fraude,Perfil de Risco,17:00
+ID-1132,430.319.225-52,Usuario Exemplo 132,2026-02-22,2026-03-29 15:32:00,15:40:00,Analista 13,Cliente 2,Fila 7,Reprovado Fraude,Renda Não Comprovada,15:00
+ID-1133,443.435.444-78,Usuario Exemplo 133,2026-03-20,2026-03-29 14:05:00,14:27:00,Analista 30,Cliente 3,Fila 11,Pendente,Aguardando Documento,14:00
+ID-1134,646.928.931-46,Usuario Exemplo 134,2026-01-28,2026-03-29 14:57:00,15:24:00,Analista 29,Cliente 3,Fila 17,Pendente,Aguardando Documento,14:00
+ID-1135,842.337.100-90,Usuario Exemplo 135,2026-03-18,2026-03-29 08:39:00,08:50:00,Analista 26,Cliente 6,Fila 13,Aprovado,Fluxo Normal,08:00
+ID-1136,765.113.735-25,Usuario Exemplo 136,2026-03-01,2026-03-29 16:02:00,16:43:00,Analista 28,Cliente 4,Fila 6,Reprovado Politica,Renda Não Comprovada,16:00
+ID-1137,224.972.765-62,Usuario Exemplo 137,2026-01-31,2026-03-29 12:22:00,13:07:00,Analista 8,Cliente 5,Fila 9,Aprovado,Fluxo Normal,12:00
+ID-1138,435.162.686-21,Usuario Exemplo 138,2026-03-29,2026-03-29 09:26:00,09:55:00,Analista 17,Cliente 6,Fila 14,Reprovado Politica,Renda Não Comprovada,09:00
+ID-1139,514.737.374-40,Usuario Exemplo 139,2026-03-10,2026-03-29 10:55:00,11:38:00,Analista 7,Cliente 2,Fila 2,Reprovado Politica,Score Baixo,10:00
+ID-1140,454.435.844-66,Usuario Exemplo 140,2026-02-04,2026-03-29 12:02:00,12:39:00,Analista 12,Cliente 3,Fila 16,Aprovado,Fluxo Normal,12:00
+ID-1141,265.873.893-17,Usuario Exemplo 141,2026-02-23,2026-03-29 12:24:00,13:09:00,Analista 20,Cliente 2,Fila 4,Pendente,Aguardando Documento,12:00
+ID-1142,318.298.989-25,Usuario Exemplo 142,2026-03-25,2026-03-29 08:20:00,08:44:00,Analista 11,Cliente 3,Fila 14,Aprovado,Fluxo Normal,08:00
+ID-1143,446.857.907-17,Usuario Exemplo 143,2026-01-31,2026-03-29 11:36:00,12:12:00,Analista 25,Cliente 3,Fila 6,Reprovado Politica,Suspeita de Fraude,11:00
+ID-1144,413.802.912-21,Usuario Exemplo 144,2026-03-09,2026-03-29 12:41:00,13:15:00,Analista 11,Cliente 6,Fila 17,Aprovado,Fluxo Normal,12:00
+ID-1145,173.647.184-14,Usuario Exemplo 145,2026-03-15,2026-03-29 08:06:00,08:19:00,Analista 6,Cliente 2,Fila 6,Reprovado Fraude,Perfil de Risco,08:00
+ID-1146,401.157.604-49,Usuario Exemplo 146,2026-03-07,2026-03-29 17:17:00,17:39:00,Analista 30,Cliente 2,Fila 15,Reprovado Politica,Documentação Irregular,17:00
+ID-1147,243.481.875-87,Usuario Exemplo 147,2026-01-28,2026-03-29 17:07:00,17:33:00,Analista 22,Cliente 3,Fila 12,Pendente,Aguardando Documento,17:00
+ID-1148,845.363.776-68,Usuario Exemplo 148,2026-02-01,2026-03-29 15:58:00,16:18:00,Analista 12,Cliente 3,Fila 12,Aprovado,Fluxo Normal,15:00
+ID-1149,238.851.493-11,Usuario Exemplo 149,2026-02-05,2026-03-29 14:09:00,14:29:00,Analista 3,Cliente 4,Fila 18,Reprovado Politica,Divergência Cadastral,14:00
+ID-1150,999.133.120-69,Usuario Exemplo 150,2026-02-27,2026-03-29 17:27:00,17:57:00,Analista 25,Cliente 2,Fila 17,Reprovado Politica,Renda Não Comprovada,17:00
+ID-1151,959.206.513-25,Usuario Exemplo 151,2026-03-05,2026-03-29 17:47:00,18:09:00,Analista 13,Cliente 1,Fila 1,Reprovado Politica,Divergência Cadastral,17:00
+ID-1152,149.299.203-37,Usuario Exemplo 152,2026-03-25,2026-03-29 10:23:00,10:51:00,Analista 10,Cliente 6,Fila 13,Pendente,Aguardando Documento,10:00
+ID-1153,377.769.133-99,Usuario Exemplo 153,2026-02-05,2026-03-29 13:58:00,14:13:00,Analista 18,Cliente 5,Fila 1,Reprovado Politica,Documentação Irregular,13:00
+ID-1154,229.863.175-57,Usuario Exemplo 154,2026-01-30,2026-03-29 16:21:00,16:27:00,Analista 2,Cliente 2,Fila 2,Reprovado Politica,Documentação Irregular,16:00
+ID-1155,733.232.177-54,Usuario Exemplo 155,2026-02-23,2026-03-29 09:49:00,10:22:00,Analista 20,Cliente 6,Fila 14,Reprovado Fraude,Score Baixo,09:00
+ID-1156,712.875.159-54,Usuario Exemplo 156,2026-03-17,2026-03-29 14:19:00,15:02:00,Analista 2,Cliente 2,Fila 18,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1157,910.214.300-46,Usuario Exemplo 157,2026-03-05,2026-03-29 16:40:00,17:01:00,Analista 27,Cliente 1,Fila 15,Reprovado Fraude,Documentação Irregular,16:00
+ID-1158,104.121.786-94,Usuario Exemplo 158,2026-02-23,2026-03-29 11:06:00,11:11:00,Analista 17,Cliente 4,Fila 3,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1159,918.830.701-64,Usuario Exemplo 159,2026-03-23,2026-03-29 09:06:00,09:44:00,Analista 17,Cliente 1,Fila 15,Reprovado Fraude,Documentação Irregular,09:00
+ID-1160,816.347.169-65,Usuario Exemplo 160,2026-03-13,2026-03-29 08:36:00,08:56:00,Analista 21,Cliente 3,Fila 7,Reprovado Politica,Perfil de Risco,08:00
+ID-1161,500.313.626-90,Usuario Exemplo 161,2026-03-17,2026-03-29 17:01:00,17:46:00,Analista 4,Cliente 4,Fila 18,Reprovado Fraude,Perfil de Risco,17:00
+ID-1162,572.335.859-74,Usuario Exemplo 162,2026-02-06,2026-03-29 17:40:00,18:18:00,Analista 7,Cliente 3,Fila 2,Reprovado Politica,Divergência Cadastral,17:00
+ID-1163,828.307.982-29,Usuario Exemplo 163,2026-02-14,2026-03-29 09:59:00,10:14:00,Analista 10,Cliente 4,Fila 1,Aprovado,Fluxo Normal,09:00
+ID-1164,957.701.261-89,Usuario Exemplo 164,2026-03-02,2026-03-29 10:26:00,10:42:00,Analista 16,Cliente 1,Fila 6,Reprovado Fraude,Perfil de Risco,10:00
+ID-1165,376.418.180-37,Usuario Exemplo 165,2026-03-18,2026-03-29 08:15:00,08:21:00,Analista 16,Cliente 4,Fila 9,Aprovado,Fluxo Normal,08:00
+ID-1166,754.648.541-21,Usuario Exemplo 166,2026-02-02,2026-03-29 12:51:00,13:18:00,Analista 3,Cliente 5,Fila 14,Pendente,Aguardando Documento,12:00
+ID-1167,196.295.592-41,Usuario Exemplo 167,2026-03-13,2026-03-29 08:22:00,08:36:00,Analista 29,Cliente 1,Fila 14,Pendente,Aguardando Documento,08:00
+ID-1168,422.490.872-34,Usuario Exemplo 168,2026-02-26,2026-03-29 10:51:00,10:59:00,Analista 25,Cliente 2,Fila 10,Aprovado,Fluxo Normal,10:00
+ID-1169,677.214.112-23,Usuario Exemplo 169,2026-03-10,2026-03-29 17:47:00,18:01:00,Analista 21,Cliente 1,Fila 8,Reprovado Politica,Perfil de Risco,17:00
+ID-1170,382.919.149-96,Usuario Exemplo 170,2026-03-16,2026-03-29 12:28:00,12:41:00,Analista 11,Cliente 3,Fila 9,Aprovado,Fluxo Normal,12:00
+ID-1171,470.162.376-18,Usuario Exemplo 171,2026-02-09,2026-03-29 11:24:00,11:45:00,Analista 20,Cliente 4,Fila 12,Reprovado Politica,Suspeita de Fraude,11:00
+ID-1172,413.353.459-29,Usuario Exemplo 172,2026-02-20,2026-03-29 17:38:00,17:44:00,Analista 2,Cliente 6,Fila 3,Pendente,Aguardando Documento,17:00
+ID-1173,806.246.805-81,Usuario Exemplo 173,2026-03-26,2026-03-29 10:43:00,10:59:00,Analista 2,Cliente 2,Fila 3,Pendente,Aguardando Documento,10:00
+ID-1174,908.560.366-88,Usuario Exemplo 174,2026-03-19,2026-03-29 08:02:00,08:22:00,Analista 16,Cliente 5,Fila 8,Pendente,Aguardando Documento,08:00
+ID-1175,630.426.818-40,Usuario Exemplo 175,2026-02-07,2026-03-29 09:22:00,09:53:00,Analista 6,Cliente 3,Fila 1,Reprovado Politica,Divergência Cadastral,09:00
+ID-1176,497.593.595-11,Usuario Exemplo 176,2026-03-17,2026-03-29 14:21:00,14:56:00,Analista 19,Cliente 2,Fila 6,Reprovado Fraude,Divergência Cadastral,14:00
+ID-1177,950.153.954-77,Usuario Exemplo 177,2026-03-16,2026-03-29 10:06:00,10:34:00,Analista 5,Cliente 5,Fila 17,Pendente,Aguardando Documento,10:00
+ID-1178,244.713.800-65,Usuario Exemplo 178,2026-03-02,2026-03-29 11:52:00,12:16:00,Analista 5,Cliente 3,Fila 7,Pendente,Aguardando Documento,11:00
+ID-1179,778.518.705-33,Usuario Exemplo 179,2026-02-27,2026-03-29 13:04:00,13:23:00,Analista 3,Cliente 2,Fila 15,Pendente,Aguardando Documento,13:00
+ID-1180,165.891.913-56,Usuario Exemplo 180,2026-02-12,2026-03-29 16:27:00,17:12:00,Analista 27,Cliente 5,Fila 8,Reprovado Fraude,Documentação Irregular,16:00
+ID-1181,934.105.999-95,Usuario Exemplo 181,2026-02-17,2026-03-29 13:56:00,14:25:00,Analista 16,Cliente 2,Fila 9,Pendente,Aguardando Documento,13:00
+ID-1182,414.981.144-32,Usuario Exemplo 182,2026-01-29,2026-03-29 11:38:00,12:15:00,Analista 13,Cliente 4,Fila 1,Reprovado Politica,Divergência Cadastral,11:00
+ID-1183,996.500.628-53,Usuario Exemplo 183,2026-02-18,2026-03-29 08:20:00,08:39:00,Analista 14,Cliente 6,Fila 12,Reprovado Politica,Score Baixo,08:00
+ID-1184,530.436.151-98,Usuario Exemplo 184,2026-02-24,2026-03-29 17:44:00,18:16:00,Analista 4,Cliente 4,Fila 11,Pendente,Aguardando Documento,17:00
+ID-1185,592.701.662-76,Usuario Exemplo 185,2026-02-21,2026-03-29 08:53:00,09:37:00,Analista 24,Cliente 5,Fila 3,Reprovado Fraude,Score Baixo,08:00
+ID-1186,637.618.811-44,Usuario Exemplo 186,2026-02-03,2026-03-29 12:51:00,13:00:00,Analista 10,Cliente 3,Fila 2,Reprovado Politica,Divergência Cadastral,12:00
+ID-1187,124.173.317-36,Usuario Exemplo 187,2026-02-07,2026-03-29 15:54:00,16:02:00,Analista 5,Cliente 4,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1188,490.472.294-26,Usuario Exemplo 188,2026-03-22,2026-03-29 09:41:00,09:51:00,Analista 16,Cliente 2,Fila 17,Reprovado Politica,Renda Não Comprovada,09:00
+ID-1189,354.427.912-39,Usuario Exemplo 189,2026-03-22,2026-03-29 13:18:00,13:59:00,Analista 30,Cliente 1,Fila 3,Reprovado Fraude,Suspeita de Fraude,13:00
+ID-1190,380.364.640-46,Usuario Exemplo 190,2026-02-04,2026-03-29 11:05:00,11:23:00,Analista 24,Cliente 1,Fila 17,Reprovado Politica,Suspeita de Fraude,11:00
+ID-1191,675.128.147-52,Usuario Exemplo 191,2026-03-12,2026-03-29 15:34:00,16:12:00,Analista 24,Cliente 2,Fila 2,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1192,543.203.626-55,Usuario Exemplo 192,2026-03-14,2026-03-29 15:30:00,15:43:00,Analista 29,Cliente 4,Fila 6,Reprovado Fraude,Perfil de Risco,15:00
+ID-1193,215.830.782-29,Usuario Exemplo 193,2026-03-23,2026-03-29 16:21:00,16:53:00,Analista 23,Cliente 4,Fila 6,Pendente,Aguardando Documento,16:00
+ID-1194,131.819.277-50,Usuario Exemplo 194,2026-02-25,2026-03-29 10:39:00,10:57:00,Analista 2,Cliente 4,Fila 6,Reprovado Politica,Renda Não Comprovada,10:00
+ID-1195,780.758.278-86,Usuario Exemplo 195,2026-02-11,2026-03-29 13:55:00,14:14:00,Analista 11,Cliente 3,Fila 5,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1196,652.985.804-44,Usuario Exemplo 196,2026-03-14,2026-03-29 12:53:00,13:23:00,Analista 10,Cliente 6,Fila 16,Pendente,Aguardando Documento,12:00
+ID-1197,880.276.440-82,Usuario Exemplo 197,2026-03-21,2026-03-29 15:21:00,15:52:00,Analista 5,Cliente 5,Fila 18,Aprovado,Fluxo Normal,15:00
+ID-1198,926.631.720-69,Usuario Exemplo 198,2026-02-03,2026-03-29 11:40:00,11:53:00,Analista 20,Cliente 4,Fila 18,Reprovado Fraude,Score Baixo,11:00
+ID-1199,344.382.211-90,Usuario Exemplo 199,2026-03-16,2026-03-29 09:30:00,10:06:00,Analista 5,Cliente 1,Fila 15,Pendente,Aguardando Documento,09:00
+ID-1200,469.676.880-98,Usuario Exemplo 200,2026-02-18,2026-03-29 17:04:00,17:29:00,Analista 30,Cliente 3,Fila 8,Reprovado Politica,Divergência Cadastral,17:00
+ID-1201,645.604.334-86,Usuario Exemplo 201,2026-02-08,2026-03-29 15:10:00,15:50:00,Analista 7,Cliente 6,Fila 13,Aprovado,Fluxo Normal,15:00
+ID-1202,604.854.329-91,Usuario Exemplo 202,2026-03-13,2026-03-29 09:44:00,10:14:00,Analista 7,Cliente 4,Fila 6,Reprovado Fraude,Score Baixo,09:00
+ID-1203,356.503.346-42,Usuario Exemplo 203,2026-03-02,2026-03-29 08:28:00,08:33:00,Analista 3,Cliente 2,Fila 5,Reprovado Fraude,Renda Não Comprovada,08:00
+ID-1204,941.392.132-34,Usuario Exemplo 204,2026-03-29,2026-03-29 17:39:00,17:58:00,Analista 21,Cliente 6,Fila 17,Reprovado Politica,Perfil de Risco,17:00
+ID-1205,612.335.635-57,Usuario Exemplo 205,2026-03-16,2026-03-29 13:23:00,13:48:00,Analista 1,Cliente 1,Fila 15,Reprovado Fraude,Documentação Irregular,13:00
+ID-1206,464.114.648-46,Usuario Exemplo 206,2026-02-20,2026-03-29 15:02:00,15:38:00,Analista 25,Cliente 4,Fila 5,Reprovado Fraude,Divergência Cadastral,15:00
+ID-1207,448.603.656-61,Usuario Exemplo 207,2026-02-17,2026-03-29 12:56:00,13:20:00,Analista 21,Cliente 2,Fila 16,Aprovado,Fluxo Normal,12:00
+ID-1208,120.191.848-14,Usuario Exemplo 208,2026-02-23,2026-03-29 17:14:00,17:37:00,Analista 10,Cliente 1,Fila 15,Pendente,Aguardando Documento,17:00
+ID-1209,642.620.791-94,Usuario Exemplo 209,2026-03-26,2026-03-29 10:16:00,10:24:00,Analista 20,Cliente 3,Fila 9,Reprovado Fraude,Score Baixo,10:00
+ID-1210,657.102.821-57,Usuario Exemplo 210,2026-03-20,2026-03-29 17:39:00,17:46:00,Analista 5,Cliente 6,Fila 5,Pendente,Aguardando Documento,17:00
+ID-1211,495.592.549-93,Usuario Exemplo 211,2026-02-02,2026-03-29 12:33:00,12:47:00,Analista 10,Cliente 5,Fila 14,Reprovado Politica,Suspeita de Fraude,12:00
+ID-1212,608.284.501-78,Usuario Exemplo 212,2026-02-21,2026-03-29 15:38:00,15:51:00,Analista 1,Cliente 3,Fila 5,Reprovado Politica,Divergência Cadastral,15:00
+ID-1213,270.949.996-51,Usuario Exemplo 213,2026-03-12,2026-03-29 09:20:00,09:41:00,Analista 4,Cliente 2,Fila 5,Aprovado,Fluxo Normal,09:00
+ID-1214,324.405.946-45,Usuario Exemplo 214,2026-03-25,2026-03-29 16:29:00,16:57:00,Analista 22,Cliente 3,Fila 3,Reprovado Politica,Perfil de Risco,16:00
+ID-1215,303.643.415-64,Usuario Exemplo 215,2026-02-17,2026-03-29 14:23:00,14:51:00,Analista 28,Cliente 3,Fila 17,Reprovado Politica,Perfil de Risco,14:00
+ID-1216,108.636.632-89,Usuario Exemplo 216,2026-03-07,2026-03-29 16:12:00,16:34:00,Analista 10,Cliente 4,Fila 3,Reprovado Politica,Renda Não Comprovada,16:00
+ID-1217,141.886.136-64,Usuario Exemplo 217,2026-02-07,2026-03-29 17:55:00,18:25:00,Analista 18,Cliente 5,Fila 15,Aprovado,Fluxo Normal,17:00
+ID-1218,686.655.409-84,Usuario Exemplo 218,2026-02-20,2026-03-29 08:23:00,08:42:00,Analista 5,Cliente 1,Fila 1,Aprovado,Fluxo Normal,08:00
+ID-1219,876.947.771-73,Usuario Exemplo 219,2026-02-17,2026-03-29 12:46:00,13:14:00,Analista 4,Cliente 2,Fila 8,Pendente,Aguardando Documento,12:00
+ID-1220,744.676.913-39,Usuario Exemplo 220,2026-03-29,2026-03-29 14:37:00,14:52:00,Analista 13,Cliente 3,Fila 6,Aprovado,Fluxo Normal,14:00
+ID-1221,763.396.894-77,Usuario Exemplo 221,2026-03-14,2026-03-29 13:59:00,14:23:00,Analista 14,Cliente 1,Fila 8,Aprovado,Fluxo Normal,13:00
+ID-1222,319.627.650-48,Usuario Exemplo 222,2026-02-24,2026-03-29 10:39:00,10:44:00,Analista 10,Cliente 4,Fila 8,Pendente,Aguardando Documento,10:00
+ID-1223,392.250.374-80,Usuario Exemplo 223,2026-01-27,2026-03-29 17:49:00,18:13:00,Analista 21,Cliente 2,Fila 6,Aprovado,Fluxo Normal,17:00
+ID-1224,349.615.525-38,Usuario Exemplo 224,2026-03-05,2026-03-29 16:09:00,16:52:00,Analista 14,Cliente 6,Fila 7,Aprovado,Fluxo Normal,16:00
+ID-1225,292.449.538-12,Usuario Exemplo 225,2026-03-27,2026-03-29 10:23:00,10:31:00,Analista 28,Cliente 2,Fila 17,Pendente,Aguardando Documento,10:00
+ID-1226,652.597.262-49,Usuario Exemplo 226,2026-03-21,2026-03-29 09:19:00,09:54:00,Analista 18,Cliente 6,Fila 8,Aprovado,Fluxo Normal,09:00
+ID-1227,112.894.104-69,Usuario Exemplo 227,2026-02-22,2026-03-29 10:35:00,11:12:00,Analista 5,Cliente 5,Fila 8,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1228,779.411.431-62,Usuario Exemplo 228,2026-01-30,2026-03-29 17:57:00,18:16:00,Analista 19,Cliente 2,Fila 12,Aprovado,Fluxo Normal,17:00
+ID-1229,466.291.603-61,Usuario Exemplo 229,2026-02-25,2026-03-29 14:10:00,14:46:00,Analista 27,Cliente 6,Fila 1,Pendente,Aguardando Documento,14:00
+ID-1230,292.798.705-68,Usuario Exemplo 230,2026-02-11,2026-03-29 12:38:00,13:20:00,Analista 16,Cliente 2,Fila 16,Reprovado Fraude,Renda Não Comprovada,12:00
+ID-1231,448.466.339-62,Usuario Exemplo 231,2026-01-31,2026-03-29 15:39:00,15:44:00,Analista 14,Cliente 2,Fila 1,Reprovado Fraude,Score Baixo,15:00
+ID-1232,978.168.200-79,Usuario Exemplo 232,2026-03-24,2026-03-29 09:03:00,09:40:00,Analista 20,Cliente 4,Fila 2,Reprovado Fraude,Score Baixo,09:00
+ID-1233,732.459.929-51,Usuario Exemplo 233,2026-03-09,2026-03-29 08:19:00,08:29:00,Analista 16,Cliente 5,Fila 15,Reprovado Politica,Suspeita de Fraude,08:00
+ID-1234,202.407.569-41,Usuario Exemplo 234,2026-03-15,2026-03-29 13:37:00,14:21:00,Analista 3,Cliente 6,Fila 16,Pendente,Aguardando Documento,13:00
+ID-1235,297.928.395-22,Usuario Exemplo 235,2026-03-23,2026-03-29 09:42:00,10:18:00,Analista 30,Cliente 2,Fila 6,Aprovado,Fluxo Normal,09:00
+ID-1236,442.803.518-26,Usuario Exemplo 236,2026-01-29,2026-03-29 10:54:00,11:39:00,Analista 10,Cliente 3,Fila 6,Reprovado Fraude,Divergência Cadastral,10:00
+ID-1237,922.283.290-95,Usuario Exemplo 237,2026-02-03,2026-03-29 08:10:00,08:41:00,Analista 29,Cliente 3,Fila 10,Reprovado Politica,Perfil de Risco,08:00
+ID-1238,776.699.304-47,Usuario Exemplo 238,2026-02-11,2026-03-29 13:26:00,13:49:00,Analista 24,Cliente 2,Fila 4,Aprovado,Fluxo Normal,13:00
+ID-1239,570.503.823-85,Usuario Exemplo 239,2026-02-22,2026-03-29 09:50:00,10:25:00,Analista 28,Cliente 3,Fila 9,Pendente,Aguardando Documento,09:00
+ID-1240,911.887.724-78,Usuario Exemplo 240,2026-03-18,2026-03-29 13:08:00,13:23:00,Analista 22,Cliente 2,Fila 16,Reprovado Fraude,Renda Não Comprovada,13:00
+ID-1241,857.473.439-78,Usuario Exemplo 241,2026-02-05,2026-03-29 08:53:00,09:35:00,Analista 16,Cliente 3,Fila 9,Pendente,Aguardando Documento,08:00
+ID-1242,570.453.776-20,Usuario Exemplo 242,2026-02-11,2026-03-29 12:06:00,12:29:00,Analista 12,Cliente 4,Fila 9,Reprovado Politica,Perfil de Risco,12:00
+ID-1243,690.691.567-80,Usuario Exemplo 243,2026-02-05,2026-03-29 17:28:00,17:45:00,Analista 11,Cliente 3,Fila 16,Aprovado,Fluxo Normal,17:00
+ID-1244,643.631.612-96,Usuario Exemplo 244,2026-02-21,2026-03-29 15:41:00,15:48:00,Analista 15,Cliente 6,Fila 11,Pendente,Aguardando Documento,15:00
+ID-1245,558.511.627-31,Usuario Exemplo 245,2026-02-11,2026-03-29 14:17:00,14:50:00,Analista 16,Cliente 1,Fila 4,Reprovado Politica,Perfil de Risco,14:00
+ID-1246,197.107.499-70,Usuario Exemplo 246,2026-02-08,2026-03-29 15:18:00,15:39:00,Analista 21,Cliente 3,Fila 18,Reprovado Politica,Suspeita de Fraude,15:00
+ID-1247,546.965.184-67,Usuario Exemplo 247,2026-02-28,2026-03-29 13:05:00,13:14:00,Analista 1,Cliente 1,Fila 12,Aprovado,Fluxo Normal,13:00
+ID-1248,690.296.113-80,Usuario Exemplo 248,2026-03-24,2026-03-29 11:42:00,11:56:00,Analista 12,Cliente 3,Fila 12,Pendente,Aguardando Documento,11:00
+ID-1249,438.372.642-47,Usuario Exemplo 249,2026-03-21,2026-03-29 08:49:00,09:10:00,Analista 5,Cliente 3,Fila 2,Aprovado,Fluxo Normal,08:00
+ID-1250,673.837.537-16,Usuario Exemplo 250,2026-03-16,2026-03-29 11:01:00,11:20:00,Analista 11,Cliente 1,Fila 2,Aprovado,Fluxo Normal,11:00
+ID-1251,943.666.483-79,Usuario Exemplo 251,2026-02-06,2026-03-29 15:51:00,16:11:00,Analista 4,Cliente 6,Fila 13,Aprovado,Fluxo Normal,15:00
+ID-1252,866.195.795-79,Usuario Exemplo 252,2026-03-27,2026-03-29 14:58:00,15:16:00,Analista 18,Cliente 4,Fila 18,Aprovado,Fluxo Normal,14:00
+ID-1253,206.396.180-34,Usuario Exemplo 253,2026-01-27,2026-03-29 12:24:00,12:39:00,Analista 6,Cliente 5,Fila 3,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1254,482.664.123-62,Usuario Exemplo 254,2026-01-31,2026-03-29 17:43:00,18:22:00,Analista 11,Cliente 3,Fila 5,Reprovado Fraude,Perfil de Risco,17:00
+ID-1255,486.933.656-20,Usuario Exemplo 255,2026-03-04,2026-03-29 08:31:00,09:14:00,Analista 16,Cliente 3,Fila 2,Aprovado,Fluxo Normal,08:00
+ID-1256,838.783.249-50,Usuario Exemplo 256,2026-02-21,2026-03-29 09:24:00,09:34:00,Analista 3,Cliente 1,Fila 4,Pendente,Aguardando Documento,09:00
+ID-1257,163.200.222-84,Usuario Exemplo 257,2026-03-18,2026-03-29 14:08:00,14:16:00,Analista 10,Cliente 2,Fila 15,Reprovado Politica,Perfil de Risco,14:00
+ID-1258,939.676.447-99,Usuario Exemplo 258,2026-02-20,2026-03-29 17:56:00,18:25:00,Analista 9,Cliente 1,Fila 4,Reprovado Politica,Documentação Irregular,17:00
+ID-1259,139.642.190-86,Usuario Exemplo 259,2026-03-06,2026-03-29 08:51:00,09:25:00,Analista 17,Cliente 2,Fila 2,Pendente,Aguardando Documento,08:00
+ID-1260,466.397.872-81,Usuario Exemplo 260,2026-03-03,2026-03-29 08:43:00,08:55:00,Analista 14,Cliente 4,Fila 10,Pendente,Aguardando Documento,08:00
+ID-1261,135.524.671-87,Usuario Exemplo 261,2026-02-27,2026-03-29 14:51:00,15:23:00,Analista 16,Cliente 6,Fila 8,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1262,728.427.340-55,Usuario Exemplo 262,2026-03-02,2026-03-29 12:19:00,13:03:00,Analista 2,Cliente 4,Fila 9,Pendente,Aguardando Documento,12:00
+ID-1263,442.722.537-36,Usuario Exemplo 263,2026-03-07,2026-03-29 10:35:00,11:13:00,Analista 19,Cliente 5,Fila 13,Pendente,Aguardando Documento,10:00
+ID-1264,922.283.998-54,Usuario Exemplo 264,2026-03-22,2026-03-29 11:46:00,12:04:00,Analista 26,Cliente 4,Fila 4,Reprovado Politica,Renda Não Comprovada,11:00
+ID-1265,308.633.138-87,Usuario Exemplo 265,2026-02-19,2026-03-29 16:52:00,17:26:00,Analista 7,Cliente 2,Fila 18,Pendente,Aguardando Documento,16:00
+ID-1266,768.369.873-19,Usuario Exemplo 266,2026-03-29,2026-03-29 17:40:00,18:08:00,Analista 14,Cliente 6,Fila 14,Pendente,Aguardando Documento,17:00
+ID-1267,521.435.764-32,Usuario Exemplo 267,2026-02-25,2026-03-29 13:01:00,13:33:00,Analista 3,Cliente 3,Fila 12,Reprovado Fraude,Score Baixo,13:00
+ID-1268,616.754.921-12,Usuario Exemplo 268,2026-03-05,2026-03-29 08:27:00,08:54:00,Analista 21,Cliente 1,Fila 8,Reprovado Fraude,Score Baixo,08:00
+ID-1269,524.494.306-57,Usuario Exemplo 269,2026-02-24,2026-03-29 13:13:00,13:24:00,Analista 2,Cliente 4,Fila 9,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1270,398.962.963-25,Usuario Exemplo 270,2026-01-27,2026-03-29 08:15:00,08:57:00,Analista 22,Cliente 1,Fila 17,Pendente,Aguardando Documento,08:00
+ID-1271,353.749.735-83,Usuario Exemplo 271,2026-03-17,2026-03-29 16:23:00,17:02:00,Analista 1,Cliente 4,Fila 16,Pendente,Aguardando Documento,16:00
+ID-1272,396.961.937-21,Usuario Exemplo 272,2026-03-29,2026-03-29 12:45:00,12:50:00,Analista 21,Cliente 5,Fila 11,Pendente,Aguardando Documento,12:00
+ID-1273,192.350.272-97,Usuario Exemplo 273,2026-02-10,2026-03-29 16:20:00,16:57:00,Analista 3,Cliente 5,Fila 8,Aprovado,Fluxo Normal,16:00
+ID-1274,840.621.289-92,Usuario Exemplo 274,2026-03-21,2026-03-29 12:36:00,13:04:00,Analista 27,Cliente 4,Fila 8,Pendente,Aguardando Documento,12:00
+ID-1275,741.332.518-63,Usuario Exemplo 275,2026-02-02,2026-03-29 17:22:00,18:02:00,Analista 13,Cliente 3,Fila 18,Reprovado Politica,Documentação Irregular,17:00
+ID-1276,697.424.220-95,Usuario Exemplo 276,2026-03-09,2026-03-29 17:06:00,17:38:00,Analista 23,Cliente 3,Fila 15,Aprovado,Fluxo Normal,17:00
+ID-1277,418.776.831-20,Usuario Exemplo 277,2026-01-31,2026-03-29 13:16:00,13:33:00,Analista 1,Cliente 1,Fila 10,Aprovado,Fluxo Normal,13:00
+ID-1278,352.562.348-43,Usuario Exemplo 278,2026-02-19,2026-03-29 17:54:00,18:16:00,Analista 17,Cliente 3,Fila 13,Reprovado Politica,Perfil de Risco,17:00
+ID-1279,428.609.309-98,Usuario Exemplo 279,2026-03-15,2026-03-29 16:32:00,16:56:00,Analista 7,Cliente 5,Fila 13,Reprovado Fraude,Perfil de Risco,16:00
+ID-1280,916.261.788-33,Usuario Exemplo 280,2026-01-30,2026-03-29 08:37:00,08:58:00,Analista 4,Cliente 4,Fila 16,Pendente,Aguardando Documento,08:00
+ID-1281,960.677.202-96,Usuario Exemplo 281,2026-02-22,2026-03-29 08:59:00,09:39:00,Analista 21,Cliente 2,Fila 9,Aprovado,Fluxo Normal,08:00
+ID-1282,577.728.621-56,Usuario Exemplo 282,2026-03-15,2026-03-29 11:25:00,11:42:00,Analista 20,Cliente 1,Fila 17,Pendente,Aguardando Documento,11:00
+ID-1283,198.605.802-52,Usuario Exemplo 283,2026-02-26,2026-03-29 14:16:00,14:31:00,Analista 19,Cliente 1,Fila 1,Pendente,Aguardando Documento,14:00
+ID-1284,509.946.257-88,Usuario Exemplo 284,2026-01-29,2026-03-29 14:36:00,14:50:00,Analista 25,Cliente 4,Fila 7,Pendente,Aguardando Documento,14:00
+ID-1285,643.951.154-75,Usuario Exemplo 285,2026-02-08,2026-03-29 11:35:00,11:47:00,Analista 17,Cliente 2,Fila 4,Aprovado,Fluxo Normal,11:00
+ID-1286,203.484.655-13,Usuario Exemplo 286,2026-01-29,2026-03-29 17:42:00,18:05:00,Analista 12,Cliente 6,Fila 12,Pendente,Aguardando Documento,17:00
+ID-1287,667.284.987-98,Usuario Exemplo 287,2026-02-01,2026-03-29 12:58:00,13:06:00,Analista 20,Cliente 2,Fila 17,Reprovado Politica,Divergência Cadastral,12:00
+ID-1288,489.109.648-69,Usuario Exemplo 288,2026-02-26,2026-03-29 16:23:00,17:08:00,Analista 3,Cliente 3,Fila 14,Reprovado Politica,Score Baixo,16:00
+ID-1289,409.722.572-27,Usuario Exemplo 289,2026-03-10,2026-03-29 16:36:00,17:21:00,Analista 20,Cliente 3,Fila 2,Reprovado Politica,Score Baixo,16:00
+ID-1290,353.526.742-71,Usuario Exemplo 290,2026-03-16,2026-03-29 16:56:00,17:34:00,Analista 24,Cliente 5,Fila 12,Reprovado Fraude,Documentação Irregular,16:00
+ID-1291,740.448.726-98,Usuario Exemplo 291,2026-02-23,2026-03-29 15:52:00,16:07:00,Analista 20,Cliente 3,Fila 2,Reprovado Politica,Documentação Irregular,15:00
+ID-1292,203.155.354-50,Usuario Exemplo 292,2026-03-26,2026-03-29 15:03:00,15:18:00,Analista 6,Cliente 5,Fila 14,Reprovado Fraude,Perfil de Risco,15:00
+ID-1293,478.508.742-82,Usuario Exemplo 293,2026-03-07,2026-03-29 17:55:00,18:38:00,Analista 8,Cliente 4,Fila 6,Reprovado Politica,Suspeita de Fraude,17:00
+ID-1294,511.212.283-27,Usuario Exemplo 294,2026-02-23,2026-03-29 09:44:00,10:28:00,Analista 23,Cliente 3,Fila 5,Reprovado Fraude,Score Baixo,09:00
+ID-1295,390.902.300-51,Usuario Exemplo 295,2026-03-24,2026-03-29 17:41:00,18:04:00,Analista 8,Cliente 6,Fila 1,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1296,986.913.420-28,Usuario Exemplo 296,2026-02-21,2026-03-29 10:18:00,10:53:00,Analista 2,Cliente 6,Fila 10,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1297,342.238.109-47,Usuario Exemplo 297,2026-03-11,2026-03-29 11:00:00,11:35:00,Analista 20,Cliente 6,Fila 4,Reprovado Fraude,Renda Não Comprovada,11:00
+ID-1298,983.321.409-43,Usuario Exemplo 298,2026-03-10,2026-03-29 08:53:00,09:33:00,Analista 2,Cliente 4,Fila 16,Aprovado,Fluxo Normal,08:00
+ID-1299,845.212.383-10,Usuario Exemplo 299,2026-03-05,2026-03-29 08:09:00,08:34:00,Analista 13,Cliente 4,Fila 7,Reprovado Fraude,Documentação Irregular,08:00
+ID-1300,348.965.855-89,Usuario Exemplo 300,2026-02-04,2026-03-29 14:26:00,15:03:00,Analista 2,Cliente 2,Fila 18,Reprovado Fraude,Suspeita de Fraude,14:00
+ID-1301,458.406.546-46,Usuario Exemplo 301,2026-02-01,2026-03-29 11:28:00,11:56:00,Analista 26,Cliente 1,Fila 7,Aprovado,Fluxo Normal,11:00
+ID-1302,891.197.246-54,Usuario Exemplo 302,2026-01-29,2026-03-29 12:24:00,12:34:00,Analista 9,Cliente 5,Fila 4,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1303,399.157.812-80,Usuario Exemplo 303,2026-03-10,2026-03-29 09:55:00,10:26:00,Analista 20,Cliente 5,Fila 10,Pendente,Aguardando Documento,09:00
+ID-1304,140.484.957-77,Usuario Exemplo 304,2026-03-04,2026-03-29 16:16:00,16:28:00,Analista 21,Cliente 5,Fila 8,Reprovado Politica,Suspeita de Fraude,16:00
+ID-1305,172.821.617-10,Usuario Exemplo 305,2026-02-26,2026-03-29 16:44:00,17:20:00,Analista 26,Cliente 5,Fila 2,Aprovado,Fluxo Normal,16:00
+ID-1306,378.336.158-17,Usuario Exemplo 306,2026-03-27,2026-03-29 13:15:00,13:24:00,Analista 26,Cliente 3,Fila 9,Reprovado Politica,Score Baixo,13:00
+ID-1307,528.854.849-63,Usuario Exemplo 307,2026-03-27,2026-03-29 09:30:00,10:05:00,Analista 11,Cliente 2,Fila 2,Reprovado Politica,Score Baixo,09:00
+ID-1308,191.521.946-74,Usuario Exemplo 308,2026-03-10,2026-03-29 13:54:00,14:36:00,Analista 16,Cliente 5,Fila 3,Reprovado Fraude,Perfil de Risco,13:00
+ID-1309,426.803.314-92,Usuario Exemplo 309,2026-02-23,2026-03-29 13:33:00,14:12:00,Analista 28,Cliente 5,Fila 1,Reprovado Politica,Documentação Irregular,13:00
+ID-1310,346.107.485-44,Usuario Exemplo 310,2026-03-20,2026-03-29 09:14:00,09:28:00,Analista 8,Cliente 1,Fila 12,Reprovado Politica,Renda Não Comprovada,09:00
+ID-1311,365.977.467-52,Usuario Exemplo 311,2026-02-23,2026-03-29 17:18:00,17:27:00,Analista 9,Cliente 5,Fila 13,Pendente,Aguardando Documento,17:00
+ID-1312,988.335.833-40,Usuario Exemplo 312,2026-02-09,2026-03-29 08:34:00,08:45:00,Analista 5,Cliente 5,Fila 18,Reprovado Politica,Score Baixo,08:00
+ID-1313,364.272.184-47,Usuario Exemplo 313,2026-03-02,2026-03-29 14:06:00,14:44:00,Analista 25,Cliente 6,Fila 14,Pendente,Aguardando Documento,14:00
+ID-1314,268.539.153-70,Usuario Exemplo 314,2026-02-04,2026-03-29 11:52:00,12:04:00,Analista 16,Cliente 3,Fila 7,Pendente,Aguardando Documento,11:00
+ID-1315,553.563.769-18,Usuario Exemplo 315,2026-02-11,2026-03-29 10:23:00,10:34:00,Analista 23,Cliente 4,Fila 8,Aprovado,Fluxo Normal,10:00
+ID-1316,207.569.269-51,Usuario Exemplo 316,2026-01-30,2026-03-29 17:26:00,17:34:00,Analista 8,Cliente 4,Fila 17,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1317,680.392.128-53,Usuario Exemplo 317,2026-02-17,2026-03-29 08:47:00,09:01:00,Analista 29,Cliente 3,Fila 7,Reprovado Politica,Perfil de Risco,08:00
+ID-1318,325.274.691-74,Usuario Exemplo 318,2026-03-22,2026-03-29 17:28:00,17:44:00,Analista 16,Cliente 5,Fila 12,Aprovado,Fluxo Normal,17:00
+ID-1319,573.100.404-88,Usuario Exemplo 319,2026-02-10,2026-03-29 13:27:00,14:00:00,Analista 19,Cliente 4,Fila 14,Pendente,Aguardando Documento,13:00
+ID-1320,104.592.888-75,Usuario Exemplo 320,2026-03-15,2026-03-29 13:13:00,13:39:00,Analista 15,Cliente 2,Fila 12,Pendente,Aguardando Documento,13:00
+ID-1321,800.693.412-73,Usuario Exemplo 321,2026-03-25,2026-03-29 15:57:00,16:08:00,Analista 2,Cliente 4,Fila 8,Reprovado Politica,Renda Não Comprovada,15:00
+ID-1322,864.406.324-48,Usuario Exemplo 322,2026-03-08,2026-03-29 17:39:00,17:58:00,Analista 3,Cliente 5,Fila 3,Reprovado Fraude,Score Baixo,17:00
+ID-1323,830.897.926-62,Usuario Exemplo 323,2026-03-09,2026-03-29 13:12:00,13:40:00,Analista 15,Cliente 5,Fila 9,Aprovado,Fluxo Normal,13:00
+ID-1324,764.781.986-34,Usuario Exemplo 324,2026-02-17,2026-03-29 13:50:00,14:33:00,Analista 20,Cliente 4,Fila 2,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1325,737.161.526-57,Usuario Exemplo 325,2026-02-21,2026-03-29 08:14:00,08:33:00,Analista 12,Cliente 2,Fila 16,Reprovado Politica,Score Baixo,08:00
+ID-1326,522.986.490-31,Usuario Exemplo 326,2026-03-19,2026-03-29 14:58:00,15:17:00,Analista 3,Cliente 1,Fila 6,Aprovado,Fluxo Normal,14:00
+ID-1327,766.681.526-91,Usuario Exemplo 327,2026-02-19,2026-03-29 11:09:00,11:16:00,Analista 30,Cliente 1,Fila 6,Aprovado,Fluxo Normal,11:00
+ID-1328,969.362.123-93,Usuario Exemplo 328,2026-01-29,2026-03-29 09:08:00,09:40:00,Analista 18,Cliente 2,Fila 16,Aprovado,Fluxo Normal,09:00
+ID-1329,197.566.109-34,Usuario Exemplo 329,2026-02-14,2026-03-29 15:04:00,15:30:00,Analista 6,Cliente 4,Fila 5,Reprovado Politica,Divergência Cadastral,15:00
+ID-1330,776.243.757-90,Usuario Exemplo 330,2026-03-11,2026-03-29 15:33:00,15:54:00,Analista 27,Cliente 2,Fila 6,Reprovado Politica,Score Baixo,15:00
+ID-1331,381.370.204-10,Usuario Exemplo 331,2026-03-24,2026-03-29 12:44:00,13:03:00,Analista 14,Cliente 4,Fila 16,Pendente,Aguardando Documento,12:00
+ID-1332,949.156.808-36,Usuario Exemplo 332,2026-02-09,2026-03-29 17:19:00,17:28:00,Analista 24,Cliente 6,Fila 13,Reprovado Politica,Divergência Cadastral,17:00
+ID-1333,864.913.665-60,Usuario Exemplo 333,2026-03-07,2026-03-29 16:56:00,17:06:00,Analista 9,Cliente 5,Fila 16,Aprovado,Fluxo Normal,16:00
+ID-1334,884.198.187-69,Usuario Exemplo 334,2026-02-14,2026-03-29 09:23:00,09:33:00,Analista 14,Cliente 3,Fila 13,Aprovado,Fluxo Normal,09:00
+ID-1335,820.754.288-65,Usuario Exemplo 335,2026-03-04,2026-03-29 12:42:00,13:16:00,Analista 26,Cliente 3,Fila 14,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1336,876.130.620-22,Usuario Exemplo 336,2026-03-07,2026-03-29 16:17:00,16:31:00,Analista 30,Cliente 5,Fila 6,Reprovado Fraude,Score Baixo,16:00
+ID-1337,117.517.206-97,Usuario Exemplo 337,2026-02-14,2026-03-29 10:39:00,11:00:00,Analista 6,Cliente 3,Fila 11,Aprovado,Fluxo Normal,10:00
+ID-1338,515.947.853-32,Usuario Exemplo 338,2026-03-14,2026-03-29 11:14:00,11:45:00,Analista 20,Cliente 6,Fila 14,Reprovado Politica,Documentação Irregular,11:00
+ID-1339,790.720.144-79,Usuario Exemplo 339,2026-03-29,2026-03-29 08:53:00,09:25:00,Analista 17,Cliente 4,Fila 16,Pendente,Aguardando Documento,08:00
+ID-1340,434.104.587-40,Usuario Exemplo 340,2026-03-15,2026-03-29 17:55:00,18:11:00,Analista 20,Cliente 6,Fila 14,Reprovado Politica,Perfil de Risco,17:00
+ID-1341,765.742.678-77,Usuario Exemplo 341,2026-03-14,2026-03-29 11:29:00,11:48:00,Analista 9,Cliente 6,Fila 12,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1342,525.296.245-72,Usuario Exemplo 342,2026-03-27,2026-03-29 16:09:00,16:41:00,Analista 27,Cliente 6,Fila 14,Reprovado Fraude,Suspeita de Fraude,16:00
+ID-1343,203.314.432-54,Usuario Exemplo 343,2026-03-27,2026-03-29 16:36:00,17:14:00,Analista 12,Cliente 5,Fila 18,Aprovado,Fluxo Normal,16:00
+ID-1344,757.955.216-12,Usuario Exemplo 344,2026-02-13,2026-03-29 16:30:00,16:54:00,Analista 21,Cliente 2,Fila 17,Reprovado Fraude,Suspeita de Fraude,16:00
+ID-1345,793.827.913-61,Usuario Exemplo 345,2026-02-19,2026-03-29 08:41:00,08:59:00,Analista 11,Cliente 2,Fila 13,Reprovado Fraude,Score Baixo,08:00
+ID-1346,739.762.477-66,Usuario Exemplo 346,2026-01-28,2026-03-29 17:20:00,18:02:00,Analista 24,Cliente 2,Fila 7,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1347,225.955.993-79,Usuario Exemplo 347,2026-02-04,2026-03-29 17:02:00,17:11:00,Analista 28,Cliente 6,Fila 12,Pendente,Aguardando Documento,17:00
+ID-1348,646.256.894-14,Usuario Exemplo 348,2026-03-03,2026-03-29 12:08:00,12:29:00,Analista 27,Cliente 4,Fila 7,Pendente,Aguardando Documento,12:00
+ID-1349,982.166.942-20,Usuario Exemplo 349,2026-03-26,2026-03-29 08:21:00,08:33:00,Analista 6,Cliente 2,Fila 15,Aprovado,Fluxo Normal,08:00
+ID-1350,261.516.640-62,Usuario Exemplo 350,2026-03-10,2026-03-29 12:00:00,12:28:00,Analista 15,Cliente 2,Fila 5,Reprovado Politica,Documentação Irregular,12:00
+ID-1351,415.581.836-53,Usuario Exemplo 351,2026-02-27,2026-03-29 13:56:00,14:07:00,Analista 9,Cliente 5,Fila 6,Reprovado Fraude,Perfil de Risco,13:00
+ID-1352,730.520.428-25,Usuario Exemplo 352,2026-02-04,2026-03-29 13:06:00,13:27:00,Analista 4,Cliente 2,Fila 6,Pendente,Aguardando Documento,13:00
+ID-1353,153.601.116-36,Usuario Exemplo 353,2026-01-30,2026-03-29 11:51:00,12:32:00,Analista 11,Cliente 5,Fila 9,Aprovado,Fluxo Normal,11:00
+ID-1354,959.394.627-72,Usuario Exemplo 354,2026-03-11,2026-03-29 10:06:00,10:45:00,Analista 17,Cliente 5,Fila 10,Reprovado Fraude,Documentação Irregular,10:00
+ID-1355,888.103.166-79,Usuario Exemplo 355,2026-03-02,2026-03-29 11:46:00,11:57:00,Analista 12,Cliente 1,Fila 1,Reprovado Politica,Suspeita de Fraude,11:00
+ID-1356,466.680.464-46,Usuario Exemplo 356,2026-02-20,2026-03-29 09:40:00,10:04:00,Analista 7,Cliente 6,Fila 9,Pendente,Aguardando Documento,09:00
+ID-1357,198.913.161-82,Usuario Exemplo 357,2026-03-22,2026-03-29 16:54:00,16:59:00,Analista 28,Cliente 4,Fila 2,Pendente,Aguardando Documento,16:00
+ID-1358,781.140.838-32,Usuario Exemplo 358,2026-03-04,2026-03-29 10:29:00,11:07:00,Analista 15,Cliente 1,Fila 1,Pendente,Aguardando Documento,10:00
+ID-1359,108.280.965-86,Usuario Exemplo 359,2026-02-09,2026-03-29 14:26:00,14:55:00,Analista 30,Cliente 5,Fila 2,Reprovado Fraude,Score Baixo,14:00
+ID-1360,861.735.424-76,Usuario Exemplo 360,2026-01-27,2026-03-29 16:23:00,16:43:00,Analista 9,Cliente 3,Fila 7,Aprovado,Fluxo Normal,16:00
+ID-1361,412.359.196-61,Usuario Exemplo 361,2026-01-27,2026-03-29 15:32:00,16:14:00,Analista 26,Cliente 6,Fila 4,Aprovado,Fluxo Normal,15:00
+ID-1362,246.849.770-29,Usuario Exemplo 362,2026-01-30,2026-03-29 15:03:00,15:11:00,Analista 25,Cliente 1,Fila 3,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1363,518.638.565-80,Usuario Exemplo 363,2026-02-20,2026-03-29 16:11:00,16:38:00,Analista 17,Cliente 3,Fila 16,Aprovado,Fluxo Normal,16:00
+ID-1364,344.626.429-95,Usuario Exemplo 364,2026-03-04,2026-03-29 14:13:00,14:25:00,Analista 5,Cliente 4,Fila 18,Aprovado,Fluxo Normal,14:00
+ID-1365,555.454.931-94,Usuario Exemplo 365,2026-02-15,2026-03-29 12:22:00,12:42:00,Analista 20,Cliente 6,Fila 10,Reprovado Fraude,Suspeita de Fraude,12:00
+ID-1366,543.583.815-39,Usuario Exemplo 366,2026-03-13,2026-03-29 15:24:00,16:08:00,Analista 20,Cliente 3,Fila 1,Reprovado Fraude,Renda Não Comprovada,15:00
+ID-1367,294.194.856-88,Usuario Exemplo 367,2026-03-23,2026-03-29 17:37:00,17:56:00,Analista 26,Cliente 2,Fila 18,Reprovado Politica,Divergência Cadastral,17:00
+ID-1368,899.708.300-48,Usuario Exemplo 368,2026-03-14,2026-03-29 17:03:00,17:08:00,Analista 23,Cliente 3,Fila 12,Pendente,Aguardando Documento,17:00
+ID-1369,563.878.334-53,Usuario Exemplo 369,2026-02-28,2026-03-29 13:34:00,14:05:00,Analista 1,Cliente 6,Fila 3,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1370,968.564.128-62,Usuario Exemplo 370,2026-02-17,2026-03-29 15:46:00,16:30:00,Analista 26,Cliente 4,Fila 18,Aprovado,Fluxo Normal,15:00
+ID-1371,346.949.414-61,Usuario Exemplo 371,2026-03-19,2026-03-29 08:57:00,09:36:00,Analista 2,Cliente 2,Fila 16,Pendente,Aguardando Documento,08:00
+ID-1372,583.282.902-24,Usuario Exemplo 372,2026-03-16,2026-03-29 09:29:00,09:34:00,Analista 4,Cliente 4,Fila 8,Reprovado Fraude,Score Baixo,09:00
+ID-1373,572.205.512-35,Usuario Exemplo 373,2026-03-21,2026-03-29 16:11:00,16:34:00,Analista 4,Cliente 2,Fila 17,Pendente,Aguardando Documento,16:00
+ID-1374,341.644.451-16,Usuario Exemplo 374,2026-02-08,2026-03-29 16:47:00,17:32:00,Analista 11,Cliente 4,Fila 13,Pendente,Aguardando Documento,16:00
+ID-1375,557.301.442-37,Usuario Exemplo 375,2026-02-07,2026-03-29 15:14:00,15:49:00,Analista 18,Cliente 5,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1376,242.261.243-51,Usuario Exemplo 376,2026-02-09,2026-03-29 09:21:00,09:56:00,Analista 27,Cliente 2,Fila 11,Aprovado,Fluxo Normal,09:00
+ID-1377,663.624.120-56,Usuario Exemplo 377,2026-02-14,2026-03-29 13:48:00,14:33:00,Analista 12,Cliente 2,Fila 3,Pendente,Aguardando Documento,13:00
+ID-1378,859.472.472-89,Usuario Exemplo 378,2026-02-14,2026-03-29 09:31:00,10:02:00,Analista 20,Cliente 3,Fila 15,Aprovado,Fluxo Normal,09:00
+ID-1379,452.937.487-58,Usuario Exemplo 379,2026-01-31,2026-03-29 17:38:00,17:44:00,Analista 23,Cliente 6,Fila 13,Reprovado Politica,Documentação Irregular,17:00
+ID-1380,149.989.644-39,Usuario Exemplo 380,2026-02-26,2026-03-29 10:55:00,11:07:00,Analista 11,Cliente 4,Fila 6,Aprovado,Fluxo Normal,10:00
+ID-1381,782.834.871-37,Usuario Exemplo 381,2026-02-04,2026-03-29 15:41:00,15:50:00,Analista 4,Cliente 5,Fila 11,Reprovado Fraude,Perfil de Risco,15:00
+ID-1382,131.881.351-85,Usuario Exemplo 382,2026-02-04,2026-03-29 13:53:00,14:05:00,Analista 15,Cliente 6,Fila 5,Pendente,Aguardando Documento,13:00
+ID-1383,732.861.498-83,Usuario Exemplo 383,2026-03-02,2026-03-29 14:41:00,14:54:00,Analista 23,Cliente 1,Fila 6,Reprovado Fraude,Score Baixo,14:00
+ID-1384,933.519.606-55,Usuario Exemplo 384,2026-03-02,2026-03-29 08:17:00,08:33:00,Analista 20,Cliente 3,Fila 7,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1385,422.636.287-35,Usuario Exemplo 385,2026-01-29,2026-03-29 13:57:00,14:16:00,Analista 13,Cliente 3,Fila 12,Aprovado,Fluxo Normal,13:00
+ID-1386,526.617.920-47,Usuario Exemplo 386,2026-02-06,2026-03-29 16:11:00,16:33:00,Analista 8,Cliente 6,Fila 2,Reprovado Politica,Suspeita de Fraude,16:00
+ID-1387,527.450.445-14,Usuario Exemplo 387,2026-02-15,2026-03-29 17:47:00,18:05:00,Analista 29,Cliente 2,Fila 12,Reprovado Politica,Perfil de Risco,17:00
+ID-1388,927.336.586-69,Usuario Exemplo 388,2026-03-24,2026-03-29 15:01:00,15:28:00,Analista 24,Cliente 6,Fila 4,Reprovado Fraude,Renda Não Comprovada,15:00
+ID-1389,325.796.833-82,Usuario Exemplo 389,2026-02-14,2026-03-29 09:45:00,09:57:00,Analista 17,Cliente 3,Fila 4,Reprovado Politica,Renda Não Comprovada,09:00
+ID-1390,853.894.772-74,Usuario Exemplo 390,2026-03-01,2026-03-29 17:06:00,17:11:00,Analista 28,Cliente 4,Fila 8,Aprovado,Fluxo Normal,17:00
+ID-1391,770.338.495-21,Usuario Exemplo 391,2026-02-17,2026-03-29 17:25:00,17:33:00,Analista 21,Cliente 6,Fila 8,Reprovado Politica,Renda Não Comprovada,17:00
+ID-1392,505.947.594-76,Usuario Exemplo 392,2026-01-30,2026-03-29 15:37:00,15:48:00,Analista 28,Cliente 5,Fila 5,Reprovado Fraude,Perfil de Risco,15:00
+ID-1393,695.805.980-70,Usuario Exemplo 393,2026-02-08,2026-03-29 09:00:00,09:20:00,Analista 23,Cliente 6,Fila 14,Pendente,Aguardando Documento,09:00
+ID-1394,780.124.709-74,Usuario Exemplo 394,2026-02-25,2026-03-29 09:04:00,09:43:00,Analista 10,Cliente 3,Fila 7,Reprovado Politica,Suspeita de Fraude,09:00
+ID-1395,574.505.284-30,Usuario Exemplo 395,2026-01-27,2026-03-29 17:20:00,17:37:00,Analista 9,Cliente 6,Fila 2,Pendente,Aguardando Documento,17:00
+ID-1396,508.809.625-96,Usuario Exemplo 396,2026-02-10,2026-03-29 14:36:00,14:47:00,Analista 1,Cliente 5,Fila 8,Reprovado Fraude,Divergência Cadastral,14:00
+ID-1397,125.764.340-76,Usuario Exemplo 397,2026-02-25,2026-03-29 17:24:00,17:48:00,Analista 21,Cliente 3,Fila 13,Pendente,Aguardando Documento,17:00
+ID-1398,343.686.727-14,Usuario Exemplo 398,2026-03-10,2026-03-29 09:50:00,10:15:00,Analista 30,Cliente 3,Fila 18,Pendente,Aguardando Documento,09:00
+ID-1399,444.839.621-33,Usuario Exemplo 399,2026-02-27,2026-03-29 08:06:00,08:27:00,Analista 1,Cliente 2,Fila 14,Reprovado Politica,Documentação Irregular,08:00
+ID-1400,940.371.767-58,Usuario Exemplo 400,2026-03-05,2026-03-29 09:45:00,10:03:00,Analista 22,Cliente 4,Fila 18,Aprovado,Fluxo Normal,09:00
+ID-1401,776.287.829-57,Usuario Exemplo 401,2026-02-08,2026-03-29 16:23:00,16:33:00,Analista 29,Cliente 1,Fila 13,Reprovado Politica,Perfil de Risco,16:00
+ID-1402,106.651.825-41,Usuario Exemplo 402,2026-02-16,2026-03-29 09:28:00,10:00:00,Analista 11,Cliente 5,Fila 8,Aprovado,Fluxo Normal,09:00
+ID-1403,431.386.797-76,Usuario Exemplo 403,2026-02-03,2026-03-29 08:21:00,08:45:00,Analista 29,Cliente 4,Fila 9,Reprovado Politica,Documentação Irregular,08:00
+ID-1404,413.515.496-55,Usuario Exemplo 404,2026-02-17,2026-03-29 16:37:00,16:57:00,Analista 12,Cliente 4,Fila 14,Reprovado Politica,Perfil de Risco,16:00
+ID-1405,171.601.566-98,Usuario Exemplo 405,2026-03-01,2026-03-29 10:58:00,11:12:00,Analista 26,Cliente 3,Fila 17,Aprovado,Fluxo Normal,10:00
+ID-1406,973.623.586-29,Usuario Exemplo 406,2026-03-17,2026-03-29 10:29:00,11:09:00,Analista 27,Cliente 1,Fila 10,Pendente,Aguardando Documento,10:00
+ID-1407,777.262.862-96,Usuario Exemplo 407,2026-03-19,2026-03-29 10:45:00,11:01:00,Analista 10,Cliente 3,Fila 7,Pendente,Aguardando Documento,10:00
+ID-1408,148.751.587-41,Usuario Exemplo 408,2026-03-23,2026-03-29 17:29:00,17:55:00,Analista 8,Cliente 4,Fila 18,Pendente,Aguardando Documento,17:00
+ID-1409,644.139.248-26,Usuario Exemplo 409,2026-03-15,2026-03-29 14:43:00,15:09:00,Analista 29,Cliente 3,Fila 4,Reprovado Fraude,Score Baixo,14:00
+ID-1410,222.153.233-71,Usuario Exemplo 410,2026-03-18,2026-03-29 16:40:00,16:50:00,Analista 3,Cliente 5,Fila 18,Aprovado,Fluxo Normal,16:00
+ID-1411,406.362.938-66,Usuario Exemplo 411,2026-02-12,2026-03-29 16:15:00,16:43:00,Analista 24,Cliente 3,Fila 17,Aprovado,Fluxo Normal,16:00
+ID-1412,418.899.653-20,Usuario Exemplo 412,2026-02-25,2026-03-29 09:28:00,09:55:00,Analista 30,Cliente 3,Fila 3,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1413,656.172.726-65,Usuario Exemplo 413,2026-02-02,2026-03-29 08:03:00,08:29:00,Analista 14,Cliente 4,Fila 4,Pendente,Aguardando Documento,08:00
+ID-1414,870.331.127-20,Usuario Exemplo 414,2026-01-31,2026-03-29 17:22:00,17:53:00,Analista 15,Cliente 1,Fila 15,Reprovado Fraude,Documentação Irregular,17:00
+ID-1415,756.754.743-80,Usuario Exemplo 415,2026-02-01,2026-03-29 14:08:00,14:34:00,Analista 14,Cliente 1,Fila 3,Reprovado Politica,Divergência Cadastral,14:00
+ID-1416,921.339.926-66,Usuario Exemplo 416,2026-03-14,2026-03-29 17:09:00,17:48:00,Analista 17,Cliente 6,Fila 12,Aprovado,Fluxo Normal,17:00
+ID-1417,965.436.621-63,Usuario Exemplo 417,2026-03-27,2026-03-29 09:40:00,10:04:00,Analista 13,Cliente 1,Fila 6,Pendente,Aguardando Documento,09:00
+ID-1418,152.615.299-16,Usuario Exemplo 418,2026-03-20,2026-03-29 10:07:00,10:14:00,Analista 30,Cliente 2,Fila 18,Reprovado Politica,Suspeita de Fraude,10:00
+ID-1419,910.767.130-29,Usuario Exemplo 419,2026-03-01,2026-03-29 13:08:00,13:38:00,Analista 18,Cliente 6,Fila 9,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1420,166.140.771-15,Usuario Exemplo 420,2026-02-07,2026-03-29 14:09:00,14:19:00,Analista 20,Cliente 1,Fila 18,Reprovado Politica,Renda Não Comprovada,14:00
+ID-1421,873.383.899-55,Usuario Exemplo 421,2026-01-31,2026-03-29 08:47:00,09:24:00,Analista 2,Cliente 2,Fila 16,Pendente,Aguardando Documento,08:00
+ID-1422,903.299.466-52,Usuario Exemplo 422,2026-02-07,2026-03-29 14:00:00,14:35:00,Analista 29,Cliente 4,Fila 3,Pendente,Aguardando Documento,14:00
+ID-1423,548.199.649-85,Usuario Exemplo 423,2026-01-31,2026-03-29 17:43:00,18:07:00,Analista 2,Cliente 6,Fila 17,Reprovado Politica,Perfil de Risco,17:00
+ID-1424,811.980.799-97,Usuario Exemplo 424,2026-02-22,2026-03-29 17:35:00,17:58:00,Analista 22,Cliente 4,Fila 11,Reprovado Fraude,Score Baixo,17:00
+ID-1425,321.517.182-50,Usuario Exemplo 425,2026-03-16,2026-03-29 11:09:00,11:54:00,Analista 25,Cliente 6,Fila 14,Reprovado Fraude,Score Baixo,11:00
+ID-1426,629.996.836-50,Usuario Exemplo 426,2026-02-28,2026-03-29 13:17:00,13:25:00,Analista 8,Cliente 5,Fila 16,Reprovado Politica,Score Baixo,13:00
+ID-1427,474.311.715-37,Usuario Exemplo 427,2026-02-10,2026-03-29 14:49:00,15:20:00,Analista 6,Cliente 4,Fila 6,Reprovado Fraude,Divergência Cadastral,14:00
+ID-1428,608.109.323-31,Usuario Exemplo 428,2026-02-19,2026-03-29 08:52:00,09:04:00,Analista 19,Cliente 6,Fila 14,Reprovado Politica,Divergência Cadastral,08:00
+ID-1429,247.848.987-72,Usuario Exemplo 429,2026-03-17,2026-03-29 17:51:00,18:23:00,Analista 6,Cliente 5,Fila 17,Reprovado Fraude,Score Baixo,17:00
+ID-1430,668.456.374-80,Usuario Exemplo 430,2026-03-09,2026-03-29 15:22:00,15:45:00,Analista 26,Cliente 5,Fila 4,Reprovado Fraude,Perfil de Risco,15:00
+ID-1431,495.354.795-88,Usuario Exemplo 431,2026-03-22,2026-03-29 13:48:00,14:00:00,Analista 11,Cliente 2,Fila 6,Aprovado,Fluxo Normal,13:00
+ID-1432,543.446.120-80,Usuario Exemplo 432,2026-02-18,2026-03-29 17:00:00,17:19:00,Analista 28,Cliente 6,Fila 15,Reprovado Fraude,Documentação Irregular,17:00
+ID-1433,839.358.648-18,Usuario Exemplo 433,2026-03-08,2026-03-29 16:33:00,17:01:00,Analista 7,Cliente 1,Fila 16,Aprovado,Fluxo Normal,16:00
+ID-1434,325.339.479-29,Usuario Exemplo 434,2026-02-02,2026-03-29 10:49:00,11:26:00,Analista 1,Cliente 5,Fila 7,Aprovado,Fluxo Normal,10:00
+ID-1435,914.278.846-47,Usuario Exemplo 435,2026-03-20,2026-03-29 16:55:00,17:03:00,Analista 24,Cliente 4,Fila 14,Reprovado Fraude,Renda Não Comprovada,16:00
+ID-1436,447.548.221-39,Usuario Exemplo 436,2026-03-03,2026-03-29 13:32:00,13:41:00,Analista 8,Cliente 6,Fila 8,Reprovado Fraude,Divergência Cadastral,13:00
+ID-1437,277.400.656-72,Usuario Exemplo 437,2026-02-10,2026-03-29 12:06:00,12:16:00,Analista 5,Cliente 3,Fila 1,Pendente,Aguardando Documento,12:00
+ID-1438,133.773.474-68,Usuario Exemplo 438,2026-03-08,2026-03-29 16:20:00,16:44:00,Analista 30,Cliente 2,Fila 10,Pendente,Aguardando Documento,16:00
+ID-1439,708.625.435-61,Usuario Exemplo 439,2026-03-22,2026-03-29 15:26:00,16:09:00,Analista 26,Cliente 3,Fila 8,Pendente,Aguardando Documento,15:00
+ID-1440,787.416.783-88,Usuario Exemplo 440,2026-03-20,2026-03-29 11:21:00,11:29:00,Analista 16,Cliente 6,Fila 16,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1441,377.846.651-18,Usuario Exemplo 441,2026-02-17,2026-03-29 08:47:00,09:25:00,Analista 27,Cliente 5,Fila 14,Reprovado Politica,Divergência Cadastral,08:00
+ID-1442,338.599.324-50,Usuario Exemplo 442,2026-02-19,2026-03-29 11:19:00,11:28:00,Analista 7,Cliente 2,Fila 14,Reprovado Fraude,Renda Não Comprovada,11:00
+ID-1443,733.848.219-70,Usuario Exemplo 443,2026-02-27,2026-03-29 15:31:00,15:58:00,Analista 9,Cliente 5,Fila 18,Pendente,Aguardando Documento,15:00
+ID-1444,224.463.932-26,Usuario Exemplo 444,2026-02-02,2026-03-29 13:37:00,14:13:00,Analista 12,Cliente 6,Fila 8,Aprovado,Fluxo Normal,13:00
+ID-1445,433.534.446-96,Usuario Exemplo 445,2026-02-03,2026-03-29 10:11:00,10:18:00,Analista 14,Cliente 4,Fila 7,Pendente,Aguardando Documento,10:00
+ID-1446,901.493.722-13,Usuario Exemplo 446,2026-02-04,2026-03-29 13:35:00,14:08:00,Analista 23,Cliente 3,Fila 3,Pendente,Aguardando Documento,13:00
+ID-1447,587.914.438-17,Usuario Exemplo 447,2026-03-05,2026-03-29 12:00:00,12:19:00,Analista 4,Cliente 3,Fila 1,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1448,641.865.712-13,Usuario Exemplo 448,2026-03-01,2026-03-29 10:51:00,11:06:00,Analista 5,Cliente 1,Fila 3,Reprovado Politica,Documentação Irregular,10:00
+ID-1449,816.919.786-71,Usuario Exemplo 449,2026-03-18,2026-03-29 13:06:00,13:46:00,Analista 18,Cliente 2,Fila 18,Reprovado Fraude,Renda Não Comprovada,13:00
+ID-1450,114.321.466-27,Usuario Exemplo 450,2026-03-04,2026-03-29 16:49:00,17:34:00,Analista 3,Cliente 6,Fila 15,Pendente,Aguardando Documento,16:00
+ID-1451,655.634.121-86,Usuario Exemplo 451,2026-02-21,2026-03-29 14:32:00,15:17:00,Analista 14,Cliente 3,Fila 6,Reprovado Fraude,Divergência Cadastral,14:00
+ID-1452,211.395.250-57,Usuario Exemplo 452,2026-02-16,2026-03-29 13:01:00,13:09:00,Analista 11,Cliente 4,Fila 1,Pendente,Aguardando Documento,13:00
+ID-1453,359.448.670-38,Usuario Exemplo 453,2026-02-03,2026-03-29 09:37:00,10:05:00,Analista 21,Cliente 1,Fila 10,Reprovado Politica,Divergência Cadastral,09:00
+ID-1454,150.357.295-85,Usuario Exemplo 454,2026-02-10,2026-03-29 08:14:00,08:46:00,Analista 17,Cliente 2,Fila 14,Pendente,Aguardando Documento,08:00
+ID-1455,304.693.276-97,Usuario Exemplo 455,2026-02-20,2026-03-29 11:06:00,11:34:00,Analista 14,Cliente 6,Fila 1,Aprovado,Fluxo Normal,11:00
+ID-1456,166.689.544-82,Usuario Exemplo 456,2026-03-04,2026-03-29 11:47:00,12:05:00,Analista 23,Cliente 2,Fila 4,Reprovado Politica,Divergência Cadastral,11:00
+ID-1457,520.612.398-34,Usuario Exemplo 457,2026-03-02,2026-03-29 15:28:00,16:02:00,Analista 3,Cliente 5,Fila 9,Reprovado Fraude,Score Baixo,15:00
+ID-1458,713.902.679-27,Usuario Exemplo 458,2026-02-11,2026-03-29 09:17:00,09:45:00,Analista 26,Cliente 2,Fila 15,Pendente,Aguardando Documento,09:00
+ID-1459,245.622.241-48,Usuario Exemplo 459,2026-02-24,2026-03-29 15:52:00,16:25:00,Analista 1,Cliente 2,Fila 11,Reprovado Fraude,Divergência Cadastral,15:00
+ID-1460,481.516.908-34,Usuario Exemplo 460,2026-02-03,2026-03-29 14:41:00,15:04:00,Analista 29,Cliente 3,Fila 7,Aprovado,Fluxo Normal,14:00
+ID-1461,812.583.518-30,Usuario Exemplo 461,2026-02-27,2026-03-29 15:58:00,16:33:00,Analista 12,Cliente 3,Fila 4,Pendente,Aguardando Documento,15:00
+ID-1462,128.327.683-97,Usuario Exemplo 462,2026-02-08,2026-03-29 13:36:00,13:46:00,Analista 27,Cliente 1,Fila 5,Aprovado,Fluxo Normal,13:00
+ID-1463,879.280.146-68,Usuario Exemplo 463,2026-01-29,2026-03-29 09:29:00,09:58:00,Analista 15,Cliente 3,Fila 10,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1464,849.825.844-11,Usuario Exemplo 464,2026-01-29,2026-03-29 09:11:00,09:20:00,Analista 18,Cliente 1,Fila 4,Aprovado,Fluxo Normal,09:00
+ID-1465,930.733.688-45,Usuario Exemplo 465,2026-02-13,2026-03-29 10:13:00,10:50:00,Analista 4,Cliente 4,Fila 13,Pendente,Aguardando Documento,10:00
+ID-1466,815.743.266-69,Usuario Exemplo 466,2026-03-17,2026-03-29 12:20:00,12:36:00,Analista 30,Cliente 2,Fila 5,Reprovado Politica,Perfil de Risco,12:00
+ID-1467,110.409.666-53,Usuario Exemplo 467,2026-01-28,2026-03-29 17:55:00,18:36:00,Analista 2,Cliente 2,Fila 17,Reprovado Politica,Renda Não Comprovada,17:00
+ID-1468,440.971.225-32,Usuario Exemplo 468,2026-01-31,2026-03-29 13:36:00,13:51:00,Analista 4,Cliente 1,Fila 7,Aprovado,Fluxo Normal,13:00
+ID-1469,410.817.369-42,Usuario Exemplo 469,2026-02-03,2026-03-29 11:33:00,11:49:00,Analista 25,Cliente 2,Fila 10,Reprovado Politica,Score Baixo,11:00
+ID-1470,177.149.872-89,Usuario Exemplo 470,2026-03-21,2026-03-29 14:02:00,14:20:00,Analista 27,Cliente 3,Fila 4,Pendente,Aguardando Documento,14:00
+ID-1471,786.677.854-11,Usuario Exemplo 471,2026-03-11,2026-03-29 11:20:00,11:53:00,Analista 1,Cliente 4,Fila 9,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1472,911.190.524-61,Usuario Exemplo 472,2026-02-18,2026-03-29 11:55:00,12:31:00,Analista 27,Cliente 2,Fila 4,Pendente,Aguardando Documento,11:00
+ID-1473,206.235.431-27,Usuario Exemplo 473,2026-01-30,2026-03-29 10:08:00,10:34:00,Analista 25,Cliente 4,Fila 9,Reprovado Fraude,Score Baixo,10:00
+ID-1474,975.649.384-92,Usuario Exemplo 474,2026-03-16,2026-03-29 09:40:00,10:06:00,Analista 19,Cliente 3,Fila 10,Pendente,Aguardando Documento,09:00
+ID-1475,950.249.254-30,Usuario Exemplo 475,2026-03-19,2026-03-29 17:31:00,17:42:00,Analista 1,Cliente 5,Fila 13,Reprovado Politica,Documentação Irregular,17:00
+ID-1476,654.643.762-42,Usuario Exemplo 476,2026-01-31,2026-03-29 14:01:00,14:23:00,Analista 18,Cliente 2,Fila 4,Aprovado,Fluxo Normal,14:00
+ID-1477,720.162.623-74,Usuario Exemplo 477,2026-02-22,2026-03-29 14:33:00,15:01:00,Analista 19,Cliente 1,Fila 6,Pendente,Aguardando Documento,14:00
+ID-1478,499.899.909-20,Usuario Exemplo 478,2026-02-15,2026-03-29 12:43:00,12:54:00,Analista 29,Cliente 5,Fila 16,Aprovado,Fluxo Normal,12:00
+ID-1479,647.450.966-21,Usuario Exemplo 479,2026-03-25,2026-03-29 17:37:00,17:51:00,Analista 6,Cliente 6,Fila 10,Reprovado Politica,Divergência Cadastral,17:00
+ID-1480,697.271.782-81,Usuario Exemplo 480,2026-02-09,2026-03-29 14:29:00,15:11:00,Analista 9,Cliente 3,Fila 3,Aprovado,Fluxo Normal,14:00
+ID-1481,929.196.371-27,Usuario Exemplo 481,2026-02-08,2026-03-29 17:51:00,17:59:00,Analista 1,Cliente 5,Fila 1,Aprovado,Fluxo Normal,17:00
+ID-1482,747.959.844-12,Usuario Exemplo 482,2026-02-17,2026-03-29 09:10:00,09:44:00,Analista 9,Cliente 2,Fila 6,Pendente,Aguardando Documento,09:00
+ID-1483,733.986.631-92,Usuario Exemplo 483,2026-03-25,2026-03-29 15:56:00,16:22:00,Analista 23,Cliente 2,Fila 2,Aprovado,Fluxo Normal,15:00
+ID-1484,688.733.363-19,Usuario Exemplo 484,2026-02-20,2026-03-29 12:03:00,12:12:00,Analista 28,Cliente 1,Fila 7,Aprovado,Fluxo Normal,12:00
+ID-1485,668.312.476-32,Usuario Exemplo 485,2026-02-19,2026-03-29 16:42:00,17:14:00,Analista 1,Cliente 2,Fila 8,Reprovado Politica,Renda Não Comprovada,16:00
+ID-1486,773.341.762-53,Usuario Exemplo 486,2026-02-19,2026-03-29 13:23:00,13:40:00,Analista 18,Cliente 5,Fila 10,Pendente,Aguardando Documento,13:00
+ID-1487,593.645.382-90,Usuario Exemplo 487,2026-02-19,2026-03-29 13:57:00,14:40:00,Analista 14,Cliente 6,Fila 8,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1488,435.452.675-11,Usuario Exemplo 488,2026-02-16,2026-03-29 10:42:00,11:23:00,Analista 28,Cliente 4,Fila 7,Reprovado Fraude,Perfil de Risco,10:00
+ID-1489,719.568.709-25,Usuario Exemplo 489,2026-02-03,2026-03-29 17:30:00,17:49:00,Analista 30,Cliente 3,Fila 16,Reprovado Fraude,Score Baixo,17:00
+ID-1490,246.640.529-78,Usuario Exemplo 490,2026-03-27,2026-03-29 11:31:00,12:13:00,Analista 10,Cliente 5,Fila 13,Pendente,Aguardando Documento,11:00
+ID-1491,382.534.801-95,Usuario Exemplo 491,2026-02-28,2026-03-29 17:39:00,17:46:00,Analista 19,Cliente 4,Fila 18,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1492,768.707.847-84,Usuario Exemplo 492,2026-02-08,2026-03-29 11:11:00,11:53:00,Analista 20,Cliente 6,Fila 10,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1493,796.952.176-92,Usuario Exemplo 493,2026-03-06,2026-03-29 11:56:00,12:05:00,Analista 11,Cliente 3,Fila 16,Reprovado Politica,Renda Não Comprovada,11:00
+ID-1494,939.782.625-70,Usuario Exemplo 494,2026-03-14,2026-03-29 15:45:00,15:59:00,Analista 29,Cliente 6,Fila 18,Pendente,Aguardando Documento,15:00
+ID-1495,708.778.881-69,Usuario Exemplo 495,2026-02-21,2026-03-29 17:39:00,18:12:00,Analista 22,Cliente 5,Fila 5,Aprovado,Fluxo Normal,17:00
+ID-1496,973.387.105-64,Usuario Exemplo 496,2026-02-09,2026-03-29 10:16:00,10:27:00,Analista 8,Cliente 1,Fila 3,Reprovado Politica,Perfil de Risco,10:00
+ID-1497,410.167.767-25,Usuario Exemplo 497,2026-02-09,2026-03-29 17:08:00,17:32:00,Analista 28,Cliente 5,Fila 18,Reprovado Politica,Divergência Cadastral,17:00
+ID-1498,544.338.754-98,Usuario Exemplo 498,2026-03-22,2026-03-29 17:44:00,18:06:00,Analista 1,Cliente 2,Fila 8,Aprovado,Fluxo Normal,17:00
+ID-1499,488.791.582-55,Usuario Exemplo 499,2026-03-18,2026-03-29 12:31:00,13:10:00,Analista 2,Cliente 6,Fila 1,Reprovado Fraude,Perfil de Risco,12:00
+ID-1500,603.230.822-10,Usuario Exemplo 500,2026-02-03,2026-03-29 09:40:00,09:46:00,Analista 29,Cliente 2,Fila 9,Pendente,Aguardando Documento,09:00
+ID-1501,348.335.346-64,Usuario Exemplo 501,2026-02-18,2026-03-29 15:00:00,15:28:00,Analista 28,Cliente 5,Fila 7,Reprovado Politica,Perfil de Risco,15:00
+ID-1502,388.965.637-62,Usuario Exemplo 502,2026-03-25,2026-03-29 17:38:00,17:45:00,Analista 28,Cliente 2,Fila 4,Pendente,Aguardando Documento,17:00
+ID-1503,932.997.570-26,Usuario Exemplo 503,2026-02-23,2026-03-29 15:42:00,15:55:00,Analista 3,Cliente 2,Fila 6,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1504,941.598.444-51,Usuario Exemplo 504,2026-02-05,2026-03-29 13:35:00,13:52:00,Analista 16,Cliente 3,Fila 11,Reprovado Fraude,Perfil de Risco,13:00
+ID-1505,843.615.708-95,Usuario Exemplo 505,2026-03-02,2026-03-29 08:19:00,08:56:00,Analista 10,Cliente 1,Fila 1,Pendente,Aguardando Documento,08:00
+ID-1506,452.344.815-93,Usuario Exemplo 506,2026-02-23,2026-03-29 09:22:00,09:59:00,Analista 2,Cliente 3,Fila 11,Aprovado,Fluxo Normal,09:00
+ID-1507,309.841.952-12,Usuario Exemplo 507,2026-02-27,2026-03-29 09:54:00,10:30:00,Analista 1,Cliente 3,Fila 3,Reprovado Fraude,Documentação Irregular,09:00
+ID-1508,235.639.550-87,Usuario Exemplo 508,2026-02-11,2026-03-29 11:57:00,12:16:00,Analista 7,Cliente 4,Fila 15,Pendente,Aguardando Documento,11:00
+ID-1509,543.584.794-81,Usuario Exemplo 509,2026-03-13,2026-03-29 17:53:00,18:17:00,Analista 6,Cliente 2,Fila 7,Pendente,Aguardando Documento,17:00
+ID-1510,657.975.621-40,Usuario Exemplo 510,2026-03-10,2026-03-29 14:46:00,15:30:00,Analista 12,Cliente 2,Fila 4,Aprovado,Fluxo Normal,14:00
+ID-1511,516.468.553-99,Usuario Exemplo 511,2026-03-12,2026-03-29 15:07:00,15:15:00,Analista 4,Cliente 3,Fila 4,Aprovado,Fluxo Normal,15:00
+ID-1512,317.252.946-17,Usuario Exemplo 512,2026-02-24,2026-03-29 12:44:00,13:12:00,Analista 2,Cliente 2,Fila 4,Reprovado Fraude,Documentação Irregular,12:00
+ID-1513,106.817.803-76,Usuario Exemplo 513,2026-02-06,2026-03-29 12:52:00,13:20:00,Analista 24,Cliente 4,Fila 7,Reprovado Fraude,Suspeita de Fraude,12:00
+ID-1514,917.821.608-10,Usuario Exemplo 514,2026-01-28,2026-03-29 13:38:00,13:47:00,Analista 13,Cliente 1,Fila 14,Aprovado,Fluxo Normal,13:00
+ID-1515,201.748.493-31,Usuario Exemplo 515,2026-02-16,2026-03-29 14:55:00,15:33:00,Analista 24,Cliente 5,Fila 3,Reprovado Politica,Renda Não Comprovada,14:00
+ID-1516,666.771.924-55,Usuario Exemplo 516,2026-03-25,2026-03-29 16:36:00,17:02:00,Analista 29,Cliente 5,Fila 15,Pendente,Aguardando Documento,16:00
+ID-1517,384.819.623-10,Usuario Exemplo 517,2026-02-25,2026-03-29 15:02:00,15:24:00,Analista 30,Cliente 6,Fila 1,Reprovado Fraude,Documentação Irregular,15:00
+ID-1518,698.220.420-14,Usuario Exemplo 518,2026-03-17,2026-03-29 10:57:00,11:09:00,Analista 7,Cliente 5,Fila 14,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1519,729.594.815-26,Usuario Exemplo 519,2026-03-01,2026-03-29 10:26:00,11:11:00,Analista 7,Cliente 5,Fila 2,Pendente,Aguardando Documento,10:00
+ID-1520,297.790.787-34,Usuario Exemplo 520,2026-03-27,2026-03-29 16:46:00,17:18:00,Analista 24,Cliente 4,Fila 16,Pendente,Aguardando Documento,16:00
+ID-1521,521.905.384-94,Usuario Exemplo 521,2026-03-26,2026-03-29 09:27:00,09:40:00,Analista 24,Cliente 3,Fila 1,Pendente,Aguardando Documento,09:00
+ID-1522,564.815.949-62,Usuario Exemplo 522,2026-03-12,2026-03-29 14:33:00,14:57:00,Analista 14,Cliente 2,Fila 9,Reprovado Fraude,Suspeita de Fraude,14:00
+ID-1523,389.348.918-21,Usuario Exemplo 523,2026-03-27,2026-03-29 16:56:00,17:03:00,Analista 22,Cliente 1,Fila 15,Reprovado Politica,Score Baixo,16:00
+ID-1524,754.477.974-43,Usuario Exemplo 524,2026-02-02,2026-03-29 09:10:00,09:39:00,Analista 14,Cliente 1,Fila 18,Pendente,Aguardando Documento,09:00
+ID-1525,663.127.952-82,Usuario Exemplo 525,2026-03-10,2026-03-29 16:15:00,17:00:00,Analista 24,Cliente 4,Fila 16,Pendente,Aguardando Documento,16:00
+ID-1526,569.298.231-92,Usuario Exemplo 526,2026-01-28,2026-03-29 11:02:00,11:25:00,Analista 24,Cliente 3,Fila 4,Aprovado,Fluxo Normal,11:00
+ID-1527,434.550.330-44,Usuario Exemplo 527,2026-03-04,2026-03-29 14:11:00,14:22:00,Analista 24,Cliente 1,Fila 16,Pendente,Aguardando Documento,14:00
+ID-1528,527.975.329-92,Usuario Exemplo 528,2026-02-15,2026-03-29 08:19:00,08:40:00,Analista 19,Cliente 3,Fila 9,Aprovado,Fluxo Normal,08:00
+ID-1529,827.629.731-38,Usuario Exemplo 529,2026-02-10,2026-03-29 12:26:00,12:54:00,Analista 3,Cliente 4,Fila 18,Reprovado Fraude,Documentação Irregular,12:00
+ID-1530,660.177.504-23,Usuario Exemplo 530,2026-02-09,2026-03-29 16:45:00,17:06:00,Analista 27,Cliente 5,Fila 12,Reprovado Politica,Perfil de Risco,16:00
+ID-1531,173.476.398-36,Usuario Exemplo 531,2026-03-09,2026-03-29 10:22:00,10:50:00,Analista 5,Cliente 5,Fila 8,Reprovado Fraude,Divergência Cadastral,10:00
+ID-1532,905.248.449-94,Usuario Exemplo 532,2026-02-09,2026-03-29 10:56:00,11:17:00,Analista 13,Cliente 4,Fila 8,Reprovado Politica,Documentação Irregular,10:00
+ID-1533,913.614.465-85,Usuario Exemplo 533,2026-03-19,2026-03-29 17:35:00,18:11:00,Analista 18,Cliente 6,Fila 7,Reprovado Fraude,Perfil de Risco,17:00
+ID-1534,280.357.537-85,Usuario Exemplo 534,2026-02-15,2026-03-29 09:51:00,10:27:00,Analista 10,Cliente 5,Fila 1,Pendente,Aguardando Documento,09:00
+ID-1535,503.384.838-83,Usuario Exemplo 535,2026-02-23,2026-03-29 14:23:00,14:36:00,Analista 8,Cliente 4,Fila 4,Pendente,Aguardando Documento,14:00
+ID-1536,964.756.120-39,Usuario Exemplo 536,2026-03-22,2026-03-29 16:12:00,16:24:00,Analista 3,Cliente 3,Fila 15,Reprovado Politica,Documentação Irregular,16:00
+ID-1537,111.560.814-71,Usuario Exemplo 537,2026-02-25,2026-03-29 10:37:00,10:44:00,Analista 14,Cliente 5,Fila 17,Aprovado,Fluxo Normal,10:00
+ID-1538,375.493.255-19,Usuario Exemplo 538,2026-02-27,2026-03-29 11:52:00,12:12:00,Analista 14,Cliente 4,Fila 17,Aprovado,Fluxo Normal,11:00
+ID-1539,918.313.894-55,Usuario Exemplo 539,2026-03-25,2026-03-29 16:46:00,17:11:00,Analista 15,Cliente 2,Fila 6,Pendente,Aguardando Documento,16:00
+ID-1540,125.435.416-73,Usuario Exemplo 540,2026-02-10,2026-03-29 14:05:00,14:42:00,Analista 25,Cliente 3,Fila 9,Reprovado Politica,Perfil de Risco,14:00
+ID-1541,602.400.184-84,Usuario Exemplo 541,2026-03-10,2026-03-29 16:46:00,17:11:00,Analista 1,Cliente 1,Fila 5,Pendente,Aguardando Documento,16:00
+ID-1542,460.779.727-39,Usuario Exemplo 542,2026-03-06,2026-03-29 09:25:00,09:42:00,Analista 29,Cliente 6,Fila 5,Reprovado Politica,Documentação Irregular,09:00
+ID-1543,123.878.184-54,Usuario Exemplo 543,2026-03-23,2026-03-29 12:52:00,13:26:00,Analista 18,Cliente 1,Fila 6,Reprovado Fraude,Perfil de Risco,12:00
+ID-1544,601.653.151-78,Usuario Exemplo 544,2026-02-25,2026-03-29 17:19:00,17:42:00,Analista 29,Cliente 6,Fila 17,Reprovado Fraude,Score Baixo,17:00
+ID-1545,144.576.206-93,Usuario Exemplo 545,2026-03-02,2026-03-29 10:12:00,10:35:00,Analista 24,Cliente 4,Fila 7,Reprovado Fraude,Documentação Irregular,10:00
+ID-1546,421.152.256-43,Usuario Exemplo 546,2026-02-20,2026-03-29 09:43:00,10:03:00,Analista 30,Cliente 4,Fila 10,Pendente,Aguardando Documento,09:00
+ID-1547,622.407.371-54,Usuario Exemplo 547,2026-02-20,2026-03-29 13:36:00,14:03:00,Analista 26,Cliente 6,Fila 17,Aprovado,Fluxo Normal,13:00
+ID-1548,144.753.577-58,Usuario Exemplo 548,2026-03-26,2026-03-29 15:32:00,15:55:00,Analista 8,Cliente 1,Fila 11,Aprovado,Fluxo Normal,15:00
+ID-1549,282.542.695-39,Usuario Exemplo 549,2026-02-27,2026-03-29 13:35:00,13:57:00,Analista 27,Cliente 2,Fila 3,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1550,208.830.757-89,Usuario Exemplo 550,2026-02-08,2026-03-29 11:38:00,12:09:00,Analista 7,Cliente 5,Fila 5,Aprovado,Fluxo Normal,11:00
+ID-1551,847.189.612-71,Usuario Exemplo 551,2026-03-23,2026-03-29 12:59:00,13:44:00,Analista 15,Cliente 1,Fila 18,Reprovado Politica,Score Baixo,12:00
+ID-1552,155.476.428-46,Usuario Exemplo 552,2026-01-28,2026-03-29 16:01:00,16:44:00,Analista 17,Cliente 1,Fila 2,Reprovado Politica,Renda Não Comprovada,16:00
+ID-1553,700.169.507-82,Usuario Exemplo 553,2026-02-02,2026-03-29 10:36:00,10:41:00,Analista 8,Cliente 3,Fila 12,Reprovado Politica,Divergência Cadastral,10:00
+ID-1554,100.147.534-20,Usuario Exemplo 554,2026-02-15,2026-03-29 09:11:00,09:34:00,Analista 6,Cliente 5,Fila 2,Aprovado,Fluxo Normal,09:00
+ID-1555,132.856.462-74,Usuario Exemplo 555,2026-02-13,2026-03-29 14:04:00,14:23:00,Analista 21,Cliente 6,Fila 15,Pendente,Aguardando Documento,14:00
+ID-1556,247.559.349-35,Usuario Exemplo 556,2026-01-30,2026-03-29 13:28:00,13:40:00,Analista 26,Cliente 4,Fila 1,Pendente,Aguardando Documento,13:00
+ID-1557,501.743.143-65,Usuario Exemplo 557,2026-02-22,2026-03-29 12:02:00,12:07:00,Analista 20,Cliente 4,Fila 7,Reprovado Fraude,Documentação Irregular,12:00
+ID-1558,494.813.202-12,Usuario Exemplo 558,2026-03-16,2026-03-29 12:51:00,13:35:00,Analista 17,Cliente 4,Fila 8,Aprovado,Fluxo Normal,12:00
+ID-1559,425.271.714-17,Usuario Exemplo 559,2026-03-01,2026-03-29 17:48:00,18:14:00,Analista 13,Cliente 1,Fila 2,Reprovado Fraude,Divergência Cadastral,17:00
+ID-1560,430.579.476-44,Usuario Exemplo 560,2026-02-25,2026-03-29 08:07:00,08:52:00,Analista 27,Cliente 3,Fila 13,Reprovado Politica,Perfil de Risco,08:00
+ID-1561,588.966.131-96,Usuario Exemplo 561,2026-03-18,2026-03-29 16:37:00,17:21:00,Analista 30,Cliente 2,Fila 18,Pendente,Aguardando Documento,16:00
+ID-1562,125.840.976-40,Usuario Exemplo 562,2026-03-20,2026-03-29 10:46:00,11:10:00,Analista 22,Cliente 6,Fila 12,Pendente,Aguardando Documento,10:00
+ID-1563,869.199.329-84,Usuario Exemplo 563,2026-02-10,2026-03-29 09:30:00,09:39:00,Analista 23,Cliente 2,Fila 18,Pendente,Aguardando Documento,09:00
+ID-1564,761.729.913-73,Usuario Exemplo 564,2026-02-11,2026-03-29 08:09:00,08:38:00,Analista 22,Cliente 4,Fila 11,Reprovado Fraude,Perfil de Risco,08:00
+ID-1565,537.236.454-71,Usuario Exemplo 565,2026-03-25,2026-03-29 14:35:00,15:00:00,Analista 26,Cliente 3,Fila 11,Reprovado Politica,Divergência Cadastral,14:00
+ID-1566,690.166.859-94,Usuario Exemplo 566,2026-03-17,2026-03-29 13:42:00,14:21:00,Analista 18,Cliente 3,Fila 17,Reprovado Fraude,Perfil de Risco,13:00
+ID-1567,230.567.773-64,Usuario Exemplo 567,2026-02-24,2026-03-29 10:06:00,10:25:00,Analista 8,Cliente 3,Fila 5,Pendente,Aguardando Documento,10:00
+ID-1568,407.592.658-96,Usuario Exemplo 568,2026-03-19,2026-03-29 14:21:00,14:27:00,Analista 16,Cliente 3,Fila 1,Aprovado,Fluxo Normal,14:00
+ID-1569,880.809.375-58,Usuario Exemplo 569,2026-01-30,2026-03-29 16:12:00,16:33:00,Analista 28,Cliente 4,Fila 6,Reprovado Fraude,Score Baixo,16:00
+ID-1570,366.635.930-33,Usuario Exemplo 570,2026-02-11,2026-03-29 15:44:00,16:11:00,Analista 16,Cliente 1,Fila 16,Aprovado,Fluxo Normal,15:00
+ID-1571,498.271.551-89,Usuario Exemplo 571,2026-03-04,2026-03-29 08:48:00,09:15:00,Analista 17,Cliente 3,Fila 8,Pendente,Aguardando Documento,08:00
+ID-1572,446.724.930-64,Usuario Exemplo 572,2026-03-29,2026-03-29 08:10:00,08:46:00,Analista 4,Cliente 6,Fila 9,Reprovado Politica,Perfil de Risco,08:00
+ID-1573,157.681.277-93,Usuario Exemplo 573,2026-02-07,2026-03-29 10:21:00,10:29:00,Analista 20,Cliente 3,Fila 18,Pendente,Aguardando Documento,10:00
+ID-1574,913.814.426-20,Usuario Exemplo 574,2026-02-14,2026-03-29 15:49:00,16:29:00,Analista 8,Cliente 1,Fila 7,Reprovado Politica,Suspeita de Fraude,15:00
+ID-1575,844.264.772-49,Usuario Exemplo 575,2026-03-17,2026-03-29 16:24:00,16:29:00,Analista 10,Cliente 5,Fila 17,Pendente,Aguardando Documento,16:00
+ID-1576,333.518.779-88,Usuario Exemplo 576,2026-02-04,2026-03-29 13:58:00,14:42:00,Analista 26,Cliente 4,Fila 5,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1577,887.822.790-97,Usuario Exemplo 577,2026-02-05,2026-03-29 15:45:00,16:10:00,Analista 11,Cliente 5,Fila 14,Aprovado,Fluxo Normal,15:00
+ID-1578,491.999.407-20,Usuario Exemplo 578,2026-01-31,2026-03-29 11:06:00,11:35:00,Analista 29,Cliente 6,Fila 3,Reprovado Politica,Documentação Irregular,11:00
+ID-1579,971.774.497-34,Usuario Exemplo 579,2026-03-25,2026-03-29 12:23:00,12:31:00,Analista 3,Cliente 1,Fila 2,Reprovado Fraude,Score Baixo,12:00
+ID-1580,168.220.825-49,Usuario Exemplo 580,2026-03-17,2026-03-29 15:08:00,15:39:00,Analista 24,Cliente 1,Fila 15,Pendente,Aguardando Documento,15:00
+ID-1581,249.613.300-70,Usuario Exemplo 581,2026-03-21,2026-03-29 14:07:00,14:50:00,Analista 27,Cliente 4,Fila 11,Pendente,Aguardando Documento,14:00
+ID-1582,626.278.355-33,Usuario Exemplo 582,2026-01-31,2026-03-29 09:33:00,09:56:00,Analista 3,Cliente 6,Fila 11,Reprovado Politica,Divergência Cadastral,09:00
+ID-1583,194.592.394-66,Usuario Exemplo 583,2026-03-21,2026-03-29 09:10:00,09:28:00,Analista 19,Cliente 1,Fila 12,Reprovado Fraude,Divergência Cadastral,09:00
+ID-1584,318.507.947-45,Usuario Exemplo 584,2026-03-23,2026-03-29 09:09:00,09:39:00,Analista 20,Cliente 4,Fila 9,Reprovado Politica,Suspeita de Fraude,09:00
+ID-1585,388.863.989-54,Usuario Exemplo 585,2026-03-03,2026-03-29 13:29:00,13:49:00,Analista 15,Cliente 2,Fila 1,Pendente,Aguardando Documento,13:00
+ID-1586,172.331.491-38,Usuario Exemplo 586,2026-02-01,2026-03-29 08:52:00,09:21:00,Analista 30,Cliente 5,Fila 18,Reprovado Politica,Perfil de Risco,08:00
+ID-1587,842.538.561-60,Usuario Exemplo 587,2026-03-23,2026-03-29 14:58:00,15:14:00,Analista 30,Cliente 4,Fila 15,Pendente,Aguardando Documento,14:00
+ID-1588,265.831.243-22,Usuario Exemplo 588,2026-03-10,2026-03-29 08:50:00,09:35:00,Analista 16,Cliente 2,Fila 15,Reprovado Politica,Suspeita de Fraude,08:00
+ID-1589,563.967.486-30,Usuario Exemplo 589,2026-02-15,2026-03-29 11:44:00,12:03:00,Analista 24,Cliente 6,Fila 14,Reprovado Fraude,Perfil de Risco,11:00
+ID-1590,996.904.447-69,Usuario Exemplo 590,2026-03-01,2026-03-29 11:06:00,11:37:00,Analista 18,Cliente 6,Fila 7,Reprovado Politica,Renda Não Comprovada,11:00
+ID-1591,324.628.812-79,Usuario Exemplo 591,2026-02-25,2026-03-29 08:45:00,08:58:00,Analista 16,Cliente 4,Fila 12,Reprovado Politica,Divergência Cadastral,08:00
+ID-1592,562.895.895-73,Usuario Exemplo 592,2026-03-18,2026-03-29 16:23:00,16:38:00,Analista 17,Cliente 4,Fila 5,Reprovado Fraude,Renda Não Comprovada,16:00
+ID-1593,540.625.233-99,Usuario Exemplo 593,2026-02-11,2026-03-29 10:38:00,10:46:00,Analista 16,Cliente 5,Fila 13,Reprovado Fraude,Score Baixo,10:00
+ID-1594,533.495.162-47,Usuario Exemplo 594,2026-03-27,2026-03-29 14:30:00,14:37:00,Analista 8,Cliente 4,Fila 16,Reprovado Fraude,Perfil de Risco,14:00
+ID-1595,996.729.151-81,Usuario Exemplo 595,2026-02-17,2026-03-29 12:30:00,12:53:00,Analista 7,Cliente 6,Fila 1,Reprovado Fraude,Documentação Irregular,12:00
+ID-1596,846.815.709-28,Usuario Exemplo 596,2026-02-05,2026-03-29 16:12:00,16:50:00,Analista 10,Cliente 4,Fila 12,Aprovado,Fluxo Normal,16:00
+ID-1597,416.879.916-46,Usuario Exemplo 597,2026-02-08,2026-03-29 14:22:00,14:43:00,Analista 12,Cliente 2,Fila 7,Pendente,Aguardando Documento,14:00
+ID-1598,948.621.930-49,Usuario Exemplo 598,2026-03-23,2026-03-29 11:08:00,11:25:00,Analista 30,Cliente 6,Fila 8,Reprovado Fraude,Divergência Cadastral,11:00
+ID-1599,389.303.593-51,Usuario Exemplo 599,2026-03-08,2026-03-29 11:23:00,11:38:00,Analista 8,Cliente 1,Fila 8,Pendente,Aguardando Documento,11:00
+ID-1600,658.992.143-19,Usuario Exemplo 600,2026-03-10,2026-03-29 09:46:00,10:03:00,Analista 16,Cliente 1,Fila 6,Reprovado Politica,Divergência Cadastral,09:00
+ID-1601,767.770.393-40,Usuario Exemplo 601,2026-03-05,2026-03-29 10:14:00,10:30:00,Analista 3,Cliente 2,Fila 4,Aprovado,Fluxo Normal,10:00
+ID-1602,547.960.349-56,Usuario Exemplo 602,2026-03-16,2026-03-29 13:04:00,13:46:00,Analista 4,Cliente 4,Fila 11,Aprovado,Fluxo Normal,13:00
+ID-1603,992.696.744-87,Usuario Exemplo 603,2026-01-27,2026-03-29 12:03:00,12:47:00,Analista 15,Cliente 6,Fila 3,Reprovado Fraude,Perfil de Risco,12:00
+ID-1604,420.160.179-13,Usuario Exemplo 604,2026-02-07,2026-03-29 09:44:00,09:57:00,Analista 27,Cliente 1,Fila 12,Reprovado Fraude,Documentação Irregular,09:00
+ID-1605,572.462.441-99,Usuario Exemplo 605,2026-03-23,2026-03-29 13:48:00,14:27:00,Analista 28,Cliente 4,Fila 9,Reprovado Fraude,Perfil de Risco,13:00
+ID-1606,147.172.657-83,Usuario Exemplo 606,2026-03-16,2026-03-29 12:13:00,12:47:00,Analista 27,Cliente 5,Fila 10,Aprovado,Fluxo Normal,12:00
+ID-1607,556.611.975-63,Usuario Exemplo 607,2026-03-11,2026-03-29 13:14:00,13:40:00,Analista 29,Cliente 5,Fila 6,Reprovado Politica,Perfil de Risco,13:00
+ID-1608,262.627.593-71,Usuario Exemplo 608,2026-03-02,2026-03-29 14:45:00,15:07:00,Analista 29,Cliente 2,Fila 16,Aprovado,Fluxo Normal,14:00
+ID-1609,884.125.701-55,Usuario Exemplo 609,2026-03-04,2026-03-29 14:15:00,14:26:00,Analista 7,Cliente 4,Fila 9,Pendente,Aguardando Documento,14:00
+ID-1610,202.529.792-27,Usuario Exemplo 610,2026-01-29,2026-03-29 10:39:00,11:17:00,Analista 17,Cliente 1,Fila 10,Aprovado,Fluxo Normal,10:00
+ID-1611,952.901.894-41,Usuario Exemplo 611,2026-02-24,2026-03-29 08:46:00,09:08:00,Analista 26,Cliente 1,Fila 8,Aprovado,Fluxo Normal,08:00
+ID-1612,522.214.826-58,Usuario Exemplo 612,2026-03-19,2026-03-29 16:33:00,17:11:00,Analista 20,Cliente 2,Fila 9,Aprovado,Fluxo Normal,16:00
+ID-1613,954.739.133-39,Usuario Exemplo 613,2026-02-13,2026-03-29 16:11:00,16:20:00,Analista 11,Cliente 4,Fila 17,Reprovado Politica,Perfil de Risco,16:00
+ID-1614,479.347.682-94,Usuario Exemplo 614,2026-02-14,2026-03-29 09:45:00,10:10:00,Analista 26,Cliente 3,Fila 2,Aprovado,Fluxo Normal,09:00
+ID-1615,192.992.306-86,Usuario Exemplo 615,2026-02-01,2026-03-29 11:42:00,12:13:00,Analista 12,Cliente 4,Fila 17,Reprovado Fraude,Score Baixo,11:00
+ID-1616,480.283.925-98,Usuario Exemplo 616,2026-03-04,2026-03-29 10:07:00,10:15:00,Analista 25,Cliente 3,Fila 11,Aprovado,Fluxo Normal,10:00
+ID-1617,607.899.505-69,Usuario Exemplo 617,2026-03-17,2026-03-29 10:05:00,10:32:00,Analista 22,Cliente 2,Fila 5,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1618,193.676.247-33,Usuario Exemplo 618,2026-02-20,2026-03-29 09:58:00,10:43:00,Analista 2,Cliente 3,Fila 2,Reprovado Politica,Documentação Irregular,09:00
+ID-1619,229.352.119-17,Usuario Exemplo 619,2026-01-30,2026-03-29 11:51:00,12:05:00,Analista 10,Cliente 3,Fila 12,Pendente,Aguardando Documento,11:00
+ID-1620,177.347.134-72,Usuario Exemplo 620,2026-03-25,2026-03-29 17:36:00,18:16:00,Analista 3,Cliente 5,Fila 3,Reprovado Fraude,Documentação Irregular,17:00
+ID-1621,556.756.823-11,Usuario Exemplo 621,2026-03-16,2026-03-29 10:30:00,10:46:00,Analista 17,Cliente 1,Fila 13,Pendente,Aguardando Documento,10:00
+ID-1622,318.528.490-14,Usuario Exemplo 622,2026-02-01,2026-03-29 13:12:00,13:43:00,Analista 1,Cliente 1,Fila 11,Aprovado,Fluxo Normal,13:00
+ID-1623,171.566.971-71,Usuario Exemplo 623,2026-01-31,2026-03-29 17:18:00,17:30:00,Analista 7,Cliente 6,Fila 10,Aprovado,Fluxo Normal,17:00
+ID-1624,459.223.355-76,Usuario Exemplo 624,2026-02-11,2026-03-29 13:45:00,14:27:00,Analista 7,Cliente 5,Fila 6,Reprovado Fraude,Suspeita de Fraude,13:00
+ID-1625,639.595.933-41,Usuario Exemplo 625,2026-02-08,2026-03-29 10:56:00,11:36:00,Analista 9,Cliente 6,Fila 14,Reprovado Fraude,Score Baixo,10:00
+ID-1626,318.668.219-60,Usuario Exemplo 626,2026-02-17,2026-03-29 17:39:00,17:45:00,Analista 29,Cliente 2,Fila 7,Pendente,Aguardando Documento,17:00
+ID-1627,795.144.320-87,Usuario Exemplo 627,2026-02-09,2026-03-29 16:56:00,17:24:00,Analista 30,Cliente 6,Fila 12,Aprovado,Fluxo Normal,16:00
+ID-1628,260.223.793-60,Usuario Exemplo 628,2026-03-25,2026-03-29 10:35:00,10:45:00,Analista 15,Cliente 5,Fila 15,Pendente,Aguardando Documento,10:00
+ID-1629,878.783.808-23,Usuario Exemplo 629,2026-01-27,2026-03-29 09:30:00,10:08:00,Analista 11,Cliente 2,Fila 14,Aprovado,Fluxo Normal,09:00
+ID-1630,940.893.144-67,Usuario Exemplo 630,2026-02-05,2026-03-29 15:00:00,15:18:00,Analista 6,Cliente 5,Fila 10,Reprovado Politica,Documentação Irregular,15:00
+ID-1631,141.849.135-33,Usuario Exemplo 631,2026-02-16,2026-03-29 12:14:00,12:51:00,Analista 12,Cliente 4,Fila 5,Pendente,Aguardando Documento,12:00
+ID-1632,309.507.912-13,Usuario Exemplo 632,2026-03-10,2026-03-29 13:02:00,13:25:00,Analista 13,Cliente 6,Fila 7,Reprovado Politica,Perfil de Risco,13:00
+ID-1633,883.168.600-21,Usuario Exemplo 633,2026-02-09,2026-03-29 15:40:00,16:19:00,Analista 3,Cliente 6,Fila 11,Aprovado,Fluxo Normal,15:00
+ID-1634,288.184.217-80,Usuario Exemplo 634,2026-02-27,2026-03-29 13:03:00,13:12:00,Analista 3,Cliente 3,Fila 4,Pendente,Aguardando Documento,13:00
+ID-1635,455.321.633-30,Usuario Exemplo 635,2026-03-12,2026-03-29 17:15:00,17:40:00,Analista 16,Cliente 1,Fila 14,Reprovado Politica,Suspeita de Fraude,17:00
+ID-1636,749.129.289-49,Usuario Exemplo 636,2026-03-22,2026-03-29 17:59:00,18:21:00,Analista 30,Cliente 3,Fila 11,Reprovado Politica,Suspeita de Fraude,17:00
+ID-1637,489.548.442-16,Usuario Exemplo 637,2026-03-21,2026-03-29 15:51:00,16:33:00,Analista 28,Cliente 3,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1638,935.721.929-71,Usuario Exemplo 638,2026-03-06,2026-03-29 10:01:00,10:23:00,Analista 17,Cliente 1,Fila 13,Reprovado Politica,Perfil de Risco,10:00
+ID-1639,346.725.562-99,Usuario Exemplo 639,2026-02-27,2026-03-29 15:55:00,16:21:00,Analista 9,Cliente 1,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1640,327.378.634-32,Usuario Exemplo 640,2026-02-18,2026-03-29 16:59:00,17:27:00,Analista 25,Cliente 4,Fila 11,Aprovado,Fluxo Normal,16:00
+ID-1641,603.458.251-99,Usuario Exemplo 641,2026-02-01,2026-03-29 17:09:00,17:21:00,Analista 7,Cliente 1,Fila 15,Reprovado Fraude,Score Baixo,17:00
+ID-1642,892.600.486-12,Usuario Exemplo 642,2026-02-04,2026-03-29 16:17:00,16:49:00,Analista 18,Cliente 3,Fila 12,Aprovado,Fluxo Normal,16:00
+ID-1643,802.871.287-50,Usuario Exemplo 643,2026-02-04,2026-03-29 12:01:00,12:08:00,Analista 24,Cliente 2,Fila 14,Reprovado Fraude,Documentação Irregular,12:00
+ID-1644,511.573.834-31,Usuario Exemplo 644,2026-02-16,2026-03-29 08:30:00,09:04:00,Analista 20,Cliente 6,Fila 5,Pendente,Aguardando Documento,08:00
+ID-1645,829.715.852-81,Usuario Exemplo 645,2026-03-19,2026-03-29 15:02:00,15:16:00,Analista 22,Cliente 6,Fila 8,Reprovado Politica,Score Baixo,15:00
+ID-1646,779.191.988-82,Usuario Exemplo 646,2026-02-27,2026-03-29 09:09:00,09:51:00,Analista 30,Cliente 6,Fila 14,Aprovado,Fluxo Normal,09:00
+ID-1647,718.450.756-58,Usuario Exemplo 647,2026-02-17,2026-03-29 08:26:00,08:32:00,Analista 27,Cliente 2,Fila 12,Pendente,Aguardando Documento,08:00
+ID-1648,383.264.162-90,Usuario Exemplo 648,2026-01-29,2026-03-29 16:52:00,17:17:00,Analista 6,Cliente 2,Fila 7,Aprovado,Fluxo Normal,16:00
+ID-1649,807.696.903-86,Usuario Exemplo 649,2026-03-10,2026-03-29 17:48:00,17:57:00,Analista 17,Cliente 1,Fila 7,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1650,327.288.303-91,Usuario Exemplo 650,2026-03-10,2026-03-29 12:40:00,13:08:00,Analista 14,Cliente 5,Fila 10,Reprovado Fraude,Suspeita de Fraude,12:00
+ID-1651,756.857.906-57,Usuario Exemplo 651,2026-03-11,2026-03-29 14:45:00,15:20:00,Analista 23,Cliente 4,Fila 5,Pendente,Aguardando Documento,14:00
+ID-1652,302.172.654-85,Usuario Exemplo 652,2026-03-14,2026-03-29 10:18:00,10:47:00,Analista 1,Cliente 3,Fila 8,Aprovado,Fluxo Normal,10:00
+ID-1653,421.347.983-53,Usuario Exemplo 653,2026-02-09,2026-03-29 12:48:00,13:18:00,Analista 23,Cliente 6,Fila 4,Reprovado Fraude,Score Baixo,12:00
+ID-1654,507.847.283-19,Usuario Exemplo 654,2026-03-20,2026-03-29 11:57:00,12:17:00,Analista 5,Cliente 6,Fila 3,Aprovado,Fluxo Normal,11:00
+ID-1655,220.785.575-91,Usuario Exemplo 655,2026-03-17,2026-03-29 15:08:00,15:33:00,Analista 17,Cliente 3,Fila 6,Reprovado Fraude,Score Baixo,15:00
+ID-1656,801.129.918-65,Usuario Exemplo 656,2026-03-08,2026-03-29 13:08:00,13:46:00,Analista 4,Cliente 3,Fila 1,Aprovado,Fluxo Normal,13:00
+ID-1657,318.512.951-52,Usuario Exemplo 657,2026-02-02,2026-03-29 09:08:00,09:24:00,Analista 13,Cliente 4,Fila 18,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1658,479.881.321-90,Usuario Exemplo 658,2026-02-19,2026-03-29 09:55:00,10:27:00,Analista 15,Cliente 1,Fila 15,Reprovado Fraude,Score Baixo,09:00
+ID-1659,768.733.755-81,Usuario Exemplo 659,2026-01-30,2026-03-29 08:16:00,08:31:00,Analista 27,Cliente 5,Fila 8,Aprovado,Fluxo Normal,08:00
+ID-1660,897.993.698-57,Usuario Exemplo 660,2026-02-01,2026-03-29 12:36:00,12:50:00,Analista 4,Cliente 4,Fila 8,Reprovado Fraude,Perfil de Risco,12:00
+ID-1661,586.491.948-80,Usuario Exemplo 661,2026-02-12,2026-03-29 08:55:00,09:08:00,Analista 10,Cliente 6,Fila 13,Reprovado Fraude,Score Baixo,08:00
+ID-1662,820.292.595-27,Usuario Exemplo 662,2026-03-25,2026-03-29 09:01:00,09:30:00,Analista 9,Cliente 3,Fila 4,Reprovado Fraude,Documentação Irregular,09:00
+ID-1663,849.396.906-77,Usuario Exemplo 663,2026-02-02,2026-03-29 13:33:00,13:50:00,Analista 14,Cliente 6,Fila 1,Aprovado,Fluxo Normal,13:00
+ID-1664,701.181.735-33,Usuario Exemplo 664,2026-02-09,2026-03-29 16:28:00,17:02:00,Analista 26,Cliente 3,Fila 12,Reprovado Fraude,Documentação Irregular,16:00
+ID-1665,484.752.967-88,Usuario Exemplo 665,2026-02-25,2026-03-29 14:35:00,15:15:00,Analista 26,Cliente 1,Fila 1,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1666,986.993.610-32,Usuario Exemplo 666,2026-03-14,2026-03-29 14:04:00,14:26:00,Analista 28,Cliente 2,Fila 13,Reprovado Politica,Documentação Irregular,14:00
+ID-1667,361.867.726-12,Usuario Exemplo 667,2026-03-19,2026-03-29 08:59:00,09:28:00,Analista 16,Cliente 5,Fila 13,Aprovado,Fluxo Normal,08:00
+ID-1668,587.999.813-73,Usuario Exemplo 668,2026-02-17,2026-03-29 17:35:00,18:06:00,Analista 11,Cliente 4,Fila 12,Aprovado,Fluxo Normal,17:00
+ID-1669,764.402.288-40,Usuario Exemplo 669,2026-02-22,2026-03-29 14:35:00,15:04:00,Analista 13,Cliente 2,Fila 14,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1670,942.398.128-29,Usuario Exemplo 670,2026-03-26,2026-03-29 12:34:00,12:48:00,Analista 26,Cliente 6,Fila 7,Reprovado Fraude,Perfil de Risco,12:00
+ID-1671,132.944.473-54,Usuario Exemplo 671,2026-02-05,2026-03-29 14:02:00,14:11:00,Analista 14,Cliente 6,Fila 14,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1672,110.100.590-82,Usuario Exemplo 672,2026-03-03,2026-03-29 15:19:00,15:58:00,Analista 5,Cliente 4,Fila 10,Reprovado Fraude,Suspeita de Fraude,15:00
+ID-1673,262.729.467-87,Usuario Exemplo 673,2026-03-22,2026-03-29 08:04:00,08:38:00,Analista 18,Cliente 4,Fila 18,Reprovado Politica,Documentação Irregular,08:00
+ID-1674,484.686.932-72,Usuario Exemplo 674,2026-03-09,2026-03-29 09:34:00,09:46:00,Analista 11,Cliente 4,Fila 1,Reprovado Politica,Renda Não Comprovada,09:00
+ID-1675,424.334.143-83,Usuario Exemplo 675,2026-02-09,2026-03-29 12:15:00,12:54:00,Analista 16,Cliente 3,Fila 3,Aprovado,Fluxo Normal,12:00
+ID-1676,591.195.594-34,Usuario Exemplo 676,2026-03-21,2026-03-29 13:20:00,14:00:00,Analista 26,Cliente 1,Fila 1,Pendente,Aguardando Documento,13:00
+ID-1677,232.141.629-38,Usuario Exemplo 677,2026-02-09,2026-03-29 14:43:00,15:20:00,Analista 12,Cliente 2,Fila 16,Aprovado,Fluxo Normal,14:00
+ID-1678,620.982.601-10,Usuario Exemplo 678,2026-02-28,2026-03-29 12:10:00,12:29:00,Analista 8,Cliente 3,Fila 15,Aprovado,Fluxo Normal,12:00
+ID-1679,704.136.160-58,Usuario Exemplo 679,2026-03-27,2026-03-29 13:20:00,13:26:00,Analista 26,Cliente 6,Fila 14,Pendente,Aguardando Documento,13:00
+ID-1680,172.902.590-17,Usuario Exemplo 680,2026-02-02,2026-03-29 16:47:00,17:30:00,Analista 19,Cliente 4,Fila 17,Aprovado,Fluxo Normal,16:00
+ID-1681,928.395.667-96,Usuario Exemplo 681,2026-02-22,2026-03-29 15:40:00,15:51:00,Analista 11,Cliente 4,Fila 3,Pendente,Aguardando Documento,15:00
+ID-1682,823.950.137-33,Usuario Exemplo 682,2026-03-23,2026-03-29 10:17:00,10:31:00,Analista 6,Cliente 4,Fila 12,Reprovado Politica,Divergência Cadastral,10:00
+ID-1683,905.182.212-78,Usuario Exemplo 683,2026-03-07,2026-03-29 17:29:00,17:55:00,Analista 1,Cliente 4,Fila 2,Pendente,Aguardando Documento,17:00
+ID-1684,788.175.283-24,Usuario Exemplo 684,2026-03-16,2026-03-29 11:35:00,12:02:00,Analista 26,Cliente 3,Fila 8,Reprovado Politica,Documentação Irregular,11:00
+ID-1685,302.705.289-81,Usuario Exemplo 685,2026-03-25,2026-03-29 15:49:00,16:03:00,Analista 30,Cliente 4,Fila 8,Pendente,Aguardando Documento,15:00
+ID-1686,438.365.821-10,Usuario Exemplo 686,2026-03-22,2026-03-29 09:25:00,09:50:00,Analista 5,Cliente 6,Fila 1,Pendente,Aguardando Documento,09:00
+ID-1687,227.622.250-12,Usuario Exemplo 687,2026-03-21,2026-03-29 10:36:00,11:08:00,Analista 20,Cliente 4,Fila 11,Aprovado,Fluxo Normal,10:00
+ID-1688,257.798.299-91,Usuario Exemplo 688,2026-03-24,2026-03-29 12:36:00,13:15:00,Analista 9,Cliente 2,Fila 18,Pendente,Aguardando Documento,12:00
+ID-1689,242.885.223-15,Usuario Exemplo 689,2026-02-26,2026-03-29 08:24:00,08:36:00,Analista 20,Cliente 5,Fila 8,Reprovado Politica,Documentação Irregular,08:00
+ID-1690,525.456.769-25,Usuario Exemplo 690,2026-02-14,2026-03-29 08:19:00,09:03:00,Analista 28,Cliente 5,Fila 15,Reprovado Fraude,Documentação Irregular,08:00
+ID-1691,402.583.848-31,Usuario Exemplo 691,2026-02-09,2026-03-29 13:40:00,14:12:00,Analista 23,Cliente 1,Fila 18,Reprovado Fraude,Perfil de Risco,13:00
+ID-1692,587.626.993-32,Usuario Exemplo 692,2026-03-19,2026-03-29 13:28:00,14:11:00,Analista 28,Cliente 1,Fila 15,Pendente,Aguardando Documento,13:00
+ID-1693,748.916.875-18,Usuario Exemplo 693,2026-03-10,2026-03-29 09:21:00,09:28:00,Analista 19,Cliente 5,Fila 18,Pendente,Aguardando Documento,09:00
+ID-1694,857.199.139-51,Usuario Exemplo 694,2026-02-09,2026-03-29 11:15:00,11:36:00,Analista 28,Cliente 6,Fila 13,Reprovado Politica,Score Baixo,11:00
+ID-1695,876.180.539-44,Usuario Exemplo 695,2026-02-23,2026-03-29 11:58:00,12:36:00,Analista 7,Cliente 4,Fila 13,Pendente,Aguardando Documento,11:00
+ID-1696,919.409.468-71,Usuario Exemplo 696,2026-03-24,2026-03-29 17:57:00,18:32:00,Analista 16,Cliente 4,Fila 16,Pendente,Aguardando Documento,17:00
+ID-1697,484.678.734-87,Usuario Exemplo 697,2026-03-26,2026-03-29 09:43:00,09:48:00,Analista 4,Cliente 1,Fila 1,Reprovado Politica,Perfil de Risco,09:00
+ID-1698,489.976.882-78,Usuario Exemplo 698,2026-03-08,2026-03-29 12:43:00,12:48:00,Analista 3,Cliente 2,Fila 12,Pendente,Aguardando Documento,12:00
+ID-1699,297.523.462-63,Usuario Exemplo 699,2026-03-13,2026-03-29 13:03:00,13:28:00,Analista 21,Cliente 2,Fila 4,Reprovado Politica,Documentação Irregular,13:00
+ID-1700,185.256.509-98,Usuario Exemplo 700,2026-03-23,2026-03-29 12:08:00,12:30:00,Analista 15,Cliente 3,Fila 6,Pendente,Aguardando Documento,12:00
+ID-1701,610.612.580-65,Usuario Exemplo 701,2026-03-18,2026-03-29 11:44:00,12:22:00,Analista 25,Cliente 5,Fila 11,Aprovado,Fluxo Normal,11:00
+ID-1702,425.605.782-59,Usuario Exemplo 702,2026-02-04,2026-03-29 11:22:00,12:02:00,Analista 8,Cliente 1,Fila 13,Aprovado,Fluxo Normal,11:00
+ID-1703,833.124.543-21,Usuario Exemplo 703,2026-02-07,2026-03-29 17:37:00,18:20:00,Analista 21,Cliente 3,Fila 14,Reprovado Fraude,Divergência Cadastral,17:00
+ID-1704,661.322.309-31,Usuario Exemplo 704,2026-03-05,2026-03-29 09:22:00,10:03:00,Analista 30,Cliente 1,Fila 10,Pendente,Aguardando Documento,09:00
+ID-1705,394.295.206-73,Usuario Exemplo 705,2026-03-14,2026-03-29 17:14:00,17:32:00,Analista 12,Cliente 2,Fila 10,Reprovado Politica,Documentação Irregular,17:00
+ID-1706,328.358.111-49,Usuario Exemplo 706,2026-03-01,2026-03-29 08:20:00,08:33:00,Analista 4,Cliente 3,Fila 10,Reprovado Fraude,Perfil de Risco,08:00
+ID-1707,551.528.818-16,Usuario Exemplo 707,2026-03-20,2026-03-29 12:40:00,12:55:00,Analista 8,Cliente 4,Fila 4,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1708,958.137.338-75,Usuario Exemplo 708,2026-02-01,2026-03-29 09:19:00,09:25:00,Analista 15,Cliente 5,Fila 5,Pendente,Aguardando Documento,09:00
+ID-1709,780.736.457-71,Usuario Exemplo 709,2026-01-28,2026-03-29 11:53:00,12:08:00,Analista 8,Cliente 2,Fila 13,Reprovado Fraude,Perfil de Risco,11:00
+ID-1710,668.742.572-48,Usuario Exemplo 710,2026-02-07,2026-03-29 11:44:00,12:06:00,Analista 18,Cliente 2,Fila 15,Reprovado Fraude,Divergência Cadastral,11:00
+ID-1711,165.735.537-58,Usuario Exemplo 711,2026-02-16,2026-03-29 08:06:00,08:31:00,Analista 10,Cliente 3,Fila 11,Reprovado Politica,Suspeita de Fraude,08:00
+ID-1712,906.588.650-17,Usuario Exemplo 712,2026-02-19,2026-03-29 13:43:00,13:50:00,Analista 20,Cliente 1,Fila 8,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1713,676.151.737-74,Usuario Exemplo 713,2026-02-26,2026-03-29 12:17:00,12:28:00,Analista 1,Cliente 6,Fila 12,Reprovado Politica,Score Baixo,12:00
+ID-1714,745.619.519-14,Usuario Exemplo 714,2026-03-11,2026-03-29 13:12:00,13:49:00,Analista 23,Cliente 3,Fila 11,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1715,695.270.812-90,Usuario Exemplo 715,2026-03-04,2026-03-29 10:53:00,11:03:00,Analista 3,Cliente 2,Fila 7,Pendente,Aguardando Documento,10:00
+ID-1716,218.229.428-38,Usuario Exemplo 716,2026-03-25,2026-03-29 10:48:00,10:59:00,Analista 18,Cliente 4,Fila 3,Reprovado Politica,Renda Não Comprovada,10:00
+ID-1717,642.552.848-16,Usuario Exemplo 717,2026-02-18,2026-03-29 17:43:00,18:14:00,Analista 10,Cliente 6,Fila 6,Reprovado Politica,Suspeita de Fraude,17:00
+ID-1718,504.691.832-17,Usuario Exemplo 718,2026-02-05,2026-03-29 17:07:00,17:49:00,Analista 20,Cliente 4,Fila 1,Reprovado Fraude,Divergência Cadastral,17:00
+ID-1719,725.493.612-24,Usuario Exemplo 719,2026-02-20,2026-03-29 10:19:00,10:45:00,Analista 16,Cliente 3,Fila 10,Aprovado,Fluxo Normal,10:00
+ID-1720,657.164.305-81,Usuario Exemplo 720,2026-01-29,2026-03-29 13:29:00,14:05:00,Analista 16,Cliente 2,Fila 5,Reprovado Politica,Score Baixo,13:00
+ID-1721,588.555.799-34,Usuario Exemplo 721,2026-01-28,2026-03-29 17:13:00,17:20:00,Analista 24,Cliente 3,Fila 1,Aprovado,Fluxo Normal,17:00
+ID-1722,894.574.312-12,Usuario Exemplo 722,2026-03-23,2026-03-29 15:56:00,16:09:00,Analista 30,Cliente 5,Fila 17,Pendente,Aguardando Documento,15:00
+ID-1723,571.566.457-51,Usuario Exemplo 723,2026-03-18,2026-03-29 16:30:00,16:48:00,Analista 13,Cliente 2,Fila 8,Reprovado Fraude,Documentação Irregular,16:00
+ID-1724,484.462.542-68,Usuario Exemplo 724,2026-02-08,2026-03-29 15:45:00,16:20:00,Analista 1,Cliente 4,Fila 7,Pendente,Aguardando Documento,15:00
+ID-1725,371.853.768-86,Usuario Exemplo 725,2026-03-14,2026-03-29 09:13:00,09:30:00,Analista 19,Cliente 6,Fila 1,Pendente,Aguardando Documento,09:00
+ID-1726,360.446.939-94,Usuario Exemplo 726,2026-02-04,2026-03-29 17:04:00,17:40:00,Analista 21,Cliente 6,Fila 7,Reprovado Fraude,Score Baixo,17:00
+ID-1727,574.930.920-48,Usuario Exemplo 727,2026-03-05,2026-03-29 08:33:00,08:50:00,Analista 6,Cliente 1,Fila 14,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1728,222.920.232-71,Usuario Exemplo 728,2026-03-07,2026-03-29 10:31:00,10:52:00,Analista 6,Cliente 4,Fila 16,Aprovado,Fluxo Normal,10:00
+ID-1729,548.462.809-14,Usuario Exemplo 729,2026-03-08,2026-03-29 12:11:00,12:19:00,Analista 4,Cliente 3,Fila 8,Aprovado,Fluxo Normal,12:00
+ID-1730,542.982.803-28,Usuario Exemplo 730,2026-02-10,2026-03-29 08:44:00,09:26:00,Analista 24,Cliente 3,Fila 17,Pendente,Aguardando Documento,08:00
+ID-1731,810.975.328-62,Usuario Exemplo 731,2026-02-19,2026-03-29 10:09:00,10:17:00,Analista 17,Cliente 2,Fila 1,Pendente,Aguardando Documento,10:00
+ID-1732,645.492.559-37,Usuario Exemplo 732,2026-02-18,2026-03-29 16:24:00,17:07:00,Analista 6,Cliente 5,Fila 12,Pendente,Aguardando Documento,16:00
+ID-1733,823.230.940-28,Usuario Exemplo 733,2026-03-08,2026-03-29 16:01:00,16:37:00,Analista 22,Cliente 4,Fila 13,Aprovado,Fluxo Normal,16:00
+ID-1734,277.646.830-50,Usuario Exemplo 734,2026-01-28,2026-03-29 09:00:00,09:17:00,Analista 19,Cliente 3,Fila 12,Aprovado,Fluxo Normal,09:00
+ID-1735,108.309.536-68,Usuario Exemplo 735,2026-02-03,2026-03-29 08:16:00,08:48:00,Analista 22,Cliente 5,Fila 5,Reprovado Fraude,Documentação Irregular,08:00
+ID-1736,379.481.150-61,Usuario Exemplo 736,2026-03-04,2026-03-29 12:21:00,12:58:00,Analista 19,Cliente 6,Fila 18,Pendente,Aguardando Documento,12:00
+ID-1737,217.260.609-10,Usuario Exemplo 737,2026-03-09,2026-03-29 09:41:00,10:01:00,Analista 3,Cliente 5,Fila 14,Reprovado Fraude,Score Baixo,09:00
+ID-1738,919.442.509-21,Usuario Exemplo 738,2026-02-18,2026-03-29 13:12:00,13:19:00,Analista 16,Cliente 2,Fila 17,Reprovado Politica,Documentação Irregular,13:00
+ID-1739,816.968.738-91,Usuario Exemplo 739,2026-03-12,2026-03-29 13:15:00,13:23:00,Analista 18,Cliente 2,Fila 16,Aprovado,Fluxo Normal,13:00
+ID-1740,885.972.872-23,Usuario Exemplo 740,2026-02-23,2026-03-29 12:50:00,12:57:00,Analista 23,Cliente 2,Fila 1,Aprovado,Fluxo Normal,12:00
+ID-1741,300.331.733-50,Usuario Exemplo 741,2026-03-06,2026-03-29 13:55:00,14:11:00,Analista 13,Cliente 1,Fila 5,Pendente,Aguardando Documento,13:00
+ID-1742,823.871.624-77,Usuario Exemplo 742,2026-03-11,2026-03-29 13:02:00,13:28:00,Analista 7,Cliente 1,Fila 7,Reprovado Fraude,Perfil de Risco,13:00
+ID-1743,809.275.167-36,Usuario Exemplo 743,2026-03-20,2026-03-29 15:52:00,16:12:00,Analista 25,Cliente 6,Fila 6,Reprovado Fraude,Renda Não Comprovada,15:00
+ID-1744,329.461.619-20,Usuario Exemplo 744,2026-03-14,2026-03-29 11:15:00,11:49:00,Analista 16,Cliente 2,Fila 12,Reprovado Fraude,Perfil de Risco,11:00
+ID-1745,416.648.980-68,Usuario Exemplo 745,2026-03-24,2026-03-29 16:45:00,17:25:00,Analista 3,Cliente 6,Fila 17,Reprovado Fraude,Divergência Cadastral,16:00
+ID-1746,243.728.489-23,Usuario Exemplo 746,2026-03-13,2026-03-29 17:31:00,17:36:00,Analista 27,Cliente 6,Fila 1,Aprovado,Fluxo Normal,17:00
+ID-1747,386.271.914-79,Usuario Exemplo 747,2026-03-24,2026-03-29 13:11:00,13:17:00,Analista 24,Cliente 3,Fila 4,Reprovado Politica,Documentação Irregular,13:00
+ID-1748,362.907.651-59,Usuario Exemplo 748,2026-01-27,2026-03-29 14:17:00,14:31:00,Analista 10,Cliente 1,Fila 5,Aprovado,Fluxo Normal,14:00
+ID-1749,878.947.490-87,Usuario Exemplo 749,2026-03-23,2026-03-29 17:24:00,18:00:00,Analista 9,Cliente 5,Fila 4,Pendente,Aguardando Documento,17:00
+ID-1750,332.380.719-11,Usuario Exemplo 750,2026-03-22,2026-03-29 14:14:00,14:51:00,Analista 20,Cliente 1,Fila 3,Aprovado,Fluxo Normal,14:00
+ID-1751,283.385.356-12,Usuario Exemplo 751,2026-03-20,2026-03-29 11:20:00,11:26:00,Analista 16,Cliente 4,Fila 1,Reprovado Fraude,Score Baixo,11:00
+ID-1752,418.659.885-89,Usuario Exemplo 752,2026-01-31,2026-03-29 08:19:00,08:48:00,Analista 21,Cliente 5,Fila 3,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1753,765.413.855-58,Usuario Exemplo 753,2026-03-25,2026-03-29 17:27:00,17:51:00,Analista 4,Cliente 1,Fila 8,Aprovado,Fluxo Normal,17:00
+ID-1754,629.862.858-67,Usuario Exemplo 754,2026-02-10,2026-03-29 09:36:00,09:58:00,Analista 28,Cliente 2,Fila 2,Reprovado Politica,Suspeita de Fraude,09:00
+ID-1755,295.116.484-36,Usuario Exemplo 755,2026-03-10,2026-03-29 09:25:00,10:07:00,Analista 29,Cliente 3,Fila 17,Pendente,Aguardando Documento,09:00
+ID-1756,784.348.908-62,Usuario Exemplo 756,2026-01-31,2026-03-29 17:35:00,17:58:00,Analista 18,Cliente 5,Fila 6,Reprovado Politica,Documentação Irregular,17:00
+ID-1757,677.798.163-23,Usuario Exemplo 757,2026-02-06,2026-03-29 11:11:00,11:21:00,Analista 14,Cliente 1,Fila 13,Pendente,Aguardando Documento,11:00
+ID-1758,566.883.507-60,Usuario Exemplo 758,2026-03-27,2026-03-29 17:18:00,17:27:00,Analista 15,Cliente 1,Fila 12,Reprovado Fraude,Score Baixo,17:00
+ID-1759,746.368.463-23,Usuario Exemplo 759,2026-02-12,2026-03-29 15:06:00,15:15:00,Analista 21,Cliente 3,Fila 18,Aprovado,Fluxo Normal,15:00
+ID-1760,672.662.933-56,Usuario Exemplo 760,2026-03-29,2026-03-29 10:45:00,11:08:00,Analista 3,Cliente 3,Fila 4,Aprovado,Fluxo Normal,10:00
+ID-1761,920.442.260-26,Usuario Exemplo 761,2026-02-05,2026-03-29 11:14:00,11:59:00,Analista 3,Cliente 4,Fila 16,Aprovado,Fluxo Normal,11:00
+ID-1762,267.968.524-60,Usuario Exemplo 762,2026-02-20,2026-03-29 12:21:00,12:46:00,Analista 13,Cliente 6,Fila 12,Reprovado Politica,Renda Não Comprovada,12:00
+ID-1763,354.439.852-83,Usuario Exemplo 763,2026-03-03,2026-03-29 14:33:00,15:02:00,Analista 8,Cliente 3,Fila 9,Pendente,Aguardando Documento,14:00
+ID-1764,998.649.184-40,Usuario Exemplo 764,2026-01-30,2026-03-29 16:52:00,17:06:00,Analista 1,Cliente 5,Fila 15,Pendente,Aguardando Documento,16:00
+ID-1765,533.305.480-81,Usuario Exemplo 765,2026-03-02,2026-03-29 11:34:00,12:09:00,Analista 27,Cliente 6,Fila 2,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1766,379.694.599-71,Usuario Exemplo 766,2026-02-21,2026-03-29 14:50:00,15:04:00,Analista 26,Cliente 6,Fila 4,Reprovado Politica,Renda Não Comprovada,14:00
+ID-1767,941.555.241-66,Usuario Exemplo 767,2026-03-19,2026-03-29 13:30:00,13:53:00,Analista 4,Cliente 4,Fila 10,Aprovado,Fluxo Normal,13:00
+ID-1768,276.368.323-62,Usuario Exemplo 768,2026-02-09,2026-03-29 08:47:00,09:19:00,Analista 19,Cliente 6,Fila 13,Reprovado Fraude,Documentação Irregular,08:00
+ID-1769,864.849.341-73,Usuario Exemplo 769,2026-02-07,2026-03-29 10:11:00,10:38:00,Analista 7,Cliente 3,Fila 17,Aprovado,Fluxo Normal,10:00
+ID-1770,738.481.896-51,Usuario Exemplo 770,2026-03-11,2026-03-29 11:10:00,11:33:00,Analista 13,Cliente 4,Fila 4,Reprovado Fraude,Divergência Cadastral,11:00
+ID-1771,140.926.532-78,Usuario Exemplo 771,2026-02-12,2026-03-29 12:34:00,13:03:00,Analista 16,Cliente 6,Fila 13,Reprovado Politica,Suspeita de Fraude,12:00
+ID-1772,937.915.406-63,Usuario Exemplo 772,2026-01-27,2026-03-29 17:35:00,17:44:00,Analista 13,Cliente 5,Fila 5,Reprovado Fraude,Perfil de Risco,17:00
+ID-1773,890.165.897-71,Usuario Exemplo 773,2026-03-24,2026-03-29 08:28:00,08:42:00,Analista 19,Cliente 4,Fila 6,Reprovado Politica,Score Baixo,08:00
+ID-1774,585.210.486-11,Usuario Exemplo 774,2026-03-02,2026-03-29 08:09:00,08:16:00,Analista 17,Cliente 1,Fila 14,Pendente,Aguardando Documento,08:00
+ID-1775,834.199.354-69,Usuario Exemplo 775,2026-03-22,2026-03-29 11:38:00,12:22:00,Analista 16,Cliente 3,Fila 12,Reprovado Politica,Divergência Cadastral,11:00
+ID-1776,152.140.696-41,Usuario Exemplo 776,2026-02-18,2026-03-29 14:47:00,15:25:00,Analista 10,Cliente 2,Fila 1,Reprovado Fraude,Documentação Irregular,14:00
+ID-1777,492.250.251-79,Usuario Exemplo 777,2026-03-21,2026-03-29 08:53:00,09:37:00,Analista 2,Cliente 3,Fila 5,Reprovado Fraude,Suspeita de Fraude,08:00
+ID-1778,256.131.440-75,Usuario Exemplo 778,2026-02-05,2026-03-29 12:44:00,13:14:00,Analista 6,Cliente 3,Fila 10,Aprovado,Fluxo Normal,12:00
+ID-1779,887.667.861-57,Usuario Exemplo 779,2026-02-14,2026-03-29 08:35:00,09:03:00,Analista 29,Cliente 6,Fila 4,Aprovado,Fluxo Normal,08:00
+ID-1780,528.249.203-19,Usuario Exemplo 780,2026-03-05,2026-03-29 16:04:00,16:44:00,Analista 16,Cliente 1,Fila 4,Reprovado Fraude,Score Baixo,16:00
+ID-1781,236.737.251-55,Usuario Exemplo 781,2026-03-13,2026-03-29 12:43:00,12:51:00,Analista 22,Cliente 5,Fila 3,Reprovado Politica,Renda Não Comprovada,12:00
+ID-1782,437.194.472-78,Usuario Exemplo 782,2026-02-26,2026-03-29 11:48:00,12:20:00,Analista 27,Cliente 2,Fila 9,Reprovado Politica,Documentação Irregular,11:00
+ID-1783,918.848.831-27,Usuario Exemplo 783,2026-02-16,2026-03-29 15:14:00,15:52:00,Analista 14,Cliente 4,Fila 12,Reprovado Fraude,Divergência Cadastral,15:00
+ID-1784,770.318.184-38,Usuario Exemplo 784,2026-02-23,2026-03-29 15:43:00,16:03:00,Analista 1,Cliente 5,Fila 17,Reprovado Politica,Suspeita de Fraude,15:00
+ID-1785,527.497.403-24,Usuario Exemplo 785,2026-02-19,2026-03-29 14:06:00,14:20:00,Analista 1,Cliente 5,Fila 13,Pendente,Aguardando Documento,14:00
+ID-1786,290.528.736-33,Usuario Exemplo 786,2026-03-09,2026-03-29 13:59:00,14:10:00,Analista 20,Cliente 2,Fila 3,Reprovado Politica,Score Baixo,13:00
+ID-1787,621.363.152-41,Usuario Exemplo 787,2026-02-24,2026-03-29 16:16:00,16:57:00,Analista 24,Cliente 3,Fila 8,Pendente,Aguardando Documento,16:00
+ID-1788,376.234.921-80,Usuario Exemplo 788,2026-02-12,2026-03-29 16:39:00,17:02:00,Analista 18,Cliente 4,Fila 2,Reprovado Politica,Documentação Irregular,16:00
+ID-1789,619.288.466-15,Usuario Exemplo 789,2026-02-09,2026-03-29 08:18:00,08:53:00,Analista 22,Cliente 4,Fila 17,Aprovado,Fluxo Normal,08:00
+ID-1790,170.513.977-88,Usuario Exemplo 790,2026-01-29,2026-03-29 09:17:00,09:56:00,Analista 21,Cliente 1,Fila 9,Aprovado,Fluxo Normal,09:00
+ID-1791,591.205.906-60,Usuario Exemplo 791,2026-02-01,2026-03-29 17:06:00,17:47:00,Analista 9,Cliente 4,Fila 1,Pendente,Aguardando Documento,17:00
+ID-1792,571.842.149-26,Usuario Exemplo 792,2026-01-30,2026-03-29 11:48:00,12:33:00,Analista 18,Cliente 2,Fila 4,Aprovado,Fluxo Normal,11:00
+ID-1793,953.199.985-67,Usuario Exemplo 793,2026-02-05,2026-03-29 10:41:00,11:21:00,Analista 16,Cliente 4,Fila 14,Reprovado Fraude,Score Baixo,10:00
+ID-1794,557.715.933-64,Usuario Exemplo 794,2026-02-04,2026-03-29 15:46:00,15:51:00,Analista 25,Cliente 3,Fila 18,Reprovado Politica,Documentação Irregular,15:00
+ID-1795,130.275.333-43,Usuario Exemplo 795,2026-02-24,2026-03-29 10:59:00,11:43:00,Analista 25,Cliente 2,Fila 13,Reprovado Fraude,Score Baixo,10:00
+ID-1796,469.673.200-92,Usuario Exemplo 796,2026-02-24,2026-03-29 16:43:00,17:09:00,Analista 14,Cliente 3,Fila 10,Reprovado Politica,Suspeita de Fraude,16:00
+ID-1797,888.879.863-55,Usuario Exemplo 797,2026-02-18,2026-03-29 11:42:00,12:18:00,Analista 10,Cliente 3,Fila 17,Pendente,Aguardando Documento,11:00
+ID-1798,921.158.876-85,Usuario Exemplo 798,2026-02-06,2026-03-29 17:20:00,18:02:00,Analista 25,Cliente 6,Fila 6,Reprovado Politica,Documentação Irregular,17:00
+ID-1799,679.618.761-76,Usuario Exemplo 799,2026-03-06,2026-03-29 14:19:00,14:40:00,Analista 27,Cliente 2,Fila 2,Aprovado,Fluxo Normal,14:00
+ID-1800,444.350.199-31,Usuario Exemplo 800,2026-02-25,2026-03-29 12:35:00,12:57:00,Analista 17,Cliente 2,Fila 1,Reprovado Politica,Documentação Irregular,12:00
+ID-1801,553.645.119-57,Usuario Exemplo 801,2026-02-14,2026-03-29 15:16:00,15:33:00,Analista 21,Cliente 4,Fila 12,Aprovado,Fluxo Normal,15:00
+ID-1802,185.670.206-21,Usuario Exemplo 802,2026-02-12,2026-03-29 14:35:00,14:41:00,Analista 10,Cliente 3,Fila 7,Pendente,Aguardando Documento,14:00
+ID-1803,470.928.182-91,Usuario Exemplo 803,2026-02-05,2026-03-29 14:50:00,15:17:00,Analista 10,Cliente 6,Fila 13,Aprovado,Fluxo Normal,14:00
+ID-1804,419.402.161-17,Usuario Exemplo 804,2026-03-09,2026-03-29 17:56:00,18:05:00,Analista 7,Cliente 5,Fila 18,Reprovado Politica,Perfil de Risco,17:00
+ID-1805,552.119.753-51,Usuario Exemplo 805,2026-03-22,2026-03-29 15:10:00,15:43:00,Analista 18,Cliente 3,Fila 10,Reprovado Fraude,Renda Não Comprovada,15:00
+ID-1806,800.131.123-57,Usuario Exemplo 806,2026-01-29,2026-03-29 09:10:00,09:41:00,Analista 18,Cliente 6,Fila 14,Pendente,Aguardando Documento,09:00
+ID-1807,697.925.975-76,Usuario Exemplo 807,2026-01-29,2026-03-29 17:25:00,17:54:00,Analista 5,Cliente 2,Fila 6,Aprovado,Fluxo Normal,17:00
+ID-1808,228.276.155-20,Usuario Exemplo 808,2026-01-27,2026-03-29 09:49:00,10:07:00,Analista 22,Cliente 2,Fila 9,Reprovado Fraude,Divergência Cadastral,09:00
+ID-1809,420.696.554-87,Usuario Exemplo 809,2026-03-06,2026-03-29 08:45:00,09:02:00,Analista 2,Cliente 2,Fila 5,Aprovado,Fluxo Normal,08:00
+ID-1810,737.225.417-50,Usuario Exemplo 810,2026-03-29,2026-03-29 13:13:00,13:39:00,Analista 20,Cliente 6,Fila 14,Pendente,Aguardando Documento,13:00
+ID-1811,392.601.731-92,Usuario Exemplo 811,2026-02-03,2026-03-29 13:11:00,13:16:00,Analista 8,Cliente 3,Fila 2,Reprovado Politica,Divergência Cadastral,13:00
+ID-1812,571.611.851-27,Usuario Exemplo 812,2026-03-03,2026-03-29 14:20:00,14:41:00,Analista 28,Cliente 1,Fila 15,Reprovado Politica,Score Baixo,14:00
+ID-1813,199.887.561-64,Usuario Exemplo 813,2026-02-03,2026-03-29 12:59:00,13:24:00,Analista 3,Cliente 1,Fila 10,Reprovado Politica,Renda Não Comprovada,12:00
+ID-1814,524.432.916-40,Usuario Exemplo 814,2026-02-04,2026-03-29 15:12:00,15:28:00,Analista 21,Cliente 4,Fila 5,Pendente,Aguardando Documento,15:00
+ID-1815,413.574.488-34,Usuario Exemplo 815,2026-02-04,2026-03-29 14:02:00,14:20:00,Analista 4,Cliente 1,Fila 17,Aprovado,Fluxo Normal,14:00
+ID-1816,561.773.704-96,Usuario Exemplo 816,2026-03-26,2026-03-29 09:44:00,10:14:00,Analista 1,Cliente 6,Fila 1,Reprovado Fraude,Renda Não Comprovada,09:00
+ID-1817,145.946.614-96,Usuario Exemplo 817,2026-02-17,2026-03-29 11:42:00,12:23:00,Analista 5,Cliente 6,Fila 3,Aprovado,Fluxo Normal,11:00
+ID-1818,314.242.465-51,Usuario Exemplo 818,2026-01-30,2026-03-29 10:28:00,11:04:00,Analista 16,Cliente 6,Fila 5,Aprovado,Fluxo Normal,10:00
+ID-1819,604.287.694-64,Usuario Exemplo 819,2026-02-07,2026-03-29 14:05:00,14:35:00,Analista 10,Cliente 5,Fila 3,Reprovado Fraude,Documentação Irregular,14:00
+ID-1820,953.138.627-51,Usuario Exemplo 820,2026-02-16,2026-03-29 16:19:00,17:00:00,Analista 26,Cliente 4,Fila 4,Aprovado,Fluxo Normal,16:00
+ID-1821,945.786.159-92,Usuario Exemplo 821,2026-02-15,2026-03-29 09:47:00,09:52:00,Analista 5,Cliente 4,Fila 2,Reprovado Politica,Divergência Cadastral,09:00
+ID-1822,600.748.392-20,Usuario Exemplo 822,2026-02-15,2026-03-29 08:25:00,08:50:00,Analista 19,Cliente 2,Fila 9,Aprovado,Fluxo Normal,08:00
+ID-1823,115.708.673-75,Usuario Exemplo 823,2026-03-18,2026-03-29 09:14:00,09:58:00,Analista 12,Cliente 1,Fila 9,Pendente,Aguardando Documento,09:00
+ID-1824,676.648.473-46,Usuario Exemplo 824,2026-02-27,2026-03-29 12:10:00,12:37:00,Analista 17,Cliente 2,Fila 12,Reprovado Fraude,Renda Não Comprovada,12:00
+ID-1825,119.962.337-22,Usuario Exemplo 825,2026-03-21,2026-03-29 12:03:00,12:32:00,Analista 16,Cliente 4,Fila 15,Pendente,Aguardando Documento,12:00
+ID-1826,759.947.605-23,Usuario Exemplo 826,2026-02-26,2026-03-29 10:30:00,10:48:00,Analista 17,Cliente 3,Fila 8,Aprovado,Fluxo Normal,10:00
+ID-1827,334.131.982-79,Usuario Exemplo 827,2026-02-18,2026-03-29 11:54:00,12:12:00,Analista 22,Cliente 5,Fila 10,Reprovado Politica,Score Baixo,11:00
+ID-1828,214.916.375-65,Usuario Exemplo 828,2026-03-29,2026-03-29 15:50:00,16:24:00,Analista 19,Cliente 5,Fila 18,Reprovado Fraude,Perfil de Risco,15:00
+ID-1829,799.173.874-69,Usuario Exemplo 829,2026-02-09,2026-03-29 08:21:00,09:02:00,Analista 7,Cliente 1,Fila 17,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1830,490.522.616-80,Usuario Exemplo 830,2026-01-28,2026-03-29 14:07:00,14:22:00,Analista 16,Cliente 3,Fila 12,Reprovado Politica,Score Baixo,14:00
+ID-1831,293.173.841-53,Usuario Exemplo 831,2026-03-08,2026-03-29 15:09:00,15:53:00,Analista 28,Cliente 3,Fila 12,Pendente,Aguardando Documento,15:00
+ID-1832,359.769.737-11,Usuario Exemplo 832,2026-03-14,2026-03-29 16:03:00,16:26:00,Analista 5,Cliente 2,Fila 8,Pendente,Aguardando Documento,16:00
+ID-1833,103.820.683-52,Usuario Exemplo 833,2026-03-01,2026-03-29 12:35:00,13:10:00,Analista 7,Cliente 2,Fila 7,Reprovado Politica,Score Baixo,12:00
+ID-1834,193.543.181-69,Usuario Exemplo 834,2026-03-18,2026-03-29 12:03:00,12:10:00,Analista 3,Cliente 3,Fila 17,Aprovado,Fluxo Normal,12:00
+ID-1835,822.376.632-18,Usuario Exemplo 835,2026-02-13,2026-03-29 14:31:00,15:02:00,Analista 16,Cliente 4,Fila 18,Reprovado Fraude,Perfil de Risco,14:00
+ID-1836,289.878.541-15,Usuario Exemplo 836,2026-02-02,2026-03-29 09:01:00,09:32:00,Analista 16,Cliente 1,Fila 8,Pendente,Aguardando Documento,09:00
+ID-1837,251.380.797-11,Usuario Exemplo 837,2026-03-12,2026-03-29 14:41:00,14:52:00,Analista 13,Cliente 1,Fila 1,Aprovado,Fluxo Normal,14:00
+ID-1838,833.899.430-51,Usuario Exemplo 838,2026-01-27,2026-03-29 08:30:00,08:45:00,Analista 11,Cliente 1,Fila 1,Pendente,Aguardando Documento,08:00
+ID-1839,527.586.874-63,Usuario Exemplo 839,2026-02-02,2026-03-29 11:44:00,12:18:00,Analista 20,Cliente 4,Fila 2,Reprovado Fraude,Documentação Irregular,11:00
+ID-1840,695.545.927-86,Usuario Exemplo 840,2026-03-01,2026-03-29 11:09:00,11:44:00,Analista 13,Cliente 6,Fila 5,Reprovado Politica,Suspeita de Fraude,11:00
+ID-1841,412.644.581-57,Usuario Exemplo 841,2026-01-29,2026-03-29 11:02:00,11:27:00,Analista 2,Cliente 6,Fila 4,Aprovado,Fluxo Normal,11:00
+ID-1842,122.575.951-97,Usuario Exemplo 842,2026-02-21,2026-03-29 12:45:00,12:50:00,Analista 5,Cliente 3,Fila 17,Reprovado Fraude,Perfil de Risco,12:00
+ID-1843,471.869.618-69,Usuario Exemplo 843,2026-03-14,2026-03-29 11:19:00,11:41:00,Analista 23,Cliente 3,Fila 10,Pendente,Aguardando Documento,11:00
+ID-1844,994.220.424-11,Usuario Exemplo 844,2026-03-10,2026-03-29 15:36:00,15:46:00,Analista 22,Cliente 2,Fila 3,Pendente,Aguardando Documento,15:00
+ID-1845,273.611.604-96,Usuario Exemplo 845,2026-03-09,2026-03-29 14:29:00,15:10:00,Analista 10,Cliente 6,Fila 11,Aprovado,Fluxo Normal,14:00
+ID-1846,703.405.874-22,Usuario Exemplo 846,2026-03-19,2026-03-29 15:25:00,15:49:00,Analista 1,Cliente 1,Fila 18,Reprovado Politica,Perfil de Risco,15:00
+ID-1847,745.129.186-19,Usuario Exemplo 847,2026-03-26,2026-03-29 17:11:00,17:29:00,Analista 20,Cliente 2,Fila 16,Reprovado Fraude,Suspeita de Fraude,17:00
+ID-1848,750.180.284-54,Usuario Exemplo 848,2026-03-14,2026-03-29 11:47:00,12:31:00,Analista 19,Cliente 4,Fila 13,Reprovado Politica,Perfil de Risco,11:00
+ID-1849,533.616.333-49,Usuario Exemplo 849,2026-02-16,2026-03-29 17:35:00,17:52:00,Analista 7,Cliente 5,Fila 16,Reprovado Fraude,Score Baixo,17:00
+ID-1850,275.178.403-25,Usuario Exemplo 850,2026-02-25,2026-03-29 12:54:00,13:31:00,Analista 22,Cliente 1,Fila 6,Reprovado Politica,Renda Não Comprovada,12:00
+ID-1851,256.971.671-56,Usuario Exemplo 851,2026-03-03,2026-03-29 16:06:00,16:16:00,Analista 22,Cliente 6,Fila 18,Reprovado Fraude,Renda Não Comprovada,16:00
+ID-1852,446.599.149-29,Usuario Exemplo 852,2026-03-22,2026-03-29 17:27:00,17:48:00,Analista 24,Cliente 2,Fila 6,Aprovado,Fluxo Normal,17:00
+ID-1853,523.407.960-59,Usuario Exemplo 853,2026-03-26,2026-03-29 10:56:00,11:14:00,Analista 14,Cliente 1,Fila 5,Pendente,Aguardando Documento,10:00
+ID-1854,911.735.468-19,Usuario Exemplo 854,2026-03-20,2026-03-29 15:59:00,16:13:00,Analista 1,Cliente 3,Fila 14,Aprovado,Fluxo Normal,15:00
+ID-1855,619.964.773-75,Usuario Exemplo 855,2026-03-22,2026-03-29 16:39:00,17:01:00,Analista 22,Cliente 2,Fila 4,Reprovado Politica,Score Baixo,16:00
+ID-1856,185.227.576-71,Usuario Exemplo 856,2026-02-03,2026-03-29 09:41:00,10:08:00,Analista 29,Cliente 4,Fila 15,Reprovado Fraude,Perfil de Risco,09:00
+ID-1857,752.230.201-34,Usuario Exemplo 857,2026-03-15,2026-03-29 14:51:00,15:16:00,Analista 16,Cliente 6,Fila 12,Reprovado Politica,Renda Não Comprovada,14:00
+ID-1858,838.663.253-38,Usuario Exemplo 858,2026-02-19,2026-03-29 13:03:00,13:31:00,Analista 20,Cliente 6,Fila 5,Reprovado Fraude,Suspeita de Fraude,13:00
+ID-1859,908.948.628-87,Usuario Exemplo 859,2026-03-27,2026-03-29 09:42:00,10:13:00,Analista 28,Cliente 3,Fila 15,Reprovado Fraude,Divergência Cadastral,09:00
+ID-1860,381.725.738-97,Usuario Exemplo 860,2026-01-29,2026-03-29 14:17:00,14:48:00,Analista 13,Cliente 5,Fila 18,Reprovado Fraude,Perfil de Risco,14:00
+ID-1861,964.706.176-61,Usuario Exemplo 861,2026-02-22,2026-03-29 15:24:00,15:55:00,Analista 27,Cliente 6,Fila 1,Pendente,Aguardando Documento,15:00
+ID-1862,831.431.295-75,Usuario Exemplo 862,2026-02-07,2026-03-29 11:48:00,12:06:00,Analista 3,Cliente 3,Fila 15,Reprovado Fraude,Score Baixo,11:00
+ID-1863,569.695.983-70,Usuario Exemplo 863,2026-02-21,2026-03-29 11:53:00,12:38:00,Analista 7,Cliente 5,Fila 10,Reprovado Politica,Divergência Cadastral,11:00
+ID-1864,945.691.215-15,Usuario Exemplo 864,2026-02-21,2026-03-29 10:04:00,10:41:00,Analista 15,Cliente 5,Fila 3,Aprovado,Fluxo Normal,10:00
+ID-1865,588.741.837-87,Usuario Exemplo 865,2026-02-08,2026-03-29 16:56:00,17:34:00,Analista 27,Cliente 1,Fila 2,Reprovado Fraude,Suspeita de Fraude,16:00
+ID-1866,217.150.379-24,Usuario Exemplo 866,2026-02-25,2026-03-29 10:23:00,10:44:00,Analista 10,Cliente 5,Fila 12,Aprovado,Fluxo Normal,10:00
+ID-1867,286.271.188-55,Usuario Exemplo 867,2026-01-28,2026-03-29 17:13:00,17:57:00,Analista 23,Cliente 1,Fila 10,Aprovado,Fluxo Normal,17:00
+ID-1868,620.640.590-59,Usuario Exemplo 868,2026-03-23,2026-03-29 12:41:00,12:49:00,Analista 10,Cliente 5,Fila 7,Reprovado Fraude,Perfil de Risco,12:00
+ID-1869,634.316.558-76,Usuario Exemplo 869,2026-03-09,2026-03-29 13:15:00,13:20:00,Analista 11,Cliente 1,Fila 13,Reprovado Politica,Renda Não Comprovada,13:00
+ID-1870,176.875.249-94,Usuario Exemplo 870,2026-02-23,2026-03-29 10:50:00,11:04:00,Analista 15,Cliente 1,Fila 9,Reprovado Fraude,Suspeita de Fraude,10:00
+ID-1871,706.465.245-48,Usuario Exemplo 871,2026-03-08,2026-03-29 12:22:00,12:27:00,Analista 12,Cliente 3,Fila 13,Aprovado,Fluxo Normal,12:00
+ID-1872,532.186.573-46,Usuario Exemplo 872,2026-03-19,2026-03-29 08:26:00,08:31:00,Analista 6,Cliente 4,Fila 9,Pendente,Aguardando Documento,08:00
+ID-1873,774.792.824-37,Usuario Exemplo 873,2026-03-19,2026-03-29 17:52:00,18:21:00,Analista 13,Cliente 6,Fila 16,Pendente,Aguardando Documento,17:00
+ID-1874,368.668.441-66,Usuario Exemplo 874,2026-03-25,2026-03-29 11:31:00,11:57:00,Analista 29,Cliente 6,Fila 15,Pendente,Aguardando Documento,11:00
+ID-1875,599.322.727-88,Usuario Exemplo 875,2026-03-18,2026-03-29 16:21:00,17:04:00,Analista 15,Cliente 3,Fila 16,Pendente,Aguardando Documento,16:00
+ID-1876,308.619.973-61,Usuario Exemplo 876,2026-03-05,2026-03-29 14:46:00,15:31:00,Analista 15,Cliente 5,Fila 14,Pendente,Aguardando Documento,14:00
+ID-1877,354.210.510-33,Usuario Exemplo 877,2026-03-18,2026-03-29 15:50:00,16:22:00,Analista 3,Cliente 6,Fila 12,Reprovado Politica,Suspeita de Fraude,15:00
+ID-1878,180.638.374-41,Usuario Exemplo 878,2026-03-06,2026-03-29 15:17:00,15:59:00,Analista 24,Cliente 1,Fila 14,Reprovado Politica,Documentação Irregular,15:00
+ID-1879,459.485.557-46,Usuario Exemplo 879,2026-02-21,2026-03-29 15:02:00,15:32:00,Analista 21,Cliente 3,Fila 17,Aprovado,Fluxo Normal,15:00
+ID-1880,782.358.696-98,Usuario Exemplo 880,2026-03-25,2026-03-29 08:18:00,08:36:00,Analista 8,Cliente 2,Fila 12,Aprovado,Fluxo Normal,08:00
+ID-1881,690.697.598-67,Usuario Exemplo 881,2026-03-14,2026-03-29 17:34:00,18:00:00,Analista 1,Cliente 2,Fila 6,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1882,998.488.778-46,Usuario Exemplo 882,2026-02-19,2026-03-29 16:04:00,16:38:00,Analista 28,Cliente 6,Fila 3,Pendente,Aguardando Documento,16:00
+ID-1883,828.671.587-60,Usuario Exemplo 883,2026-02-20,2026-03-29 10:20:00,10:31:00,Analista 16,Cliente 1,Fila 12,Aprovado,Fluxo Normal,10:00
+ID-1884,368.568.376-68,Usuario Exemplo 884,2026-03-24,2026-03-29 08:23:00,08:54:00,Analista 29,Cliente 2,Fila 9,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1885,838.281.362-60,Usuario Exemplo 885,2026-03-02,2026-03-29 09:25:00,10:06:00,Analista 28,Cliente 3,Fila 13,Reprovado Fraude,Divergência Cadastral,09:00
+ID-1886,800.555.649-95,Usuario Exemplo 886,2026-02-08,2026-03-29 10:09:00,10:18:00,Analista 17,Cliente 5,Fila 16,Reprovado Politica,Suspeita de Fraude,10:00
+ID-1887,674.721.307-31,Usuario Exemplo 887,2026-02-22,2026-03-29 08:46:00,09:10:00,Analista 19,Cliente 5,Fila 4,Aprovado,Fluxo Normal,08:00
+ID-1888,660.540.687-86,Usuario Exemplo 888,2026-02-05,2026-03-29 15:58:00,16:31:00,Analista 6,Cliente 3,Fila 17,Reprovado Politica,Documentação Irregular,15:00
+ID-1889,788.863.305-58,Usuario Exemplo 889,2026-03-13,2026-03-29 16:21:00,16:45:00,Analista 21,Cliente 5,Fila 6,Aprovado,Fluxo Normal,16:00
+ID-1890,829.465.891-25,Usuario Exemplo 890,2026-03-16,2026-03-29 16:07:00,16:42:00,Analista 10,Cliente 5,Fila 13,Reprovado Fraude,Documentação Irregular,16:00
+ID-1891,498.837.884-80,Usuario Exemplo 891,2026-01-28,2026-03-29 08:10:00,08:22:00,Analista 15,Cliente 4,Fila 7,Aprovado,Fluxo Normal,08:00
+ID-1892,480.932.269-23,Usuario Exemplo 892,2026-02-19,2026-03-29 09:00:00,09:14:00,Analista 22,Cliente 1,Fila 5,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1893,517.832.387-14,Usuario Exemplo 893,2026-02-26,2026-03-29 09:07:00,09:24:00,Analista 17,Cliente 3,Fila 12,Reprovado Politica,Suspeita de Fraude,09:00
+ID-1894,366.474.108-76,Usuario Exemplo 894,2026-02-23,2026-03-29 09:34:00,09:53:00,Analista 8,Cliente 3,Fila 11,Aprovado,Fluxo Normal,09:00
+ID-1895,539.769.871-95,Usuario Exemplo 895,2026-02-09,2026-03-29 15:34:00,15:58:00,Analista 8,Cliente 2,Fila 2,Pendente,Aguardando Documento,15:00
+ID-1896,174.152.527-68,Usuario Exemplo 896,2026-03-22,2026-03-29 13:41:00,14:06:00,Analista 4,Cliente 4,Fila 9,Reprovado Fraude,Divergência Cadastral,13:00
+ID-1897,469.704.320-47,Usuario Exemplo 897,2026-02-10,2026-03-29 14:14:00,14:45:00,Analista 20,Cliente 6,Fila 17,Pendente,Aguardando Documento,14:00
+ID-1898,716.304.116-23,Usuario Exemplo 898,2026-03-11,2026-03-29 15:55:00,16:08:00,Analista 2,Cliente 1,Fila 1,Aprovado,Fluxo Normal,15:00
+ID-1899,658.178.779-26,Usuario Exemplo 899,2026-01-30,2026-03-29 12:14:00,12:41:00,Analista 28,Cliente 3,Fila 18,Aprovado,Fluxo Normal,12:00
+ID-1900,580.149.924-99,Usuario Exemplo 900,2026-02-10,2026-03-29 13:51:00,14:01:00,Analista 2,Cliente 5,Fila 14,Pendente,Aguardando Documento,13:00
+ID-1901,171.325.575-84,Usuario Exemplo 901,2026-02-04,2026-03-29 16:02:00,16:13:00,Analista 12,Cliente 1,Fila 18,Pendente,Aguardando Documento,16:00
+ID-1902,437.639.659-36,Usuario Exemplo 902,2026-03-12,2026-03-29 16:49:00,17:22:00,Analista 3,Cliente 4,Fila 9,Reprovado Politica,Score Baixo,16:00
+ID-1903,761.503.646-24,Usuario Exemplo 903,2026-02-21,2026-03-29 08:46:00,08:51:00,Analista 3,Cliente 1,Fila 4,Aprovado,Fluxo Normal,08:00
+ID-1904,182.369.768-96,Usuario Exemplo 904,2026-03-18,2026-03-29 17:52:00,18:30:00,Analista 13,Cliente 3,Fila 7,Reprovado Fraude,Divergência Cadastral,17:00
+ID-1905,871.294.773-92,Usuario Exemplo 905,2026-02-25,2026-03-29 14:09:00,14:44:00,Analista 2,Cliente 1,Fila 17,Aprovado,Fluxo Normal,14:00
+ID-1906,891.903.157-98,Usuario Exemplo 906,2026-01-31,2026-03-29 09:20:00,09:46:00,Analista 15,Cliente 6,Fila 13,Aprovado,Fluxo Normal,09:00
+ID-1907,358.401.679-35,Usuario Exemplo 907,2026-02-09,2026-03-29 14:24:00,15:07:00,Analista 8,Cliente 4,Fila 12,Pendente,Aguardando Documento,14:00
+ID-1908,273.716.503-84,Usuario Exemplo 908,2026-02-17,2026-03-29 14:31:00,14:48:00,Analista 7,Cliente 4,Fila 6,Pendente,Aguardando Documento,14:00
+ID-1909,732.165.834-29,Usuario Exemplo 909,2026-02-25,2026-03-29 08:32:00,08:48:00,Analista 23,Cliente 1,Fila 16,Reprovado Fraude,Score Baixo,08:00
+ID-1910,642.175.751-33,Usuario Exemplo 910,2026-03-03,2026-03-29 13:32:00,14:08:00,Analista 21,Cliente 4,Fila 7,Reprovado Politica,Suspeita de Fraude,13:00
+ID-1911,137.983.644-23,Usuario Exemplo 911,2026-01-28,2026-03-29 15:22:00,16:03:00,Analista 3,Cliente 2,Fila 10,Aprovado,Fluxo Normal,15:00
+ID-1912,116.917.412-52,Usuario Exemplo 912,2026-03-27,2026-03-29 08:44:00,09:07:00,Analista 10,Cliente 6,Fila 15,Pendente,Aguardando Documento,08:00
+ID-1913,370.726.310-85,Usuario Exemplo 913,2026-03-03,2026-03-29 15:05:00,15:25:00,Analista 11,Cliente 1,Fila 13,Reprovado Politica,Documentação Irregular,15:00
+ID-1914,610.898.183-53,Usuario Exemplo 914,2026-02-15,2026-03-29 14:57:00,15:26:00,Analista 3,Cliente 4,Fila 16,Reprovado Politica,Score Baixo,14:00
+ID-1915,908.843.299-95,Usuario Exemplo 915,2026-03-06,2026-03-29 16:30:00,16:36:00,Analista 4,Cliente 4,Fila 3,Reprovado Fraude,Score Baixo,16:00
+ID-1916,371.212.387-15,Usuario Exemplo 916,2026-03-13,2026-03-29 09:16:00,09:40:00,Analista 9,Cliente 4,Fila 4,Reprovado Fraude,Perfil de Risco,09:00
+ID-1917,401.571.588-57,Usuario Exemplo 917,2026-02-24,2026-03-29 13:52:00,14:30:00,Analista 18,Cliente 5,Fila 8,Reprovado Fraude,Documentação Irregular,13:00
+ID-1918,852.763.230-92,Usuario Exemplo 918,2026-03-22,2026-03-29 14:41:00,14:59:00,Analista 14,Cliente 1,Fila 18,Reprovado Politica,Suspeita de Fraude,14:00
+ID-1919,409.909.389-63,Usuario Exemplo 919,2026-02-19,2026-03-29 13:18:00,13:38:00,Analista 4,Cliente 4,Fila 17,Reprovado Politica,Divergência Cadastral,13:00
+ID-1920,367.308.169-90,Usuario Exemplo 920,2026-03-07,2026-03-29 08:39:00,08:53:00,Analista 19,Cliente 4,Fila 9,Reprovado Politica,Renda Não Comprovada,08:00
+ID-1921,399.168.846-49,Usuario Exemplo 921,2026-02-01,2026-03-29 08:19:00,08:42:00,Analista 1,Cliente 6,Fila 17,Reprovado Fraude,Divergência Cadastral,08:00
+ID-1922,222.411.404-95,Usuario Exemplo 922,2026-02-09,2026-03-29 09:12:00,09:39:00,Analista 12,Cliente 2,Fila 4,Aprovado,Fluxo Normal,09:00
+ID-1923,577.934.465-25,Usuario Exemplo 923,2026-02-04,2026-03-29 17:06:00,17:23:00,Analista 9,Cliente 5,Fila 17,Reprovado Politica,Score Baixo,17:00
+ID-1924,981.570.280-24,Usuario Exemplo 924,2026-02-02,2026-03-29 15:33:00,16:07:00,Analista 24,Cliente 3,Fila 4,Reprovado Fraude,Divergência Cadastral,15:00
+ID-1925,532.321.927-71,Usuario Exemplo 925,2026-03-29,2026-03-29 11:19:00,11:59:00,Analista 7,Cliente 2,Fila 2,Pendente,Aguardando Documento,11:00
+ID-1926,189.145.692-53,Usuario Exemplo 926,2026-02-16,2026-03-29 16:51:00,17:00:00,Analista 4,Cliente 1,Fila 4,Reprovado Fraude,Suspeita de Fraude,16:00
+ID-1927,167.188.350-92,Usuario Exemplo 927,2026-03-12,2026-03-29 14:27:00,15:07:00,Analista 25,Cliente 6,Fila 1,Reprovado Fraude,Perfil de Risco,14:00
+ID-1928,421.381.933-71,Usuario Exemplo 928,2026-03-25,2026-03-29 14:30:00,14:53:00,Analista 28,Cliente 3,Fila 12,Pendente,Aguardando Documento,14:00
+ID-1929,585.946.432-84,Usuario Exemplo 929,2026-03-16,2026-03-29 17:05:00,17:21:00,Analista 25,Cliente 5,Fila 10,Reprovado Politica,Score Baixo,17:00
+ID-1930,898.988.750-11,Usuario Exemplo 930,2026-03-29,2026-03-29 14:54:00,15:05:00,Analista 8,Cliente 6,Fila 12,Pendente,Aguardando Documento,14:00
+ID-1931,317.713.455-79,Usuario Exemplo 931,2026-03-21,2026-03-29 09:22:00,09:42:00,Analista 4,Cliente 3,Fila 10,Aprovado,Fluxo Normal,09:00
+ID-1932,655.326.509-71,Usuario Exemplo 932,2026-02-18,2026-03-29 08:25:00,08:55:00,Analista 27,Cliente 1,Fila 17,Reprovado Politica,Suspeita de Fraude,08:00
+ID-1933,108.812.648-79,Usuario Exemplo 933,2026-02-17,2026-03-29 12:50:00,12:55:00,Analista 7,Cliente 1,Fila 12,Reprovado Fraude,Score Baixo,12:00
+ID-1934,365.153.845-49,Usuario Exemplo 934,2026-02-12,2026-03-29 13:27:00,13:41:00,Analista 15,Cliente 3,Fila 2,Pendente,Aguardando Documento,13:00
+ID-1935,915.115.715-47,Usuario Exemplo 935,2026-03-05,2026-03-29 15:39:00,16:23:00,Analista 28,Cliente 1,Fila 2,Aprovado,Fluxo Normal,15:00
+ID-1936,461.203.275-58,Usuario Exemplo 936,2026-02-07,2026-03-29 16:51:00,17:02:00,Analista 11,Cliente 4,Fila 12,Reprovado Politica,Score Baixo,16:00
+ID-1937,188.126.138-74,Usuario Exemplo 937,2026-02-28,2026-03-29 17:55:00,18:24:00,Analista 6,Cliente 2,Fila 13,Aprovado,Fluxo Normal,17:00
+ID-1938,306.954.342-85,Usuario Exemplo 938,2026-01-28,2026-03-29 09:09:00,09:38:00,Analista 15,Cliente 4,Fila 3,Pendente,Aguardando Documento,09:00
+ID-1939,804.413.317-32,Usuario Exemplo 939,2026-03-05,2026-03-29 09:34:00,10:02:00,Analista 7,Cliente 3,Fila 7,Pendente,Aguardando Documento,09:00
+ID-1940,517.721.191-91,Usuario Exemplo 940,2026-03-08,2026-03-29 09:21:00,10:03:00,Analista 6,Cliente 1,Fila 7,Reprovado Fraude,Score Baixo,09:00
+ID-1941,925.472.484-92,Usuario Exemplo 941,2026-02-09,2026-03-29 08:17:00,08:45:00,Analista 2,Cliente 3,Fila 9,Pendente,Aguardando Documento,08:00
+ID-1942,133.417.124-57,Usuario Exemplo 942,2026-03-25,2026-03-29 16:58:00,17:36:00,Analista 16,Cliente 4,Fila 8,Aprovado,Fluxo Normal,16:00
+ID-1943,474.913.599-81,Usuario Exemplo 943,2026-03-16,2026-03-29 10:40:00,10:55:00,Analista 18,Cliente 5,Fila 4,Reprovado Fraude,Divergência Cadastral,10:00
+ID-1944,483.195.604-63,Usuario Exemplo 944,2026-03-03,2026-03-29 13:27:00,14:03:00,Analista 14,Cliente 2,Fila 10,Reprovado Fraude,Divergência Cadastral,13:00
+ID-1945,868.895.112-71,Usuario Exemplo 945,2026-03-18,2026-03-29 16:20:00,16:46:00,Analista 29,Cliente 6,Fila 11,Pendente,Aguardando Documento,16:00
+ID-1946,423.802.634-14,Usuario Exemplo 946,2026-03-01,2026-03-29 17:02:00,17:28:00,Analista 28,Cliente 3,Fila 17,Pendente,Aguardando Documento,17:00
+ID-1947,224.469.215-42,Usuario Exemplo 947,2026-01-30,2026-03-29 16:19:00,16:24:00,Analista 7,Cliente 2,Fila 12,Pendente,Aguardando Documento,16:00
+ID-1948,765.948.468-26,Usuario Exemplo 948,2026-03-19,2026-03-29 12:00:00,12:45:00,Analista 27,Cliente 2,Fila 7,Reprovado Fraude,Divergência Cadastral,12:00
+ID-1949,354.959.196-46,Usuario Exemplo 949,2026-02-06,2026-03-29 10:55:00,11:13:00,Analista 11,Cliente 5,Fila 15,Reprovado Politica,Perfil de Risco,10:00
+ID-1950,308.698.802-76,Usuario Exemplo 950,2026-02-27,2026-03-29 08:48:00,09:01:00,Analista 30,Cliente 5,Fila 6,Pendente,Aguardando Documento,08:00
+ID-1951,816.500.532-98,Usuario Exemplo 951,2026-02-24,2026-03-29 12:06:00,12:45:00,Analista 3,Cliente 1,Fila 8,Reprovado Politica,Documentação Irregular,12:00
+ID-1952,728.578.189-26,Usuario Exemplo 952,2026-01-31,2026-03-29 13:00:00,13:14:00,Analista 15,Cliente 4,Fila 2,Reprovado Fraude,Score Baixo,13:00
+ID-1953,125.808.627-45,Usuario Exemplo 953,2026-03-22,2026-03-29 14:47:00,15:30:00,Analista 7,Cliente 1,Fila 18,Reprovado Politica,Score Baixo,14:00
+ID-1954,971.572.214-67,Usuario Exemplo 954,2026-02-25,2026-03-29 16:17:00,16:31:00,Analista 28,Cliente 1,Fila 9,Reprovado Politica,Perfil de Risco,16:00
+ID-1955,399.887.490-72,Usuario Exemplo 955,2026-02-07,2026-03-29 09:25:00,09:51:00,Analista 6,Cliente 1,Fila 2,Reprovado Fraude,Perfil de Risco,09:00
+ID-1956,514.437.359-83,Usuario Exemplo 956,2026-01-27,2026-03-29 17:45:00,17:55:00,Analista 5,Cliente 4,Fila 18,Aprovado,Fluxo Normal,17:00
+ID-1957,585.839.898-71,Usuario Exemplo 957,2026-03-24,2026-03-29 09:22:00,09:30:00,Analista 20,Cliente 5,Fila 15,Pendente,Aguardando Documento,09:00
+ID-1958,736.905.970-43,Usuario Exemplo 958,2026-03-24,2026-03-29 14:34:00,15:14:00,Analista 10,Cliente 1,Fila 14,Reprovado Politica,Perfil de Risco,14:00
+ID-1959,362.874.125-22,Usuario Exemplo 959,2026-03-01,2026-03-29 13:27:00,14:03:00,Analista 26,Cliente 2,Fila 15,Aprovado,Fluxo Normal,13:00
+ID-1960,164.846.226-82,Usuario Exemplo 960,2026-02-17,2026-03-29 17:01:00,17:37:00,Analista 19,Cliente 3,Fila 11,Reprovado Politica,Score Baixo,17:00
+ID-1961,687.278.372-60,Usuario Exemplo 961,2026-01-27,2026-03-29 17:43:00,18:17:00,Analista 9,Cliente 1,Fila 17,Aprovado,Fluxo Normal,17:00
+ID-1962,912.914.122-96,Usuario Exemplo 962,2026-03-11,2026-03-29 15:06:00,15:16:00,Analista 14,Cliente 2,Fila 12,Reprovado Politica,Perfil de Risco,15:00
+ID-1963,980.508.457-40,Usuario Exemplo 963,2026-02-24,2026-03-29 12:07:00,12:23:00,Analista 28,Cliente 1,Fila 5,Reprovado Fraude,Renda Não Comprovada,12:00
+ID-1964,867.724.360-38,Usuario Exemplo 964,2026-03-02,2026-03-29 12:57:00,13:39:00,Analista 10,Cliente 5,Fila 1,Reprovado Fraude,Suspeita de Fraude,12:00
+ID-1965,272.724.714-89,Usuario Exemplo 965,2026-02-15,2026-03-29 08:12:00,08:22:00,Analista 30,Cliente 2,Fila 10,Pendente,Aguardando Documento,08:00
+ID-1966,800.322.506-38,Usuario Exemplo 966,2026-01-27,2026-03-29 11:09:00,11:28:00,Analista 24,Cliente 5,Fila 12,Reprovado Fraude,Score Baixo,11:00
+ID-1967,691.575.891-27,Usuario Exemplo 967,2026-03-29,2026-03-29 15:03:00,15:08:00,Analista 18,Cliente 6,Fila 2,Reprovado Politica,Documentação Irregular,15:00
+ID-1968,119.811.167-68,Usuario Exemplo 968,2026-03-18,2026-03-29 15:11:00,15:23:00,Analista 30,Cliente 2,Fila 17,Reprovado Politica,Divergência Cadastral,15:00
+ID-1969,916.406.487-20,Usuario Exemplo 969,2026-02-21,2026-03-29 12:12:00,12:34:00,Analista 30,Cliente 3,Fila 13,Aprovado,Fluxo Normal,12:00
+ID-1970,877.669.581-58,Usuario Exemplo 970,2026-03-10,2026-03-29 12:14:00,12:29:00,Analista 28,Cliente 3,Fila 15,Reprovado Fraude,Suspeita de Fraude,12:00
+ID-1971,810.957.130-23,Usuario Exemplo 971,2026-02-07,2026-03-29 17:41:00,18:08:00,Analista 25,Cliente 4,Fila 3,Reprovado Fraude,Documentação Irregular,17:00
+ID-1972,760.244.126-39,Usuario Exemplo 972,2026-03-02,2026-03-29 16:44:00,17:26:00,Analista 11,Cliente 1,Fila 11,Aprovado,Fluxo Normal,16:00
+ID-1973,916.218.428-69,Usuario Exemplo 973,2026-03-29,2026-03-29 11:43:00,12:06:00,Analista 22,Cliente 6,Fila 18,Pendente,Aguardando Documento,11:00
+ID-1974,482.240.428-93,Usuario Exemplo 974,2026-02-15,2026-03-29 11:49:00,12:13:00,Analista 2,Cliente 4,Fila 1,Reprovado Fraude,Suspeita de Fraude,11:00
+ID-1975,899.565.824-52,Usuario Exemplo 975,2026-03-26,2026-03-29 10:28:00,10:39:00,Analista 11,Cliente 2,Fila 12,Reprovado Fraude,Renda Não Comprovada,10:00
+ID-1976,412.257.569-17,Usuario Exemplo 976,2026-03-03,2026-03-29 10:33:00,10:44:00,Analista 14,Cliente 1,Fila 5,Pendente,Aguardando Documento,10:00
+ID-1977,192.569.463-13,Usuario Exemplo 977,2026-03-11,2026-03-29 13:39:00,13:54:00,Analista 22,Cliente 3,Fila 14,Aprovado,Fluxo Normal,13:00
+ID-1978,926.282.763-80,Usuario Exemplo 978,2026-01-31,2026-03-29 08:55:00,09:04:00,Analista 28,Cliente 3,Fila 16,Aprovado,Fluxo Normal,08:00
+ID-1979,564.810.354-38,Usuario Exemplo 979,2026-03-11,2026-03-29 09:53:00,10:12:00,Analista 29,Cliente 6,Fila 5,Reprovado Fraude,Suspeita de Fraude,09:00
+ID-1980,645.355.278-57,Usuario Exemplo 980,2026-02-11,2026-03-29 17:38:00,18:00:00,Analista 16,Cliente 4,Fila 2,Aprovado,Fluxo Normal,17:00
+ID-1981,821.765.803-49,Usuario Exemplo 981,2026-01-28,2026-03-29 17:31:00,18:12:00,Analista 11,Cliente 2,Fila 11,Pendente,Aguardando Documento,17:00
+ID-1982,131.198.232-49,Usuario Exemplo 982,2026-03-16,2026-03-29 14:24:00,14:31:00,Analista 16,Cliente 3,Fila 12,Reprovado Politica,Divergência Cadastral,14:00
+ID-1983,356.503.870-46,Usuario Exemplo 983,2026-02-25,2026-03-29 17:47:00,17:55:00,Analista 6,Cliente 2,Fila 8,Reprovado Politica,Suspeita de Fraude,17:00
+ID-1984,679.604.357-73,Usuario Exemplo 984,2026-03-10,2026-03-29 12:48:00,13:14:00,Analista 29,Cliente 4,Fila 12,Reprovado Fraude,Documentação Irregular,12:00
+ID-1985,300.557.319-80,Usuario Exemplo 985,2026-02-17,2026-03-29 11:43:00,12:00:00,Analista 23,Cliente 5,Fila 17,Pendente,Aguardando Documento,11:00
+ID-1986,667.255.379-59,Usuario Exemplo 986,2026-02-25,2026-03-29 14:51:00,15:31:00,Analista 25,Cliente 2,Fila 1,Reprovado Politica,Renda Não Comprovada,14:00
+ID-1987,318.852.128-10,Usuario Exemplo 987,2026-03-01,2026-03-29 09:49:00,10:08:00,Analista 29,Cliente 2,Fila 13,Pendente,Aguardando Documento,09:00
+ID-1988,505.257.118-20,Usuario Exemplo 988,2026-03-25,2026-03-29 10:58:00,11:07:00,Analista 3,Cliente 2,Fila 13,Reprovado Fraude,Perfil de Risco,10:00
+ID-1989,182.221.701-73,Usuario Exemplo 989,2026-02-15,2026-03-29 08:09:00,08:21:00,Analista 22,Cliente 1,Fila 16,Reprovado Fraude,Documentação Irregular,08:00
+ID-1990,816.396.118-40,Usuario Exemplo 990,2026-02-07,2026-03-29 09:54:00,10:26:00,Analista 23,Cliente 5,Fila 5,Pendente,Aguardando Documento,09:00
+ID-1991,358.608.643-70,Usuario Exemplo 991,2026-03-05,2026-03-29 17:14:00,17:37:00,Analista 29,Cliente 5,Fila 15,Aprovado,Fluxo Normal,17:00
+ID-1992,265.185.936-21,Usuario Exemplo 992,2026-03-16,2026-03-29 17:29:00,18:01:00,Analista 15,Cliente 5,Fila 12,Reprovado Fraude,Renda Não Comprovada,17:00
+ID-1993,723.497.795-84,Usuario Exemplo 993,2026-02-13,2026-03-29 13:17:00,14:00:00,Analista 17,Cliente 1,Fila 17,Pendente,Aguardando Documento,13:00
+ID-1994,329.266.358-58,Usuario Exemplo 994,2026-02-24,2026-03-29 15:07:00,15:52:00,Analista 17,Cliente 5,Fila 15,Reprovado Politica,Divergência Cadastral,15:00
+ID-1995,994.457.892-26,Usuario Exemplo 995,2026-02-21,2026-03-29 09:55:00,10:10:00,Analista 11,Cliente 4,Fila 10,Pendente,Aguardando Documento,09:00
+ID-1996,520.874.931-92,Usuario Exemplo 996,2026-02-20,2026-03-29 09:57:00,10:10:00,Analista 18,Cliente 1,Fila 4,Reprovado Politica,Suspeita de Fraude,09:00
+ID-1997,786.365.781-98,Usuario Exemplo 997,2026-02-05,2026-03-29 09:28:00,09:34:00,Analista 29,Cliente 5,Fila 16,Reprovado Politica,Divergência Cadastral,09:00
+ID-1998,235.290.358-42,Usuario Exemplo 998,2026-02-06,2026-03-29 12:02:00,12:11:00,Analista 22,Cliente 2,Fila 14,Aprovado,Fluxo Normal,12:00
+ID-1999,387.983.586-26,Usuario Exemplo 999,2026-02-20,2026-03-29 15:18:00,15:26:00,Analista 13,Cliente 4,Fila 16,Reprovado Politica,Renda Não Comprovada,15:00
