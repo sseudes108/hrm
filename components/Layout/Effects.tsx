@@ -5,11 +5,11 @@ import * as THREE from 'three';
 export function BloomEffect() {
   return (
     <Bloom 
-      intensity={1.5}
-      luminanceThreshold={0.2}
+      intensity={0.05}         // Menos agressivo que 2.5
+      luminanceThreshold={0.1} // Começa a brilhar mais cedo
       luminanceSmoothing={0.9}
       mipmapBlur
-      radius={0.7}
+      radius={0.4}            // <--- Aumente para o brilho espalhar
     />
   );
 }

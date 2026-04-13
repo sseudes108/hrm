@@ -3,8 +3,9 @@ import { Ocean } from './Ocean/Ocean';
 import { Overlay } from './Overlay/Overlay';
 import { Geometry } from './Geometry/Geometry';
 import { CameraController } from './Control/Camera';
+// import { Effects } from '../../Layout/Effects';
 
-export function Globe({ activeTheme, isLocked, isFlat }: { activeTheme: any; isLocked: boolean; isFlat: boolean; }) {
+export function Globe({ activeTheme, isLocked}: { activeTheme: any; isLocked: boolean; isFlat: boolean; }) {
   return (
     <div style={{ width: '100%', height: '100vh'}}>
       <Canvas 
@@ -16,6 +17,12 @@ export function Globe({ activeTheme, isLocked, isFlat }: { activeTheme: any; isL
           depth: true
         }}
       >
+        <ambientLight intensity={0.5} />
+        <pointLight 
+          position={[150, 150, 150]} 
+          intensity={2} 
+          color="#ffffff" 
+        />
         <CameraController isLocked={isLocked}/>
 
         <Ocean />
