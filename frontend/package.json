@@ -16,7 +16,7 @@
     "@react-three/postprocessing": "^2.15.11",
     "@tremor/react": "3.18.7",
     "d3-geo": "^3.1.1",
-    "lucide-react": "0.446.0",
+    "lucide-react": "^0.446.0",
     "postprocessing": "^6.33.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",

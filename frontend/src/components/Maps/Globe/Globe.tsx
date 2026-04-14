@@ -1,46 +1,44 @@
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import { Suspense, } from 'react';
-import { ShaderGlobe } from './GlobeShader';
-import { Effects } from '../../Effects';
+import { Ocean } from './Ocean/Ocean';
+import { Overlay } from './Overlay/Overlay';
+import { Geometry } from './Geometry/Geometry';
+import { CameraController } from './Control/Camera';
+// import { Effects } from '../../Layout/Effects';
 
-
-export function Globe({ activeTheme, isLocked }: { activeTheme: any; isLocked: boolean }) {
+export function Globe({ activeTheme, isLocked}: { activeTheme: any; isLocked: boolean; isFlat: boolean; }) {
   return (
     <div style={{ width: '100%', height: '100vh'}}>
       <Canvas 
         dpr={[1, 2]} 
         gl={{ 
-          // Ative o antialias nativo
           antialias: true, 
           powerPreference: "high-performance",
           stencil: false,
           depth: true
         }}
       >
-        <PerspectiveCamera makeDefault position={[100, 0, 400]} fov={45} />
-        <OrbitControls enabled={!isLocked} enablePan={false} minDistance={300} maxDistance={600} />
+        <ambientLight intensity={0.5} />
+        <pointLight 
+          position={[150, 150, 150]} 
+          intensity={2} 
+          color="#ffffff" 
+        />
+        <CameraController isLocked={isLocked}/>
 
-        {/* Oceano (Esfera de fundo) */}
-        <mesh>
-          <sphereGeometry args={[100, 1024, 1024]} />
-          <meshBasicMaterial color="#272727" />
-        </mesh>
+        <Ocean />
+    
+        <Geometry
+          glbUrl='/data/br_world.glb'
+          activeTheme={activeTheme}
+          isLocked={isLocked}
+        />
 
-        <Suspense fallback={null}>s
-          <ShaderGlobe
-            url="/data/world_heightmap.png" 
-            activeTheme={activeTheme} 
-            isLocked={isLocked} 
-          />
-
-          <Effects 
-            noise={false}
-            vignette={true}
-          />
-
-        </Suspense>
-
+        <Overlay 
+          textureUrl="/data/br_mundo.png" 
+          activeTheme={activeTheme}
+          isLocked={isLocked}
+        />
+        
       </Canvas>
     </div>
   );

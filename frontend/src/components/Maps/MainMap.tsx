@@ -1,55 +1,34 @@
-import { useState, useMemo } from 'react';
-import ReactDOM from 'react-dom';
+import { useMemo } from 'react';
 import { THEMES } from '../../constants/colors';
-
-import { MapHUD } from './MainHUD';
-import { BrazilCanvas } from './BrazilMap/BrazilCanvas';
 import { Globe } from './Globe/Globe';
 
 interface MainMapProps {
   viewMode: keyof typeof THEMES;
   setViewMode: (mode: keyof typeof THEMES) => void;
+  isLocked: boolean; // Recebe o estado do Dashboard
+  isFlat: boolean;
 }
 
-export function MainMap({ viewMode, setViewMode }: MainMapProps) {
-  // O estado de Lock agora controla diretamente o comportamento do Canvas
-  const [isLocked, setIsLocked] = useState(true);
-
-  // O tema ativo baseado no viewMode (Fraude, Aprovada, etc)
+export function MainMap({ viewMode, isLocked, isFlat}: MainMapProps) {
   const activeTheme = useMemo(() => THEMES[viewMode], [viewMode]);
 
-  return ReactDOM.createPortal(
-    <>
-      {/* 1. Interface de Usuário (Z-Index alto para ficar sobre o mapa) */}
-      <div style={{ position: 'relative', zIndex: 10 }}>
-        <MapHUD 
-          viewMode={viewMode} 
-          setViewMode={setViewMode} 
-          isLocked={isLocked} 
-          setIsLocked={setIsLocked} 
-        />
-      </div>
-
-      {/* 2. Camada do Mapa (Ocupa o fundo) */}
-      <div 
-        className="fixed inset-0 overflow-hidden" 
+  return (
+    <div 
+      className="relative w-full h-full flex items-center justify-center overflow-visible"
+      style={{ touchAction: 'none' }}
+    >
+      <div
+        className="absolute w-full h-full z-0"
         style={{ 
-          zIndex: 1, 
-          // Se estiver travado, os cliques passam "através" do canvas para a UI abaixo
-          // Se estiver destravado, o canvas captura o mouse para girar o globo
-          pointerEvents: isLocked ? 'none' : 'auto' 
+          pointerEvents: isLocked ? 'none' : 'auto',
         }}
       >
-        {/* <Globe 
+        <Globe 
           activeTheme={activeTheme}
           isLocked={isLocked}
-        /> */}
-        <BrazilCanvas
-          activeTheme={activeTheme}
-          isLocked={isLocked}
+          isFlat={isFlat}
         />
       </div>
-    </>,
-    document.body
+    </div>
   );
 }

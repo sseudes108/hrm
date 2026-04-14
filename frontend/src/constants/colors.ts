@@ -4,7 +4,7 @@ export const COLORS = {
   glassBase: "rgba(16, 22, 36, 0.1)",
   glassGray: "rgba(40, 47, 60, 0.1)",
   whiteGlow: "rgba(255, 255, 255, 0.15)",
-  borderWhite: "rgba(255, 255, 255, 0.10)"
+  borderWhite: "rgba(255, 255, 255, 0.05)"
 };
 
 export const THEMES = {
