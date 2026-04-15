@@ -1,0 +1,73 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ANIMAÇÕES DO RISK SCORE CARD (Versão Onda Tática) */
+
+/* Pulsação orgânica da onda (Opacidade e Filtro) */
+@keyframes wavePulse {
+  0%, 100% {
+    fill-opacity: 0.8;
+    filter: url(#wave-glow) brightness(1);
+  }
+  50% {
+    fill-opacity: 1;
+    filter: url(#wave-glow) brightness(1.2); /* Acende mais o neon */
+  }
+}
+
+/* Acender dos nodes brancos (sutil) */
+@keyframes acenderNodeTatico {
+  0%, 10%, 100% {
+    opacity: 0.2;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Criamos a classe utilitária do Tailwind para a animação */
+.animate-wavePulse {
+  animation: wavePulse 3s infinite ease-in-out;
+}
+
+/* No src/index.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020408;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.stars-layer-1, .stars-layer-2, .stars-layer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Elas precisam de um tamanho para a sombra existir */
+  width: 1px;
+  height: 1px;
+  background: transparent;
+}
+
+.stars-layer-1 { animation: twinkle 8s infinite ease-in-out; }
+
+.stars-layer-2 { 
+  width: 2px;
+  height: 2px;
+  filter: blur(0.5px) drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+  animation: twinkle 4s infinite ease-in-out; 
+}
+
+.stars-layer-3 {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff; /* A estrela maior é um ponto real */
+}
