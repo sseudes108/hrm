@@ -60,6 +60,21 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   );
 };
 
+const CustomBarLabel = ({ x, y, width, value }: any) => {
+  if (!value) return null; // não mostra nos placeholders
+  return (
+    <text
+      x={x + width / 2}
+      y={y - 6}
+      fill="rgba(255,255,255,0.6)"
+      fontSize={10}
+      textAnchor="middle"
+    >
+      {value}
+    </text>
+  );
+};
+
 export default function DailyVolumeChart() {
   return (
     <Box sx={{
@@ -136,7 +151,7 @@ export default function DailyVolumeChart() {
                 position: 'insideBottomRight',
             }}
             />
-          <Bar dataKey="valor" fill="#5eead4" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="valor" fill="#5eead4" radius={[4, 4, 0, 0]} label={<CustomBarLabel />} />
           <Bar dataKey="placeholder" fill="rgba(255,255,255,0.05)" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
