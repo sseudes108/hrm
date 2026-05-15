@@ -1,4 +1,3 @@
-// src/components/DailyVolumeChart.tsx
 import {
   BarChart,
   Bar,
