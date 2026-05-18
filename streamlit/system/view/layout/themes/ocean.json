@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "Ocean",
+    "base": "dark",
+    "description": "Azul profundo e verde água — calmo e moderno"
+  },
+
+  "colors": {
+    "background":    "#0a1628",
+    "surface":       "#0d2137",
+    "surface_2":     "#0f2d4a",
+    "primary":       "#00d4ff",
+    "primary_hover": "#00b8e0",
+    "secondary":     "#0ea5e9",
+    "accent":        "#10b981",
+    "text":          "#e2f0f9",
+    "text_muted":    "#7fb3cc",
+    "text_disabled": "#2d5a74",
+    "border":        "#1a3a55",
+    "border_focus":  "#00d4ff",
+    "success":       "#10b981",
+    "warning":       "#f59e0b",
+    "danger":        "#f43f5e",
+    "info":          "#0ea5e9"
+  },
+
+  "typography": {
+    "font_family":      "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs":          10,
+    "size_sm":          12,
+    "size_base":        14,
+    "size_subtitle":    18,
+    "size_title":       24,
+    "size_display":     40,
+    "weight_normal":    400,
+    "weight_medium":    500,
+    "weight_bold":      700,
+    "line_height":      1.6
+  },
+
+  "effects": {
+    "hover_y": "-3px"
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "40px"
+  },
+
+  "borders": {
+    "width":       "0.5px",
+    "radius_sm":   "4px",
+    "radius_md":   "8px",
+    "radius_lg":   "16px",
+    "radius_full": "9999px",
+    "shadow_sm":   "0 1px 4px rgba(0,0,0,0.5)",
+    "shadow_md":   "0 4px 16px rgba(0,0,0,0.6)",
+    "shadow_lg":   "0 8px 32px rgba(0,0,0,0.7)"
+  },
+
+  "chart": {
+    "height":      400,
+    "colorscale":  ["#00d4ff", "#10b981", "#0ea5e9", "#f59e0b", "#f43f5e"],
+    "grid_color":  "rgba(255,255,255,0.05)",
+    "font_color":  "#7fb3cc",
+
+    "plotly": {
+      "bg":      "transparent",
+      "plot_bg": "transparent"
+    },
+
+    "echarts": {
+      "tooltip_bg":        "rgba(10,22,40,0.97)",
+      "tooltip_border":    "rgba(0,212,255,0.3)",
+      "tooltip_text":      "#e2f0f9",
+      "axis_line_color":   "rgba(255,255,255,0.12)",
+      "axis_label_color":  "rgba(255,255,255,0.35)",
+      "split_line_color":  "rgba(255,255,255,0.04)",
+      "glow_blur":         24,
+      "area_opacity_top":  0.45,
+      "area_opacity_base": 0.0
+    }
+  }
+}

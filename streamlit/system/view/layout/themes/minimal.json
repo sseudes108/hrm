@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "Minimal",
+    "base": "light",
+    "description": "Cinza neutro e tipografia forte — dados no centro, sem distração"
+  },
+
+  "colors": {
+    "background":    "#fafafa",
+    "surface":       "#ffffff",
+    "surface_2":     "#f3f4f6",
+    "primary":       "#111827",
+    "primary_hover": "#374151",
+    "secondary":     "#6b7280",
+    "accent":        "#111827",
+    "text":          "#111827",
+    "text_muted":    "#9ca3af",
+    "text_disabled": "#e5e7eb",
+    "border":        "#e5e7eb",
+    "border_focus":  "#111827",
+    "success":       "#15803d",
+    "warning":       "#b45309",
+    "danger":        "#b91c1c",
+    "info":          "#1d4ed8"
+  },
+
+  "typography": {
+    "font_family":      "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs":          10,
+    "size_sm":          12,
+    "size_base":        14,
+    "size_subtitle":    18,
+    "size_title":       22,
+    "size_display":     36,
+    "weight_normal":    400,
+    "weight_medium":    500,
+    "weight_bold":      700,
+    "line_height":      1.7
+  },
+
+  "effects": {
+    "hover_y": "-3px"
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "40px"
+  },
+
+  "borders": {
+    "width":       "1px",
+    "radius_sm":   "2px",
+    "radius_md":   "4px",
+    "radius_lg":   "8px",
+    "radius_full": "9999px",
+    "shadow_sm":   "0 1px 2px rgba(0,0,0,0.05)",
+    "shadow_md":   "0 2px 8px rgba(0,0,0,0.07)",
+    "shadow_lg":   "0 4px 16px rgba(0,0,0,0.08)"
+  },
+
+  "chart": {
+    "height":      380,
+    "colorscale":  ["#111827", "#6b7280", "#374151", "#9ca3af", "#d1d5db"],
+    "grid_color":  "rgba(0,0,0,0.06)",
+    "font_color":  "#9ca3af",
+
+    "plotly": {
+      "bg":      "transparent",
+      "plot_bg": "transparent"
+    },
+
+    "echarts": {
+      "tooltip_bg":        "rgba(17,24,39,0.95)",
+      "tooltip_border":    "rgba(0,0,0,0.15)",
+      "tooltip_text":      "#f9fafb",
+      "axis_line_color":   "rgba(0,0,0,0.15)",
+      "axis_label_color":  "rgba(0,0,0,0.40)",
+      "split_line_color":  "rgba(0,0,0,0.06)",
+      "glow_blur":         0,
+      "area_opacity_top":  0.15,
+      "area_opacity_base": 0.0
+    }
+  }
+}

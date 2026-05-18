@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "name": "Bankai Hollow",
+    "base": "dark",
+    "description": "Tema inspirado na Bankai do Ichigo Kurosaki — preto absoluto, branco ósseo, cinzas metálicos, laranja intenso e vermelho sangue."
+  },
+
+  "icons": {
+    "toggle": "lightbulb"
+  },
+
+  "colors": {
+    "background":    "#0a0a0d",
+    "surface":       "#111318",
+    "surface_2":     "#1a1d24",
+
+    "primary":       "#ff6a00",
+    "primary_hover": "#ff8533",
+
+    "secondary":     "#dcdcdc",
+    "accent":        "#b31217",
+
+    "text":          "#f5f5f5",
+    "text_muted":    "#9ca3af",
+    "text_disabled": "#52525b",
+
+    "border":        "#2a2d34",
+    "border_focus":  "#ff6a00",
+
+    "success":       "#22c55e",
+    "warning":       "#f59e0b",
+    "danger":        "#dc2626",
+    "info":          "#dcdcdc"
+  },
+
+  "typography": {
+    "font_family":      "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+
+    "size_xs":          10,
+    "size_sm":          12,
+    "size_base":        14,
+    "size_subtitle":    18,
+    "size_title":       26,
+    "size_display":     44,
+
+    "weight_normal":    400,
+    "weight_medium":    500,
+    "weight_bold":      700,
+
+    "line_height":      1.6
+  },
+
+  "effects": {
+    "hover_y": "-2px",
+
+    "glow_primary": "0 0 18px rgba(255,106,0,0.22)",
+    "glow_danger":  "0 0 14px rgba(179,18,23,0.28)",
+
+    "glass_blur": "10px",
+
+    "gradient_primary":
+      "linear-gradient(135deg, rgba(255,106,0,1) 0%, rgba(179,18,23,1) 100%)"
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "14px",
+    "lg": "24px",
+    "xl": "40px"
+  },
+
+  "borders": {
+    "width":       "1px",
+
+    "radius_sm":   "4px",
+    "radius_md":   "10px",
+    "radius_lg":   "14px",
+    "radius_full": "9999px",
+
+    "shadow_sm":   "0 2px 6px rgba(0,0,0,0.35)",
+    "shadow_md":   "0 6px 18px rgba(0,0,0,0.45)",
+    "shadow_lg":   "0 12px 40px rgba(0,0,0,0.65)"
+  },
+
+  "chart": {
+    "height": 400,
+
+    "colorscale": [
+      "#ff6a00",
+      "#b31217",
+      "#dcdcdc",
+      "#6b7280",
+      "#ffffff"
+    ],
+
+    "grid_color": "rgba(255,255,255,0.05)",
+    "font_color": "#9ca3af",
+
+    "plotly": {
+      "bg":      "transparent",
+      "plot_bg": "transparent"
+    },
+
+    "echarts": {
+      "tooltip_bg":       "rgba(10,10,13,0.96)",
+      "tooltip_border":   "rgba(255,106,0,0.35)",
+      "tooltip_text":     "#f5f5f5",
+
+      "axis_line_color":  "rgba(255,255,255,0.12)",
+      "axis_label_color": "rgba(255,255,255,0.45)",
+
+      "split_line_color": "rgba(255,255,255,0.04)",
+
+      "glow_blur":        12,
+
+      "area_opacity_top": 0.42,
+      "area_opacity_base": 0.02
+    }
+  }
+}
