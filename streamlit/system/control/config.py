@@ -23,29 +23,45 @@ def build_colorscale(colors: list[str], area_top: float, area_base: float) -> li
         for c in colors
     ]
 
-def set_theme(name: str):
-    # garante que nunca receba um dict por engano
-    if not isinstance(name, str):
-        name = "bankai_dark"
+def get_theme(app_name: str, mode: str = "dark") -> dict:
+    """
+    Busca o arquivo JSON do tema estruturado dentro do diretório do app específico.
+    Caminho real: ROOT / apps / <categoria> / {app_name} / themes / {mode}.json
+    """
+    # 1. Encontra o diretório atual onde este script está rodando
+    current_path = Path(__file__).resolve()
     
-    theme = load_theme(name)
-    st.session_state.theme_name = name  # persiste o nome
-    st.session_state.theme = theme      # persiste o objeto
+    # 2. Sobe na árvore de diretórios até encontrar a raiz real 'Bankai'
+    # Isso evita ficar adivinhando quantos ".parent" usar
+    root_path = None
+    for parent in current_path.parents:
+        if parent.name.lower() == "bankai":
+            root_path = parent
+            break
+            
+    # Se não achar a pasta 'Bankai' pelo nome, usa o fallback clássico de subir 3 níveis
+    if not root_path:
+        root_path = current_path.parent.parent.parent
 
-def get_theme():
-    return st.session_state.theme
-
-def load_theme(name: str) -> dict:
-    path = Path(__file__).parent.parent / "view" / "layout" / "themes" / f"{name}.json"
-
-    with open(path, encoding="utf-8") as f:
-        theme = json.load(f)
-
-    ec = theme["chart"]["echarts"]
-    theme["chart"]["colorscale"] = build_colorscale(
-        theme["chart"]["colorscale"],
-        area_top=ec["area_opacity_top"],
-        area_base=ec["area_opacity_base"],
+    # 3. Agora sim, miramos na pasta 'apps' que está na raiz do projeto
+    apps_root = root_path / "apps"
+    
+    # 4. Busca recursiva focando na pasta do app e no arquivo de modo (dark/light)
+    theme_files = list(apps_root.rglob(f"{app_name}/themes/{mode}.json"))
+    
+    # 5. Se encontrou o arquivo, carrega e retorna
+    if theme_files:
+        path = theme_files[0]
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+            
+    # 6. FALLBACK SEGURO: Busca dinâmica do tema padrão da Bankai
+    fallback_files = list(apps_root.rglob(f"bankai/themes/{mode}.json"))
+    if fallback_files:
+        with open(fallback_files[0], "r", encoding="utf-8") as f:
+            return json.load(f)
+            
+    raise FileNotFoundError(
+        f"Tema '{mode}.json' para o módulo '{app_name}' (e nem o fallback da Bankai) "
+        f"foi encontrado dentro de '{apps_root}'."
     )
-
-    return theme

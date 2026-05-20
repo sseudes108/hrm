@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "name": "SheBattle",
+    "base": "dark",
+    "description": "Tema rosa neon, azul ciano e branco brilhante com toques luxuosos"
+  },
+
+  "colors": {
+    "background":     "#0f0a1f",
+    "surface":        "#1a1433",
+    "surface_2":      "#2a1f4d",
+    "primary":        "#ff2e9e",
+    "primary_hover":  "#ff69b4",
+    "secondary":      "#00f0ff",
+    "accent":         "#ffffff",
+    "text":           "#ffffff",
+    "text_muted":     "#c8b4ff",
+    "text_disabled":  "#664488",
+    "border":         "#442b66",
+    "border_focus":   "#ff2e9e",
+    "success":        "#00f0ff",
+    "warning":        "#ff9e2e",
+    "danger":         "#ff3366",
+    "info":           "#9b5de5",
+    "pink_glow":      "#ff69b4",
+    "cyan_glow":      "#00f0ff"
+  },
+
+  "chart_colors": [
+    "#ff2e9e",
+    "#00f0ff",
+    "#9b5de5",
+    "#ff9e2e",
+    "#f15bb5",
+    "#00bbf9",
+    "#ffffff"
+  ],
+  
+  "typography": {
+    "font_family":      "Inter, system-ui, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs":          10,
+    "size_sm":          12,
+    "size_base":        14,
+    "size_subtitle":    17,
+    "size_title":       27,
+    "size_display":     42,
+    "weight_normal":    400,
+    "weight_medium":    500,
+    "weight_bold":      700,
+    "line_height":      1.65
+  },
+
+  "effects": {
+    "hover_y": "-4px",
+    "glow_pink": "0 0 15px #ff2e9e",
+    "glow_cyan": "0 0 15px #00f0ff",
+    "glow_white": "0 0 20px rgba(255,255,255,0.6)"
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "14px",
+    "lg": "24px",
+    "xl": "42px"
+  },
+
+  "borders": {
+    "width":       "1px",
+    "radius_sm":   "8px",
+    "radius_md":   "14px",
+    "radius_lg":   "20px",
+    "radius_full": "9999px",
+    "shadow_sm":   "0 2px 8px rgba(255,46,158,0.15)",
+    "shadow_md":   "0 6px 24px rgba(0, 240, 255, 0.2)",
+    "shadow_lg":   "0 12px 40px rgba(255, 46, 158, 0.25)"
+  },
+
+  "chart": {
+    "height":      420,
+    "colorscale":  ["#ff2e9e", "#00f0ff", "#ffffff", "#9b5de5", "#ff69b4"],
+    "grid_color":  "rgba(255,255,255,0.08)",
+    "font_color":  "#e0d4ff",
+
+    "plotly": {
+      "bg":      "transparent",
+      "plot_bg": "transparent"
+    },
+
+    "echarts": {
+      "tooltip_bg":       "rgba(15,10,35,0.96)",
+      "tooltip_border":   "rgba(255,46,158,0.5)",
+      "tooltip_text":     "#ffffff",
+      "axis_line_color":  "rgba(0,240,255,0.25)",
+      "axis_label_color": "rgba(255,255,255,0.55)",
+      "split_line_color": "rgba(255,46,158,0.1)",
+      "glow_blur":        8,
+      "area_opacity_top": 0.65,
+      "area_opacity_base": 0.05
+    }
+  }
+}

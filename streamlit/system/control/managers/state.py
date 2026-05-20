@@ -1,23 +1,12 @@
 import streamlit as st
-from system.control.config import set_theme
+from system.control.contexts.dash import DashboardContext
+import system.control.config as config_man
 
-def init_session_state(overrides: dict = None):
-    defaults = {
-        "app": "bankai",
-        "themes":[
-            "bankai_dark",
-            "bankai_light"
-        ]
-    }
+def get_context(app_name: str) -> DashboardContext:
+    """Garante a existência e retorna a instância da classe de contexto na sessão"""
+    session_key = f"filter_context_{app_name}"
+    theme_setting = config_man.get_theme(app_name)
+    if session_key not in st.session_state:
+        st.session_state[session_key] = DashboardContext(app_name, theme_setting)
 
-    if overrides:
-        # Extrai o primeiro tema da lista antes do merge
-        if "themes" in overrides:
-            overrides["theme_name"] = overrides["themes"][0]
-        defaults.update(overrides)
-
-    for key, value in defaults.items():
-        if key not in st.session_state:
-            st.session_state[key] = value
-
-    set_theme(st.session_state.theme_name)
+    return st.session_state[session_key]

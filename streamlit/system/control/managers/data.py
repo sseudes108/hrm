@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import json
 
 def load_json(json_path: str) -> list:
@@ -36,10 +37,10 @@ def normalize_data(raw) -> list:
 
     return []
 
-
-def get_data():
+@st.cache_data
+def get_data_json(file_path:str):
     if "data" not in st.session_state:
-        raw = load_json("data/she_base.json")
+        raw = load_json(file_path)
         data = normalize_data(raw)
     
-    return data
+    return pd.DataFrame(data)

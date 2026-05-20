@@ -1,8 +1,10 @@
 import streamlit as st
 import base64
 from system.control.managers.error import check_title_key
-from system.control.config import set_theme
+# from system.control.config import set_theme
 from system.view.components.helper import get_lucide_svg
+from system.control.contexts.dash import DashboardContext
+from system.control.config import get_theme
 
 def get_b64(theme):
     is_dark = theme["meta"]["base"] == "dark"
@@ -15,7 +17,7 @@ def get_b64(theme):
     b64 = base64.b64encode(svg_code.encode()).decode()
     return b64
 
-def draw_header(theme, icon, title=None, background=False, toggle_btn=True, ticker=True, ticker_list=None, key=None):
+def draw_header(theme, icon, context:DashboardContext , title=None, background=False, toggle_btn=True, ticker=True, ticker_list=None, key=None):
     if check_title_key(title, key) == 0:
         st.error("Header sem titulo. Defina a key.")
         return
@@ -85,11 +87,11 @@ def draw_header(theme, icon, title=None, background=False, toggle_btn=True, tick
 
         with cols[2]:
             if toggle_btn:
-                is_dark = theme["meta"]["base"] == "dark"
                 with st.container(key=f"toggle_theme_btn_container_{key}"):                    
                     if st.button(f"", key=f"toggle_{key}"):
-                        st.session_state.theme_name = st.session_state.theme_name.replace("_dark", "_light") if is_dark else st.session_state.theme_name.replace("_light", "_dark")
-                        set_theme(st.session_state.theme_name)
-                        st.rerun()
+
+                        next_mode = "light" if context.mode == "dark" else "dark"
+
+                        context.update_mode(next_mode)
             else:
                 pass
