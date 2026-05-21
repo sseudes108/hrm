@@ -46,17 +46,20 @@ def get_theme(app_name: str, mode: str = "dark") -> dict:
     # 3. Agora sim, miramos na pasta 'apps' que está na raiz do projeto
     apps_root = root_path / "apps"
     
-    # 4. Busca recursiva focando na pasta do app e no arquivo de modo (dark/light)
-    theme_files = list(apps_root.rglob(f"{app_name}/themes/{mode}.json"))
+    # 4. Busca usando curinga para a categoria (ex: dashboards, engines, etc.)
+    # O '*' substitui 'dashboards' ou qualquer outra pasta que venha antes do app
+    theme_pattern = f"*/{app_name}/themes/{mode}.json"
+    theme_files = list(apps_root.glob(theme_pattern))
     
-    # 5. Se encontrou o arquivo, carrega e retorna
+    # 5. Se encontrou o arquivo real do app, carrega e retorna
     if theme_files:
         path = theme_files[0]
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
             
-    # 6. FALLBACK SEGURO: Busca dinâmica do tema padrão da Bankai
-    fallback_files = list(apps_root.rglob(f"bankai/themes/{mode}.json"))
+    # 6. Se não encontrou (ex: o app específico não tem pasta de temas), 
+    # busca o tema padrão na pasta 'bankai' independente de onde ela esteja
+    fallback_files = list(apps_root.glob(f"*/bankai/themes/{mode}.json"))
     if fallback_files:
         with open(fallback_files[0], "r", encoding="utf-8") as f:
             return json.load(f)

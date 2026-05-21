@@ -1,77 +1,41 @@
-
-
-def teste_line_echarts(theme):
-    col1, col2 = st.columns([1,1], gap='xsmall')
-    with col1:
-        data_simples = {
-            "x": ["Seg", "Ter", "Qua"],
-            "y": {"Arjuna": [10, 20, 15]},
-            "toolbox": {"magic": ["line", "bar"]}
-        }
-        draw_linhas_chart(
-            theme=theme, 
-            data=data_simples,
-            title="Evolução de Dharma",
-            subtitle="Análise semanal de alinhamento cósmico",
-            value="98.2%",
-            value_sub="Média por Dia"
-        )
-
-    with col2:
-        data_simples = {
-            "x": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul"],
-            "y": {
-                "Arjuna (Precisão)": [820, 932, 901, 934, 1290, 1330, 1320],
-                "Karna (Poder)": [850, 1132, 701, 634, 1090, 1930, 920],
-                "Bishma (Poder)": [880, 1032, 801, 734, 1590, 2930, 1020]
-            },
-            "toolbox": {"magic": ["line", "bar", "stack"]}
-        }
-        draw_linhas_chart(
-            theme=theme,
-            data=data_simples,
-            key="l2"
-        )
-
-from system.view.components.charts.echarts.linhas import draw_linhas_chart
+"""
+app.py — Bankai 
+Ponto de entrada do projeto.
+Para trocar o tema, altere apenas a string em get_theme().
+"""
 from system.view.components.cards.index import (
     sparkline_metric
 )
 import streamlit as st
-from system.control.contexts.dash import DashboardContext
+from system.control.managers.data import get_data_json
 from system.view.components.layout.header import draw_header
+from system.control.contexts.dash import DashboardContext
 from system.view.components.filters.select import draw_select_filter
+import system.control.managers.filter as filter_man
 
 def main(context:DashboardContext):
     theme = context.theme
-    draw_header(
-        theme=theme, title="Bankai", icon="⚔️", 
-        ticker=True, background=False,
-        key="header_bankai",
-        context=context
-    )
+    with st.container():
+        draw_header(
+            background=False,
+            title="Bankai", ticker=False,
+            icon="⚔️", 
+            context=context
+        )
 
-    st.write("")
-    st.write("")
-    st.write("")
+    # df = get_data_json("apps/engines/shebattle/data/she_base.json")
+    # df_filtrado = filter_man.apply_filters(df, context.active_filters)
 
-    cols = st.columns(3)
-    with cols[0]:
-        options = ["t1","t2","t3"]
-        filter = draw_select_filter("Options", options=options, theme=theme)
-        st.write(filter)
-        
-    with cols[1]:
-        options = ["t1","t2","t3"]
-        filter = draw_select_filter("Options - 1", options=options, label_width="5.5", theme=theme)
-        st.write(filter)
+    # list_names = df_filtrado["nome"].unique().tolist()
+    # list_pais = df_filtrado["pais"].unique().tolist()
+    # nome_selecionado = draw_select_filter("Nome", list_names, context)
+    # pais_selecionado = draw_select_filter("Pais", list_pais, context)
+    # context.update_filter("nome",nome_selecionado)
+    # context.update_filter("pais",pais_selecionado)
 
-    with cols[2]:
-        options = ["t1","t2","t3"]
-        filter = draw_select_filter("Options - 2", options=options, label_width="5.5", theme=theme)
-        st.write(filter)
+    # st.dataframe(df_filtrado)
 
-    col1, col2, col3, col4, col5 = st.columns(5, gap="small")
+        col1, col2, col3, col4, col5 = st.columns(5, gap="small")
 
     with col1:
         # 1. Defina as opções do Sparkline ECharts (Design "Invisível")
@@ -139,5 +103,5 @@ def main(context:DashboardContext):
             tooltip="Acumulado\nno arco Pain"
         )
 
-    st.divider()
-    teste_line_echarts(theme)
+if __name__ == "__main__":
+    main()

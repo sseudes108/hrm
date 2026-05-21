@@ -1,19 +1,37 @@
 """
-styles/css_base.py — Bankai Template
+styles/css_base.py — Bankai 
 Variáveis CSS globais (:root), reset, fundo do app e scrollbar.
 É o primeiro CSS a ser injetado — todos os outros dependem das variáveis definidas aqui.
 """
 
+
 def get_css_base(theme: dict) -> str:
+    ef = theme.get("effects", {})
+    
+    # DEBUG TEMPORÁRIO: Vai printar no seu terminal as chaves que o Python achou
+    print("DEBUG BANKAI CHAVES:", list(ef.keys())) 
+    
+    overlay = ef.get("surface_overlay", {"enabled": False, "border_gradient": "none", "inner_shadow": "none"})
+
+    
     c  = theme["colors"]
     ty = theme["typography"]
     sp = theme["spacing"]
     b  = theme["borders"]
+    ef = theme["effects"] # <-- Adicionado aqui
+    overlay = ef["surface_overlay"] # <-- Captura o bloco dinâmico
+    lay = theme["layout"]
+
+    # Define o estado das bordas tridimensionais
+    border_edge = overlay["border_gradient"] if overlay["enabled"] else "none"
+    inner_shadow = overlay["inner_shadow"] if overlay["enabled"] else "none"
 
     return f"""
 
         /* ── :root — variáveis globais do tema ── */
         :root {{
+            /* 1. VARIÁVEIS DE LAYOUT*/
+            --bk-header-h: {lay['header_height']};
 
             /* Cores */
             --bk-bg:           {c['background']};
@@ -69,6 +87,18 @@ def get_css_base(theme: dict) -> str:
             --bk-shadow-sm:    {b['shadow_sm']};
             --bk-shadow-md:    {b['shadow_md']};
             --bk-shadow-lg:    {b['shadow_lg']};
+
+            /* Efeitos Estruturais Genéricos */
+            --bk-hover-y:         {ef['hover_y']};
+            --bk-backdrop-blur:   {ef['backdrop_blur']};
+            --bk-glow-primary:    {ef['glow_primary']};
+            --bk-glow-danger:     {ef['glow_danger']};
+            --bk-grad-primary:    {ef['gradient_primary']};
+            --bk-grad-surface:    {ef['gradient_surface']};
+            
+            /* Acabamento Tridimensional Dinâmico */
+            --bk-card-border-edge: {border_edge};
+            --bk-card-inner-shadow: {inner_shadow};
         }}
 
         /* ── Reset base ── */
@@ -81,7 +111,7 @@ def get_css_base(theme: dict) -> str:
         /* ── App ── */
         .stApp {{
             background-color: var(--bk-bg);
-            font-family:      var(--bk-font);
+            font-family:       var(--bk-font);
             font-size:        var(--bk-base);
             color:            var(--bk-text);
             line-height:      var(--bk-lh);
@@ -95,9 +125,9 @@ def get_css_base(theme: dict) -> str:
         .block-container {{
             padding-top:    var(--bk-sp-xs);
             padding-bottom: var(--bk-sp-sm);
-            max-width:      100% !important;   /* <-- adicione isso */
-            padding-left:   var(--bk-sp-lg);  /* ajuste as margens laterais */
-            padding-right:  var(--bk-sp-lg);  /* conforme seu layout */
+            max-width:      100% !important;
+            padding-left:   var(--bk-sp-lg);
+            padding-right:  var(--bk-sp-lg);
         }}
 
         /* ── Scrollbar ── */
@@ -122,5 +152,4 @@ def get_css_base(theme: dict) -> str:
             border-top: var(--bk-border-w) solid var(--bk-border);
             margin: var(--bk-sp-lg) 0;
         }}
-
     """

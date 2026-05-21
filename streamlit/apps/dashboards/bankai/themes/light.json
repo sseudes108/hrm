@@ -1,14 +1,17 @@
 {
   "meta": {
-    "name": "Bankai Light",
+    "name": "Bankai Light - Polished Shard",
     "base": "light",
-    "description": "Versão clara inspirada na Bankai do Ichigo — branco espiritual, cinzas metálicos, laranja intenso e vermelho profundo."
+    "description": "Versão clara inspirada na Bankai do Ichigo — branco espiritual, cinzas metálicos, laranja intenso e vermelho profundo com acabamento polido."
+  },
+
+  "layout": {
+    "header_height": "72px"
   },
 
   "icons": {
     "toggle": "lightbulb-off"
   },
-
 
   "colors": {
     "background":    "#f5f5f7",
@@ -37,31 +40,33 @@
   "typography": {
     "font_family":      "Inter, sans-serif",
     "font_family_mono": "JetBrains Mono, monospace",
-
     "size_xs":          10,
     "size_sm":          12,
     "size_base":        14,
     "size_subtitle":    18,
     "size_title":       26,
     "size_display":     44,
-
     "weight_normal":    400,
     "weight_medium":    500,
     "weight_bold":      700,
-
     "line_height":      1.6
   },
 
   "effects": {
     "hover_y": "-2px",
-
+    "backdrop_blur": "10px",
+    
     "glow_primary": "0 0 16px rgba(255,106,0,0.16)",
-    "glow_danger":  "0 0 12px rgba(179,18,23,0.16)",
-
-    "glass_blur": "10px",
-
-    "gradient_primary":
-      "linear-gradient(135deg, rgba(255,106,0,1) 0%, rgba(179,18,23,0.92) 100%)"
+    "glow_danger":  "0 0 12px rgba(179,18,23,0.12)",
+    
+    "gradient_primary": "linear-gradient(135deg, #ff6a00 0%, #b31217 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(245,245,247,0.95) 100%)",
+    
+    "surface_overlay": {
+      "enabled": true,
+      "border_gradient": "linear-gradient(135deg, rgba(255,106,0,0.25) 0%, rgba(212,212,216,0.4) 50%, rgba(179,18,23,0.2) 100%)",
+      "inner_shadow": "inset 0 1px 0px rgba(255,255,255,0.8), inset 0 -1px 12px rgba(0,0,0,0.02)"
+    }
   },
 
   "spacing": {
@@ -74,30 +79,32 @@
 
   "borders": {
     "width":       "1px",
-
     "radius_sm":   "4px",
     "radius_md":   "10px",
     "radius_lg":   "14px",
     "radius_full": "9999px",
-
     "shadow_sm":   "0 1px 4px rgba(0,0,0,0.06)",
-    "shadow_md":   "0 4px 12px rgba(0,0,0,0.10)",
-    "shadow_lg":   "0 10px 30px rgba(0,0,0,0.14)"
+    "shadow_md":   "0 4px 12px rgba(0,0,0,0.08)",
+    "shadow_lg":   "0 10px 30px rgba(0,0,0,0.12)"
   },
 
   "chart": {
     "height": 400,
-
-    "colorscale": [
-      "#ff6a00",
-      "#b31217",
-      "#6b7280",
-      "#d1d5db",
-      "#111318"
-    ],
-
     "grid_color": "rgba(0,0,0,0.06)",
     "font_color": "#6b7280",
+    
+    "colorscale_extended": [
+      "#ff6a00", "#b31217", "#4b5563", "#9ca3af", 
+      "#ff8533", "#dc2626", "#111318", "#d1d5db",
+      "#ff9950", "#ff4d52", "#6b7280", "#e5e7eb"
+    ],
+
+    "severity": {
+      "critical": "#dc2626",
+      "warning":  "#ff6a00",
+      "normal":   "#4b5563",
+      "stale":    "#9ca3af"
+    },
 
     "plotly": {
       "bg":      "transparent",
@@ -108,16 +115,12 @@
       "tooltip_bg":       "rgba(255,255,255,0.96)",
       "tooltip_border":   "rgba(255,106,0,0.22)",
       "tooltip_text":     "#111318",
-
       "axis_line_color":  "rgba(0,0,0,0.14)",
       "axis_label_color": "rgba(0,0,0,0.5)",
-
       "split_line_color": "rgba(0,0,0,0.05)",
-
       "glow_blur":        10,
-
       "area_opacity_top": 0.28,
-      "area_opacity_base": 0.02
+      "area_opacity_base":0.02
     }
   }
 }

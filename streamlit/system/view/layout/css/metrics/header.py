@@ -1,37 +1,13 @@
-from system.control.config import hex_to_rgba
+"""
+styles/metrics/index.py — Bankai 
+CSS dos cards de KPIs (Métricas).
+Totalmente estático, utilizando variáveis globais e herança tridimensional.
+"""
 
-def get_css_header(theme):
-    colors = theme["colors"]
-    typography = theme["typography"]
-    borders = theme["borders"]
-    effects = theme["effects"]
-    dark = theme["meta"]["base"] == "dark"
-
-    # if dark:
-    #     bg_normal    = "rgba(255, 255, 255, 0.05)"
-    #     bg_hover     = "rgba(255, 255, 255, 0.08)"
-    #     border       = "1px solid rgba(255, 255, 255, 0.08)"
-    #     border_hover = f"1px solid {hex_to_rgba(colors['primary'], 0.4)}"
-    #     shadow       = "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
-    #     shadow_hover = "0 12px 40px 0 rgba(0, 0, 0, 0.5)"
-    #     backdrop     = "backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important;"
-    #     text_primary = "rgba(255, 255, 255, 0.95)"
-    #     text_muted   = "rgba(255, 255, 255, 0.35)"
-    # else:
-    #     bg_normal    = colors["surface"]
-    #     bg_hover     = colors["surface_2"]
-    #     border       = f"1px solid {colors['border']}"
-    #     border_hover = f"1px solid {colors['border_focus']}"
-    #     shadow       = borders["shadow_sm"]
-    #     shadow_hover = borders["shadow_md"]
-    #     backdrop     = ""
-    #     text_primary = colors["text"]
-    #     text_muted   = colors["text_muted"]
-    border_hover = f"1px solid {colors['border_focus']}"
-
-    return f"""
-        /* O PAI (Container Externo) */
-        [class*="st-key-metric_card_"] {{            
+def get_css_header() -> str:
+    return """
+        /* O PAI (Container Externo - A Placa Polida) */
+        [class*="st-key-metric_card_"] {            
             margin: 0 !important;
             padding: 0 !important;
             display: flex !important;
@@ -41,100 +17,126 @@ def get_css_header(theme):
             
             min-height: 120px;
             max-height: 120px;
-            border: 1px solid rgba(255,255,255,0.1) !important;
-            border-radius: 10px !important;
-            /* Importante: overflow visible para o tooltip vazar para cima */
+            
+            /* Herança estrutural dinâmica do tema ativo */
+            background: var(--bk-grad-surface) !important;
+            backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            
+            border: var(--bk-border-w) solid var(--bk-border) !important;
+            border-radius: var(--bk-radius-md) !important;
+            box-shadow: var(--bk-shadow-sm), var(--bk-card-inner-shadow) !important;
+            
+            /* Overflow visible para o tooltip vazar para cima */
             overflow: visible !important; 
             position: relative !important;
-        }}
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+        }
+
+        /* Efeito de Hover no Card de Métrica */
+        [class*="st-key-metric_card_"]:hover {
+            transform: translateY(var(--bk-hover-y)) !important;
+            border-color: var(--bk-border-focus) !important;
+            box-shadow: var(--bk-shadow-md), var(--bk-glow-primary) !important;
+        }
 
         /* Reduz o gap entre os elementos filhos do card */
-        [class*="st-key-metric_card_"] > div {{
+        [class*="st-key-metric_card_"] > div {
             gap: 0 !important;
             row-gap: 0 !important;
             margin-top: 0 !important;
             padding-top: 0 !important;
-        }}
+        }
 
-        /* O FILHO (Cabeçalho Vermelho) */
-        [class*="st-key-metric_header_"] {{
+        /* O FILHO (Cabeçalho do Card) */
+        [class*="st-key-metric_header_"] {
             width: 100% !important;
-            padding: 8px 12px !important;
+            padding: var(--bk-sp-sm) var(--bk-sp-md) !important;
             margin: 0 !important;
             display: flex !important;
             align-items: center !important;
             min-height: 35px !important;
             overflow: visible !important;
             transform: translateY(-15px) !important;
-        }}
-
+        }
                 
-        [class*="st-key-metric_header_"] > div {{
+        [class*="st-key-metric_header_"] > div {
             overflow: visible !important;
             width: 100% !important;
-        }}
+        }
 
-
-
-        [class*="st-key-metric_header_"] .mcard-titulo {{
-            font-size: 1rem !important;
-            color: white !important;
+        [class*="st-key-metric_header_"] .mcard-titulo {
+            font-family: var(--bk-font) !important;
+            font-size: var(--bk-base) !important;
+            color: var(--bk-text) !important;
             text-transform: uppercase !important;
-            font-weight: bold !important;
-        }}
+            font-weight: var(--bk-w-bold) !important;
+        }
 
-        [class*="st-key-metric_header_"] .mcard-icon {{
+        [class*="st-key-metric_header_"] .mcard-icon {
             display: flex !important;
-            align-items: center !important;    /* Centraliza o conteúdo (texto/emoji) verticalmente */
-            justify-content: center !important; /* Centraliza o conteúdo horizontalmente dentro de si */
+            align-items: center !important;    
+            justify-content: center !important; 
 
             width: 1em;
             height: 1em;
-        }}
+            color: var(--bk-primary) !important; /* Ícones ganham a cor de destaque */
+        }
 
-        /* ─── 4. INFO & TOOLTIP (CORREÇÃO DE LAYOUT) ───────────────────── */
-        /* 1. Forçar o container do Streamlit a permitir que o tooltip "vaze" */
-        [data-testid="stVerticalBlock"]:has(> [class*="st-key-metric_card_"]) {{
+        /* ─── INFO & TOOLTIP (CORREÇÃO DE LAYOUT) ─── */
+        
+        /* Forçar o container do Streamlit a permitir que o tooltip "vaze" */
+        [data-testid="stVerticalBlock"]:has(> [class*="st-key-metric_card_"]) {
             overflow: visible !important;
-        }}
+        }
 
-        /* Tooltip corrigido */
-        .mcard-tooltip {{
+        /* Tooltip adaptável */
+        .mcard-tooltip {
             visibility: hidden;
             opacity: 0;
             position: absolute;
             z-index: 999999 !important; 
-            bottom: 110%; /* Sobe um pouco mais */
+            bottom: 110%; 
             right: 10px;
-            background: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 10px;
-            border-radius: 5px;
+            
+            /* Cores e desfoque herdam do contexto do tema */
+            background: color-mix(in srgb, var(--bk-surface-2) 95%, transparent) !important;
+            backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            
+            border: var(--bk-border-w) solid var(--bk-border) !important;
+            padding: var(--bk-sp-sm) var(--bk-sp-md) !important;
+            border-radius: var(--bk-radius-sm) !important;
+            box-shadow: var(--bk-shadow-md) !important;
+            color: var(--bk-text) !important;
+            font-family: var(--bk-font) !important;
+            font-size: var(--bk-sm) !important;
+            
             pointer-events: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             transform: translateY(5px);
-        }}
+        }
 
-        /* Seta do Tooltip (opcional, mas fica elegante) */
-        .mcard-tooltip::after {{
+        /* Seta do Tooltip baseada nas cores da borda do tema */
+        .mcard-tooltip::after {
             content: "";
             position: absolute;
             top: 100%;
-            right: 10px;
+            right: 14px;
             border-width: 6px;
             border-style: solid;
-            border-color: rgba(255, 255, 255, 0.1) transparent transparent transparent;
-        }}
+            border-color: var(--bk-border) transparent transparent transparent !important;
+        }
 
-        .mcard-info {{
+        .mcard-info {
             position: relative !important;
             overflow: visible !important;
             z-index: 101 !important;
-        }}
+        }
 
-        .mcard-info:hover .mcard-tooltip {{
+        .mcard-info:hover .mcard-tooltip {
             visibility: visible !important;
             opacity: 1 !important;
             transform: translateY(0) !important;
-        }}
+        }
     """

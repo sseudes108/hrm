@@ -1,5 +1,5 @@
 """
-control/styles/css_metrics.py — Bankai Template
+control/styles/css_metrics.py — Bankai 
 Containers de métricas com efeito glassmorphism adaptado ao tema.
 """
 

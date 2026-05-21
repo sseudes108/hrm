@@ -1,41 +1,42 @@
 {
   "meta": {
-    "name": "SheBattle",
+    "name": "SheBattle - Barbie Hyper-Glow",
     "base": "dark",
-    "description": "Tema rosa neon, azul ciano e branco brilhante com toques luxuosos"
+    "description": "Tema rosa neon extravagante, azul ciano cibernético e branco brilhante com acabamento de acrílico polido luxuoso."
+  },
+
+  "layout": {
+    "header_height": "72px"
+  },
+
+  "icons": {
+    "toggle": "lightbulb"
   },
 
   "colors": {
     "background":     "#0f0a1f",
     "surface":        "#1a1433",
     "surface_2":      "#2a1f4d",
+
     "primary":        "#ff2e9e",
     "primary_hover":  "#ff69b4",
+
     "secondary":      "#00f0ff",
     "accent":         "#ffffff",
+
     "text":           "#ffffff",
     "text_muted":     "#c8b4ff",
     "text_disabled":  "#664488",
+
     "border":         "#442b66",
     "border_focus":   "#ff2e9e",
+
     "success":        "#00f0ff",
     "warning":        "#ff9e2e",
     "danger":         "#ff3366",
-    "info":           "#9b5de5",
-    "pink_glow":      "#ff69b4",
-    "cyan_glow":      "#00f0ff"
+    "info":           "#9b5de5"
   },
 
-  "chart_colors": [
-    "#ff2e9e",
-    "#00f0ff",
-    "#9b5de5",
-    "#ff9e2e",
-    "#f15bb5",
-    "#00bbf9",
-    "#ffffff"
-  ],
-  
   "typography": {
     "font_family":      "Inter, system-ui, sans-serif",
     "font_family_mono": "JetBrains Mono, monospace",
@@ -53,9 +54,19 @@
 
   "effects": {
     "hover_y": "-4px",
-    "glow_pink": "0 0 15px #ff2e9e",
-    "glow_cyan": "0 0 15px #00f0ff",
-    "glow_white": "0 0 20px rgba(255,255,255,0.6)"
+    "backdrop_blur": "12px",
+    
+    "glow_primary": "0 0 20px rgba(255,46,158,0.65)",
+    "glow_danger":  "0 0 16px rgba(255,51,102,0.5)",
+    
+    "gradient_primary": "linear-gradient(135deg, #ff2e9e 0%, #00f0ff 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(26,20,51,0.75) 0%, rgba(15,10,31,0.95) 100%)",
+    
+    "surface_overlay": {
+      "enabled": true,
+      "border_gradient": "linear-gradient(135deg, rgba(255,46,158,0.6) 0%, rgba(68,43,102,0.3) 50%, rgba(0,240,255,0.4) 100%)",
+      "inner_shadow": "inset 0 1px 0px rgba(255,105,180,0.4), inset 0 -1px 16px rgba(0,240,255,0.05)"
+    }
   },
 
   "spacing": {
@@ -78,10 +89,22 @@
   },
 
   "chart": {
-    "height":      420,
-    "colorscale":  ["#ff2e9e", "#00f0ff", "#ffffff", "#9b5de5", "#ff69b4"],
-    "grid_color":  "rgba(255,255,255,0.08)",
-    "font_color":  "#e0d4ff",
+    "height": 420,
+    "grid_color": "rgba(255,255,255,0.08)",
+    "font_color": "#e0d4ff",
+    
+    "colorscale_extended": [
+      "#ff2e9e", "#00f0ff", "#9b5de5", "#ffffff",
+      "#ff69b4", "#00bbf9", "#f15bb5", "#ff9e2e",
+      "#b5179e", "#4cc9f0", "#7209b7", "#f72585"
+    ],
+
+    "severity": {
+      "critical": "#ff3366",
+      "warning":  "#ff9e2e",
+      "normal":   "#00f0ff",
+      "stale":    "#664488"
+    },
 
     "plotly": {
       "bg":      "transparent",
@@ -97,7 +120,7 @@
       "split_line_color": "rgba(255,46,158,0.1)",
       "glow_blur":        8,
       "area_opacity_top": 0.65,
-      "area_opacity_base": 0.05
+      "area_opacity_base":0.05
     }
   }
 }

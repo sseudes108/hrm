@@ -1,10 +1,12 @@
+"""
+styles/containers/index.py — Bankai 
+Unificador do CSS dos containers principais do dashboard.
+"""
 from system.view.layout.css.containers.charts import get_css_charts
 from system.view.layout.css.containers.tables import get_css_tables
-from system.view.layout.css.containers.metrics import get_css_metrics
 
-def get_css_containers(theme):
+def get_css_containers() -> str:
     return f"""
-        {get_css_charts(theme)}
-        {get_css_tables(theme)}
+        {get_css_charts()}
+        {get_css_tables()}
     """
-        # {get_css_metrics(theme)}

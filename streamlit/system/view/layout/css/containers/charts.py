@@ -1,50 +1,25 @@
 """
-control/styles/css_charts.py — Bankai Template
-Containers de gráficos com efeito glassmorphism adaptado ao tema.
+styles/containers/charts.py — Bankai 
+Containers de gráficos com efeito tridimensional agnóstico e polido.
 """
 
-from system.control.config import hex_to_rgba
-
-def get_css_charts(theme: dict) -> str:
-    c    = theme["colors"]
-    b    = theme["borders"]
-    ty   = theme["typography"]
-    sp   = theme["spacing"]
-    ef   = theme["effects"]
-    dark = theme["meta"]["base"] == "dark"
-
-    # Configuração Dinâmica de Glassmorphism vs Surface
-    if dark:
-        bg_normal    = "rgba(255, 255, 255, 0.05)"
-        bg_hover     = "rgba(255, 255, 255, 0.08)"
-        border       = "1px solid rgba(255, 255, 255, 0.10)"
-        border_hover = f"1px solid {hex_to_rgba(c['primary'], 0.4)}"
-        shadow       = "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
-        shadow_hover = "0 12px 40px 0 rgba(0, 0, 0, 0.5)"
-        backdrop     = "backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important;"
-        text_color   = "rgba(255, 255, 255, 0.9)"
-        text_muted   = c["text_muted"]
-    else:
-        bg_normal    = c["surface"]
-        bg_hover     = c["surface_2"]
-        border       = f"1px solid {c['border']}"
-        border_hover = f"1px solid {c['border_focus']}"
-        shadow       = b["shadow_sm"]
-        shadow_hover = b["shadow_md"]
-        backdrop     = ""
-        text_color   = c["text"]
-        text_muted   = c["text_muted"]
-
-    return f"""
-        /* 1. O CONTAINER PAI */
-        [class*="st-key-chart_container_"] {{
-            background:    {bg_normal} !important;
-            {backdrop}
-            border:        {border} !important;
-            border-radius: {b['radius_md']} !important;
-                        
-            box-shadow:    {shadow} !important;
-            transition:    all 0.3s ease-in-out !important;
+def get_css_charts() -> str:
+    return """
+        /* 1. O CONTAINER PAI (Herança Direta da Placa Polida) */
+        [class*="st-key-chart_container_"] {
+            position: relative !important;
+            
+            /* Fundo e Efeitos de Vidro baseados no Tema Ativo */
+            background: var(--bk-grad-surface) !important;
+            backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) !important;
+            
+            border: var(--bk-border-w) solid var(--bk-border) !important;
+            border-radius: var(--bk-radius-md) !important;
+            
+            /* Sombras de peso + Chanfro de luz interno (Polimento) */
+            box-shadow: var(--bk-shadow-sm), var(--bk-card-inner-shadow) !important;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out, background 0.3s ease-in-out !important;
 
             margin-top: -1%;
             padding-top: 2%;
@@ -53,44 +28,62 @@ def get_css_charts(theme: dict) -> str:
             display:        flex !important;
             flex-direction: column !important;
             align-items:    center !important;
-        }}
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Pseudo-elemento para aplicar o Rim Light (Contraluz nas bordas de cristal) */
+        [class*="st-key-chart_container_"]::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: var(--bk-radius-md);
+            padding: var(--bk-border-w);
+            background: var(--bk-card-border-edge);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* HOVER DA PLACA DE GRÁFICOS */
+        [class*="st-key-chart_container_"]:hover {
+            border-color: var(--bk-border-focus) !important;
+            transform: translateY(var(--bk-hover-y)) !important;
+            box-shadow: var(--bk-shadow-md), var(--bk-glow-primary) !important;
+        }
 
         /* 2. APENAS O CABEÇALHO (Markdown) */
-        [class*="st-key-chart_container_"] .stMarkdown {{
-            width: 92% !important; /* Ajuste para alinhar com o início do desenho do gráfico */
+        [class*="st-key-chart_container_"] .stMarkdown {
+            width: 92% !important; /* Alinha com o início do desenho do gráfico */
             margin-left: auto !important;
             margin-right: auto !important;
             margin-bottom: -3% !important; /* Mantém o gráfico próximo ao texto */
             display: block !important;
-        }}
+        }
 
-        [class*="st-key-chart_container_"]:hover {{
-            background:    {bg_hover} !important;
-            border:        {border_hover} !important;
-            transform:     translateY({ef['hover_y']});
-            box-shadow:    {shadow_hover} !important;
-        }}
-
-        /* 3. TIPOGRAFIA */
-        [class*="st-key-chart_container_"] h3 {{
-            color:       {text_color} !important;
-            font-family: {ty['font_family']} !important;
-            font-size:   {ty['size_subtitle']}px !important;
-            font-weight: {ty['weight_bold']} !important;
+        /* 3. TIPOGRAFIA CONTROLADA PELO DESIGN SYSTEM */
+        [class*="st-key-chart_container_"] h3 {
+            color:       var(--bk-text) !important;
+            font-family: var(--bk-font) !important;
+            font-size:   var(--bk-sub) !important; /* var(--bk-sub) já traz px do base */
+            font-weight: var(--bk-w-bold) !important;
             margin:      0 !important;
-        }}
+        }
 
-        [class*="st-key-chart_container_"] p {{
-            color:       {text_muted} !important;
-            font-family: {ty['font_family']} !important;
-            font-size:   {ty['size_sm']}px !important;
+        [class*="st-key-chart_container_"] p {
+            color:       var(--bk-text-muted) !important;
+            font-family: var(--bk-font) !important;
+            font-size:   var(--bk-sm) !important;
             margin:      0 !important;
-        }}
+        }
 
-        [class*="st-key-chart_container_"] .metric-value {{
-            color:       {c['primary']} !important;
-            font-family: {ty['font_family_mono']} !important;
-            font-size:   {ty['size_subtitle']}px !important;
-            font-weight: {ty['weight_medium']} !important;
-        }}
+        /* Destaque numérico interno */
+        [class*="st-key-chart_container_"] .metric-value {
+            color:       var(--bk-primary) !important;
+            font-family: var(--bk-font-mono) !important;
+            font-size:   var(--bk-sub) !important;
+            font-weight: var(--bk-w-medium) !important;
+        }
     """

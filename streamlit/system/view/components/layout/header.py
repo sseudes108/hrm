@@ -4,7 +4,7 @@ from system.control.managers.error import check_title_key
 # from system.control.config import set_theme
 from system.view.components.helper import get_lucide_svg
 from system.control.contexts.dash import DashboardContext
-from system.control.config import get_theme
+from system.view.layout.fixes import draw_empty_element
 
 def get_b64(theme):
     is_dark = theme["meta"]["base"] == "dark"
@@ -17,40 +17,42 @@ def get_b64(theme):
     b64 = base64.b64encode(svg_code.encode()).decode()
     return b64
 
-def draw_header(theme, icon, context:DashboardContext , title=None, background=False, toggle_btn=True, ticker=True, ticker_list=None, key=None):
+def draw_header(icon, context:DashboardContext , title=None, background=False, toggle_btn=True, ticker=True, ticker_list=None, key=None):
     if check_title_key(title, key) == 0:
         st.error("Header sem titulo. Defina a key.")
         return
-    
-    # background-color: white !important;
-    
+    print("CONTEÚDO DO LAYOUT NO HEADER:", context.theme.get("layout"))
     with st.container(key="container_header_"):
-        
         unique_style = ""
-
         if background:
             unique_style = f"""
                 <style>
                     /* Wrapper */
-
                     [class*="st-key-container_header_"] {{
-                        background-color: {theme['colors']['secondary']} !important;
-                    }}
+                        background-color: var(--bk-secondary) !important;
+                        position: absolute !important; 
+                        left: 0 !important;
+                        top: 0 !important;
 
+                        height: var(--bk-header-h) !important; /* <--- DINÂMICO! */
+                        z-index: 1000;
+
+                        padding-left: var(--bk-sp-lg) !important;
+                        padding-right: var(--bk-sp-lg) !important;
+                        display: flex !important;
+                        align-items: center !important;
+                    }}
                     /* Color Title */
                     [class*="st-key-container_header_"] .header-title {{
-                        color: {theme['colors']['background']} !important;
+                        color: var(--bk-bg) !important;
                     }}
-
                     /* Color Ticker */
                     [class*="st-key-container_header_"] .ticker-move {{
-                        color: {theme['colors']['background']};
+                        color: var(--bk-bg) !important;
                     }}
                 </style>
             """
-
         st.markdown(unique_style.replace('\n', ' '), unsafe_allow_html=True)
-
         cols = st.columns([1.5, 7, 0.5], gap='xxsmall')
         with cols[0]:
             if title:
@@ -95,3 +97,5 @@ def draw_header(theme, icon, context:DashboardContext , title=None, background=F
                         context.update_mode(next_mode)
             else:
                 pass
+
+    draw_empty_element(42)

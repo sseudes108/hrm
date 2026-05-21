@@ -3,7 +3,8 @@ import os
 import streamlit as st
 import system.control.managers.pages as page_man
 import system.control.managers.state as state_man
-import system.control.config as config_man
+from system.control.managers.layout import init_theme
+from system.control.contexts.dash import DashboardContext
 
 def check_args():
     root_path = os.path.dirname(os.path.abspath(__file__))
@@ -18,11 +19,11 @@ def check_args():
     
     return target_app
 
-def get_context(target_app):
+def get_context(target_app) -> DashboardContext:
     try:
-        filter_context = state_man.get_context(target_app)
-        if filter_context:
-            return filter_context
+        context = state_man.get_context(target_app)
+        if context:
+            return context
     except Exception as e:
         print(f"Falha crítica no state_man: {e}")
     
@@ -30,14 +31,7 @@ def get_context(target_app):
     return None
 
 def load_app(target_app, context):
-    if target_app == "bankai":
-        page_man.bankai(context)
-
-    elif target_app == "shebattle":
-        page_man.shebattle(context)
-        
-    else:
-        page_man.show_error_page(target_app)
+    page_man.run(target_app, context)
 
 def main():
     target_app = check_args()
@@ -49,14 +43,15 @@ def main():
     )
 
     # Busca o contexto com validação
-    filter_context = get_context(target_app)
+    context = get_context(target_app)
     
     # Se o contexto não voltar, interrompe e mostra a variação do erro
-    if filter_context is None:
+    if context is None:
         page_man.show_error_page(f"{target_app} (Erro de Inicialização de Estado)")
         st.stop() # Garante que o Python para a execução aqui e não renderiza mais nada
-        
-    load_app(target_app, filter_context)
+    
+    init_theme(context.theme)
+    load_app(target_app, context)
 
 if __name__ == "__main__":
     main()
