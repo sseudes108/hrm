@@ -1,0 +1,20 @@
+/* ==========================================================================
+   styles/components/table_deltas.css — Bankai 
+   Zera geral: Aplica gap 0 e padding 0 em toda a árvore do componente.
+   ========================================================================== */
+
+/* 2. O PULO DO GATO: Qualquer bloco vertical interno (do pai ou dos filhos) 
+   terá o gap e o padding pulverizados */
+[class*="st-key-table_deltas_card"] div[data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+    row-gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*Espaço Header*/
+[class*="st-key-table_deltas_card_"] div[data-testid="stLayoutWrapper"]:first-of-type {
+    height: 40px !important;      /* Defina aqui a altura que você deseja testar */
+    min-height: 40px !important;
+    max-height: 40px !important;
+}
