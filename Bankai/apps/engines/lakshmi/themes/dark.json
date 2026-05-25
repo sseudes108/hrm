@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "name": "Lakshmi Dark - Cosmic Ocean",
+    "base": "dark",
+    "description": "Tema escuro inspirado no Oceano Cósmico e na noite védica — fundos em azul noturno profundo e ônix, onde a riqueza do ouro e do cobre reluzem em alto contraste sob um acabamento de vidro negro."
+  },
+
+  "layout": {
+    "header_height": "81px",
+    "icon_size": "66px"
+  },
+
+  "icons": {
+    "toggle": "moon"
+  },
+
+  "colors": {
+    "background":    "#0b0d14",
+    "surface":       "#131622",
+    "surface_2":     "#1c2030",
+
+    "primary":       "#d4af66",
+    "primary_hover": "#e6c178",
+
+    "secondary":     "#c28042",
+    "accent":        "#e07a3e",
+
+    "text":          "#f3efe6",
+    "text_muted":    "#94a3b8",
+    "text_disabled": "#4b5563",
+
+    "border":        "#2d3248",
+    "border_focus":  "#d4af66",
+
+    "success":       "#34d399",
+    "warning":       "#fbbf24",
+    "danger":        "#f43f5e",
+    "info":          "#818cf8"
+  },
+
+  "typography": {
+    "font_family":      "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs":          10,
+    "size_sm":          12,
+    "size_base":        14,
+    "size_subtitle":    18,
+    "size_title":       26,
+    "size_display":     44,
+    "weight_normal":    400,
+    "weight_medium":    500,
+    "weight_bold":      700,
+    "line_height":      1.6
+  },
+
+  "effects": {
+    "hover_y": "-2px",
+    "backdrop_blur": "27px",
+    
+    "glow_primary": "0 0 20px rgba(212,175,102,0.25)",
+    "glow_danger":  "0 0 16px rgba(244,63,94,0.2)",
+    
+    "gradient_primary": "linear-gradient(135deg, #d4af66 0%, #c28042 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(19,22,34,0.7) 0%, rgba(11,13,20,0.9) 100%)",
+    
+    "surface_overlay": {
+      "enabled": true,
+      "border_gradient": "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 40%, rgba(212,175,102,0.1) 100%)",
+      "inner_shadow": "inset 0 1px 0px rgba(255,255,255,0.05), inset 0 -1px 12px rgba(0,0,0,0.5)"
+    }
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "14px",
+    "lg": "24px",
+    "xl": "40px"
+  },
+
+  "borders": {
+    "width":       "1px",
+    "radius_sm":   "4px",
+    "radius_md":   "10px",
+    "radius_lg":   "14px",
+    "radius_full": "9999px",
+    "shadow_sm":   "0 1px 4px rgba(0,0,0,0.3)",
+    "shadow_md":   "0 4px 12px rgba(0,0,0,0.4)",
+    "shadow_lg":   "0 10px 30px rgba(0,0,0,0.6)"
+  },
+
+  "chart": {
+    "height": 400,
+    "grid_color": "rgba(255,255,255,0.05)",
+    "font_color": "#94a3b8",
+    
+    "colorscale_extended": [
+      "#d4af66", "#c28042", "#818cf8", "#f3efe6", 
+      "#34d399", "#f43f5e", "#fbbf24", "#e6c178",
+      "#a78bfa", "#e07a3e", "#94a3b8", "#1c2030"
+    ],
+
+    "severity": {
+      "critical": "#f43f5e",
+      "warning":  "#c28042",
+      "normal":   "#818cf8",
+      "stale":    "#4b5563"
+    },
+
+    "plotly": {
+      "bg":      "transparent",
+      "plot_bg": "transparent"
+    },
+
+    "echarts": {
+      "tooltip_bg":       "rgba(19,22,34,0.96)",
+      "tooltip_border":   "rgba(212,175,102,0.3)",
+      "tooltip_text":     "#f3efe6",
+      "axis_line_color":  "rgba(255,255,255,0.1)",
+      "axis_label_color": "rgba(255,255,255,0.6)",
+      "split_line_color": "rgba(255,255,255,0.05)",
+      "glow_blur":        15,
+      "area_opacity_top": 0.35,
+      "area_opacity_base":0.05
+    }
+  }
+}
