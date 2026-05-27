@@ -22,6 +22,11 @@
                 transform var(--bk-hover-y) ease !important;
 }
 
+[class*="st-key-co_card_hover_"]:hover {
+    transform: translateY(var(--bk-hover-y)) !important;
+    border-color: var(--bk-primary) !important;
+}
+
 /* ─── BORDA GRADIENTE (não sabe se é glass, só lê a variável) ── */
 [class*="st-key-co_card_"]::before {
     content: "";

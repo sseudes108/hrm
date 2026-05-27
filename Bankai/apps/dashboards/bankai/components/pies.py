@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from system.control.contexts import AppContext
 from system.view.components.charts.echarts import pie
-from system.view.components.cards import draw_card
+from system.view.components.cards import card
 
 def draw_pie(df:pd.DataFrame, context:AppContext):
     cols = st.columns([1,2])
@@ -24,7 +24,7 @@ def draw_pie(df:pd.DataFrame, context:AppContext):
                 "view": True,
             }
         }
-        draw_card(
+        card.draw_card(
             "bankai", "pie_rating_chart",
             card_config,
             render_content=lambda: pie.draw_pie(chart_config, df, context)
@@ -47,7 +47,7 @@ def draw_pie(df:pd.DataFrame, context:AppContext):
                 "view": False
             }
         }
-        draw_card(
+        card.draw_card(
             "bankai", "pie_status_chart",
             card_config,
             render_content=lambda: pie.draw_pie(chart_config, df, context)

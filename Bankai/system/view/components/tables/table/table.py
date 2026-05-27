@@ -27,6 +27,36 @@ from system.view.components.tables.logic import filter_columns
 # }
 ######################################################################
 
+def get_table_config(
+    app_name:str, titulo:str, subtitulo:str, height:int = 500, 
+    filter_labels:dict = {}, filter_df_coluns:list = []
+):
+    if filter_labels == {}:
+        st.error("Defina o dicionario de labels.")
+        return
+    
+    if filter_df_coluns == []:
+        st.error("Defina o a lista de colunas correspondentes dicionario de labels.")
+        return
+    
+    if len(filter_labels) != len(filter_df_coluns):
+        st.error("Número de labels diferente do numero de colunas")
+        return
+    
+    return {
+        "app_name": app_name,
+        "titulo": titulo,
+        "subtitulo": subtitulo,
+        "height": height,
+        "ft_bar_config": {
+            "update_app_context": False,
+            "num_colunas": len(filter_df_coluns), 
+            "labels": filter_labels,
+            "columns_df": filter_df_coluns
+        }
+    }
+
+
 def reset_table_filters(context, config, title_key):
     """Callback para limpar o session_state dos filtros e ordenação"""
     

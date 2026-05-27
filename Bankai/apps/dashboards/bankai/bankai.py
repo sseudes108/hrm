@@ -1,253 +1,62 @@
-"""
-app.py — Bankai 
-Ponto de entrada do projeto.
-Para trocar o tema, altere apenas a string em get_theme().
-"""
-import streamlit as st
-
 from system.control.contexts import AppContext
+from system.control.managers import layout as layout_man
 
-import system.control.managers.data     as data_man
-import system.control.managers.filter   as filter_man
+from system.view.components.layout.header    import HeaderConfig, header
+from system.view.components.layout.navigator import NavigatorConfig,navigator
 
-import system.view.components.tables.table as table
-import system.view.components.tables.bodies as bodies
-from system.view.components.cards import draw_card                      
-from system.view.components.filters import select as select_filtter
+import streamlit as st
+import pandas as pd
+from system.view.components.charts.echarts import chart
+from system.view.components.charts.echarts.config.base import BaseChartConfig
+from system.view.components.charts.echarts.config.toolbox import ToolboxConfig
+from system.view.components.charts.echarts.config.legend import LegendConfig
+from system.view.components.charts.echarts.config.tooltip import TooltipConfig
+from system.view.components.charts.echarts.config.series.pie import PieSeriesConfig
 
-from system.view.components.charts.echarts import pie
-from system.view.components.charts.echarts import line
+APP_NAME = "bankai"
 
+def draw_header():
+    st.write("")
+    st.write("")
+    header.draw(
+        HeaderConfig(
+            app_name=APP_NAME, model="slim", 
+            title="bankai", subtitle="Zanpakuto Framework"
+        )
+    )
+
+def draw_pie(df:pd.DataFrame, column_pie:str, context:AppContext):
+
+    # 1. Monta as subconfigs desejadas (todos têm padrões, só sobrescreve o que precisa)
+    series  = PieSeriesConfig(column=column_pie)
+    toolbox = ToolboxConfig()
+    legend  = LegendConfig(orientation="vertical", top="20%", left="85%")
+    tooltip = TooltipConfig(trigger="item")
+
+    # 2. Monta a config principal
+    config = BaseChartConfig(
+        app_name = "bankai",
+        model    = "pie",
+        title    = "default",
+        theme    = context.theme,
+        series   = series,
+        toolbox  = toolbox,
+        legend   = legend,
+        tooltip  = tooltip,
+    )
+
+    # 3. Renderiza
+    return chart.draw(config, df)
 
 def main(context:AppContext):
-    # st.write("")
-    # st.write("")
-    # st.write("")
-    # st.write("")
+    draw_header()
 
-    # main2(context)
+    df = pd.DataFrame({
+        "categoria": ["A", "B", "C", "A", "B", "A"],
+        "valor":     [10, 20, 30, 15, 25, 5]
+    })
+    clicked = draw_pie(df, "categoria", context)
+    st.success(clicked)
 
-    # return
-
-    st.info("Header Space")
-
-    df = data_man.get_data_csv("apps/dashboards/bankai/data/anime_dataset.csv")
-    df_filtrado = filter_man.apply_filters(df, context.active_filters)
-
-    tabs = st.tabs(["Echarts Filter Callbacks", "HTML Table"])
-
-    with tabs[0]:
-        cols = st.columns([2,5])
-
-        with cols[0]:
-            chart_config = {
-                "app_name": "bankai",
-                "in_card": True,
-                "card_hover": True,
-                "title": "ECHART CALLBACKS",
-                "column": "source",
-                "height": 330,
-                "theme": context.theme,
-                "radius": ["42%", "72%"],
-                "legend_config":{
-                    "orientation": "horizontal",
-                    "top": "85%", "left": "2%", "bottom": "0%", "right": "0%"
-                },
-                    "toolbox": {
-                    "magic": False,
-                    "view": True,
-                }
-            }
-            clicked_value_pie = pie.draw_pie(
-                chart_config, df_filtrado
-            )
-
-            last_sel = context.active_filters.get("source", {})
-            # st.warning(f"Last Selected - {key} - {last_sel}")
-            # st.json(context.active_filters)
-
-            if clicked_value_pie["chart_event"] is not None:
-                selected = clicked_value_pie["chart_event"]["name"]
-                if selected != last_sel:
-                    context.update_filter("source", selected)
-                else:
-                    context.remove_filter("source")
-
-            # st.json(clicked_value_pie)
-            # st.json(clicked_value_pie["chart_event"])
-            # st.write(clicked_value_pie["chart_event"]["name"])
-
-        with cols[1]:
-            pass
-            # clicked_value_line = line.draw_line(
-            #     chart_config={
-            #         "app_name": "bankai",
-            #         "title": "Vendas por mês",
-            #         "x_axis": "year",
-            #         "y_axis": ["popularity", "rank"],
-            #         "height": 330,
-            #         "smooth": True,
-            #         "in_card": False,
-            #         "legend_config": {
-            #             "orientation": "horizontal",
-            #             "top": "2%",
-            #             "left": "center"
-            #         },
-            #         "toolbox": {
-            #             "magic": ["bar", "line", "stack"],
-            #             "view": True,
-            #             "zoom": True
-            #         }
-            #     },
-            #     df=df_filtrado, context=context
-            # )
-
-            # last_sel = context.active_filters.get("year", {})
-            # st.warning(f"Last Selected - year - {last_sel}")
-            # st.json(context.active_filters)
-
-            # if clicked_value_line["chart_event"] is not None:
-            #     selected = clicked_value_line["chart_event"]["name"]
-            #     if selected != last_sel:
-            #         context.update_filter("year", selected)
-            #     else:
-            #         context.remove_filter("year")
-        
-            # st.json(clicked_value_line)
-            # st.json(clicked_value_line["chart_event"])
-            # st.write(clicked_value_line["chart_event"]["name"])
-
-    st.dataframe(df_filtrado)
-
-    with tabs[1]:
-        table_config = {
-            "app_name": "bankai",
-            "titulo": "Tabela Teste",
-            "subtitulo": "Subititulo Teste",
-            "height": 500,
-            "ft_bar_config": {
-                "update_app_context": False,
-                "num_colunas": 5, 
-                "labels": {
-                    "title": "Title",
-                    "status": "Status",
-                    "rating": "Rating",
-                    "year": "Year",
-                    "genres": "Genres"
-                },
-                "columns_df": ["title", "status", "rating", "year", "genres"]
-            }
-        }
-        table.draw(
-            df_filtrado, context,
-            table_config, bodies.delta.draw_body
-        ) 
-
-# def main2(context:AppContext):
-#     df = data_man.get_data_csv("apps/dashboards/bankai/data/anime_dataset.csv")
-#     df_filtrado = filter_man.apply_filters(df, context.active_filters)
-
-#     cols = st.columns([2,5])
-#     with cols[0]:
-#         chart_config = {
-#             "app_name": "bankai",
-#             "in_card": True,
-#             "card_hover": True,
-#             "title": "echarts_pie_source",
-#             "column": "source",
-#             "height": 330,
-#             "theme": context.theme,
-#             "radius": ["42%", "72%"],
-#             "legend_config":{
-#                 "orientation": "horizontal",
-#                 "top": "85%", "left": "2%", "bottom": "0%", "right": "0%"
-#             },
-#                 "toolbox": {
-#                 "magic": False,
-#                 "view": True,
-#             }
-#         }
-#         clicked_value_pie_source = pie.draw_pie(
-#             chart_config, df_filtrado
-#         )
-#         last_sel = context.active_filters.get("source", {})
-#         if clicked_value_pie_source["chart_event"] is not None:
-#             selected = clicked_value_pie_source["chart_event"]["name"]
-
-#             if selected != last_sel:
-#                 selected = clicked_value_pie_source["chart_event"]["name"]
-#                 context.update_filter("source", selected)
-#             else:
-#                 context.remove_filter("source")
-
-#         chart_config = {
-#             "app_name": "bankai",
-#             "in_card": True,
-#             "card_hover": True,
-#             "title": "echarts_pie_season",
-#             "column": "season",
-#             "height": 330,
-#             "theme": context.theme,
-#             "radius": ["42%", "72%"],
-#             "legend_config":{
-#                 "orientation": "horizontal",
-#                 "top": "85%", "left": "2%", "bottom": "0%", "right": "0%"
-#             },
-#                 "toolbox": {
-#                 "magic": False,
-#                 "view": True,
-#             }
-#         }
-#         clicked_value_pie_season = pie.draw_pie(
-#             chart_config, df_filtrado
-#         )
-#         last_sel = context.active_filters.get("season", {})
-#         if clicked_value_pie_season["chart_event"] is not None:
-#             selected = clicked_value_pie_season["chart_event"]["name"]
-
-#             if selected != last_sel:
-#                 selected = clicked_value_pie_season["chart_event"]["name"]
-#                 context.update_filter("season", selected)
-#             else:
-#                 context.remove_filter("season")
-
-
-
-
-
-#         chart_config = {
-#             "app_name": "bankai",
-#             "in_card": True,
-#             "card_hover": True,
-#             "title": "echarts_pie_year",
-#             "column": "year",
-#             "height": 330,
-#             "theme": context.theme,
-#             "radius": ["42%", "72%"],
-#             "legend_config":{
-#                 "orientation": "horizontal",
-#                 "top": "85%", "left": "2%", "bottom": "0%", "right": "0%"
-#             },
-#                 "toolbox": {
-#                 "magic": False,
-#                 "view": True,
-#             }
-#         }
-#         clicked_value_pie_year = pie.draw_pie(
-#             chart_config, df_filtrado
-#         )
-#         last_sel = context.active_filters.get("year", {})
-#         if clicked_value_pie_year["chart_event"] is not None:
-#             selected = clicked_value_pie_year["chart_event"]["name"]
-
-#             if selected != last_sel:
-#                 selected = clicked_value_pie_year["chart_event"]["name"]
-#                 context.update_filter("year", selected)
-#             else:
-#                 context.remove_filter("year")
-
-#     df_filtrado = filter_man.apply_filters(df, context.active_filters)
-        
-#     with cols[1]:
-#         st.json(context.active_filters)
-#         st.dataframe(df_filtrado)
+if __name__ == "__main__":
+    main()

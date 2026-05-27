@@ -1,1 +1,4 @@
-from .models.nav import nav_header
+from . import models
+from .models.config import HeaderConfig
+
+from .views import slim

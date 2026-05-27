@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from system.control.contexts import AppContext
 import system.view.components.filters.select as select_filter
-from system.view.components.cards import draw_card
+from system.view.components.cards import card
 
 def get_options_config(df:pd.DataFrame, label:str, column:str):
     options = {
@@ -96,7 +96,7 @@ def draw_filters_bar(df:pd.DataFrame, context:AppContext):
         "df":df,
         "context": context
     }
-    draw_card(
+    card.draw_card(
         "bankai", "filter_bar",
         card_config, render_content=draw_filters,
         **ft_bar_args

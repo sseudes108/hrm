@@ -35,7 +35,10 @@ def main():
     st.set_page_config(
         page_title=f"{target_app.upper()}",
         layout="wide",
-        initial_sidebar_state="collapsed"
+        initial_sidebar_state="collapsed",
+        menu_items={
+            "About": "Teste"
+        }
     )
 
     # Busca o contexto com validação

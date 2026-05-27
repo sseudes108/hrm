@@ -1,1 +1,2 @@
-from .main.card import draw_card
+from .main import card
+from .main.card import CardConfig
