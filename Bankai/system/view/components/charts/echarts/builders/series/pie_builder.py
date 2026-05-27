@@ -5,7 +5,7 @@ from typing import Optional
 from system.view.components.charts.echarts.config import BaseChartConfig
 from system.view.components.charts.echarts.config.series import PieSeriesConfig
 
-def build(df: pd.DataFrame, config: BaseChartConfig) -> list:
+def build(df: pd.DataFrame, config: BaseChartConfig, options: dict) -> dict:
     series      = config.series         # PieSeriesConfig
     theme       = config.theme
     colors      = theme["colors"]
@@ -19,7 +19,7 @@ def build(df: pd.DataFrame, config: BaseChartConfig) -> list:
 
     border_radius = int(borders["radius_md"].replace("px", ""))
 
-    return [
+    options["series"] = [
         {
             "name": series.column,
             "type": "pie",
@@ -36,6 +36,7 @@ def build(df: pd.DataFrame, config: BaseChartConfig) -> list:
             "data": data
         }
     ]
+    return options
 
 
 # ── Dados ──────────────────────────────────────────────────────────────────────

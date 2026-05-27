@@ -7,14 +7,14 @@ from system.view.components.charts.echarts.config   import BaseChartConfig
 from system.view.components.charts.echarts.builders import base_builder
 from system.view.components.charts.echarts.builders.series import (
     pie_builder,
-    # bar_builder,
+    bar_builder,
     # line_builder,
 )
 from typing import Optional
 
 _SERIES_BUILDERS = {
     "pie":  pie_builder.build,
-    # "bar":  bar_builder.build,
+    "bar":  bar_builder.build,
     # "line": line_builder.build,
 }
 
@@ -45,9 +45,7 @@ def _render(chart_config: BaseChartConfig, df, key: str) -> None:
 
     # Monta base (tooltip, legend, toolbox, backgroundColor…)
     options = base_builder.build(chart_config)
-
-    # Delega a série para o builder específico
-    options["series"] = builder_fn(df, chart_config)
+    options = builder_fn(df, chart_config, options)    # ← recebe e devolve options
 
     echarts_events = {
         "click": "function(params) { return { name: params.name, ts: Date.now() }; }"

@@ -11,7 +11,9 @@ from system.view.components.charts.echarts.config.base import BaseChartConfig
 from system.view.components.charts.echarts.config.toolbox import ToolboxConfig
 from system.view.components.charts.echarts.config.legend import LegendConfig
 from system.view.components.charts.echarts.config.tooltip import TooltipConfig
-from system.view.components.charts.echarts.config.series.pie import PieSeriesConfig
+from system.view.components.charts.echarts.config.series import (
+    PieSeriesConfig, BarSeriesConfig
+)
 
 APP_NAME = "bankai"
 
@@ -25,19 +27,16 @@ def draw_header():
         )
     )
 
-def draw_pie(df:pd.DataFrame, column_pie:str, context:AppContext):
+def draw_bar(df:pd.DataFrame, column_x:str, columns_y:list, context:AppContext):
+    series  = BarSeriesConfig(column_x=column_x, columns_y=columns_y)
+    toolbox = ToolboxConfig(magic=["line","bar","stack"])
+    legend  = LegendConfig()
+    tooltip = TooltipConfig(trigger="axis")
 
-    # 1. Monta as subconfigs desejadas (todos têm padrões, só sobrescreve o que precisa)
-    series  = PieSeriesConfig(column=column_pie)
-    toolbox = ToolboxConfig()
-    legend  = LegendConfig(orientation="vertical", top="20%", left="85%")
-    tooltip = TooltipConfig(trigger="item")
-
-    # 2. Monta a config principal
     config = BaseChartConfig(
         app_name = "bankai",
-        model    = "pie",
-        title    = "default",
+        model    = "bar",
+        title    = "bar",
         theme    = context.theme,
         series   = series,
         toolbox  = toolbox,
@@ -45,18 +44,43 @@ def draw_pie(df:pd.DataFrame, column_pie:str, context:AppContext):
         tooltip  = tooltip,
     )
 
-    # 3. Renderiza
     return chart.draw(config, df)
+
+
+def draw_pie(df:pd.DataFrame, column_pie:str, context:AppContext):
+    series  = PieSeriesConfig(column=column_pie)
+    toolbox = ToolboxConfig()
+    legend  = LegendConfig(orientation="vertical", top="20%", left="85%")
+    tooltip = TooltipConfig(trigger="item")
+
+    config = BaseChartConfig(
+        app_name = "bankai",
+        model    = "pie",
+        title    = "pie",
+        theme    = context.theme,
+        series   = series,
+        toolbox  = toolbox,
+        legend   = legend,
+        tooltip  = tooltip,
+    )
+
+    return chart.draw(config, df)
+
 
 def main(context:AppContext):
     draw_header()
 
+    cols = st.columns([1,3])
     df = pd.DataFrame({
-        "categoria": ["A", "B", "C", "A", "B", "A"],
-        "valor":     [10, 20, 30, 15, 25, 5]
+        "categoria": ["A", "B", "C", "A", "B", "A", "C", "B"],
+        "receita":   [10,  20,  30,  15,  25,   5,  18,  22],
+        "despesa":   [ 8,  14,  20,  12,  18,   4,  15,  19],
+        "lucro":     [ 2,   6,  10,   3,   7,   1,   3,   3],
     })
-    clicked = draw_pie(df, "categoria", context)
-    st.success(clicked)
+    with cols[0]:
+        draw_pie(df, "categoria", context)
+    with cols[1]:
+        draw_bar(df, "categoria", ["receita", "despesa", "lucro"], context)
 
 if __name__ == "__main__":
     main()
