@@ -1,0 +1,1 @@
+from .bankai.bankai import main as run_bankai

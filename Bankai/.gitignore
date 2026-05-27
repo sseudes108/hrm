@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Data / uploads temporários
+*.csv
+*.xlsx
+*.parquet
+uploads/
+temp/
+tmp/
+
+# Secrets e configs locais
+*.env
+.env.*
+secrets.toml
+config.local.json
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/

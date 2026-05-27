@@ -1,0 +1,41 @@
+/* ==========================================================================
+   TOOLBAR (Ordenação e Botões) - Estilo Ghost com Separador
+   ========================================================================== */
+
+/* 1. O SEPARADOR: Cria a linha '|' à esquerda de todo o bloco de ferramentas */
+[class*="st-key-co_table_tools_"] {
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important; /* Cor e espessura do pipe */
+}
+
+/* 2. SELECTBOX FANTASMA: Remove o fundo e a borda da caixa de seleção */
+[class*="st-key-co_table_tools_"] [data-baseweb="select"] > div {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0.2rem !important;
+}
+[class*="st-key-co_table_tools_"] button {
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important; /* Um respirozinho lateral */
+    gap: 0 !important;
+}
+/* Força o desaparecimento das bordas cinzas nativas do botão */
+[class*="st-key-co_table_tools_"] button[data-baseweb="button"],
+[class*="st-key-co_table_tools_"] button[kind="secondary"] {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+/* Garante que o hover aplique APENAS o fundo sutil, sem recriar borda */
+[class*="st-key-co_table_tools_"] button[data-baseweb="button"]:hover,
+[class*="st-key-co_table_tools_"] button[kind="secondary"]:hover {
+    border-color: transparent !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
