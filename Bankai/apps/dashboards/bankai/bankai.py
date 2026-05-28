@@ -2,7 +2,7 @@ from system.control.contexts import AppContext
 from system.control.managers import layout as layout_man
 
 from system.view.components.layout.header    import HeaderConfig, header
-from system.view.components.layout.navigator import NavigatorConfig,navigator
+from system.view.components.layout.navigator import NavigatorConfig
 
 import streamlit as st
 import pandas as pd
@@ -66,21 +66,23 @@ def draw_pie(df:pd.DataFrame, column_pie:str, context:AppContext):
 
     return chart.draw(config, df)
 
+from system.view.components.layout.navigator import navigator, NavigatorConfig
+from system.view.components.renderers import page
+from apps.dashboards.bankai import p1,p2,p3
+
+PAGES = {1: p1, 2: p2, 3: p3}
+
+def get_page(context: AppContext):
+    return PAGES.get(context.current_page)
 
 def main(context:AppContext):
+    st.success(context.current_page)
     draw_header()
+    navigator.draw(
+        NavigatorConfig(
+            "bankai", "tabs", ["Pagina1", "Pagina2", "Pagina3"]
+        ), context
+    )
 
-    cols = st.columns([1,3])
-    df = pd.DataFrame({
-        "categoria": ["A", "B", "C", "A", "B", "A", "C", "B"],
-        "receita":   [10,  20,  30,  15,  25,   5,  18,  22],
-        "despesa":   [ 8,  14,  20,  12,  18,   4,  15,  19],
-        "lucro":     [ 2,   6,  10,   3,   7,   1,   3,   3],
-    })
-    with cols[0]:
-        draw_pie(df, "categoria", context)
-    with cols[1]:
-        draw_bar(df, "categoria", ["receita", "despesa", "lucro"], context)
-
-if __name__ == "__main__":
-    main()
+    page_to_render = get_page(context)
+    page.render("bankai", page_to_render, context)

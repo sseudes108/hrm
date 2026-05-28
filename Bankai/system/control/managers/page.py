@@ -1,6 +1,8 @@
 ## imports internos devido a loop de dependencia circular
 from apps.dashboards import run_bankai
-from apps.engines import run_lakshmi
+from apps.engines import (
+    run_lakshmi
+)
 from system.view.pages import run_error_page
 from system.control.contexts import AppContext
 

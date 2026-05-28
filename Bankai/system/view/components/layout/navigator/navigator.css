@@ -1,29 +1,30 @@
-/* Tabs sobem para dentro do card */
-[class*="st-key-co_navigator_"] {
-    margin-top: -2.5rem !important;
-    background: transparent !important;
-    position:   relative !important;
-    z-index:    10 !important;
+/* ── Paginator — botões base ── */
+[class*="st-key-co_navigator_"] button {
+    background:    transparent;
+    border:        none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding:       var(--bk-sp-sm) var(--bk-sp-md);
+
+    font-family:   var(--bk-font);
+    font-size:     var(--bk-sm);
+    font-weight:   var(--bk-w-normal);
+    color:         var(--bk-text-muted);
+
+    width:         100%;
+    cursor:        pointer;
+    transition:    border-color 0.2s, color 0.2s;
 }
 
-.co-navigator-bg {
-    height:          calc(var(--bk-header-h) * 0.5) !important;
-    background:      var(--bk-gradient-surface) !important;
-    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
-    -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
-    border-radius:   var(--bk-radius-md) !important;
-    box-shadow:      var(--bk-shadow-lg), var(--bk-card-inner-shadow) !important;
-    position:        relative !important;
-    overflow:        hidden !important;
-    margin-bottom:   0 !important;
+/* ── Hover ── */
+[class*="st-key-co_navigator_"] button:hover {
+    border-bottom: 2px solid var(--bk-border-focus);
+    color:         var(--bk-secondary);
+    background:    transparent;
 }
 
-.co-navigator-no_bg {
-    height:          calc(var(--bk-header-h) * 0.5) !important;
-    backdrop-filter:         none !important;
-    -webkit-backdrop-filter: none !important;
-    border-radius:           0 !important;
-    box-shadow:              none !important;
-    border:                  none !important;
-    margin-bottom:   0 !important;
+/* ── Focus — remove o outline padrão do Streamlit ── */
+[class*="st-key-co_navigator_"] button:focus {
+    box-shadow: none;
+    outline:    none;
 }

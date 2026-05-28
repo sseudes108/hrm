@@ -1,46 +1,47 @@
 import streamlit as st
-import system.control.managers.hash as hash_man
-
 from dataclasses import dataclass
-from typing import Optional
+from system.control.contexts import AppContext
 
-
-VALID_MODELS = {"in_header", "no_bg"}
+VALID_MODELS = ["tabs", "arrows"]
 
 @dataclass
 class NavigatorConfig:
     app_name: str
     model: str
-    nav_pages: list
-    title: Optional[str] = None
-    has_card: bool = True
-    hover: bool = False
+    labels: list[str]
 
     def __post_init__(self):
         if self.model not in VALID_MODELS:
-            st.error(f"Navigator — model inválido: '{self.model}'. Escolha entre: {VALID_MODELS}")
+            st.error(f"navigator — model inválido: '{self.model}'. Escolha entre: {VALID_MODELS}")
             raise ValueError(f"model inválido: '{self.model}'")
 
-        if not self.nav_pages:
-            st.error("Navigator — 'nav_pages' não pode ser vazio.")
-            raise ValueError("nav_pages não pode ser vazio")
+        if not self.labels:
+            st.error("navigator — 'labels' não pode ser vazio.")
+            raise ValueError("labels não pode ser vazio")
 
-def draw(nav_config: NavigatorConfig):
-    if nav_config is None:
-        return
+def _inject_active_css(app_name: str, active_index: int):
+    st.markdown(f"""
+        <style>
+        [data-testid="co_navigator_{app_name}"] > div > div:nth-child({active_index + 1}) button {{
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            font-weight: 500;
+        }}
+        </style>
+    """, unsafe_allow_html=True)
 
-    key = hash_man.get_hash_key(nav_config.app_name, f"navigator_{nav_config.model}")
 
-    if nav_config.model == "no_bg":
-        st.markdown(
-            '<div class="co-navigator-no_bg"></div>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            '<div class="co-navigator-bg"></div>',
-            unsafe_allow_html=True
-        )
+def draw(config: NavigatorConfig, context:AppContext):
+    _inject_active_css(config.app_name, context.current_page - 1)
 
-    with st.container(key=f"co_navigator_{nav_config.model}_{key}"):
-        return st.tabs(nav_config.nav_pages)
+    with st.container(key=f"co_navigator_{config.app_name}"):
+        cols = st.columns(len(config.labels))
+        for i, (col, label) in enumerate(zip(cols, config.labels)):
+            with col:
+                st.button(
+                    label,
+                    key=f"pag_{config.app_name}_p{i+1}",
+                    on_click=lambda ctx, idx: setattr(ctx, "current_page", idx),
+                    args=[context, i + 1],
+                    use_container_width=True,
+                )
