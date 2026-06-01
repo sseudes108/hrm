@@ -1,11 +1,15 @@
 import streamlit as st
 from system.view.components.layout.header import HeaderConfig
+from system.control.contexts import AppContext
 
 def set_unique_style(header_config: HeaderConfig):
     # Injeta reset APENAS quando não tem card wrapper
+    unique_style = ""
+    
+    key = header_config.key
+
     if not header_config.has_card:
-        key = header_config["key"]
-        unique_style = f"""
+        unique_style += f"""
             <style>
                 [class*="st-key-co_card_header_{key}"] {{
                     background:              transparent !important;
@@ -15,6 +19,12 @@ def set_unique_style(header_config: HeaderConfig):
                     box-shadow:              none !important;
                     border:                  none !important;
                 }}
+            </style>
+        """
+
+    if header_config.hover == False:
+        unique_style += f"""
+            <style>
                 [class*="st-key-co_card_header_{key}"]:hover {{
                     box-shadow: none !important;
                     transform:  none !important;
@@ -43,23 +53,30 @@ def draw_title(header_config: dict):
     )
     st.markdown(html, unsafe_allow_html=True)
 
-def draw_tools(header_config: HeaderConfig):
-    initial = header_config.title[0].upper()
+def draw_tools(header_config: HeaderConfig, context: AppContext):
+    if context.mode == "dark":
+        icon = "☀️"
+        next_mode = "light"
+    else:
+        icon = "🌙"
+        next_mode = "dark"
 
-    html = f"""
-        <div class="header-tools">
-            <p class="header-status">SISTEMA ONLINE</p>
-            <div class="header-avatar">{initial}</div>
-        </div>
-    """
-    st.markdown(html, unsafe_allow_html=True)
+    with st.container(
+        key="co_header_tools", 
+        horizontal_alignment="right", 
+        vertical_alignment="center"
+    ):
+        st.button(
+            label=icon, 
+            on_click=lambda: context.update_mode(new_mode=next_mode)
+        )
 
-def get_component(header_config: HeaderConfig):
-    set_unique_style(header_config)
-
+def get_component(header_config: HeaderConfig, context: AppContext):
+    # As colunas são criadas diretamente, pois já estamos "dentro" do container do Card.draw()
     header_cols = st.columns([2, 5, 1], gap='xxsmall')
 
     with header_cols[0]:
         draw_title(header_config)
+
     with header_cols[2]:
-        draw_tools(header_config)
+        draw_tools(header_config, context)

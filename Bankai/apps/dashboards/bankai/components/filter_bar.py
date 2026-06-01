@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from system.control.contexts import AppContext
-import system.view.components.filters.select as select_filter
+import system.view.components.filters.select.select as select_filter
 from system.view.components.cards import card
 
 def get_options_config(df:pd.DataFrame, label:str, column:str):
@@ -25,7 +25,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "title", "title")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -33,7 +33,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "status", "status")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -41,7 +41,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "rating", "rating")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -49,7 +49,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "popularity", "popularity")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -57,7 +57,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
     
     ###########################################################
     options,config = get_options_config(df, "year", "year")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -65,7 +65,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "genres", "genres")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -73,7 +73,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "themes", "themes")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -81,7 +81,7 @@ def draw_filters(df:pd.DataFrame, context:AppContext):
 
     ###########################################################
     options,config = get_options_config(df, "demographics", "demographics")
-    title_selected = select_filter.draw_filter(
+    title_selected = select_filter.draw(
         options=options, context=context,
         config=config
     )
@@ -96,8 +96,8 @@ def draw_filters_bar(df:pd.DataFrame, context:AppContext):
         "df":df,
         "context": context
     }
-    card.draw_card(
-        "bankai", "filter_bar",
+    card.draw(
+        "bankai", "filter",
         card_config, render_content=draw_filters,
         **ft_bar_args
     )

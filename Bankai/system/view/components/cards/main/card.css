@@ -1,5 +1,17 @@
-/* ─── CARD BASE ─────────────────────────────────────────────── */
+/* ─── 1. ESTRUTURA BASE (Para TODOS os cards, com ou sem fundo) ─── */
+/* Como a chave sempre contém "co_card_", isso aplica a base para os dois */
 [class*="st-key-co_card_"] {
+    position: relative !important;
+    overflow: visible !important;
+    
+    display: flex !important;
+    flex-direction: column !important; /* Garante que o título fique em cima do gráfico */
+    
+    padding: var(--bk-sp-md) !important;
+}
+
+/* ─── 2. PINTURA: CARD NORMAL (Apenas _bg_) ─── */
+[class*="st-key-co_card_bg_"] {
     background:      var(--bk-gradient-surface) !important;
     backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
     -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
@@ -7,28 +19,23 @@
     border-radius:   var(--bk-radius-md) !important;
     box-shadow:      var(--bk-shadow-lg), var(--bk-card-inner-shadow) !important;
 
-    position: relative !important;
-    overflow: hidden !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center  !important;
-    height: var(--bk-header-h) !important;
-    padding: 0 var(--bk-sp-md) !important;
-
     transition: background-color 0.3s ease, 
                 border-color 0.3s ease, 
                 box-shadow 0.3s ease, 
                 transform var(--bk-hover-y) ease !important;
 }
 
-[class*="st-key-co_card_hover_"]:hover {
-    transform: translateY(var(--bk-hover-y)) !important;
-    border-color: var(--bk-primary) !important;
+/* ─── 3. PINTURA: CARD INVISÍVEL (Apenas _nobg_) ─── */
+[class*="st-key-co_card_nobg_"] {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    /* Sem transition aqui para evitar qualquer animação de hover */
 }
 
-/* ─── BORDA GRADIENTE (não sabe se é glass, só lê a variável) ── */
-[class*="st-key-co_card_"]::before {
+/* ─── BORDA GRADIENTE (Apenas para o card normal) ── */
+[class*="st-key-co_card_bg_"]::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -49,7 +56,39 @@
     z-index: 0;
 }
 
-/* ─── HOVER ──────────────────────────────────────────────────── */
-[class*="st-key-co_card_"]:hover {
+/* ─── HOVER (Apenas para os cards normais configurados com Hover) ─── */
+[class*="st-key-co_card_bg_hover_"]:hover {
     box-shadow: var(--bk-shadow-lg), var(--bk-glow-primary), var(--bk-card-inner-shadow) !important;
+    transform: translateY(var(--bk-hover-y)) !important;
+}
+
+
+/* ─── TIPOGRAFIA (Aplica a ambos, sem usar vírgulas perigosas) ─── */
+
+/* Container do Cabeçalho */
+[class*="st-key-co_card_"] .bk-card-header {
+    display: flex;
+    flex-direction: column;    
+    padding: 0.0rem 0rem 0rem 0.8rem; 
+}
+
+/* Título */
+[class*="st-key-co_card_"] .bk-card-title {
+    font-size: var(--bk-sub, 1.25rem);
+    font-weight: var(--bk-w-bold);
+    color: var(--bk-text);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtítulo */
+[class*="st-key-co_card_"] .bk-card-subtitle {
+    font-size: var(--bk-xs, 0.75rem);
+    font-weight: var(--bk-w-medium);
+    color: var(--bk-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
 }

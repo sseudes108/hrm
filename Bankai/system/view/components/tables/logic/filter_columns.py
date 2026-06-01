@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-import system.view.components.filters.select as select_filter
+import system.view.components.filters as select_filter
 from system.control.contexts.app import AppContext
 from system.control.managers import hash as hash_man
 
@@ -51,7 +51,7 @@ def renderizar_filtros_dinamicos(
                     "allow_all": True,
                     "update_app_context": config["update_app_context"],
                 }
-                selected = select_filter.draw_filter(
+                selected = select_filter.draw(
                     options, context, config
                 )
 

@@ -1,60 +1,30 @@
-/* ─── CARD BASE ─────────────────────────────────────────────── */
-[class*="st-key-co_card_header_"] {
-    background:      var(--bk-gradient-surface) !important;
-    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
-    -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
+/* =========================================================
+   CSS ESPECÍFICO DO HEADER 
+   ========================================================= */
 
-    border-radius:   var(--bk-radius-md) !important;
-    box-shadow:      var(--bk-shadow-lg), var(--bk-card-inner-shadow) !important;
-
-    position: relative !important;
-    overflow: hidden !important;
-
-    height: var(--bk-header-h);
+/* ─── CONTAINER DO HEADER ────────────────────────────────────── */
+[class*="st-key-co_card_bg_static_header_"],
+[class*="st-key-co_card_bg_hover_header_"] {
+    /* Força as alturas exatas para cabeçalho */
+    height: var(--bk-header-h) !important;
     max-height: var(--bk-header-h) !important;
     min-height: var(--bk-header-h) !important;
 
+    /* Layout interno */
     display: flex !important;
     align-items: center !important;
     justify-content: center  !important;
-    height: var(--bk-header-h) !important;
+    
+    /* Substitui o padding padrão do card genérico pelo do header */
     padding: 0 var(--bk-sp-md) !important;
 
-    transition: background-color 0.3s ease, 
-                border-color 0.3s ease, 
-                box-shadow 0.3s ease, 
-                transform var(--bk-hover-y) ease !important;
-}
-
-/* ─── BORDA GRADIENTE (não sabe se é glass, só lê a variável) ── */
-[class*="st-key-co_card_header_"]::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: var(--bk-border-w);
-    background: var(--bk-border-gradient);
-    border-radius: inherit;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* ─── HOVER ──────────────────────────────────────────────────── */
-[class*="st-key-co_card_header_"]:hover {
-    box-shadow: var(--bk-shadow-lg), var(--bk-glow-primary), var(--bk-card-inner-shadow) !important;
+    /* Margem superior para desgrudar do topo da página */
+    margin-top: 0.7rem;
 }
 
 /* ─── ÍCONE SVG ──────────────────────────────────────────────── */
-[class*="st-key-co_card_header_"] .header-logo-icon {
+[class*="st-key-co_card_bg_static_header_"] .header-logo-icon,
+[class*="st-key-co_card_bg_hover_header_"] .header-logo-icon {
     width:  var(--bk-header-icon);
     height: var(--bk-header-icon);
     color:  var(--bk-primary);
@@ -65,26 +35,30 @@
     z-index: 1;
 }
 
-[class*="st-key-co_card_header_"]:hover .header-logo-icon {
+[class*="st-key-co_card_bg_static_header_"]:hover .header-logo-icon,
+[class*="st-key-co_card_bg_hover_header_"]:hover .header-logo-icon {
     color:     var(--bk-primary-h);
     transform: scale(1.05);
 }
 
-/* ─── BRAND (esquerda) ───────────────────────────────────────── */
-[class*="st-key-co_card_header_"] .header-brand {
+/* ─── BRAND (Esquerda) ───────────────────────────────────────── */
+[class*="st-key-co_card_bg_static_header_"] .header-brand,
+[class*="st-key-co_card_bg_hover_header_"] .header-brand {
     display:     flex;
     align-items: center;
     gap:         var(--bk-sp-sm);
     height:      var(--bk-header-h);
 }
 
-[class*="st-key-co_card_header_"] .header-brand-text {
+[class*="st-key-co_card_bg_static_header_"] .header-brand-text,
+[class*="st-key-co_card_bg_hover_header_"] .header-brand-text {
     display:        flex;
     flex-direction: column;
     gap:            2px;
 }
 
-[class*="st-key-co_card_header_"] .header-brand-title {
+[class*="st-key-co_card_bg_static_header_"] .header-brand-title,
+[class*="st-key-co_card_bg_hover_header_"] .header-brand-title {
     font-size:   var(--bk-sub);
     font-weight: var(--bk-w-bold);
     color:       var(--bk-text);
@@ -92,7 +66,8 @@
     letter-spacing: 0.08em;
 }
 
-[class*="st-key-co_card_header_"] .header-brand-subtitle {
+[class*="st-key-co_card_bg_static_header_"] .header-brand-subtitle,
+[class*="st-key-co_card_bg_hover_header_"] .header-brand-subtitle {
     font-size:   var(--bk-xs);
     font-weight: var(--bk-w-normal);
     color:       var(--bk-primary);
@@ -100,8 +75,9 @@
     letter-spacing: 0.12em;
 }
 
-/* ─── TOOLS (direita) ────────────────────────────────────────── */
-[class*="st-key-co_card_header_"] .header-tools {
+/* ─── TOOLS (Direita) ────────────────────────────────────────── */
+[class*="st-key-co_card_bg_static_header_"] .header-tools,
+[class*="st-key-co_card_bg_hover_header_"] .header-tools {
     display:     flex;
     align-items: center;
     justify-content: flex-end;
@@ -109,7 +85,8 @@
     height:      var(--bk-header-h);
 }
 
-[class*="st-key-co_card_header_"] .header-status {
+[class*="st-key-co_card_bg_static_header_"] .header-status,
+[class*="st-key-co_card_bg_hover_header_"] .header-status {
     font-size:   var(--bk-xs);
     font-weight: var(--bk-w-medium);
     color:       var(--bk-primary);
@@ -117,7 +94,8 @@
     white-space: nowrap;
 }
 
-[class*="st-key-co_card_header_"] .header-avatar {
+[class*="st-key-co_card_bg_static_header_"] .header-avatar,
+[class*="st-key-co_card_bg_hover_header_"] .header-avatar {
     width:           32px;
     height:          32px;
     transform: translateY(-0.5rem);

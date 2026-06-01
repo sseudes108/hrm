@@ -24,7 +24,7 @@ def draw_pie(df:pd.DataFrame, context:AppContext):
                 "view": True,
             }
         }
-        card.draw_card(
+        card.draw(
             "bankai", "pie_rating_chart",
             card_config,
             render_content=lambda: pie.draw_pie(chart_config, df, context)
@@ -47,7 +47,7 @@ def draw_pie(df:pd.DataFrame, context:AppContext):
                 "view": False
             }
         }
-        card.draw_card(
+        card.draw(
             "bankai", "pie_status_chart",
             card_config,
             render_content=lambda: pie.draw_pie(chart_config, df, context)

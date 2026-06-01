@@ -1,0 +1,108 @@
+/* ─── TABELAS DO BANKAI ─── */
+.bk-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    /* Removemos as bordas do wrapper para não conflitar com a borda do Card */
+    margin-top: 0.5rem; 
+}
+
+.bk-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+    color: var(--bk-text);
+    /* 🚀 MÁGICA: Fundo transparente para herdar a cor do card perfeitamente */
+    background-color: transparent; 
+    font-size: 0.85em; /* Fonte um pouco menor para caber mais dados elegantes */
+}
+
+.bk-table th {
+    position: sticky;
+    /* 🚀 Puxa o cabeçalho 1 pixel para cima para esmagar a fresta */
+    top: -1px; 
+    z-index: 10;
+    
+    background-color: var(--bk-surface);
+    
+    /* 🚀 SOMBRA DUPLA (O Tapa-Buraco) */
+    box-shadow: 
+        inset 0 -2px 0 var(--bk-text-muted), /* 1. A nossa linha de baixo (borda) */
+        0 -2px 0 var(--bk-surface);          /* 2. O remendo superior que esconde o vazamento */
+
+    padding: 10px 8px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--bk-text-muted);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+}
+
+.bk-table td {
+    padding: 12px 8px;
+    /* Linha sutil separando as fileiras */
+    border-bottom: 1px solid var(--bk-border); 
+}
+
+/* Efeito de destaque ao passar o mouse */
+.bk-table tr:hover td {
+    /* Um fundo super sutil no hover */
+    background-color: var(--bk-surface-2); 
+    transition: background-color 0.2s ease;
+}
+
+/* Remove a borda da última linha para não ficar uma linha sobrando no fundo do card */
+.bk-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ─── BOTÕES DE AÇÃO DO CABEÇALHO ─── */
+/* 1. 🚀 O SEGREDO: Aplica o flexbox no CONTAINER PAI para empurrar o botão */
+[class*="st-key-wrap_btn_"] {
+    display: flex;
+    justify-content: flex-end; /* "Cola" o botão inteiro à direita */
+    align-items: flex-end;
+    margin-top: -1.1rem !important;
+}
+
+/* ── Paginator — botões base ── */
+[class*="st-key-wrap_btn_"] button {
+    background:    transparent;
+    border:        none;
+    border-radius: 0;
+    padding:       var(--bk-sp-sm) var(--bk-sp-md);
+
+    font-family:   var(--bk-font);
+    font-weight:   var(--bk-w-normal);
+    color:         var(--bk-text-muted);
+
+    /* 2. 🚀 Tire o 100% e use max-content para o botão não esticar */
+    width:         max-content; 
+    cursor:        pointer;
+    transition:    border-color 0.2s, color 0.2s;
+    margin-top:    0 !important;
+    
+    /* Pode remover o flexbox do botão, não precisamos mais dele aqui */
+}
+
+/* 3. Força o tamanho do emoji (texto) */
+[class*="st-key-wrap_btn_"] button div,
+[class*="st-key-wrap_btn_"] button p {
+    font-size: 1.1rem !important; 
+    margin: 0 !important;         
+}
+
+/* ── Hover ── */
+[class*="st-key-wrap_btn_"] button:hover {
+    box-shadow: inset 0 -2px 0 0 var(--bk-border-focus) !important;
+    border-color: transparent !important; 
+    color: var(--bk-secondary) !important;
+    background: transparent !important;
+}
+
+/* ── Focus ── */
+[class*="st-key-wrap_btn_"] button:focus {
+    box-shadow: none;
+    outline:    none;
+}

@@ -2,76 +2,75 @@
   "meta": {
     "base": "light"
   },
-  "icons": { "toggle": "lightbulb-off" },
+  "icons": { "toggle": "moon" },
   "colors": {
-    "background":    "#f5f5f7",
-    "surface":       "#ffffff",
-    "surface_2":     "#ebedf2",
+    "background":    "#e9eef2",
+    "surface":       "#f4f7f9",
+    "surface_2":     "#ffffff",
 
-    "primary":       "#ff6a00",
-    "primary_hover": "#ff8533",
+    "primary":       "#0f766e",
+    "primary_hover": "#14b8a6",
 
-    "secondary":     "#4b5563",
-    "accent":        "#b31217",
+    "secondary":     "#64748b",
+    "accent":        "#9f1239",
 
-    "text":          "#111318",
-    "text_muted":    "#6b7280",
-    "text_disabled": "#9ca3af",
+    "text":          "#1e293b",
+    "text_muted":    "#64748b",
+    "text_disabled": "#94a3b8",
 
-    "border":        "#d4d4d8",
-    "border_focus":  "#ff6a00",
+    "border":        "#cbd5e1",
+    "border_focus":  "#0f766e",
 
-    "success":       "#16a34a",
+    "success":       "#10b981",
     "warning":       "#d97706",
-    "danger":        "#dc2626",
-    "info":          "#52525b"
+    "danger":        "#9f1239",
+    "info":          "#0ea5e9"
   },
   "effects": {
     "hover_y":       "-2px",
-    "backdrop_blur": "10px",
+    "backdrop_blur": "8px",
 
-    "glow_primary": "0 0 16px rgba(255,106,0,0.16)",
-    "glow_danger":  "0 0 12px rgba(179,18,23,0.12)",
+    "glow_primary": "0 2px 8px rgba(15, 118, 110, 0.3)",
+    "glow_danger":  "0 2px 8px rgba(159, 18, 57, 0.3)",
 
-    "gradient_primary": "linear-gradient(135deg, #ff6a00 0%, #b31217 100%)",
-    "gradient_surface": "linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(245,245,247,0.95) 100%)",
+    "gradient_primary": "linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(244,247,249,0.95) 100%)",
 
     "surface_overlay": {
       "enabled": true,
-      "border_gradient": "linear-gradient(135deg, rgba(255,106,0,0.25) 0%, rgba(212,212,216,0.4) 50%, rgba(179,18,23,0.2) 100%)",
-      "inner_shadow": "inset 0 1px 0px rgba(255,255,255,0.8), inset 0 -1px 12px rgba(0,0,0,0.02)"
+      "border_gradient": "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 30%, rgba(15,118,110,0) 50%, rgba(15,118,110,0.6) 70%, #0f766e 100%)",
+      "inner_shadow": "inset -1px 1px 0px rgba(255, 255, 255, 1), inset 3px -3px 0px rgba(15, 118, 110, 0.8)"
     }
   },
   "borders": {
-    "radius_md":  "10px",
-    "shadow_sm":  "0 1px 4px rgba(0,0,0,0.06)",
-    "shadow_md":  "0 4px 12px rgba(0,0,0,0.08)",
-    "shadow_lg":  "0 10px 30px rgba(0,0,0,0.12)"
+    "shadow_sm": "0 0 0 transparent",
+    "shadow_md": "0 5px 3px -2px rgba(15, 23, 42, 0), 0 2px 2px -2px rgba(15, 23, 42, 0)",
+    "shadow_lg": "0 8px 5px -3px rgba(15, 23, 42, 0), 0 4px 3px -3px rgba(15, 23, 42, 0)"
   },
   "chart": {
-    "grid_color": "rgba(0,0,0,0.06)",
-    "font_color": "#6b7280",
+    "grid_color": "rgba(30, 41, 59, 0.06)",
+    "font_color": "#64748b",
     "colorscale_extended": [
-      "#ff6a00", "#b31217", "#4b5563", "#9ca3af",
-      "#ff8533", "#dc2626", "#111318", "#d1d5db",
-      "#ff9950", "#ff4d52", "#6b7280", "#e5e7eb"
+      "#0f766e", "#9f1239", "#cbd5e1", "#64748b",
+      "#14b8a6", "#c21841", "#94a3b8", "#055a5b",
+      "#0ea5e9", "#e11d48", "#e2e8f0", "#1e293b"
     ],
     "severity": {
-      "critical": "#dc2626",
-      "warning":  "#ff6a00",
-      "normal":   "#4b5563",
-      "stale":    "#9ca3af"
+      "critical": "#9f1239",
+      "warning":  "#d97706",
+      "normal":   "#64748b",
+      "stale":    "#cbd5e1"
     },
     "echarts": {
-      "tooltip_bg":        "rgba(255,255,255,0.96)",
-      "tooltip_border":    "rgba(255,106,0,0.22)",
-      "tooltip_text":      "#111318",
-      "axis_line_color":   "rgba(0,0,0,0.14)",
-      "axis_label_color":  "rgba(0,0,0,0.5)",
-      "split_line_color":  "rgba(0,0,0,0.05)",
+      "tooltip_bg":        "rgba(244, 247, 249, 0.95)",
+      "tooltip_border":    "rgba(15, 118, 110, 0.25)",
+      "tooltip_text":      "#1e293b",
+      "axis_line_color":   "rgba(30, 41, 59, 0.15)",
+      "axis_label_color":  "rgba(30, 41, 59, 0.6)",
+      "split_line_color":  "rgba(30, 41, 59, 0.05)",
       "glow_blur":         10,
-      "area_opacity_top":  0.28,
-      "area_opacity_base": 0.02
+      "area_opacity_top":  0.25,
+      "area_opacity_base": 0.01
     }
   }
 }

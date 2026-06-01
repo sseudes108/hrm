@@ -1,1 +1,2 @@
-from .slim import slim
+from .slim  import slim
+from .nav   import nav

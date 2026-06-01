@@ -1,9 +1,10 @@
 import streamlit as st
+import pandas as pd
 from streamlit_echarts import st_echarts
 import system.control.managers.hash as hash_man
 from system.view.components.cards import card, CardConfig
 
-from system.view.components.charts.echarts.config   import BaseChartConfig
+from system.view.components.charts.echarts.config import BaseChartConfig
 from system.view.components.charts.echarts.builders import base_builder
 from system.view.components.charts.echarts.builders.series import (
     pie_builder,
@@ -18,26 +19,25 @@ _SERIES_BUILDERS = {
     # "line": line_builder.build,
 }
 
-def draw(chart_config: Optional[BaseChartConfig], df) -> None:
+def draw(chart_config: Optional[BaseChartConfig], df:pd.DataFrame) -> None:
     if chart_config is None:
         return
 
-    key = hash_man.get_hash_key(chart_config.app_name, chart_config.title)
+    key = hash_man.get_hash(chart_config.title)
 
-    with st.container(key=f"{chart_config.model}_container_{key}"):
-        if chart_config.in_card:
-            card_config = CardConfig(
-                model="chart", key=key
-            )
-            return card.draw_card(
-                card_config,
-                render_content=lambda: _render(chart_config, df, key)
-            )
-        else:
-            return _render(chart_config, df, key)
+    return card.draw(
+        CardConfig(
+            app_name=chart_config.app_name,
+            card_id=f"{chart_config.app_name}_{chart_config.model}_{chart_config.title}",
+            model="chart", has_title=chart_config.has_card_title, 
+            title=chart_config.title.upper(), subtitle=chart_config.subtitle.upper(), 
+            hover=chart_config.card_hover, show_card=chart_config.show_card
+        ), render_content=lambda: _render(
+            chart_config, df, key
+        )
+    )
 
-
-def _render(chart_config: BaseChartConfig, df, key: str) -> None:
+def _render(chart_config: BaseChartConfig, df:pd.DataFrame, key: str) -> None:
     builder_fn = _SERIES_BUILDERS.get(chart_config.model)
     if builder_fn is None:
         st.error(f"Builder não implementado para model='{chart_config.model}'")
@@ -50,10 +50,11 @@ def _render(chart_config: BaseChartConfig, df, key: str) -> None:
     echarts_events = {
         "click": "function(params) { return { name: params.name, ts: Date.now() }; }"
     }
+    
     clicked_value = st_echarts(
         options=options,
         events=echarts_events,
-        renderer="canvas",
+        renderer="svg",
         theme=None,
         width=chart_config.width,
         height=chart_config.height,

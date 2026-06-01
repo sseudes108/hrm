@@ -9,7 +9,8 @@ class PieSeriesConfig:
     column: str
 
     # Forma
-    radius:        list = field(default_factory=lambda: ["42%", "72%"])
+    radius:        list
+    center:        list
     avoid_overlap: bool = False
 
     # Label
@@ -18,4 +19,4 @@ class PieSeriesConfig:
     label_formatter: Optional[JsCode]    = None
 
     # Label line (linha que conecta fatia ao label externo)
-    show_label_line: bool = False
+    show_label_line: bool = True

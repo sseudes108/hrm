@@ -69,29 +69,39 @@ def _deep_merge(base: dict, override: dict) -> dict:
             result[key] = value
     return result
 
+@st.cache_data 
 def get_theme(app_name: str, mode: str = "dark") -> dict:
     current_path = Path(__file__).resolve()
 
+    # Encontra a raiz do projeto (Bankai)
     root_path = None
     for parent in current_path.parents:
         if parent.name.lower() == "bankai":
             root_path = parent
             break
+            
     if not root_path:
         root_path = current_path.parent.parent.parent
 
-    apps_root = root_path / "apps"
-
-    def _load(pattern: str) -> dict | None:
-        files = list(apps_root.glob(pattern))
+    def _load_search(target_app: str, file_name: str) -> dict | None:
+        """
+        Usa busca recursiva (rglob) para encontrar o arquivo de tema, 
+        independentemente de estar em books, dashboards, engines ou sandbox.
+        """
+        # Procura em qualquer lugar por: <target_app>/themes/<file_name>
+        pattern = f"**/{target_app}/themes/{file_name}"
+        
+        # O rglob vasculha a partir do root_path
+        files = list(root_path.rglob(pattern))
+        
         if files:
             with open(files[0], "r", encoding="utf-8") as f:
                 return json.load(f)
         return None
 
     # Tenta carregar base e mode do app específico, com fallback para bankai
-    base  = _load(f"*/{app_name}/themes/base.json")  or _load("*/bankai/themes/base.json")
-    theme = _load(f"*/{app_name}/themes/{mode}.json") or _load(f"*/bankai/themes/{mode}.json")
+    base  = _load_search(app_name, "base.json")  or _load_search("bankai", "base.json")
+    theme = _load_search(app_name, f"{mode}.json") or _load_search("bankai", f"{mode}.json")
 
     if not base:
         raise FileNotFoundError(f"base.json não encontrado para '{app_name}' nem no fallback.")
@@ -100,52 +110,7 @@ def get_theme(app_name: str, mode: str = "dark") -> dict:
 
     return _deep_merge(base, theme)
 
-# def get_theme(app_name: str, mode: str = "dark") -> dict:
-#     """
-#     Busca o arquivo JSON do tema estruturado dentro do diretório do app específico.
-#     Caminho real: ROOT / apps / <categoria> / {app_name} / themes / {mode}.json
-#     """
-#     # 1. Encontra o diretório atual onde este script está rodando
-#     current_path = Path(__file__).resolve()
-    
-#     # 2. Sobe na árvore de diretórios até encontrar a raiz real 'Bankai'
-#     # Isso evita ficar adivinhando quantos ".parent" usar
-#     root_path = None
-#     for parent in current_path.parents:
-#         if parent.name.lower() == "bankai":
-#             root_path = parent
-#             break
-            
-#     # Se não achar a pasta 'Bankai' pelo nome, usa o fallback clássico de subir 3 níveis
-#     if not root_path:
-#         root_path = current_path.parent.parent.parent
-
-#     # 3. Agora sim, miramos na pasta 'apps' que está na raiz do projeto
-#     apps_root = root_path / "apps"
-
-#     # 4. Busca usando curinga para a categoria (ex: dashboards, engines, etc.)
-#     # O '*' substitui 'dashboards' ou qualquer outra pasta que venha antes do app
-#     theme_pattern = f"*/{app_name}/themes/{mode}.json"
-#     theme_files = list(apps_root.glob(theme_pattern))
-    
-#     # 5. Se encontrou o arquivo real do app, carrega e retorna
-#     if theme_files:
-#         path = theme_files[0]
-#         with open(path, "r", encoding="utf-8") as f:
-#             return json.load(f)
-            
-#     # 6. Se não encontrou (ex: o app específico não tem pasta de temas), 
-#     # busca o tema padrão na pasta 'bankai' independente de onde ela esteja
-#     fallback_files = list(apps_root.glob(f"*/bankai/themes/{mode}.json"))
-#     if fallback_files:
-#         with open(fallback_files[0], "r", encoding="utf-8") as f:
-#             return json.load(f)
-            
-#     raise FileNotFoundError(
-#         f"Tema '{mode}.json' para o módulo '{app_name}' (e nem o fallback da Bankai) "
-#         f"foi encontrado dentro de '{apps_root}'."
-#     )
-
+@st.cache_data
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -154,7 +119,6 @@ def get_base64_of_bin_file(bin_file):
 def set_bg(img_path:str):
     img_base64 = get_base64_of_bin_file(img_path)
 
-    # 3. Montar o CSS (Note que as chaves do Streamlit/stApp estão duplicadas {{}} para não bugar o f-string)
     page_bg_img = f'''
     <style>
         /* O .stApp é a classe principal que engloba toda a tela do Streamlit */

@@ -14,46 +14,99 @@ def build(config: BaseChartConfig) -> dict:
     ty          = config.theme["typography"]
     chart_cfg   = config.theme["chart"]
     echarts_cfg = chart_cfg["echarts"]
+    colors      = config.theme["colors"]  # 🚀 Extraímos as cores para o hover do Toolbox
 
-    return {
+    options = {
         "backgroundColor": "transparent",
         "color":           chart_cfg["colorscale_extended"],
-        "toolbox":         _build_toolbox(config.toolbox, chart_cfg),
+        "toolbox":         _build_toolbox(config.toolbox, chart_cfg, colors),
         "tooltip":         _build_tooltip(config, echarts_cfg, ty),
         "legend":          _build_legend(config, chart_cfg, ty),
     }
 
+    # 🚀 Injeção do Grid (Se o GridConfig foi passado pelo bar_man/line_man)
+    if getattr(config, 'grid', None):
+        options["grid"] = {
+            "show":         config.grid.show,
+            "left":         config.grid.left,
+            "right":        config.grid.right,
+            "bottom":       config.grid.bottom,
+            "top":          config.grid.top,
+            "containLabel": config.grid.contain_label
+        }
+
+    return options
+
 
 # ── Toolbox ────────────────────────────────────────────────────────────────────
 
-def _build_toolbox(toolbox: ToolboxConfig, chart_cfg: dict) -> dict:
+def _build_toolbox(toolbox: ToolboxConfig, chart_cfg: dict, colors: dict) -> dict:
     layout = {"orient": toolbox.orient}
 
     if toolbox.top    is not None: layout["top"]    = toolbox.top
     if toolbox.right  is not None: layout["right"]  = toolbox.right
     if toolbox.bottom is not None: layout["bottom"] = toolbox.bottom
     if toolbox.left   is not None: layout["left"]   = toolbox.left
+    
+    cor_hover = colors.get("text", "#a60505")
 
     return {
         "show": True,
         "feature": _assemble_features(toolbox),
-        "iconStyle": {"borderColor": chart_cfg["font_color"]},
+        "iconStyle": {
+            "borderColor": chart_cfg["font_color"],
+            "borderWidth": 1.5
+        },
+        "emphasis": {
+            "iconStyle": {
+                "borderColor": cor_hover,
+                "borderWidth": 2
+            }
+        },
         **layout
     }
+
 
 def _assemble_features(toolbox: ToolboxConfig) -> dict:
     features = {}
 
     if toolbox.save:
-        features["saveAsImage"] = {"show": True}
+        features["saveAsImage"] = {
+            "show": True,
+            "title": "Salvar Imagem"
+        }
     if toolbox.view:
-        features["dataView"] = {"show": True, "readOnly": False}
+        features["dataView"] = {
+            "show": True, 
+            "readOnly": False,
+            "title": "Ver Dados",
+            "lang": ["Visualização de Dados", "Fechar", "Atualizar"]
+        }
     if toolbox.zoom:
-        features["dataZoom"] = {"show": True, "type": toolbox.zoom}
+        features["dataZoom"] = {
+            "show": True, 
+            "type": toolbox.zoom,
+            "title": {
+                "zoom": "Aplicar Zoom", 
+                "back": "Restaurar Zoom"
+            }
+        }
     if toolbox.magic:
-        features["magicType"] = {"show": True, "type": toolbox.magic}
+        features["magicType"] = {
+            "show": True, 
+            "type": toolbox.magic,
+            "title": {
+                "line":  "Gráfico de Linha",
+                "bar":   "Gráfico de Barras",
+                "stack": "Empilhar",
+                "tiled": "Lado a Lado"
+            }
+        }
     if toolbox.restore:
-        features["restore"] = {"show": True}
+        features["restore"] = {
+            "show": True,
+            "title": "Resetar"
+        }
 
     return features
 

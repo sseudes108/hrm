@@ -23,12 +23,13 @@ def build(df: pd.DataFrame, config: BaseChartConfig, options: dict) -> dict:
         {
             "name": series.column,
             "type": "pie",
+            "center": series.center,
             "radius": series.radius,
             "avoidLabelOverlap": series.avoid_overlap,
             "itemStyle": {
                 "borderRadius": border_radius,
                 "borderColor":  colors["background"],
-                "borderWidth":  borders["radius_sm"]
+                "borderWidth":  borders["radius_md"]
             },
             "label": _build_label(series, typography, colors),
             "emphasis": _build_emphasis(series, typography, colors, echarts_cfg),
@@ -42,16 +43,17 @@ def build(df: pd.DataFrame, config: BaseChartConfig, options: dict) -> dict:
 # ── Dados ──────────────────────────────────────────────────────────────────────
 
 def _process_data(df: pd.DataFrame, column: str) -> Optional[list]:
-    if column not in df.columns:
-        st.error(f"PieSeriesConfig — coluna '{column}' não encontrada no DataFrame.")
+    # Agora validamos se as duas colunas esperadas vieram do pie_man
+    if column not in df.columns or "value" not in df.columns:
+        st.error(f"PieSeriesConfig — colunas '{column}' ou 'value' não encontradas. O Gerenciador agrupou corretamente?")
         return None
 
-    counts = df[column].value_counts().reset_index()
-    # pandas moderno: colunas são [column, "count"], não ["name", "value"]
-    counts.columns = ["name", "value"]
+    # O pie_man já fez o agrupamento pesado. 
+    # Só precisamos renomear a coluna de categoria para "name" para agradar o ECharts
+    df_echarts = df[[column, "value"]].copy()
+    df_echarts.rename(columns={column: "name"}, inplace=True)
 
-    return counts.to_dict(orient="records")
-
+    return df_echarts.to_dict(orient="records")
 
 # ── Label ──────────────────────────────────────────────────────────────────────
 
