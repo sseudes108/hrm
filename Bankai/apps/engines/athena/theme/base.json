@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "name": "Athena - Core Structure",
+    "description": "Base estrutural elegante e estratégica para a calculadora de capacidade operacional Athena, inspirada em proporções clássicas e mármore polido."
+  },
+  "layout": {
+    "header_height": "80px",
+    "logo_size": "108",
+    "logo_png": "apps/engines/athena/at.png"
+  },
+  "typography": {
+    "font_url": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap",
+    "font_family": "'Montserrat', sans-serif",
+    "font_family_mono": "'Fira Code', monospace",
+    "size_xs": 10,
+    "size_sm": 12,
+    "size_base": 14,
+    "size_subtitle": 18,
+    "size_title": 24,
+    "size_display": 40,
+    "weight_normal": 400,
+    "weight_medium": 500,
+    "weight_bold": 600,
+    "line_height": 1.6
+  },
+  "spacing": {
+    "xs": "6px",
+    "sm": "12px",
+    "md": "20px", 
+    "lg": "36px",
+    "xl": "56px"
+  },
+  "borders": {
+    "width": "1px",
+    "radius_sm": "2px",
+    "radius_md": "6px",
+    "radius_lg": "12px",
+    "radius_full": "9999px"
+  },
+  "chart": {
+    "plotly": {
+      "bg": "transparent",
+      "plot_bg": "transparent"
+    }
+  }
+}

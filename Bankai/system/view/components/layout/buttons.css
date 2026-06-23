@@ -1,0 +1,17 @@
+/* Busca o contêiner pela chave E mira no botão dentro dele */
+[class*="st-key-btn_"] button {
+    background-color: var(--bk-border) !important;
+    border-radius: var(--bk-radius-md) !important;
+    color: var(--bk-text) !important; /* Boa prática para garantir a cor inicial do texto */
+    border-color: transparent !important; /* Remove a borda cinza padrão do Streamlit */
+
+    /* 🚀 O SEGREDO DA SUAVIDADE (Vai animar a entrada e a saída) */
+    transition: all 0.3s ease !important;
+}
+
+/* Estilo do efeito de hover (quando passa o mouse) */
+[class*="st-key-btn_"] button:hover {
+    background-color: var(--bk-primary) !important;
+    border-color: var(--bk-primary) !important;
+    color: var(--bk-bg) !important;
+}

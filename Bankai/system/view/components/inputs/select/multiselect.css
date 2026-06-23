@@ -1,0 +1,147 @@
+/* 1. O CONTAINER PRINCIPAL */
+[class*="st-key-co_input_select_"] {            
+    position: relative !important;
+    left: 0 !important;
+    padding: 0em !important;
+    cursor: pointer;
+}
+[class*="st-key-co_input_select_"] [data-baseweb="select"] span {            
+    color: var(--bk-text-muted) 
+}
+[class*="st-key-co_input_select_"] [data-baseweb="icon"] {            
+    color: var(--bk-text-muted) 
+}
+/* Muda a cor de qualquer SVG dentro do multiselect ao passar o mouse */
+[class*="st-key-co_input_select_"] svg:hover,
+[class*="st-key-co_input_select_"] [data-baseweb="icon"]:hover svg,
+[class*="st-key-co_input_select_"] [role="button"]:hover svg {            
+    color: var(--bk-primary) !important;
+    fill: var(--bk-primary) !important;
+}
+
+/* Opcional: Adiciona uma transição suave para não "piscar" a cor do nada */
+[class*="st-key-co_input_select_"] svg {
+    transition: color 0.2s ease, fill 0.2s ease !important;
+}
+
+/* 2. A LABEL */
+[class*="st-key-co_input_select_"] [data-testid="stWidgetLabel"] {
+    position: absolute !important;
+    top: -1.1rem !important; /* Sentar exatamente no topo da borda */
+    left: 1rem !important;
+    border-radius: var(--bk-radius-sm);
+    z-index: 10 !important;
+    
+    /* Herda dinamicamente o fundo do app ativo (Dark ou Light) */
+    background-color: var(--bk-bg) !important;
+    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.01) !important;
+    padding: 0 8px !important;
+    width: auto !important;
+    min-width: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+[class*="st-key-co_input_select_"] [data-testid="stWidgetLabel"] p {           
+    color: var(--bk-text-muted) !important;
+    font-family: var(--bk-font) !important;
+    font-size: var(--bk-xs) !important;
+    font-weight: var(--bk-w-bold) !important;
+    margin: 0 !important;
+}
+
+/* 3. A BORDA DO CAMPO (Selectbox) */
+[class*="st-key-co_input_select_"] [data-baseweb="select"] > div {
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.01) !important;
+    background-color: transparent !important;
+    border-radius: var(--bk-radius-md) !important;
+    transition: all 0.3s ease;
+}
+
+/* Texto do valor SELECIONADO (dentro do campo) */
+[class*="st-key-co_input_select_"] [data-baseweb="select"] div {
+    color: var(--bk-text) !important;
+    font-family: var(--bk-font) !important;
+}
+
+/* 1. Destrói o fundo sólido da "casca" externa do popover */
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 2. Aplica a placa de vidro no container real do Menu */
+[data-baseweb="menu"],
+[data-testid="stSelectboxVirtualDropdown"] {
+    /* Mistura a cor da sua surface com transparência para o desfoque funcionar */
+    background-color: color-mix(in srgb, var(--bk-bg) 10%, transparent) !important;
+    
+    /* O filtro de desfoque */
+    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(150%) brightness(1.01) !important;
+    -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(150%) brightness(1.01) !important;
+    
+    border-radius: var(--bk-radius-md) !important;
+    border: 1px solid var(--bk-border) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    padding: 4px !important;
+}
+
+/* 3. Garante que os itens da lista não tenham fundo opaco atrapalhando */
+[data-testid="stSelectboxVirtualDropdown"] li {
+    background-color: transparent !important;
+    color: var(--bk-text) !important;
+    font-family: var(--bk-font) !important;
+    font-size: var(--bk-base) !important;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: var(--bk-radius-sm) !important;
+    border: none !important; 
+    margin-bottom: 2px;
+}
+
+/* 4. Remove a caixa padrão do Streamlit de dentro do LI */
+[data-testid="stSelectboxVirtualDropdown"] li div[class*="e1d7a4qp0"] {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* 5. Hover (Cor primary com bastante transparência) */
+[data-testid="stSelectboxVirtualDropdown"] li:hover {
+    background-color: color-mix(in srgb, var(--bk-primary) 15%, transparent) !important;
+    color: var(--bk-text) !important;
+}
+
+/* 6. Selecionado (Cor primary com um pouco mais de opacidade) */
+[data-testid="stSelectboxVirtualDropdown"] li[aria-selected="true"] {
+    background-color: color-mix(in srgb, var(--bk-primary) 25%, transparent) !important;
+    color: var(--bk-text) !important;
+    font-weight: var(--bk-w-bold) !important;
+}
+
+/* 7. SCROLLBAR */
+[data-testid="stSelectboxVirtualDropdown"] > div::-webkit-scrollbar {
+    width: 4px !important;
+}
+[data-testid="stSelectboxVirtualDropdown"] > div::-webkit-scrollbar-thumb {
+    background: var(--bk-border) !important;
+    border-radius: var(--bk-radius-full) !important;
+}
+[data-testid="stSelectboxVirtualDropdown"] > div::-webkit-scrollbar-thumb:hover {
+    background: var(--bk-primary) !important;
+}
+
+[data-testid="stSelectboxVirtualDropdownEmpty"]{
+    background-color: var(--bk-surface) !important;
+}
+
+[data-baseweb="tag"]{
+    background-color: var(--bk-primary) !important;
+}
+
+[class*="st-key-co_input_select_"] [data-baseweb="select"] span {
+    color: var(--bk-text) !important;
+}

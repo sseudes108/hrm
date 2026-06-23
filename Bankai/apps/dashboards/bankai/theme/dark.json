@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "base": "dark"
+  },
+  "icons": { "toggle": "sun" },
+  "colors": {
+    "background":    "#050507",
+    "surface":       "#0d0d12",
+    "surface_2":     "#14141c",
+
+    "primary":       "#ff6a00",
+    "primary_hover": "#ff8533",
+
+    "secondary":     "#dcdcdc",
+    "accent":        "#b31217",
+
+    "text":          "#f8f9fa",
+    "text_muted":    "#9ca3af",
+    "text_disabled": "#4a4a52",
+
+    "border":        "#1c1c24",
+    "border_focus":  "#ff6a00",
+
+    "success":       "#10b981",
+    "warning":       "#f59e0b",
+    "danger":        "#b31217",
+    "info":          "#0ea5e9"
+  },
+  "effects": {
+    "hover_y":       "-4px",
+    "backdrop_blur": "12px",
+
+    "glow_primary": "0 4px 25px rgba(255, 106, 0, 0.35)",
+    "glow_danger":  "0 4px 25px rgba(179, 18, 23, 0.4)",
+
+    "gradient_primary": "linear-gradient(135deg, #ff8533 0%, #ff6a00 50%, #b31217 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(20,20,28,0.8) 0%, rgba(13,13,18,0.98) 100%)",
+
+    "surface_overlay": {
+      "enabled": true,
+      "border_gradient": "linear-gradient(225deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 30%, rgba(255,106,0,0) 50%, rgba(255,106,0,0.4) 70%, #ff6a00 85%, #ffb84d 100%)",
+      "inner_shadow": "inset -1px 1px 0px rgba(255,255,255,0.5), inset 3px -3px 0px rgba(255,106,0,0.7)"
+    }
+  },
+  "borders": {
+    "shadow_sm": "0 0 0 transparent",
+    "shadow_md": "0 12px 32px rgba(0, 0, 0, 0.85)",
+    "shadow_lg": "0 24px 50px rgba(0, 0, 0, 0.95)"
+  },
+  "chart": {
+    "grid_color": "rgba(255, 255, 255, 0.04)",
+    "font_color": "#9ca3af",
+    "colorscale_extended": [
+      "#ff6a00", "#b31217", "#f8f9fa", "#dcdcdc",
+      "#ff8533", "#e60000", "#5a5a66", "#a30006",
+      "#ff9950", "#ff333a", "#2e2e38", "#111116"
+    ],
+    "severity": {
+      "critical": "#b31217",
+      "warning":  "#ff6a00",
+      "normal":   "#dcdcdc",
+      "stale":    "#4a4a52"
+    },
+    "echarts": {
+      "tooltip_bg":        "rgba(5, 5, 7, 0.97)",
+      "tooltip_border":    "rgba(255, 106, 0, 0.5)",
+      "tooltip_text":      "#f8f9fa",
+      "axis_line_color":   "rgba(255, 255, 255, 0.08)",
+      "axis_label_color":  "rgba(255, 255, 255, 0.5)",
+      "split_line_color":  "rgba(255, 255, 255, 0.03)",
+      "glow_blur":         16,
+      "area_opacity_top":  0.45,
+      "area_opacity_base": 0.02
+    }
+  }
+}

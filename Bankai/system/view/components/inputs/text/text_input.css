@@ -1,0 +1,57 @@
+/* 1. CONTAINER PRINCIPAL (Ajuste para o padrão co_input_text) */
+[class*="st-key-co_input_text_"] {
+    position: relative !important;
+    margin-top: 1rem !important; /* Espaço para a label flutuante */
+}
+
+/* 2. A LABEL FLUTUANTE */
+[class*="st-key-co_input_text_"] [data-testid="stWidgetLabel"] {
+    position: absolute !important;
+    top: -1.1rem !important;
+    left: 1rem !important;
+    border-radius: var(--bk-radius-sm);
+    z-index: 10 !important;
+    background-color: var(--bk-bg) !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+[class*="st-key-co_input_text_"] [data-testid="stWidgetLabel"] p {
+    color: var(--bk-text-muted) !important;
+    font-family: var(--bk-font) !important;
+    font-size: var(--bk-xs) !important;
+    font-weight: var(--bk-w-bold) !important;
+    margin: 0 !important;
+}
+
+/* 3. A BORDA DO INPUT (Baseweb) */
+[class*="st-key-co_input_text_"] [data-baseweb="input"] {
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    background-color: var(--bk-surface) !important; /* Mantém fundo sólido */
+    border-radius: var(--bk-radius-md) !important;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+/* Foco no input */
+[class*="st-key-co_input_text_"] [data-baseweb="input"]:focus-within {
+    border-color: var(--bk-primary) !important;
+}
+
+/* 4. TEXTO DO VALOR */
+[class*="st-key-co_input_text_"] input {
+    color: var(--bk-text) !important;
+    font-family: var(--bk-font) !important;
+    font-weight: var(--bk-w-medium) !important;
+}
+
+/* 5. FIX: Garantir que o container interno não tenha bordas extras */
+[class*="st-key-co_input_text_"] [data-testid="stTextInputContainer"] {
+    border: none !important;
+    background: transparent !important;
+}
+
+[class*="st-key-co_input_text_"] [data-baseweb="base-input"] {
+    background-color: var(--bk-surface)
+}

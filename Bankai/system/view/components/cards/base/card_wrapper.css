@@ -1,0 +1,23 @@
+/* ─── 3. PINTURA: CARD WRAPPER (A Placa Base) ─── */
+[class*="st-key-co_card_wrapper_bg_static_"],
+[class*="st-key-co_card_wrapper_bg_hover_"] {
+    background: var(--bk-surface-2) !important;
+    padding: var(--bk-sp-xs) !important; /* Define a largura da borda externa */
+    
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    box-shadow: var(--bk-shadow-md) !important;
+        
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* ─── AJUSTE DO CARD INTERNO (A Área de Conteúdo) ─── */
+[class*="st-key-co_card_wrapper_bg_static_"] > div > [class*="st-key-co_card_wrapper_bg_"] {
+    background: var(--bk-surface) !important;
+    
+    /* 🚀 A BORDA FIRME: Cria uma linha seca e definida usando a cor de borda do tema */
+    border: 1px solid var(--bk-border) !important; 
+    
+    /* 🚀 O FIM DA MARGEM BRANCA: Anulamos as sombras e brilhos herdados */
+    box-shadow: none !important; 
+}

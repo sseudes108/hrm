@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "name": "Athena Dark - Nocturnal Parthenon",
+    "description": "Tema escuro focado em elegância e estratégia. Simulando placas de mármore negro polido com veios sutis, detalhes em bronze grego e luzes contidas para cálculos precisos.",
+    "base": "dark"
+  },
+  "assets": {
+    "background_image": "apps/engines/athena/source/images/dark_marble.png"
+  },
+  "icons": {
+    "toggle": "moon"
+  },
+  "colors": {
+    "background":    "#0a0b0e",
+    "surface":       "#13151a",
+    "surface_2":     "#1d2027",
+    "primary":       "#c5a059",
+    "primary_hover": "#d6b575",
+    "secondary":     "#475569",
+    "accent":        "#c2410c",
+    "text":          "#e5e7eb",
+    "text_muted":    "#9ca3af",
+    "text_disabled": "#4b5563",
+    "border":        "#272b36",
+    "border_focus":  "#c5a059",
+    "success":       "#10b981",
+    "warning":       "#f59e0b",
+    "danger":        "#e11d48",
+    "info":          "#3b82f6",
+    "overlay_app":   "rgba(10,11,14,0.75)"
+  },
+  "effects": {
+    "hover_y": "-2px",
+    "backdrop_blur": "12px",
+    "glow_primary": "0 4px 20px rgba(197, 160, 89, 0.15)",
+    "glow_danger":  "0 4px 20px rgba(225, 29, 72, 0.2)",
+    "gradient_primary": "linear-gradient(135deg, #c5a059 0%, #9c7c3d 100%)",
+    "gradient_surface": "linear-gradient(180deg, rgba(29,32,39,0.6) 0%, rgba(19,21,26,0.95) 100%)",
+    "surface_overlay": {
+      "enabled": true,
+      "border_gradient": "linear-gradient(225deg, rgba(197,160,89,0.3) 0%, rgba(197,160,89,0.05) 40%, rgba(39,43,54,0) 60%, rgba(39,43,54,0.6) 100%)",
+      "inner_shadow": "inset -1px 1px 0px rgba(197,160,89,0.15), inset 2px -2px 0px rgba(10,11,14,0.8)"
+    }
+  },
+  "borders": {
+    "shadow_sm":   "0 4px 12px rgba(0, 0, 0, 0.4)",
+    "shadow_md":   "0 8px 24px rgba(0, 0, 0, 0.6)",
+    "shadow_lg":   "0 16px 40px rgba(0, 0, 0, 0.8)"
+  },
+  "chart": {
+    "grid_color": "rgba(156, 163, 175, 0.06)",
+    "font_color": "#9ca3af",
+    "colorscale_extended": [
+      "#c5a059", "#475569", "#c2410c", "#9c7c3d",
+      "#272b36", "#d6b575", "#64748b", "#9a3412",
+      "#fcd34d", "#1d2027", "#f87171", "#0a0b0e"
+    ],
+    "severity": {
+      "critical": "#e11d48",
+      "warning":  "#f59e0b",
+      "normal":   "#9ca3af",
+      "stale":    "#4b5563"
+    },
+    "plotly": {
+      "bg": "transparent",
+      "plot_bg": "transparent"
+    },
+    "echarts": {
+      "tooltip_bg":        "rgba(19, 21, 26, 0.95)",
+      "tooltip_border":    "rgba(197, 160, 89, 0.3)",
+      "tooltip_text":      "#e5e7eb",
+      "axis_line_color":   "rgba(156, 163, 175, 0.15)",
+      "axis_label_color":  "rgba(156, 163, 175, 0.6)",
+      "split_line_color":  "rgba(156, 163, 175, 0.06)",
+      "glow_blur":         10,
+      "area_opacity_top":  0.25,
+      "area_opacity_base": 0.02
+    }
+  }
+}

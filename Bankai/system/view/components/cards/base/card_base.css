@@ -1,0 +1,97 @@
+/* ─── 1. ESTRUTURA BASE (Para TODOS os cards, com ou sem fundo) ─── */
+/* Como a chave sempre contém "co_card_", isso aplica a base para os dois */
+[class*="st-key-co_card_"] {
+    padding: var(--bk-sp-sm) !important;
+}
+
+[class*="st-key-co_card_metric"],
+[class*="st-key-co_card_base"] {
+    padding: var(--bk-sp-md) !important;
+}
+
+/* ─── 2. PINTURA: CARD NORMAL (Apenas _bg_) ─── */
+[class*="st-key-co_card_base_bg_"],
+[class*="st-key-co_card_header_bg_"],
+[class*="st-key-co_card_wrapper_bg_"],
+[class*="st-key-co_card_metric_bg_"],
+[class*="st-key-co_card_chart_bg_"]{
+    background:      var(--bk-gradient-surface) !important;
+    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
+    -webkit-backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.04) !important;
+
+    border-radius:   var(--bk-radius-md) !important;
+    box-shadow:      var(--bk-shadow-lg), var(--bk-card-inner-shadow) !important;
+
+    /* 🚀 CORREÇÃO DO JITTER NA FONTE */
+    backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    transform: translateY(0) translateZ(0) !important; /* Ponto de partida do transform */
+
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease, 
+                transform 0.3s ease !important;
+}
+
+/* ─── HOVER (Apenas para os cards normais configurados com Hover) ─── */
+[class*="st-key-co_card_bg_hover_"]:hover {
+    box-shadow: var(--bk-shadow-lg), var(--bk-glow-primary), var(--bk-card-inner-shadow) !important;
+    
+    /* 🚀 Mantenha o translateZ no hover */
+    transform: translateY(var(--bk-hover-y)) translateZ(0) !important;
+}
+
+/* ─── HEADER CONTAINER ─── */
+[class*="st-key-co_card_"] .bk-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Fixa o distanciamento em exatos 4px sempre */
+    justify-content: flex-start;
+}
+
+/* Título */
+[class*="st-key-co_card_"] .bk-card-title {
+    font-size: var(--bk-sub, 1.25rem);
+    font-weight: var(--bk-w-bold);
+    color: var(--bk-text);
+    line-height: 1;
+    padding: var(--bk-radius-sm);
+
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Controla o distanciamento entre o ícone e o título */
+}
+
+/* Subtítulo */
+[class*="st-key-co_card_"] .bk-card-subtitle {
+    font-size: var(--bk-xs, 0.75rem);
+    font-weight: var(--bk-w-medium);
+    color: var(--bk-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: var(--bk-radius-sm);
+}
+
+/* ─── HIGHLIGHT (right side) ─── */
+[class*="st-key-co_card_"] .bk-card-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+[class*="st-key-co_card_"] .bk-card-highlight-label {
+    font-size: var(--bk-xs);
+    font-weight: var(--bk-w-medium);
+    color: var(--bk-text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+[class*="st-key-co_card_"] .bk-card-highlight-value {
+    font-size: var(--bk-sub);
+    font-weight: var(--bk-w-bold);
+    color: var(--bk-primary);
+    line-height: 1;
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "name": "Bankai - Polished Shard",
+    "description": "Base estrutural compartilhada para os temas do sistema Bankai."
+  },
+  "layout": {
+    "header_height": "72px",
+    "logo_size": "42"
+  },
+  "typography": {
+    "font_family": "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs": 10,
+    "size_sm": 12,
+    "size_base": 14,
+    "size_subtitle": 18,
+    "size_title": 26,
+    "size_display": 44,
+    "weight_normal": 400,
+    "weight_medium": 500,
+    "weight_bold": 700,
+    "line_height": 1.6
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px", 
+    "lg": "24px",
+    "xl": "40px"
+  },
+  "borders": {
+    "width": "1px",
+    "radius_sm": "4px",
+    "radius_md": "8px",
+    "radius_lg": "16px",
+    "radius_full": "9999px"
+  },
+  "chart": {
+    "plotly": {
+      "bg": "transparent",
+      "plot_bg": "transparent"
+    }
+  }
+}

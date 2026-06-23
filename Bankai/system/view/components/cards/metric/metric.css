@@ -1,0 +1,59 @@
+/* 1. Mata o "buraco" padrão que o Streamlit injeta entre os containers */
+[class*="st-key-co_metric_"] [data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+}
+
+/* 4. Valor Central: O coração do card */
+[class*="st-key-co_metric_value_"] {
+    padding: var(--bk-radius-sm);
+    
+    /* ── Escala e Peso ── */
+    font-size: var(--bk-size-display, 2.25rem) !important; /* Fica gigante e imponente */
+    font-weight: var(--bk-weight-bold, 700) !important;    /* Ancora a visão do usuário */
+    
+    /* ── Estética Financeira ── */
+    font-family: var(--bk-font-mono, 'Fira Code', monospace) !important; /* Traz o visual de trading */
+    color: var(--bk-text, #e2e8f0) !important;             /* A cor mais brilhante do tema */
+    
+    /* ── Espaçamento Interno ── */
+    line-height: 1 !important;                             /* Impede que o número crie margens falsas em cima/baixo */
+    letter-spacing: -0.02em !important;                    /* Junta levemente os números grandes para elegância */
+}
+
+/* Proteção: Garante que o parágrafo fantasma do Streamlit herde tudo e não crie margens */
+[class*="st-key-co_metric_value_"] p,
+[class*="st-key-co_metric_value_"] div {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    line-height: inherit !important;
+    letter-spacing: inherit !important;
+    margin: 0 !important;
+}
+
+/* 5. Footer: Empurrado para o fundo */
+[class*="st-key-co_metric_footer_"] {
+    margin-top: auto !important;
+    padding-top: 0.2rem !important;
+}
+
+/* Removemos margens fantasmas dos parágrafos do HTML injetado */
+[class*="st-key-co_metric_"] p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ── Alinhamento do Slot HTML da Direita ── */
+[class*="st-key-co_cd_right_html_"] {
+    display: flex !important;
+    justify-content: flex-end !important; /* Empurra todo o conteúdo para o final (direita) */
+    text-align: right !important;         /* Garante que o texto interno também alinhe */
+    width: 100% !important;
+}
+
+/* Opcional: Se o Streamlit injetar a div de parágrafo em volta do st.html */
+[class*="st-key-co_cd_right_html_"] p {
+    margin: 0 !important;
+    text-align: right !important;
+}

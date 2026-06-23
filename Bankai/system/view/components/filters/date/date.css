@@ -1,0 +1,90 @@
+/*POP OVER*/
+/* 1. Removemos a "casca" sólida de fora */
+/* [data-baseweb="popover"] > div {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+} */
+
+/* 2. O Calendário de Vidro */
+/* [data-baseweb="calendar"] {
+
+} */
+/*Full Background*/
+
+.st-df{
+    background:      var(--bk-surface_2) !important;
+    backdrop-filter: blur(var(--bk-backdrop-blur)) saturate(140%) brightness(1.01) !important;
+    border-radius:   var(--bk-radius-md) !important;
+    border-color:    var(--bk-primary);
+}
+/*************************/
+
+/*Header *Mes e Ano*/
+.st-b7 {
+    background:      var(--bk-surface_2) !important;
+}
+/*************************/
+
+/*Espaços vazios*/
+.st-ey::after{
+    background:      var(--bk-gradient) !important;
+}
+/*************************/
+
+/*Borda dia selecionado*/
+.st-fr::after{
+    border-left-color:      var(--bk-primary) !important;
+}
+.st-fq::after{
+    border-right-color:      var(--bk-primary) !important;
+}
+.st-fp::after{
+    border-bottom-color:      var(--bk-primary) !important;
+}
+.st-fo::after{
+    border-top-color:      var(--bk-primary) !important;
+}
+/**************************/
+
+/*Fundo dia Selecionado*/
+.st-fx::after{
+    background-color: color-mix(in srgb, var(--bk-primary) 70%, transparent) !important;
+
+}
+/*************************/
+
+/*Textos*/
+.st-bb{
+    color: var(--bk-text);
+}
+/*************************/
+
+/*Dias da Semana*/
+.st-ea {
+    color: var(--bk-text_disabled);
+}
+/*************************/
+
+/*Borda externa input*/
+[class*="st-key-co_filter_date_"] .st-b3{
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    border-radius: var(--bk-radius-md) !important;
+}
+/*************************/
+
+/*Borda selected input*/
+[class*="st-key-co_filter_date_"] .st-dc{
+    border-bottom-color: var(--bk-primary) !important;
+}
+[class*="st-key-co_filter_date_"] .st-dc{
+    border-top-color: var(--bk-primary) !important;
+}
+[class*="st-key-co_filter_date_"] .st-dc{
+    border-right-color: var(--bk-primary) !important;
+}
+[class*="st-key-co_filter_date_"] .st-dc{
+    border-left-color: var(--bk-primary) !important;
+}
+/*************************/

@@ -1,0 +1,136 @@
+[class*="st-key-co_card_"][class*="_metric_"] [data-testid="stLayoutWrapper"]{
+    min-height: 3rem !important;
+    max-height: 3rem !important;
+}
+/* ── Metric card — layout interno ── */
+.metric-inner {
+    display:        flex;
+    flex-direction: column;
+}
+
+/* ── Header ── */
+.metric-header {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     flex-start;
+}
+
+.metric-header-left {
+    display:        flex;
+    flex-direction: column;
+    gap:            2px;
+}
+
+.metric-header-right {
+    display:     flex;
+    align-items: center;
+    gap:         var(--bk-sp-xs);
+}
+
+.metric-title {
+    font-size:   var(--bk-sm);
+    font-weight: var(--bk-w-bold);
+    color:       var(--bk-text-muted);
+    margin:      0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.metric-subtitle {
+    font-size: var(--bk-xs);
+    color:     var(--bk-text-dis);
+    margin:    0;
+}
+
+.metric-icon {
+    font-size: 1.4rem;
+    opacity:   0.85;
+}
+
+.metric-info-icon {
+    font-size: var(--bk-xs);
+    color:     var(--bk-text-dis);
+    cursor:    help;
+}
+
+/* ── Body ── */
+.metric-body {
+    display:     flex;
+    align-items: baseline;
+}
+
+.metric-value {
+    font-size:   var(--bk-title);
+    font-weight: var(--bk-w-bold);
+    color:       var(--bk-text);
+    margin:      0;
+    line-height: 1;
+}
+
+.metric-delta {
+    font-size:   var(--bk-xs);
+    font-weight: var(--bk-w-medium);
+    line-height: 1;
+}
+
+.metric-value-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    height: 100%;
+}
+
+.metric-value-main {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-weight: var(--bk-w-bold);
+    color: var(--bk-text);
+    line-height: 1;
+    margin-top: 0.7rem;
+}
+
+.metric-delta {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    font-size: var(--bk-md);
+    font-weight: var(--bk-w-bold);
+}
+
+.metric-delta-icon {
+    line-height: 1;
+}
+
+.metric-delta.success {
+    color: var(--bk-success);
+}
+
+.metric-delta.danger {
+    color: var(--bk-danger);
+}
+
+.metric-delta.info {
+    color: var(--bk-info);
+}
+
+.metric-delta.warning {
+    color: var(--bk-warning);
+}
+
+.metric-delta.custom {
+    color: var(--bk-primary);
+}
+
+@media (max-width: 640px) {
+
+    [class*="st-key-co_card_"][class*="_metric_"] [data-testid="stHorizontalBlock"] {
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    [class*="st-key-co_card_"][class*="_metric_"] [data-testid="stColumn"] {
+        min-width: 0 !important;
+    }
+
+}

@@ -1,0 +1,73 @@
+/* 1. CONTAINER PRINCIPAL (Ajuste para o padrão co_input_number) */
+[class*="st-key-co_input_number_"] {
+    position: relative !important;
+    margin-top: 1rem !important; /* Espaço para a label flutuante */
+}
+
+/* 2. A LABEL FLUTUANTE (Mesma lógica do Selectbox) */
+[class*="st-key-co_input_number_"] [data-testid="stWidgetLabel"] {
+    position: absolute !important;
+    top: -1.1rem !important;
+    left: 1rem !important;
+    border-radius: var(--bk-radius-sm);
+    z-index: 10 !important;
+    background-color: var(--bk-bg) !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Acessa o contêiner dentro da classe específica */
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputContainer"] {
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    transition: border-color 0.3s ease !important;
+}
+
+/* Acessa a mudança de cor no estado de foco (clicado) */
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputContainer"]:focus-within {
+    border-color: var(--bk-primary) !important;
+}
+
+/* Fundo input */
+[class*="st-key-co_input_number_"] [data-baseweb="base-input"]{
+    background-color: var(--bk-surface);
+}
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputField"]{
+    color: var(--bk-text-muted);
+}
+
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputStepDown"]{
+    background-color: var(--bk-surface);
+    color: var(--bk-text-muted);
+}
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputStepUp"]{
+    background-color: var(--bk-surface);
+    color: var(--bk-text-muted);
+}
+
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputStepDown"]:hover{
+    background-color: var(--bk-primary);
+}
+[class*="st-key-co_input_number_"] [data-testid="stNumberInputStepUp"]:hover{
+    background-color: var(--bk-primary);
+}
+/* ****************************************** */
+
+
+[class*="st-key-co_input_number_"] [data-testid="stWidgetLabel"] p {
+    color: var(--bk-text-muted) !important;
+    font-family: var(--bk-font) !important;
+    font-size: var(--bk-xs) !important;
+    font-weight: var(--bk-w-bold) !important;
+    margin: 0 !important;
+}
+
+/* 3. A BORDA DO INPUT (Baseweb) */
+[class*="st-key-co_input_number_"] [data-baseweb="input"] {
+    border: var(--bk-border-w) solid var(--bk-border) !important;
+    background-color: transparent !important;
+    border-radius: var(--bk-radius-md) !important;
+    transition: all 0.3s ease;
+    /* Remove sombra nativa */
+    box-shadow: none !important;
+}

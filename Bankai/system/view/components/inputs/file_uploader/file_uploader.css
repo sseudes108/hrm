@@ -1,0 +1,74 @@
+/* 1. CONTAINER PRINCIPAL */
+[class*="st-key-co_file_uploader_"] {
+    position: relative !important;
+    margin-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* 2. A LABEL (Mantendo o padrão flutuante) */
+[class*="st-key-co_file_uploader_"] [data-testid="stWidgetLabel"] {
+    position: absolute !important;
+    top: -1.1rem !important;
+    left: 1rem !important;
+    border-radius: var(--bk-radius-sm);
+    z-index: 10 !important;
+    background-color: var(--bk-bg) !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+[class*="st-key-co_file_uploader_"] [data-testid="stWidgetLabel"] p {
+    color: var(--bk-text-muted) !important;
+    font-family: var(--bk-font) !important;
+    font-size: var(--bk-xs) !important;
+    font-weight: var(--bk-w-bold) !important;
+    margin: 0 !important;
+}
+
+/* 3. A ÁREA DE DROP (O contêiner do uploader em si) */
+[class*="st-key-co_file_uploader_"] [data-testid="stFileUploaderDropzone"] {
+    border: var(--bk-border-w) dashed var(--bk-border) !important;
+    background-color: var(--bk-surface) !important;
+    border-radius: var(--bk-radius-md) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover na área de Drop */
+[class*="st-key-co_file_uploader_"] [data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--bk-primary) !important;
+    background-color: color-mix(in srgb, var(--bk-primary) 5%, var(--bk-surface)) !important;
+}
+
+/* 4. TEXTOS E BOTÕES DENTRO DO UPLOADER */
+[class*="st-key-co_file_uploader_"] [data-testid="stFileUploaderDropzone"] span {
+    color: var(--bk-text) !important;
+    font-family: var(--bk-font) !important;
+}
+
+/* Esconde as instruções de "Drag and drop" */
+[class*="st-key-co_file_uploader_"] [data-testid="stFileUploaderDropzoneInstructions"] {
+    display: none !important;
+}
+
+/* Opcional: Centraliza o botão dentro da área de drop */
+[class*="st-key-co_file_uploader_"] [data-testid="stFileUploaderDropzone"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 54px !important; /* Ajuste conforme necessário */
+}
+
+/* Botão de "Browse files" ou "Remove" */
+[class*="st-key-co_file_uploader_"] button {
+    border: 1px solid var(--bk-border) !important;
+    color: var(--bk-text) !important;
+    background-color: var(--bk-bg) !important;
+    border-radius: var(--bk-radius-md) !important;
+}
+
+[class*="st-key-co_file_uploader_"] button:hover {
+    border-color: var(--bk-primary) !important;
+    color: var(--bk-primary) !important;
+}

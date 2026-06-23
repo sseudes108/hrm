@@ -1,0 +1,65 @@
+/* ── Paginator — botões base ── */
+[class*="st-key-co_navigator_"] button {
+    background:    transparent;
+    border:        none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding:       var(--bk-sp-sm) var(--bk-sp-md);
+
+    font-family:   var(--bk-font);
+    font-size:     var(--bk-sm);
+    font-weight:   var(--bk-w-normal);
+    color:         var(--bk-text-muted);
+
+    width:         100%;
+    cursor:        pointer;
+    transition:    border-color 0.2s, color 0.2s;
+}
+
+/* ── Hover ── */
+[class*="st-key-co_navigator_"] button:hover {
+    border-bottom: 2px solid var(--bk-border-focus);
+    color:         var(--bk-secondary);
+    background:    transparent;
+}
+
+/* ── Focus — remove o outline padrão do Streamlit ── */
+[class*="st-key-co_navigator_"] button:focus {
+    box-shadow: none;
+    outline:    none;
+}
+
+/* ── Mobile: scroll horizontal em vez de colunas espremidas ── */
+@media (max-width: 640px) {
+
+    /* Esconde o wrapper de colunas do Streamlit e vira scroll */
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"] {
+        display:          flex !important;
+        flex-wrap:        nowrap !important;
+        overflow-x:       auto !important;
+        overflow-y:       hidden !important;
+        gap:              0 !important;
+        scrollbar-width:  none !important; /* Firefox */
+        -ms-overflow-style: none !important;
+    }
+
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"]::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    /* Cada coluna vira item de tamanho fixo */
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"] > div {
+        flex:       0 0 auto !important;
+        width:      auto !important;
+        min-width:  80px !important;
+    }
+
+    [class*="st-key-co_navigator_"]
+    [data-testid="stColumn"]:has(button) {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 80px !important;
+        margin-bottom: 0.25rem;
+    }
+}
+
