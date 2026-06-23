@@ -1,1 +1,0 @@
-from . import psql as psql_man

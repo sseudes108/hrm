@@ -1,1 +1,0 @@
-from .adi import page as adi
