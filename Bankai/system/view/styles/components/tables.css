@@ -1,0 +1,20 @@
+.ui-table-wrap { overflow-x: auto; width: 100%; }
+.ui-table { border-collapse: collapse; width: 100%; font-size: var(--ui-typography-size-base); }
+.ui-table th { color: var(--ui-colors-text-muted); border-bottom: 1px solid var(--ui-colors-border); font-weight: var(--ui-typography-weight-medium); padding: var(--ui-spacing-sm); white-space: nowrap; }
+.ui-table td { border-bottom: 1px solid color-mix(in srgb, var(--ui-colors-border) 65%, transparent); color: var(--ui-colors-text); padding: var(--ui-spacing-sm); }
+.ui-table tbody tr:last-child td { border-bottom: 0; }
+.ui-table tbody tr:hover td { background: color-mix(in srgb, var(--ui-colors-primary) 7%, transparent); }
+.ui-table-align--left { text-align: left; }
+.ui-table-align--center { text-align: center; }
+.ui-table-align--right { text-align: right; }
+.ui-table-empty { color: var(--ui-colors-text-muted); padding: var(--ui-spacing-lg); text-align: center; }
+.ui-table-badge { border-radius: var(--ui-borders-radius-full); display: inline-block; font-size: var(--ui-typography-size-xs); font-weight: var(--ui-typography-weight-bold); padding: 2px 8px; }
+.ui-table-badge--success { background: color-mix(in srgb, var(--ui-colors-success) 18%, transparent); color: var(--ui-colors-success); }
+.ui-table-badge--warning { background: color-mix(in srgb, var(--ui-colors-warning) 18%, transparent); color: var(--ui-colors-warning); }
+.ui-table-badge--danger { background: color-mix(in srgb, var(--ui-colors-danger) 18%, transparent); color: var(--ui-colors-danger); }
+.ui-table-badge--muted { background: color-mix(in srgb, var(--ui-colors-text-muted) 16%, transparent); color: var(--ui-colors-text-muted); }
+.ui-table-badge--info { background: color-mix(in srgb, var(--ui-colors-info) 16%, transparent); color: var(--ui-colors-info); }
+.ui-table-trend { font-weight: var(--ui-typography-weight-medium); }
+.ui-table-trend--positive { color: var(--ui-colors-success); }
+.ui-table-trend--negative { color: var(--ui-colors-danger); }
+.ui-table-trend--neutral { color: var(--ui-colors-text-muted); }

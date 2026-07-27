@@ -1,0 +1,17 @@
+/* Busca o contêiner pela chave E mira no botão dentro dele */
+[class*="st-key-btn_"] button {
+    background-color: var(--ui-components-button-background) !important;
+    border-radius: var(--ui-components-button-radius) !important;
+    color: var(--ui-components-button-foreground) !important;
+    border-color: var(--ui-components-button-border) !important;
+
+    /* 🚀 O SEGREDO DA SUAVIDADE (Vai animar a entrada e a saída) */
+    transition: all 0.3s ease !important;
+}
+
+/* Estilo do efeito de hover (quando passa o mouse) */
+[class*="st-key-btn_"] button:hover {
+    background-color: var(--ui-components-button-hover-background) !important;
+    border-color: var(--ui-components-button-hover-background) !important;
+    color: var(--ui-components-button-hover-foreground) !important;
+}

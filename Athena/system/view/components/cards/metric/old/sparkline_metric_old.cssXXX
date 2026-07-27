@@ -1,0 +1,3 @@
+[class*="st-key-co_card_"][class*="_metric_"] .echarts-container{
+    margin-top: -2.7rem !important;
+}

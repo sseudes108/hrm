@@ -1,0 +1,35 @@
+/* Slots sticky preservam o fluxo do documento e não encobrem o conteúdo. */
+[class*="st-key-co_layout_header_sticky_"] {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    background: var(--ui-colors-background) !important;
+}
+
+[class*="st-key-co_layout_sidebar_sticky_"],
+[class*="st-key-co_layout_filters_sticky_"] {
+    position: sticky !important;
+    top: var(--ui-layout-header-height) !important;
+    z-index: 90 !important;
+    align-self: start !important;
+    background: var(--ui-colors-background) !important;
+}
+
+[class*="st-key-co_layout_content_"] {
+    padding:
+        var(--ui-layout-content-padding-y)
+        var(--ui-layout-content-padding-x) !important;
+}
+
+[class*="st-key-co_layout_shell_"] {
+    padding:
+        var(--ui-layout-shell-padding-y)
+        var(--ui-layout-shell-padding-x) !important;
+    gap: 0 !important;
+}
+
+/* O shell compõe slots adjacentes; o espaçamento entre eles é decisão da rota. */
+[class*="st-key-co_layout_shell_"] > [data-testid="stVerticalBlock"],
+[class*="st-key-co_layout_shell_"] > div > [data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+}

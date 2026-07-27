@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "name": "Bankai - Polished Shard",
+    "description": "Base estrutural compartilhada para os temas do sistema Bankai."
+  },
+  "layout": {
+    "header_height": "72px",
+    "logo_size": "42",
+    "content_padding_x": "clamp(2px, 2vw, 2px)",
+    "content_padding_y": "2px",
+    "shell_padding_x": "clamp(12px, 2vw, 40px)",
+    "shell_padding_y": "12px"
+  },
+  "typography": {
+    "font_family": "Inter, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "size_xs": 10,
+    "size_sm": 12,
+    "size_base": 14,
+    "size_subtitle": 18,
+    "size_title": 26,
+    "size_display": 36,
+    "weight_normal": 400,
+    "weight_medium": 500,
+    "weight_bold": 700,
+    "line_height": 1.6
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "40px"
+  },
+  "borders": {
+    "width": "1px",
+    "radius_sm": "4px",
+    "radius_md": "8px",
+    "radius_lg": "16px",
+    "radius_full": "9999px"
+  },
+  "components": {
+    "button": {
+      "background": "var(--ui-colors-border)",
+      "foreground": "var(--ui-colors-text)",
+      "border": "transparent",
+      "radius": "var(--ui-borders-radius-md)",
+      "hover_background": "var(--ui-colors-primary)",
+      "hover_foreground": "var(--ui-colors-background)"
+    },
+    "input": {
+      "background": "var(--ui-colors-surface)",
+      "border": "var(--ui-borders-width) solid var(--ui-colors-border)",
+      "radius": "var(--ui-borders-radius-md)",
+      "focus_border": "var(--ui-colors-primary)"
+    },
+    "navigation": {
+      "foreground": "var(--ui-colors-text-muted)",
+      "hover_foreground": "var(--ui-colors-secondary)",
+      "active_foreground": "var(--ui-colors-text)",
+      "indicator": "var(--ui-colors-border-focus)"
+    },
+    "metric": {
+      "value_font": "var(--ui-typography-font-family-mono)",
+      "value_size": "var(--ui-typography-size-display)",
+      "value_weight": "var(--ui-typography-weight-bold)",
+      "value_color": "var(--ui-colors-text)"
+    },
+    "card": {
+      "padding": {
+        "none": "0",
+        "compact": "var(--ui-spacing-sm)",
+        "normal": "var(--ui-spacing-md)"
+      },
+      "variants": {
+        "surface": {
+          "background": "var(--ui-effects-gradient-surface)",
+          "border": "var(--ui-borders-width) solid var(--ui-colors-border)",
+          "radius": "var(--ui-borders-radius-md)",
+          "shadow": "var(--ui-borders-shadow-lg), var(--ui-effects-surface-overlay-inner-shadow)",
+          "hover_shadow": "var(--ui-borders-shadow-lg), var(--ui-effects-glow-primary), var(--ui-effects-surface-overlay-inner-shadow)",
+          "hover_transform": "translateY(var(--ui-effects-hover-y)) translateZ(0)"
+        },
+        "elevated": {
+          "background": "var(--ui-effects-gradient-surface)",
+          "border": "var(--ui-borders-width) solid var(--ui-colors-border)",
+          "radius": "var(--ui-borders-radius-lg)",
+          "shadow": "var(--ui-borders-shadow-lg)",
+          "hover_shadow": "var(--ui-borders-shadow-lg), var(--ui-effects-glow-primary)",
+          "hover_transform": "translateY(var(--ui-effects-hover-y)) translateZ(0)"
+        },
+        "outline": {
+          "background": "transparent",
+          "border": "var(--ui-borders-width) solid var(--ui-colors-border-focus)",
+          "radius": "var(--ui-borders-radius-md)",
+          "shadow": "none",
+          "hover_shadow": "0 0 0 1px var(--ui-colors-border-focus)",
+          "hover_transform": "translateY(0)"
+        },
+        "minimal": {
+          "background": "transparent",
+          "border": "none",
+          "radius": "0",
+          "shadow": "none",
+          "hover_shadow": "none",
+          "hover_transform": "translateY(0)"
+        },
+        "chart": {
+          "background": "var(--ui-effects-gradient-surface)",
+          "border": "var(--ui-borders-width) solid var(--ui-colors-border)",
+          "radius": "var(--ui-borders-radius-md)",
+          "shadow": "var(--ui-borders-shadow-md)",
+          "hover_shadow": "var(--ui-borders-shadow-md)",
+          "hover_transform": "translateY(0)"
+        }
+      }
+    }
+  },
+  "chart": {
+    "plotly": {
+      "bg": "transparent",
+      "plot_bg": "transparent"
+    }
+  }
+}

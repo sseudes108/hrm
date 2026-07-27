@@ -1,0 +1,24 @@
+.ui-alert {
+    display: flex;
+    align-items: center;
+    gap: var(--ui-spacing-sm);
+    font-size: var(--ui-typography-size-base);
+    font-weight: var(--ui-typography-weight-medium);
+    line-height: var(--ui-typography-line-height);
+}
+
+.ui-alert .material-symbols-rounded {
+    font-size: 1.5em;
+}
+
+.ui-alert--info .material-symbols-rounded {
+    color: var(--ui-colors-info);
+}
+
+.ui-alert--warning .material-symbols-rounded {
+    color: var(--ui-colors-warning);
+}
+
+.ui-alert--error .material-symbols-rounded {
+    color: var(--ui-colors-danger);
+}

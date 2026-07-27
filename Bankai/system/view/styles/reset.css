@@ -1,0 +1,16 @@
+header[data-testid="stHeader"],
+button[data-testid="collapsedControl"],
+footer,
+#MainMenu {
+    display: none !important;
+}
+
+.block-container {
+    margin-top: -1.6em !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+.st-emotion-cache-tn0cau {
+    gap: 0 !important;
+}

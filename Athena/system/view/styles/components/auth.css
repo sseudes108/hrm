@@ -1,0 +1,45 @@
+/* Login: tokens do tema, sem depender dos seletores dos componentes de input. */
+[class*="st-key-co_auth_panel_"] {
+    background: var(--ui-components-card-variants-surface-background) !important;
+    border: var(--ui-components-card-variants-surface-border) !important;
+    border-radius: var(--ui-components-card-variants-surface-radius) !important;
+    box-shadow: var(--ui-components-card-variants-surface-shadow) !important;
+    padding: var(--ui-components-card-padding-normal) !important;
+}
+
+[class*="st-key-co_auth_panel_"] [data-testid="stTextInput"] [data-baseweb="input"] {
+    background-color: var(--ui-components-input-background) !important;
+    border: var(--ui-components-input-border) !important;
+    border-radius: var(--ui-components-input-radius) !important;
+}
+
+[class*="st-key-co_auth_panel_"] [data-testid="stTextInput"] [data-baseweb="input"]:focus-within {
+    border-color: var(--ui-components-input-focus-border) !important;
+}
+
+[class*="st-key-co_auth_panel_"] input {
+    color: var(--ui-colors-text) !important;
+    background-color: transparent !important;
+}
+
+[class*="st-key-co_auth_panel_"] [data-baseweb="base-input"]{
+    background-color:var(--ui-colors-surface);
+}
+
+[class*="st-key-co_auth_panel_"] [data-testid="stWidgetLabel"] p,
+[class*="st-key-co_auth_panel_"] [data-testid="stWidgetLabel"] {
+    color: var(--ui-colors-text-muted) !important;
+}
+
+[class*="st-key-co_auth_panel_"] [data-testid="stFormSubmitButton"] button {
+    width: 100% !important;
+    background-color: var(--ui-components-button-background) !important;
+    color: var(--ui-components-button-foreground) !important;
+    border: 1px solid var(--ui-components-button-border) !important;
+    border-radius: var(--ui-components-button-radius) !important;
+}
+
+[class*="st-key-co_auth_panel_"] [data-testid="stFormSubmitButton"] button:hover {
+    background-color: var(--ui-components-button-hover-background) !important;
+    color: var(--ui-components-button-hover-foreground) !important;
+}

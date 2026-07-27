@@ -1,0 +1,30 @@
+/* Modificadores de superfície para filtros, definidos pela chave do container. */
+[class*="st-key-co_filter_select_plain_"],
+[class*="st-key-co_filter_date_plain_"] {
+    padding: 0 !important;
+}
+
+[class*="st-key-co_filter_select_card_"],
+[class*="st-key-co_filter_date_card_"] {
+    padding: 0.4em !important;
+}
+
+[class*="st-key-co_filter_select_plain_"] [data-testid="stWidgetLabel"],
+[class*="st-key-co_filter_date_plain_"] [data-testid="stWidgetLabel"] {
+    background-color: var(--ui-colors-background) !important;
+}
+
+[class*="st-key-co_filter_select_card_"] [data-testid="stWidgetLabel"],
+[class*="st-key-co_filter_date_card_"] [data-testid="stWidgetLabel"] {
+    background-color: var(--ui-colors-surface) !important;
+}
+
+[class*="st-key-co_filter_select_card_"]:hover [data-testid="stWidgetLabel"],
+[class*="st-key-co_filter_date_card_"]:hover [data-testid="stWidgetLabel"] {
+    background-color: var(--ui-colors-surface-2) !important;
+}
+
+[class*="st-key-co_filter_"]:hover [data-baseweb="select"] > div,
+[class*="st-key-co_filter_"] [data-baseweb="input"]:hover > div {
+    border-color: var(--ui-components-input-focus-border) !important;
+}

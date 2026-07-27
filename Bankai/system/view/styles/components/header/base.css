@@ -1,0 +1,31 @@
+[class*="st-key-co_card_header_"] {
+    padding: var(--ui-spacing-sm) !important;
+}
+
+.header-brand-title {
+    font-size: var(--ui-typography-size-subtitle) !important;
+    font-weight: var(--ui-typography-weight-bold) !important;
+    color: var(--ui-colors-text) !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    letter-spacing: 0.08em !important;
+}
+
+.header-brand-subtitle {
+    font-size: var(--ui-typography-size-xs) !important;
+    font-weight: var(--ui-typography-weight-bold) !important;
+    color: var(--ui-colors-primary) !important;
+    line-height: 1 !important;
+    margin-bottom: 1em  !important;
+    letter-spacing: 0.12em !important;
+}
+
+
+/* ─── 5. RESPONSIVIDADE (Mantida a original) ─────────────────── */
+@media (max-width: 640px) {
+    [class*="st-key-co_card_bg_static_header_"] {
+        height: auto !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}

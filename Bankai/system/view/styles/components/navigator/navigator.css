@@ -1,0 +1,71 @@
+/* ── Paginator — botões base ── */
+[class*="st-key-co_navigator_"] button {
+    background:    transparent;
+    border:        none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding:       var(--ui-spacing-sm) var(--ui-spacing-md);
+
+    font-family:   var(--ui-typography-font-family);
+    font-size:     var(--ui-typography-size-sm);
+    font-weight:   var(--ui-typography-weight-normal);
+    color:         var(--ui-components-navigation-foreground);
+
+    width:         100%;
+    cursor:        pointer;
+    transition:    border-color 0.2s, color 0.2s;
+}
+
+/* ── Hover ── */
+[class*="st-key-co_navigator_"] button:hover {
+    border-bottom: 2px solid var(--ui-components-navigation-indicator);
+    color:         var(--ui-components-navigation-hover-foreground);
+    background:    transparent;
+}
+
+[class*="st-key-nav_"][class*="_is_active_"] button {
+    border-bottom: 2px solid var(--ui-components-navigation-indicator);
+    color:         var(--ui-components-navigation-active-foreground);
+    background:    transparent;
+}
+
+/* ── Focus — remove o outline padrão do Streamlit ── */
+[class*="st-key-co_navigator_"] button:focus {
+    box-shadow: none;
+    outline:    none;
+}
+
+/* ── Mobile: scroll horizontal em vez de colunas espremidas ── */
+@media (max-width: 640px) {
+
+    /* Esconde o wrapper de colunas do Streamlit e vira scroll */
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"] {
+        display:          flex !important;
+        flex-wrap:        nowrap !important;
+        overflow-x:       auto !important;
+        overflow-y:       hidden !important;
+        gap:              0 !important;
+        scrollbar-width:  none !important; /* Firefox */
+        -ms-overflow-style: none !important;
+    }
+
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"]::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    /* Cada coluna vira item de tamanho fixo */
+    [class*="st-key-co_navigator_"] [data-testid="stHorizontalBlock"] > div {
+        flex:       0 0 auto !important;
+        width:      auto !important;
+        min-width:  80px !important;
+    }
+
+    [class*="st-key-co_navigator_"]
+    [data-testid="stColumn"]:has(button) {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 80px !important;
+        margin-bottom: 0.25rem;
+    }
+}
+

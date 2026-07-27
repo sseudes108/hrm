@@ -1,0 +1,121 @@
+/* Filtro de data: usa os mesmos tokens e a linguagem de vidro do select. */
+[class*="st-key-co_filter_date_"] {
+    position: relative !important;
+}
+
+/* Campos START e END: a casca e o texto nunca dependem do tema do navegador. */
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] [data-baseweb="input"] {
+    background-color: color-mix(in srgb, var(--ui-components-input-background) 76%, transparent) !important;
+    backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(140%) brightness(1.01) !important;
+    -webkit-backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(140%) brightness(1.01) !important;
+    border: var(--ui-components-input-border) !important;
+    border-radius: var(--ui-components-input-radius) !important;
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ui-colors-text) 8%, transparent) !important;
+    transition: border-color .2s ease, background-color .2s ease !important;
+}
+
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] [data-baseweb="input"]:hover,
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] [data-baseweb="input"]:focus-within {
+    border-color: var(--ui-components-input-focus-border) !important;
+    background-color: color-mix(in srgb, var(--ui-components-input-background) 90%, transparent) !important;
+}
+
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] input,
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] input::placeholder,
+[class*="st-key-co_filter_date_"] [data-testid="stDateInput"] svg {
+    color: var(--ui-colors-text) !important;
+    fill: currentColor !important;
+    -webkit-text-fill-color: var(--ui-colors-text) !important;
+}
+
+[class*="st-key-co_filter_date_"] [data-testid="stWidgetLabel"] p {
+    color: var(--ui-colors-text-muted) !important;
+    font-family: var(--ui-typography-font-family) !important;
+    font-size: var(--ui-typography-size-xs) !important;
+    font-weight: var(--ui-typography-weight-bold) !important;
+}
+
+[data-baseweb="calendar"] [tabindex="0"]::after,
+[data-baseweb="calendar"] [tabindex="-1"]::after{
+    border-left-color: var(--ui-colors-primary);
+    border-right-color: var(--ui-colors-primary);
+    border-bottom-color: var(--ui-colors-primary);
+    border-top-color: var(--ui-colors-primary);
+}
+
+/* Popover do calendário. Este é um portal, portanto o seletor precisa ser global. */
+[data-baseweb="popover"]:has([data-baseweb="calendar"]),
+[data-baseweb="popover"]:has([data-testid="stDatePicker"]),
+[data-baseweb="calendar"] {
+    background: color-mix(in srgb, var(--ui-colors-background) 10%, transparent) !important;
+    
+    /* O filtro de desfoque */
+    backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(150%) brightness(1.01) !important;
+    -webkit-backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(150%) brightness(1.01) !important;
+    
+    border-radius: var(--ui-borders-radius-md) !important;
+    border: 1px solid var(--ui-colors-border) !important;
+    box-shadow: var(--ui-borders-shadow-lg) !important;
+    padding: 4px !important;
+}
+
+/* Cabeçalho, seletores de mês/ano, navegação e tipografia do calendário. */
+[data-baseweb="calendar"] button,
+[data-baseweb="calendar"] [role="button"],
+[data-baseweb="calendar"] [data-baseweb="select"] > div,
+[data-baseweb="calendar"] [data-baseweb="select"] span,
+[data-baseweb="calendar"] [data-baseweb="select"] svg,
+[data-baseweb="calendar"] [role="gridcell"] {
+    /* color: blue;  */
+    /* background-color: transparent !important; */
+    /* border-color: transparent !important; */
+    color: var(--ui-colors-primary) !important;
+    /* fill: currentColor !important; */
+    /* font-family: var(--ui-typography-font-family) !important; */
+}
+
+[data-baseweb="calendar"] [role="gridcell"]::after {
+    background-color: transparent !important;
+}
+
+[data-baseweb="calendar"] [data-baseweb="select"] > div {
+    border: var(--ui-borders-width) solid var(--ui-colors-border) !important;
+    border-radius: var(--ui-borders-radius-sm) !important;
+}
+
+[data-baseweb="calendar"] button:hover,
+[data-baseweb="calendar"] [role="button"]:hover,
+[data-baseweb="calendar"] [role="gridcell"]:hover {
+    background-color: color-mix(in srgb, var(--ui-colors-primary) 18%, transparent) !important;
+    color: var(--ui-colors-text) !important;
+    border-radius: var(--ui-borders-radius-sm) !important;
+}
+
+/* Dia selecionado, intervalo e foco seguem o primary do tema. */
+[data-baseweb="calendar"] [aria-selected="true"],
+[data-baseweb="calendar"] [aria-current="date"] {
+    background-color: color-mix(in srgb, var(--ui-colors-primary) 72%, transparent) !important;
+    color: var(--ui-colors-text) !important;
+    border-color: var(--ui-colors-primary) !important;
+    border-radius: var(--ui-borders-radius-sm) !important;
+}
+
+[data-baseweb="calendar"] [aria-disabled="true"] {
+    color: var(--ui-colors-text-disabled) !important;
+    opacity: .62 !important;
+}
+
+/* Menus de mês/ano também são renderizados fora do calendário pelo portal. */
+[data-baseweb="menu"] [role="option"],
+[data-testid="stSelectboxVirtualDropdown"] li {
+    color: var(--ui-colors-text) !important;
+    background-color: transparent !important;
+}
+
+[data-baseweb="menu"] [role="option"]:hover,
+[data-baseweb="menu"] [role="option"][aria-selected="true"],
+[data-testid="stSelectboxVirtualDropdown"] li:hover,
+[data-testid="stSelectboxVirtualDropdown"] li[aria-selected="true"] {
+    background-color: color-mix(in srgb, var(--ui-colors-primary) 20%, transparent) !important;
+    color: var(--ui-colors-text) !important;
+}

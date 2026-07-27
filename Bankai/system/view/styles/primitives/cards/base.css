@@ -1,0 +1,138 @@
+/* Espaço interno é uma intenção explícita do chamador; nunca é acumulado por padrão. */
+[class*="st-key-co_card_"] {
+    margin: 0 !important;
+}
+
+[class*="st-key-co_card_"][class*="_pad_none_"] {
+    padding: var(--ui-components-card-padding-none) !important;
+}
+
+[class*="st-key-co_card_"][class*="_pad_compact_"] {
+    padding: var(--ui-components-card-padding-compact) !important;
+}
+
+[class*="st-key-co_card_"][class*="_pad_normal_"] {
+    padding: var(--ui-components-card-padding-normal) !important;
+}
+
+/* ─── 2. PINTURA: CARD NORMAL (Apenas _bg_) ─── */
+[class*="st-key-co_card_base_bg_"],
+[class*="st-key-co_card_header_bg_"],
+[class*="st-key-co_card_wrapper_bg_"],
+[class*="st-key-co_card_metric_bg_"],
+[class*="st-key-co_card_chart_bg_"],
+[class*="st-key-co_card_filter_bg_"]{
+    background:      var(--ui-effects-gradient-surface) !important;
+    backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(140%) brightness(1.04) !important;
+    -webkit-backdrop-filter: blur(var(--ui-effects-backdrop-blur)) saturate(140%) brightness(1.04) !important;
+
+    border-radius:   var(--ui-borders-radius-md) !important;
+    box-shadow:      var(--ui-borders-shadow-lg), var(--ui-effects-surface-overlay-inner-shadow) !important;
+
+    /* 🚀 CORREÇÃO DO JITTER NA FONTE */
+    backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    transform: translateY(0) translateZ(0) !important; /* Ponto de partida do transform */
+
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease, 
+                transform 0.3s ease !important;
+}
+
+/* ─── HOVER (Apenas para os cards normais configurados com Hover) ─── */
+[class*="st-key-co_card_"][class*="_bg_"][class*="_hover_"]:hover {
+    box-shadow: var(--ui-components-card-variants-surface-hover-shadow) !important;
+    
+    /* 🚀 Mantenha o translateZ no hover */
+    transform: var(--ui-components-card-variants-surface-hover-transform) !important;
+}
+
+/* ─── HEADER CONTAINER ─── */
+[class*="st-key-co_card_"] .ui-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Fixa o distanciamento em exatos 4px sempre */
+    justify-content: flex-start;
+}
+
+/* Título */
+[class*="st-key-co_card_"] .ui-card-title {
+    font-size: var(--ui-typography-size-subtitle);
+    font-weight: var(--ui-typography-weight-bold);
+    color: var(--ui-colors-text);
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Controla o distanciamento entre o ícone e o título */
+}
+
+/* Subtítulo */
+[class*="st-key-co_card_"] .ui-card-subtitle {
+    font-size: var(--ui-typography-size-xs);
+    font-weight: var(--ui-typography-weight-medium);
+    color: var(--ui-colors-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* O modelo filter conserva altura e padding mesmo sem pintura (_nobg_). */
+[class*="st-key-co_card_filter_"] {
+    box-sizing: border-box !important;
+    min-height: var(--ui-components-filter-card-min-height) !important;
+}
+
+/* Todos os controles ocupam a mesma altura e ficam centralizados no card. */
+[class*="st-key-co_card_filter_"] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* A ausência de card é exclusivamente visual; geometria e conteúdo persistem. */
+[class*="st-key-co_card_"][class*="_nobg_"] {
+    background: transparent !important;
+}
+
+[class*="st-key-co_card_"][class*="_titlecase_upper_"] .ui-card-title {
+    text-transform: uppercase;
+}
+
+[class*="st-key-co_card_"][class*="_titlecase_capitalize_"] .ui-card-title {
+    text-transform: capitalize;
+}
+
+[class*="st-key-co_card_"][class*="_titlealign_center_"] .ui-card-header {
+    align-items: center;
+    text-align: center;
+}
+
+[class*="st-key-co_card_"][class*="_titlealign_right_"] .ui-card-header {
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* ─── HIGHLIGHT (right side) ─── */
+[class*="st-key-co_card_"] .ui-card-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+[class*="st-key-co_card_"] .ui-card-highlight-label {
+    font-size: var(--ui-typography-size-xs);
+    font-weight: var(--ui-typography-weight-medium);
+    color: var(--ui-colors-text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+[class*="st-key-co_card_"] .ui-card-highlight-value {
+    font-size: var(--ui-typography-size-subtitle);
+    font-weight: var(--ui-typography-weight-bold);
+    color: var(--ui-colors-primary);
+    line-height: 1;
+    margin: 0;
+}

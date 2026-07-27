@@ -1,0 +1,44 @@
+html, body,
+[class*="st-"]:not(.material-symbols-rounded):not(code):not(pre):not([data-testid="stIconMaterial"]),
+[class*="st-"] *:not(.material-symbols-rounded):not(code):not(pre):not([data-testid="stIconMaterial"]) {
+    font-family: var(--ui-typography-font-family) !important;
+}
+
+.material-symbols-rounded,
+[class*="material-symbols"],
+[data-testid="stIconMaterial"] {
+    font-family: 'Material Symbols Rounded' !important;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 28 !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant-ligatures: normal !important;
+    font-feature-settings: "liga" 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+    margin-left: 0.5rem;
+    font-size: 20px !important;
+}
+
+code, pre, code *, pre * {
+    font-family: var(--ui-typography-font-family-mono) !important;
+}
+
+.stApp, .stApp > header {
+    background-color: var(--ui-colors-background) !important;
+    background-image: var(--ui-assets-background-image, none) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    color: var(--ui-colors-text) !important;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--ui-colors-background); }
+::-webkit-scrollbar-thumb {
+    background: var(--ui-colors-border);
+    border-radius: var(--ui-borders-radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ui-colors-primary); }

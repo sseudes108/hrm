@@ -1,0 +1,14 @@
+/* Aparência compartilhada dos campos, definida pelo bloco components.input do tema. */
+[class*="st-key-co_input_"] [data-baseweb="input"],
+[class*="st-key-co_input_"] [data-testid="stNumberInputContainer"],
+[class*="st-key-co_filter_"] [data-baseweb="select"] > div {
+    background-color: var(--ui-components-input-background) !important;
+    border: var(--ui-components-input-border) !important;
+    border-radius: var(--ui-components-input-radius) !important;
+}
+
+[class*="st-key-co_input_"] [data-baseweb="input"]:focus-within,
+[class*="st-key-co_input_"] [data-testid="stNumberInputContainer"]:focus-within,
+[class*="st-key-co_filter_"] [data-baseweb="select"] > div:focus-within {
+    border-color: var(--ui-components-input-focus-border) !important;
+}

@@ -1,0 +1,57 @@
+/* 1. CONTAINER PRINCIPAL (Ajuste para o padrão co_input_text) */
+[class*="st-key-co_input_text_"] {
+    position: relative !important;
+    margin-top: 1rem !important; /* Espaço para a label flutuante */
+}
+
+/* 2. A LABEL FLUTUANTE */
+[class*="st-key-co_input_text_"] [data-testid="stWidgetLabel"] {
+    position: absolute !important;
+    top: -1.1rem !important;
+    left: 1rem !important;
+    border-radius: var(--ui-borders-radius-sm);
+    z-index: 10 !important;
+    background-color: var(--ui-colors-background) !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+[class*="st-key-co_input_text_"] [data-testid="stWidgetLabel"] p {
+    color: var(--ui-colors-text-muted) !important;
+    font-family: var(--ui-typography-font-family) !important;
+    font-size: var(--ui-typography-size-xs) !important;
+    font-weight: var(--ui-typography-weight-bold) !important;
+    margin: 0 !important;
+}
+
+/* 3. A BORDA DO INPUT (Baseweb) */
+[class*="st-key-co_input_text_"] [data-baseweb="input"] {
+    border: var(--ui-borders-width) solid var(--ui-colors-border) !important;
+    background-color: var(--ui-colors-surface) !important; /* Mantém fundo sólido */
+    border-radius: var(--ui-borders-radius-md) !important;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+/* Foco no input */
+[class*="st-key-co_input_text_"] [data-baseweb="input"]:focus-within {
+    border-color: var(--ui-colors-primary) !important;
+}
+
+/* 4. TEXTO DO VALOR */
+[class*="st-key-co_input_text_"] input {
+    color: var(--ui-colors-text) !important;
+    font-family: var(--ui-typography-font-family) !important;
+    font-weight: var(--ui-typography-weight-medium) !important;
+}
+
+/* 5. FIX: Garantir que o container interno não tenha bordas extras */
+[class*="st-key-co_input_text_"] [data-testid="stTextInputContainer"] {
+    border: none !important;
+    background: transparent !important;
+}
+
+[class*="st-key-co_input_text_"] [data-baseweb="base-input"] {
+    background-color: var(--ui-colors-surface)
+}

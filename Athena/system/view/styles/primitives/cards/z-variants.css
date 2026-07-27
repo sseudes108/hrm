@@ -1,0 +1,55 @@
+/* Variantes de card: a aplicação escolhe a variante por CardConfig e o tema define os valores. */
+[class*="st-key-co_card_"][class*="_bg_"][class*="_surface_"] {
+    background: var(--ui-components-card-variants-surface-background) !important;
+    border: var(--ui-components-card-variants-surface-border) !important;
+    border-radius: var(--ui-components-card-variants-surface-radius) !important;
+    box-shadow: var(--ui-components-card-variants-surface-shadow) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_elevated_"] {
+    background: var(--ui-components-card-variants-elevated-background) !important;
+    border: var(--ui-components-card-variants-elevated-border) !important;
+    border-radius: var(--ui-components-card-variants-elevated-radius) !important;
+    box-shadow: var(--ui-components-card-variants-elevated-shadow) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_outline_"] {
+    background: var(--ui-components-card-variants-outline-background) !important;
+    border: var(--ui-components-card-variants-outline-border) !important;
+    border-radius: var(--ui-components-card-variants-outline-radius) !important;
+    box-shadow: var(--ui-components-card-variants-outline-shadow) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_minimal_"] {
+    background: var(--ui-components-card-variants-minimal-background) !important;
+    border: var(--ui-components-card-variants-minimal-border) !important;
+    border-radius: var(--ui-components-card-variants-minimal-radius) !important;
+    box-shadow: var(--ui-components-card-variants-minimal-shadow) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_chart_"] {
+    background: var(--ui-components-card-variants-chart-background) !important;
+    border: var(--ui-components-card-variants-chart-border) !important;
+    border-radius: var(--ui-components-card-variants-chart-radius) !important;
+    box-shadow: var(--ui-components-card-variants-chart-shadow) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_chart_"][class*="_hover_"]:hover {
+    box-shadow: var(--ui-components-card-variants-chart-hover-shadow) !important;
+    transform: var(--ui-components-card-variants-chart-hover-transform) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_elevated_"][class*="_hover_"]:hover {
+    box-shadow: var(--ui-components-card-variants-elevated-hover-shadow) !important;
+    transform: var(--ui-components-card-variants-elevated-hover-transform) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_outline_"][class*="_hover_"]:hover {
+    box-shadow: var(--ui-components-card-variants-outline-hover-shadow) !important;
+    transform: var(--ui-components-card-variants-outline-hover-transform) !important;
+}
+
+[class*="st-key-co_card_"][class*="_bg_"][class*="_minimal_"][class*="_hover_"]:hover {
+    box-shadow: var(--ui-components-card-variants-minimal-hover-shadow) !important;
+    transform: var(--ui-components-card-variants-minimal-hover-transform) !important;
+}
