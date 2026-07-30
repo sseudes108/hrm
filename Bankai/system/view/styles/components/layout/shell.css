@@ -1,0 +1,12 @@
+/* O shell cuida apenas do enquadramento global; a página compõe seu conteúdo. */
+[class*="st-key-co_layout_shell_"] {
+    padding:
+        var(--ui-layout-shell-padding-y)
+        var(--ui-layout-shell-padding-x) !important;
+    gap: 0 !important;
+}
+
+[class*="st-key-co_layout_shell_"] > [data-testid="stVerticalBlock"],
+[class*="st-key-co_layout_shell_"] > div > [data-testid="stVerticalBlock"] {
+    gap: 0 !important;
+}

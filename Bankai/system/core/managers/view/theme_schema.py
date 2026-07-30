@@ -8,6 +8,7 @@ from .theme_defaults import SCHEMA_VERSION, THEME_DEFAULTS
 
 CARD_VARIANTS = ("surface", "elevated", "outline", "minimal", "chart")
 CARD_PADDINGS = ("none", "compact", "normal")
+BUTTON_VARIANTS = ("primary", "secondary", "ghost")
 
 
 class ThemeValidationError(ValueError):
@@ -125,6 +126,22 @@ def normalize_and_validate(theme: Mapping[str, Any], *, source: str) -> dict[str
 
     for padding in CARD_PADDINGS:
         _require(normalized, f"components.card.padding.{padding}", str, source)
+
+    for variant in BUTTON_VARIANTS:
+        _require_many(
+            normalized,
+            {
+                f"components.button.variants.{variant}.background": str,
+                f"components.button.variants.{variant}.foreground": str,
+                f"components.button.variants.{variant}.border": str,
+                f"components.button.variants.{variant}.shadow": str,
+                f"components.button.variants.{variant}.hover_background": str,
+                f"components.button.variants.{variant}.hover_foreground": str,
+                f"components.button.variants.{variant}.hover_border": str,
+                f"components.button.variants.{variant}.hover_shadow": str,
+            },
+            source,
+        )
 
     for color_name, color_value in _mapping_at(normalized, "colors", source).items():
         if not isinstance(color_value, str):

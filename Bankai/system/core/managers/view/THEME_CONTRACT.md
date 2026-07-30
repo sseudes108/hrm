@@ -42,6 +42,23 @@ Cards não recebem espaço interno implícito. Declare `padding="compact"` ou
 `padding="normal"` em `CardConfig` quando o componente realmente precisar
 desse respiro; o padrão `padding="none"` evita acúmulo em cards aninhados.
 
+### Botões
+
+O componente `system.view.components.button` expõe as variantes `primary`,
+`secondary` e `ghost`. Todas são preenchidas pelos defaults do núcleo e
+podem ser sobrescritas pela aplicação em
+`components.button.variants.<variant>`.
+
+Cada variante define `background`, `foreground`, `border`, `shadow` e
+os equivalentes de hover. A chamada declara apenas a intenção visual:
+
+    button.draw(
+        context=context,
+        label="Salvar",
+        button_id="save",
+        variant="primary",
+    )
+
 ## Variáveis CSS compiladas
 
 Todo valor primitivo do tema vira automaticamente uma variável `--ui-*`, usando

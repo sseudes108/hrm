@@ -4,10 +4,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
-from system.view.components.layout import PageLayout
-from .pages.components.layout import filter_bar
-from .pages.components.layout import analysis_filters
-
 from .pages import analysis, catalog, home, reports
 
 
@@ -17,32 +13,13 @@ RouteRenderer = Callable[[Any], None]
 @dataclass(frozen=True)
 class RouteDefinition:
     renderer: RouteRenderer
-    layout: PageLayout
-    header_renderer: RouteRenderer | None = None
-    sidebar_renderer: RouteRenderer | None = None
-    filters_renderer: RouteRenderer | None = None
 
 
 ROUTES: dict[str, RouteDefinition] = {
-    "home": RouteDefinition(
-        renderer=home.render,
-        layout=PageLayout(header="sticky", sidebar="sticky"),
-        sidebar_renderer=filter_bar.draw,
-    ),
-    "reports": RouteDefinition(
-        renderer=reports.render, 
-        layout=PageLayout(header="sticky", filters="sticky"),
-        filters_renderer=filter_bar.draw
-    ),
-    "analysis": RouteDefinition(
-        renderer=analysis.render,
-        layout=PageLayout(header="sticky", filters="sticky"),
-        filters_renderer=analysis_filters.draw,
-    ),
-    "catalog": RouteDefinition(
-        renderer=catalog.render,
-        layout=PageLayout(header="sticky"),
-    ),
+    "home": RouteDefinition(renderer=home.render),
+    "reports": RouteDefinition(renderer=reports.render),
+    "analysis": RouteDefinition(renderer=analysis.render),
+    "catalog": RouteDefinition(renderer=catalog.render),
 }
 
 

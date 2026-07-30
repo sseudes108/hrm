@@ -5,7 +5,6 @@ import streamlit as st
 
 from system.view.components.layout import header
 from system.view.components.layout.navigator import NavigationItem
-from system.view.components.layout import page_layout
 
 from .routes import get_current_route
 
@@ -20,22 +19,8 @@ def render(context: Any) -> None:
     route = get_current_route(context)
 
     with st.container(key=f"co_layout_shell_{context.app_name}"):
-        page_layout.render(
-            context,
-            layout=route.layout,
-            header=lambda: (route.header_renderer or _render_header)(context),
-            sidebar=(
-                lambda: route.sidebar_renderer(context)
-                if route.sidebar_renderer
-                else None
-            ),
-            filters=(
-                lambda: route.filters_renderer(context)
-                if route.filters_renderer
-                else None
-            ),
-            content=lambda: route.renderer(context),
-        )
+        _render_header(context)
+        route.renderer(context)
 
 def _render_header(context: Any) -> None:
     header.draw(

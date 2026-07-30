@@ -22,82 +22,86 @@ from system.view.components.tables import summary as summary_table
 
 def render(context: Any) -> None:
     accounts = _catalog_data(filter_accounts(get_accounts(), context.state.active_filters))
-    st.subheader("Catálogo de gráficos")
-    st.caption(
-        "Exemplos funcionais dos modelos avançados. Os mesmos managers podem ser usados por qualquer aplicação do framework."
-    )
+    cols = st.columns([1,3])[1]
+    with cols:
+        with st.container(
+            height=800,
+            border=False,
+            key=f"co_page_reports_content_{context.app_name}",
+        ):
+            st.subheader("Relatórios")
+            st.write("Conteúdo próprio da rota de relatórios.")
 
-    left, right = st.columns(2, gap="xxsmall")
-    with left:
-        scatter.draw(
-            accounts.sample(min(1500, len(accounts)), random_state=42),
-            title="Scatter — saldo por perfil de cliente",
-            column_x="customer_id",
-            column_y="balance",
-            category_column="status",
-            context=context,
-            chart_id="catalog_scatter",
-            update_context=True,
-            filter_column="customer_id"
-        )
-    with right:
-        radar.draw(
-            _radar_data(accounts),
-            title="Radar — perfil por tipo de conta",
-            label_column="account_type",
-            indicator_columns=["saldo_medio", "contas_mil", "agencias", "clientes_mil"],
-            context=context,
-            chart_id="catalog_radar",
-            update_context=True,
-            filter_column="account_type"
-        )
+            left, right = st.columns(2, gap="xxsmall")
+            with left:
+                scatter.draw(
+                    accounts.sample(min(1500, len(accounts)), random_state=42),
+                    title="Scatter — saldo por perfil de cliente",
+                    column_x="customer_id",
+                    column_y="balance",
+                    category_column="status",
+                    context=context,
+                    chart_id="catalog_scatter",
+                    update_context=True,
+                    filter_column="customer_id"
+                )
+            with right:
+                radar.draw(
+                    _radar_data(accounts),
+                    title="Radar — perfil por tipo de conta",
+                    label_column="account_type",
+                    indicator_columns=["saldo_medio", "contas_mil", "agencias", "clientes_mil"],
+                    context=context,
+                    chart_id="catalog_radar",
+                    update_context=True,
+                    filter_column="account_type"
+                )
 
-    left, right = st.columns(2, gap="xxsmall")
-    with left:
-        boxplot.draw(
-            accounts,
-            title="Box plot — distribuição de saldo",
-            category_column="account_type",
-            value_column="balance",
-            context=context,
-            chart_id="catalog_boxplot",
-        )
-    with right:
-        heatmap.draw(
-            accounts,
-            title="Heatmap — saldo por ano e status",
-            column_x="open_year",
-            column_y="status",
-            value_column="balance",
-            context=context,
-            chart_id="catalog_heatmap",
-        )
+            left, right = st.columns(2, gap="xxsmall")
+            with left:
+                boxplot.draw(
+                    accounts,
+                    title="Box plot — distribuição de saldo",
+                    category_column="account_type",
+                    value_column="balance",
+                    context=context,
+                    chart_id="catalog_boxplot",
+                )
+            with right:
+                heatmap.draw(
+                    accounts,
+                    title="Heatmap — saldo por ano e status",
+                    column_x="open_year",
+                    column_y="status",
+                    value_column="balance",
+                    context=context,
+                    chart_id="catalog_heatmap",
+                )
 
-    left, right = st.columns(2, gap="xxsmall")
-    with left:
-        sunburst.draw(
-            accounts,
-            title="Sunburst — carteira hierárquica",
-            path_columns=["status", "account_type", "branch_group"],
-            value_column="balance",
-            context=context,
-            chart_id="catalog_sunburst",
-        )
-    with right:
-        nightingale.draw(
-            accounts,
-            title="Nightingale — volume por status",
-            category_column="status",
-            context=context,
-            chart_id="catalog_nightingale",
-            update_context=True,
-            click_type="categoric_click",
-        )
+            left, right = st.columns(2, gap="xxsmall")
+            with left:
+                sunburst.draw(
+                    accounts,
+                    title="Sunburst — carteira hierárquica",
+                    path_columns=["status", "account_type", "branch_group"],
+                    value_column="balance",
+                    context=context,
+                    chart_id="catalog_sunburst",
+                )
+            with right:
+                nightingale.draw(
+                    accounts,
+                    title="Nightingale — volume por status",
+                    category_column="status",
+                    context=context,
+                    chart_id="catalog_nightingale",
+                    update_context=True,
+                    click_type="categoric_click",
+                )
 
-    st.subheader("Tabelas HTML")
-    st.caption("Padrões para rankings, resumos executivos e status operacional.")
-    _render_tables(context, accounts)
-
+            st.subheader("Tabelas HTML")
+            st.caption("Padrões para rankings, resumos executivos e status operacional.")
+            _render_tables(context, accounts)
 
 def _catalog_data(accounts: pd.DataFrame) -> pd.DataFrame:
     data = accounts.copy()

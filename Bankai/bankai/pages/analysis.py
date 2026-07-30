@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from bankai.application.accounts import filter_accounts, get_accounts
+from bankai.pages.components.layout import analysis_filters
 from system.core.managers.charts import bar, line, pie
 from system.view.components.cards.metric import metric
 from system.view.components.layout import fixes
@@ -13,6 +14,16 @@ from system.view.components.layout import fixes
 
 def render(context: Any) -> None:
     """Renderiza KPIs, distribuição e evolução das contas filtradas."""
+    analysis_filters.draw(context)
+    with st.container(
+        height=800,
+        border=False,
+        key=f"co_page_analysis_content_{context.app_name}",
+    ):
+        _render_content(context)
+
+
+def _render_content(context: Any) -> None:
     accounts = filter_accounts(get_accounts(), context.state.active_filters)
 
     _render_kpis(context, accounts)

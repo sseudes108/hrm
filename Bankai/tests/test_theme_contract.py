@@ -4,16 +4,18 @@ import unittest
 import os
 from copy import deepcopy
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from system.core.managers.view import theme
+from system.core.managers.config import theme_preferences
 from system.core.managers.view.theme_schema import ThemeValidationError
 from system.core.managers.view.theme_tokens import compile_css_variables
 from system.core.managers.view.css import render_theme_tokens
 from system.view.components.cards.base.card import CardConfig
+from system.view.components.button.button import ButtonConfig
 from system.view.components.layout.navigator.navigator import NavigationItem, NavigatorConfig
 from system.view.components._keys import scoped_key
 from system.core.contexts import require_filter_state
-from system.view.components.layout.page_layout import PageLayout
 from system.core.managers.chart_data import (
     ChartDataError,
     group_pie,
@@ -39,6 +41,7 @@ from system.core.managers.database.psql import _validate_identifier
 from system.core.applications.contracts import ApplicationDefinition
 from system.core.applications.registry import ApplicationRegistry
 from system.core.auth import AuthConfig
+from system.core.contexts.app_context import AppContext
 import pandas as pd
 
 
@@ -78,6 +81,16 @@ class ThemeContractTests(unittest.TestCase):
         from system.core.managers.view.theme_schema import normalize_and_validate
         with self.assertRaisesRegex(ThemeValidationError, "components.button.background"):
             normalize_and_validate(invalid, source="example")
+
+    def test_theme_provides_three_button_variants(self) -> None:
+        loaded = theme.load(THEME_DIRECTORY / "base.json", THEME_DIRECTORY / "dark.json")
+
+        self.assertEqual(
+            set(loaded["components"]["button"]["variants"]),
+            {"primary", "secondary", "ghost"},
+        )
+        compiled = compile_css_variables(loaded)
+        self.assertIn("--ui-components-button-variants-primary-background:", compiled)
 
     def test_error_identifies_missing_token(self) -> None:
         with self.assertRaisesRegex(ThemeValidationError, "typography.font_family"):
@@ -151,16 +164,75 @@ class ThemeContractTests(unittest.TestCase):
         )
         self.assertTrue(scoped_key(context, "input_text", "name").startswith("input_text_example_"))
 
+    def test_button_configuration_exposes_stable_keys_and_variants(self) -> None:
+        context = type("Context", (), {"app_name": "example", "theme": {}})()
+        primary = ButtonConfig(context=context, button_id="save", label="Salvar")
+        ghost = ButtonConfig(
+            context=context,
+            button_id="save",
+            label="Salvar",
+            variant="ghost",
+        )
+
+        self.assertEqual(primary.widget_key, ghost.widget_key)
+        self.assertIn("co_button_primary_example_", primary.container_key)
+        self.assertIn("co_button_ghost_example_", ghost.container_key)
+        with self.assertRaisesRegex(ValueError, "variant inválida"):
+            ButtonConfig(
+                context=context,
+                button_id="save",
+                label="Salvar",
+                variant="danger",
+            )
+
+    def test_theme_preference_round_trip_is_scoped_by_application(self) -> None:
+        with TemporaryDirectory() as temporary_directory:
+            preference_path = Path(temporary_directory) / "preferences.json"
+            theme_preferences.save_theme_mode("bankai", "dark", path=preference_path)
+            theme_preferences.save_theme_mode("athena", "light", path=preference_path)
+
+            self.assertEqual(
+                theme_preferences.load_theme_mode("bankai", "light", path=preference_path),
+                "dark",
+            )
+            self.assertEqual(
+                theme_preferences.load_theme_mode("athena", "dark", path=preference_path),
+                "light",
+            )
+
+            preference_path.write_text("{json inválido", encoding="utf-8")
+            self.assertEqual(
+                theme_preferences.load_theme_mode("bankai", "light", path=preference_path),
+                "light",
+            )
+
+            preference_path.write_text('{"theme_modes": []}', encoding="utf-8")
+            self.assertEqual(
+                theme_preferences.load_theme_mode("bankai", "dark", path=preference_path),
+                "dark",
+            )
+
+    def test_app_context_persists_only_an_actual_theme_change(self) -> None:
+        persisted_modes = []
+        context = AppContext(
+            app_name="example",
+            theme={"mode": "dark"},
+            mode="dark",
+            theme_loader=lambda mode: {"mode": mode},
+            theme_mode_persister=persisted_modes.append,
+        )
+
+        context.update_mode(" LIGHT ")
+        context.update_mode("light")
+
+        self.assertEqual(context.mode, "light")
+        self.assertEqual(context.theme, {"mode": "light"})
+        self.assertEqual(persisted_modes, ["light"])
+
     def test_filter_state_contract_reports_a_clear_error(self) -> None:
         context = type("Context", (), {"state": object()})()
         with self.assertRaisesRegex(TypeError, "active_filters"):
             require_filter_state(context)
-
-    def test_page_layout_accepts_independent_slot_positions(self) -> None:
-        layout = PageLayout(header="sticky", sidebar="sticky", filters="static")
-        self.assertEqual(layout.header, "sticky")
-        self.assertEqual(layout.sidebar, "sticky")
-        self.assertEqual(layout.filters, "static")
 
     def test_chart_grouping_validates_columns_before_aggregation(self) -> None:
         frame = pd.DataFrame({"month": ["2026-01", "2026-01"], "value": [10, 20]})

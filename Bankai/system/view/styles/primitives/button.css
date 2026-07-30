@@ -1,17 +1,72 @@
-/* Busca o contêiner pela chave E mira no botão dentro dele */
-[class*="st-key-btn_"] button {
-    background-color: var(--ui-components-button-background) !important;
+/* Base comum aos botões criados por system.view.components.button. */
+[class*="st-key-co_button_"] [data-testid="stButton"] > button {
+    min-height: 2.5rem;
+    padding: var(--ui-spacing-sm) var(--ui-spacing-md) !important;
     border-radius: var(--ui-components-button-radius) !important;
-    color: var(--ui-components-button-foreground) !important;
-    border-color: var(--ui-components-button-border) !important;
-
-    /* 🚀 O SEGREDO DA SUAVIDADE (Vai animar a entrada e a saída) */
-    transition: all 0.3s ease !important;
+    font-weight: var(--ui-typography-weight-medium) !important;
+    transition:
+        background-color 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        color 160ms ease,
+        transform 120ms ease !important;
 }
 
-/* Estilo do efeito de hover (quando passa o mouse) */
-[class*="st-key-btn_"] button:hover {
-    background-color: var(--ui-components-button-hover-background) !important;
-    border-color: var(--ui-components-button-hover-background) !important;
-    color: var(--ui-components-button-hover-foreground) !important;
+[class*="st-key-co_button_"] [data-testid="stButton"] > button:focus-visible {
+    outline: 2px solid var(--ui-colors-border-focus) !important;
+    outline-offset: 2px;
+}
+
+[class*="st-key-co_button_"] [data-testid="stButton"] > button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+[class*="st-key-co_button_"] [data-testid="stButton"] > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+/* Variante de maior ênfase para a ação principal da seção. */
+[class*="st-key-co_button_primary_"] [data-testid="stButton"] > button {
+    background: var(--ui-components-button-variants-primary-background) !important;
+    border: var(--ui-components-button-variants-primary-border) !important;
+    box-shadow: var(--ui-components-button-variants-primary-shadow) !important;
+    color: var(--ui-components-button-variants-primary-foreground) !important;
+}
+
+[class*="st-key-co_button_primary_"] [data-testid="stButton"] > button:hover:not(:disabled) {
+    background: var(--ui-components-button-variants-primary-hover-background) !important;
+    border: var(--ui-components-button-variants-primary-hover-border) !important;
+    box-shadow: var(--ui-components-button-variants-primary-hover-shadow) !important;
+    color: var(--ui-components-button-variants-primary-hover-foreground) !important;
+}
+
+/* Variante neutra para ações usuais sem competir com a principal. */
+[class*="st-key-co_button_secondary_"] [data-testid="stButton"] > button {
+    background: var(--ui-components-button-variants-secondary-background) !important;
+    border: var(--ui-components-button-variants-secondary-border) !important;
+    box-shadow: var(--ui-components-button-variants-secondary-shadow) !important;
+    color: var(--ui-components-button-variants-secondary-foreground) !important;
+}
+
+[class*="st-key-co_button_secondary_"] [data-testid="stButton"] > button:hover:not(:disabled) {
+    background: var(--ui-components-button-variants-secondary-hover-background) !important;
+    border: var(--ui-components-button-variants-secondary-hover-border) !important;
+    box-shadow: var(--ui-components-button-variants-secondary-hover-shadow) !important;
+    color: var(--ui-components-button-variants-secondary-hover-foreground) !important;
+}
+
+/* Variante discreta para barras de ferramentas e botões somente com ícone. */
+[class*="st-key-co_button_ghost_"] [data-testid="stButton"] > button {
+    background: var(--ui-components-button-variants-ghost-background) !important;
+    border: var(--ui-components-button-variants-ghost-border) !important;
+    box-shadow: var(--ui-components-button-variants-ghost-shadow) !important;
+    color: var(--ui-components-button-variants-ghost-foreground) !important;
+}
+
+[class*="st-key-co_button_ghost_"] [data-testid="stButton"] > button:hover:not(:disabled) {
+    background: var(--ui-components-button-variants-ghost-hover-background) !important;
+    border: var(--ui-components-button-variants-ghost-hover-border) !important;
+    box-shadow: var(--ui-components-button-variants-ghost-hover-shadow) !important;
+    color: var(--ui-components-button-variants-ghost-hover-foreground) !important;
 }

@@ -197,7 +197,7 @@ athena.app.render(context)
           ▼
 athena.layout.render(context)
   ├─ resolve a rota atual
-  ├─ compõe header/sidebar/filtros conforme PageLayout
+  ├─ renderiza o header compartilhado
   └─ chama renderer da página
           │
           ▼
@@ -295,8 +295,15 @@ import streamlit as st
 
 
 def render(context) -> None:
-    st.title("Orion")
-    st.write("Página inicial da aplicação.")
+    sidebar, content = st.columns([1, 3])
+
+    with sidebar:
+        st.write("Filtros e controles laterais")
+
+    with content:
+        with st.container(height=800, border=False):
+            st.title("Orion")
+            st.write("Página inicial da aplicação.")
 ```
 
 Em `orion/routes.py`:
@@ -305,21 +312,16 @@ Em `orion/routes.py`:
 from dataclasses import dataclass
 from collections.abc import Callable
 
-from system.view.components.layout import PageLayout
 from .pages import home
 
 
 @dataclass(frozen=True)
 class RouteDefinition:
     renderer: Callable
-    layout: PageLayout
 
 
 ROUTES = {
-    "home": RouteDefinition(
-        renderer=home.render,
-        layout=PageLayout(header="sticky"),
-    ),
+    "home": RouteDefinition(renderer=home.render),
 }
 
 
@@ -330,34 +332,30 @@ def get_current_route(context):
         raise ValueError(f"Rota Orion não registrada: {context.state.current_route}") from exc
 ```
 
-`PageLayout` permite configurar cada slot por rota. Por exemplo,
-`PageLayout(header="sticky", sidebar="sticky")` fixa header e sidebar;
-`filters="sticky"` fixa uma faixa de filtros abaixo do header.
+A rota conhece somente o renderer. Colunas, filtros, sidebar, altura e rolagem
+são decisões explícitas da página, usando diretamente as primitivas do
+Streamlit.
 
 ### 4. Componha o layout
 
-Em `orion/layout.py`, resolva a rota e entregue seus slots ao componente
-genérico `page_layout`. O header pode ser comum ao app e, portanto, não muda
-quando somente a rota muda.
+Em `orion/layout.py`, renderize apenas o shell realmente compartilhado e
+delegue toda a composição do conteúdo à página.
 
 ```python
-from system.view.components.layout import header, page_layout
+from system.view.components.layout import header
 from .routes import get_current_route
 
 
 def render(context) -> None:
     route = get_current_route(context)
-    page_layout.render(
-        context,
-        layout=route.layout,
-        header=lambda: header.draw(context=context, title="Orion", subtitle="Meu app"),
-        content=lambda: route.renderer(context),
-    )
+    header.draw(context=context, title="Orion", subtitle="Meu app")
+    route.renderer(context)
 ```
 
-Se a sua `RouteDefinition` incluir `sidebar_renderer` e `filters_renderer`,
-passe-os aos argumentos `sidebar` e `filters`, seguindo os layouts de Bankai e
-Athena como referência.
+Esse modelo evita CSS de posicionamento e permite que cada página escolha
+livremente a quantidade e a proporção das colunas. Um
+`st.container(height=800)` cria uma área rolável quando o conteúdo excede a
+altura definida.
 
 ### 5. Exponha `ApplicationDefinition`
 

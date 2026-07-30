@@ -2,18 +2,27 @@
 from typing import Any
 
 import streamlit as st
+from bankai.pages.components.layout import filter_bar
+from system.view.components import button
+
 
 def render(context: Any) -> None:
-    st.subheader("Início")
-    st.write("Conteúdo da rota inicial. O header pertence ao shell do Bankai.")
+    """Monta livremente sidebar e conteúdo da página inicial."""
+    sidebar_column, content_column = st.columns([1, 3], gap="small")
 
+    with sidebar_column:
+        filter_bar.draw(context)
 
-def render_sidebar(context: Any) -> None:
-    """Exemplo de conteúdo pertencente ao slot lateral desta rota."""
-    st.caption("PAINEL LATERAL")
-    st.write("Este bloco permanece abaixo do header durante a rolagem.")
-    st.radio(
-        "Visualização",
-        options=["Resumo", "Detalhes"],
-        key="bankai_home_sidebar_view",
-    )
+    with content_column:
+        with st.container(
+            height=800,
+            border=False,
+            key=f"co_page_home_content_{context.app_name}",
+        ):
+            button.draw(
+                context=context,
+                label="Salvar",
+                button_id="save_report",
+                icon=":material/save:",
+                width="stretch",
+            )
